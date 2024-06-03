@@ -2,19 +2,19 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Define Macros for Details of your Project
-\newcommand{\project}{Minor Project } %Specify "Major Project" or "Minor Project"
-\newcommand{\projectTitle}{SNAPTAG: CTRL+F FOR YOUR HANDWRITTEN NOTES} %specify "Title" of Your Project
-\newcommand{\doc}{Final Report} % specify the document you are preparing eg. "Proposal", "Mid-Term Report" or "Final Report"32
+\newcommand{\project}{Major Project } %Specify "Major Project" or "Minor Project"
+\newcommand{\projectTitle}{BIRD SPECIES IDENTIFICATION FROM AUDIO AND IMAGE USING DCNN} %specify "Title" of Your Project
+\newcommand{\doc}{Proposal} % specify the document you are preparing eg. "Proposal", "Mid-Term Report" or "Final Report"32
 % Note that You have to sibmit "Final Report" for Pre-final defense as well.
 \newcommand{\subCode}{CT654} %specify Subject of Your Project
 \newcommand{\degree}{Bachelor in Computer Engineering} %specify your degree
 \newcommand{\submittedBy}%Specify Names and Roll/Symbol Numbers of the Project Group Members
 {
 %Edit Member Names and Roll/Symbol No. and adjust width (\makebox[width]) if necessary 
-\makebox[10cm]{Ajaya Chaudhary \hfill [31056]}\\
-\makebox[10cm]{Gaurav Giri \hfill [31078]}\\
-\makebox[10cm]{Iza K.C. \hfill [31083]}\\
-\makebox[10cm]{Lakesh Shrestha \hfill [31089]}
+\makebox[10cm]{Gaurav Giri \hfill [Kan077bct034]}\\
+\makebox[10cm]{Iza K.C. \hfill [Kan077bct039]}\\
+\makebox[10cm]{Prajwal Khatiwada\hfill [Kan077bct56]}\\
+\makebox[10cm]{Samrat Kumar Adhikari \hfill [Kan077bct74]}\\
 %\makebox[9cm]{Member Name \hfill [Roll/Symbol No.]}\\
 } % Note that You must write your "Symbol Numbers"(Exam Roll Numbers) for Final Defenses
 
@@ -22,8 +22,8 @@
 \newcommand{\hod}{Er. Rabindra Khati \\ Associate Professor}
  %specify Head ot the department
 \newcommand{\defYear}{2024} %Defense Year
-\newcommand{\defMonth}{Feb} %Defense Month- January, February, ...
-\newcommand{\defDay}{} %specify Defense Day- 1, 2, ...
+\newcommand{\defMonth}{June} %Defense Month- January, February, ...
+\newcommand{\defDay}{5} %specify Defense Day- 1, 2, ...
 
 \newif\ifhassupervisor
 \hassupervisorfalse % to display supervisor name use command- \hassupervisortrue
@@ -68,21 +68,21 @@
 \KECtitlepage
 
 \pagenumbering{roman}
-\KECapproval
-\chapter*{Acknowledgment}
-\addcontentsline{toc}{chapter}{Acknowledgment}%to include this chapter in TOC
-We would like to express our gratitude to everyone who helped us to complete this project.
-First and foremost, we would like to acknowledge the crucial role of our teachers of Department of Electronics and Computer Engineering for their guidance, support, and feedback throughout the project. Next, we would like
-to give our gratitude to our classmates, for providing constructive feedback and engaging in
-thought-provoking discussions regarding our project. Next, we’d like to thank all lecturers
-of our department for guiding us through the beginning of our project to the end. Finally,
-a special gratitude to our family and friends, for their love, encouragement, and support
-throughout our academic journey.\\
-Thank you all for your invaluable contributions to this project.\\
-\makebox[10cm]{Ajaya Chaudhary \hfill }\\
-\makebox[10cm]{Gaurav Giri \hfill }\\
-\makebox[10cm]{Iza K.C. \hfill }\\
-\makebox[10cm]{Lakesh Shrestha \hfill }
+%\KECapproval
+% \chapter*{Acknowledgment}
+% \addcontentsline{toc}{chapter}{Acknowledgment}%to include this chapter in TOC
+% We would like to express our gratitude to everyone who helped us to complete this project.
+% First and foremost, we would like to acknowledge the crucial role of our teachers of Department of Electronics and Computer Engineering for their guidance, support, and feedback throughout the project. Next, we would like
+% to give our gratitude to our classmates, for providing constructive feedback and engaging in
+% thought-provoking discussions regarding our project. Next, we’d like to thank all lecturers
+% of our department for guiding us through the beginning of our project to the end. Finally,
+% a special gratitude to our family and friends, for their love, encouragement, and support
+% throughout our academic journey.\\
+% Thank you all for your invaluable contributions to this project.\\
+% \makebox[10cm]{Ajaya Chaudhary \hfill }\\
+% \makebox[10cm]{Gaurav Giri \hfill }\\
+% \makebox[10cm]{Iza K.C. \hfill }\\
+% \makebox[10cm]{Lakesh Shrestha \hfill }
 %to display members name under Acknowledgement
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}%to include this chapter in TOC 
@@ -174,57 +174,33 @@ ReLU \> Rectified Linear Unit\\
 
 \chapter{Introduction}
 \section{Background}\label{sec:bkgrnd}%label your section if you require to refer them somewhere else in your document.
-When it comes to self-study or informal research, taking quick notes has long been a
-favored practice. These notes serve as a valuable tool for reviewing and revisiting the
-gathered information. Traditionally, pen and paper have been the preferred medium for
-note-taking, as they offer a tangible and familiar experience. However, a common
-challenge arises when these notes need to be quickly referenced or accessed for a
-comprehensive overview.\\\\
-Often, when we want to review the content of our notes, we may not have them readily
-available. They might be left behind, misplaced, or simply inaccessible at the time we
-need them. Additionally, the physical nature of pen and paper notes means that they are
-not always well-preserved over an extended period. They can get lost, damaged, or suffer
-from wear and tear, making them unreliable for long-term storage.\\\\
-One approach to address the challenges of organizing and accessing handwritten notes is
-to digitize them by storing them in the gallery or creating PDF documents. While this
-offers convenience and preservation, it introduces its own set of issues. The unorganized
-nature of storing notes as image files or PDFs makes it difficult to quickly locate specific
-notes. Furthermore, the inability to easily search handwritten content within these digital
-formats hinders efficient information retrieval. Existing OCR tools that enable searching
-of handwritten text often come with premium access restrictions, creating a barrier for
-users who desire a straightforward OCR solution without additional costs. Therefore,
-there is a need for a free and unrestricted solution that provides efficient organization and
-searching of handwritten notes, allowing users to easily access and retrieve information.
+Globally, the avian kingdom is vast, with over 11,000 species, a testament to nature's complexity and evolutionary prowess. This figure, sourced from the International Ornithological Committee as of April 2023, merely scratches the surface of avian diversity, each species a unique entity with its own ecological role and evolutionary story. (https://www.worldbirdnames.org/new/updates/)
+
+Turning our gaze to Nepal, a country of remarkable biodiversity and varied ecosystems, from the lowland Terai to the towering Himalayas, it is home to more than 887 bird species, as reported by the Himalayan Nature organization. This represents more than 8\% of the world's known bird species, a significant figure given Nepal's relatively small geographical footprint. (https://www.himalayannature.org/works/projects/national-red-list-of-nepals-birds/)
+
+Among these, a number are endangered, their existence threatened by habitat loss, climate change, and human activities. The National Red List of Nepal's Birds, a comprehensive assessment of the country's avian biodiversity, identifies several species at risk. Specifically, Nepal harbors 168 nationally threatened bird species, including 68 Critically Endangered, 38 Endangered, and 62 Vulnerable species, as detailed in a publication by the Journal of Threatened Taxa. (https://threatenedtaxa.org/index.php/JoTT/article/view/2855/3903)
+
+The plight of these endangered species underscores the urgency of conservation efforts. Technologies such as audio recognition and image classification offer innovative tools for identifying and monitoring bird populations. By analyzing the unique sounds and visual characteristics of birds, researchers can enhance our understanding of species distribution, behavior, and threats. Such technologies not only aid in the conservation of endangered species but also contribute to the broader field of biodiversity research.
+
   
 \section{Problem Statement}
-The problem at hand is the lack of a free and unrestricted solution for organizing and
-searching handwritten notes efficiently. The existing methods of storing notes in the
-gallery or creating PDF documents offer convenience but lack proper organization and
-search functionality. The handwritten content within these notes cannot be easily and
-accurately searched using available tools, often requiring premium access for OCR
-operations. This limitation hampers the ability of students and researchers to retrieve
-specific information quickly and effectively.\\
-The objective of the project is to develop a solution that addresses these issues by
-providing a user-friendly platform for organizing handwritten notes and enabling efficient
-keyword-based searching. This solution should be accessible, free of charge, and not
-restricted by premium access limitations. By leveraging OCR technology, the project
-aims to convert handwritten keywords within the notes into searchable digital text,
-making it easier for users to retrieve relevant information when needed. Ultimately, this
-project seeks to empower students and researchers by providing them with a convenient
-and efficient tool for managing their handwritten notes and facilitating seamless
-information retrieval.
+Given the complexity and significance of avian biodiversity, particularly in regions rich in species diversity such as Nepal, the challenge of accurately identifying and classifying bird species, especially those that are endangered, emerges as a critical concern. The necessity for precise identification and classification is not merely academic but is deeply intertwined with conservation efforts aimed at preserving the delicate balance of ecosystems. In Nepal, where the avian population includes a range of endangered species, the task of monitoring and protecting these birds is compounded by the limitations of traditional observation methods.
+
+The problem, therefore, lies in developing a method that can overcome the constraints of human observation and the vast geographical and ecological diversity of Nepal. This method must be capable of identifying bird species through the sounds they make, a task that requires distinguishing between the myriad of calls and songs in the natural environment. Additionally, it must utilize visual identification through image classification to account for instances where audio data may be insufficient or inconclusive. The integration of audio recognition and image classification technologies presents a promising solution to this problem, offering a way to automate the identification process, enhance accuracy, and significantly improve the efficiency of monitoring endangered bird species.
+
+However, the implementation of such technologies raises several questions: How can audio recognition and image classification systems be effectively trained to recognize the specific calls and visual markers of Nepal's endangered bird species? What are the challenges in collecting and curating the necessary datasets for this training, given the elusive nature of many of these species and the complex acoustics of their natural habitats? And, importantly, how can these technologies be integrated into conservation strategies to not only identify but also protect these species from the myriad threats they face?
+
+Addressing these questions requires a multidisciplinary approach that combines expertise in ornithology, conservation biology, machine learning, and environmental science. The ultimate goal is to develop a robust system that can contribute to the conservation of Nepal's endangered birds by providing reliable data on species distribution, population trends, and habitat use, thereby informing targeted conservation actions and policies.
 
 \section{Objectives}
 \begin{enumerate}[label=\roman*]
-    \item To create a free and unrestricted platform for efficient organization and searching
-    of handwritten notes, leveraging OCR technology to enable easy digitization and
-    retrieval of information.
+    \item To develop and implement an integrated technological solution that utilizes advanced audio recognition and image classification techniques for the accurate identification and monitoring of bird species in Nepal, with an emphasis on endangered species.
 \end{enumerate}
 
 \section{Application Scope}
  \begin{enumerate}
     \item This software can be utilized by researchers and academics to organize their
-    handwritten research notes, allowing for efficient retrieval of information during
+    handwritten research notes,allowing for efficient retrieval of information during
     the writing process. The OCR functionality enables quick keyword searching
     within the notes, helping researchers locate relevant information, references, and
     supporting evidence for their papers.
@@ -263,7 +239,7 @@ importance.
  Our system is economically achievable as a result of the development of several tools,
 libraries, and frameworks. Since all the software required to construct it is free and
 readily available online, this project is incredibly cost-effective. Only time and effort are
-needed to create a worthwhile, genuinely passive system. The project doesn’t come at a
+needed to create a worthwhile, genuinely passive system. The project doesn't come at a
 substantial cost. From an economic standpoint, the project appears successful in this
 sense.
  \subsection{Technical Feasibility}
@@ -322,32 +298,36 @@ handwritten notes. Consequently, our project is operationally feasible.
 
 
 \chapter{Literature Review}
+
 Regardless of whether they are documented or not, every project has helped to shape the world as it is today.
 Other researchers can benefit from documented projects by learning specifics about problems and how to solve
 them. Additionally, they boostproject efficiency by removing the need to start the project from the beginning 
 and specifying the starting point.
+
+\section{Related Works}
+BirdNET is a cutting-edge research platform developed through collaboration between the K. Lisa Yang Center for Conservation Bioacoustics at the Cornell Lab of Ornithology and the Chair of Media Informatics at Chemnitz University of Technology. Its primary aim is to detect and classify bird sounds using machine learning technologies, serving both experts and citizen scientists in their efforts to monitor and protect bird populations.\\\\
+BirdNET can identify around 3,000 of the world's most common bird species, with plans to expand this number. Features such as a live submissions map and a Twitter bot are included to engage the community and share real-time data. The project is supported by donations and collaborations, offering opportunities for researchers and developers to contribute to its growth. BirdNET serves as an invaluable tool for bird enthusiasts, conservationists, and biologists alike, providing innovative solutions for large-scale acoustic monitoring and contributing to the conservation and understanding of avian biodiversity.\\\\
+The BirdCLEF 2023 competition on Kaggle is a significant data science challenge that falls under the broader LifeCLEF initiative, aimed at pushing the boundaries of species identification and biodiversity monitoring through technological innovation. This particular competition focuses on the development of machine learning models that can identify bird species based on audio recordings. It presents a complex and realistic challenge due to the diversity of the audio recordings, which are collected from various environments and feature a wide range of bird species.
 \section{Related Research}
-S. Abbas et all introduced an intelligent and efficient handwritten script recognition system using deep
-convolutional neural networks (CNNs). The research addresses several challenges in handwritten character 
-recognition, such as distorted shapes, varying writing styles, and curved characters. To overcome these
-issues, the proposed method incorporates extensive image processing and pattern recognition techniques.
-The research utilizes a large dataset of 65,000 handwritten characters’ images for training and testing
-the CNN model. The deep convolutional neural network, consisting of multiple hidden layers with numerous 
-neurons, is trained on this dataset to recognize handwritten scripts. The system also employs three 
-segmentation algorithms: line-based, word-based, and character-based, to accurately separate characters 
-in the script before recognition. The results show promising accuracy of 90\% in recognizing handwritten 
-scripts and effectively converting them into electronic text documents\cite{ghazal2022convolutional}.\\
 
-D.V. Tropin et all present  a thorough investigation into the challenging problem of quadrilateral detection in computer vision tasks. The detection of quadrilaterals is a crucial step in various applications, including document processing, signboards, whiteboards, license plates, and more.The paper provides an overview of existing approaches to quadrilateral detection, including contour-based, region-based, and vertex-based methods. It  highlights the limitations and challenges faced by each approach, such as difficulties in handling occlusions, low contrast, strong lines, blurred images, and lack of a priori 
-information about object structure. To address the limitations of existing methods, the paper introduces a novel combination of contour and region-based approaches. The main idea is to rank competing contour hypotheses based on the contrast between areas inside and outside the border. By leveraging both approaches in the quadrilateral scoring process, the authors report a 40\% decrease in ranking errors\cite{tropin2021approach}.\\
+The research paper `Audio Classifier for Automatic Identification of Endangered Bird Species of Nepal' focuses on developing an audio classifier to identify endangered bird species in Nepal using deep learning techniques. The dataset, collected from xeno-canto.org, comprises 2215 audio recordings of 41 bird species, 38 of which are endangered. This dataset was expanded to 6733 recordings through 10-second audio splitting and Gaussian noise augmentation, with 5407 recordings used for training, 639 for validation, and 687 for testing. The methodology involved handling imbalanced class distribution through data augmentation, employing Mel spectrograms and Mel-Frequency Cepstral Coefficients (MFCCs) for feature extraction, and developing a custom Convolutional Neural Network (CNN) model and an EfficientNet model. The hyperparameters of these models were optimized using a genetic algorithm. The Mel spectrograms were created using Short-Time Fourier Transform, converting amplitudes to decibel scale, and applying Mel filter banks to the spectrograms. Similarly, MFCCs were derived by framing the audio signals, applying Discrete Fourier Transform, logarithmic scaling, Mel scaling, and Discrete Cosine Transform. The EfficientNet architecture utilized compound scaling for network depth, width, and resolution. The findings indicated that the proposed approach achieved satisfactory results in classifying the bird species. However, limitations include the relatively small dataset size and the need for further enhancement in model robustness and accuracy. Future enhancements could involve expanding the dataset, exploring additional feature extraction techniques, and incorporating more advanced deep learning models to improve classification performance. This research contributes significantly to the conservation efforts by providing a reliable method for automatic bird species identification, aiding in monitoring and protecting endangered species.\cite{gautam2023audio}\\
 
-A. Tam et all introduced a novel system for automatically detecting signboards and extracting text from them, specifically tailored for guiding the navigation of autonomous robots indoors and outdoors. Unlike previous approaches, the system is not restricted to traffic signs and car plates; instead, it aims to detect a wide range of signboards, accommodating variations in shape, rotation, and scaling. The authors employ the Hough transform and other advanced processing schemes to achieve their goal. The system primarily focuses on identifying quadrilateral signboards present in images, assuming the entire signboard is visible and avoiding detection of overly small signboards with limited recognizability. To enhance text extraction accuracy, a geometric transformation is proposed to convert the detected quadrilaterals into rectangular shapes. The paper also discusses the segmentation of text from the found signboards. While the approach shows great promise, providing more extensive experimental evaluations and detailed discussions of segmentation techniques would further strengthen the paper's impact\cite{tam2003quadrilateral}. \\
+The paper `Audio Bird Classification with Inception-v4 extended with Time and Time-Frequency Attention Mechanisms' presents an innovative adaptation of the Inception-v4 deep convolutional network for bioacoustic classification, focusing specifically on bird sound recognition. The datasets employed include various bird sounds, prominently from the BirdClef2017 challenge, consisting of 1500 bird species recordings. The methodology revolves around treating bird sound classification as an image classification problem through transfer learning. The Inception-v4 model, initially pre-trained on ImageNet, was adapted to process time-frequency representations of bird sounds by converting these sounds into RGB images using three log-spectrograms generated via fast Fourier transform at different scales (128, 512, 2048 bins). Data augmentation techniques, common in computer vision, were applied to these spectrograms to enhance the robustness of the model. The findings demonstrate that the model, termed `Soundception', integrates time and time-frequency attention mechanisms effectively, significantly improving classification accuracy. The results highlight Soundception's outstanding performance, achieving a mean average precision (MAP) of 0.714 in classifying 1500 bird species, 0.616 MAP for background species, and 0.288 MAP for soundscapes with time-codes, making it the top model in the BirdClef2017 challenge across multiple tasks. However, limitations include the incomplete convergence of the model due to computational constraints and the extensive GPU resources required for training, which restricted the full potential realization within the challenge's timeframe. The paper concludes with a discussion on future improvements, such as exploring different scalable optimizations and incorporating stacked GRU layers for better audio-to-image representation learning, underscoring the potential of transfer learning from advanced image classification models to acoustic domains\\
 
-G. Cohen et all present the significance of good benchmarks and standardized problems in machine learning and computer vision, particularly in the context of rapid advancements in these fields. It emphasizes the need for diverse benchmark tasks to comprehensively evaluate learning approaches and techniques. The authors introduce a suite of datasets called Extended Modified NIST (EMNIST) derived from the NIST Special Database 19, with the intention of providing a more challenging classification task for neural networks and learning systems. The datasets are designed to be drop-in replacements for existing systems, aligning with the image specifications and file formats of the well-known MNIST dataset. The paper thoroughly documents the dataset conversion process and presents benchmark results to validate the datasets. However, it acknowledges that MNIST, though widely used, may have lost its relevance as a challenging benchmark due 
-to exceptionally high accuracies achieved by deep learning models, questioning the labeling integrity of the dataset. In contrast, the EMNIST datasets offer a more complex task that ensures the longevity of meaningful benchmarks in the field\cite{cohen2017emnist}.
+The research paper `Bird Species Identification using Deep Learning' presents a methodology using Deep Convolutional Neural Networks (DCNNs) to classify bird species, leveraging the Caltech-UCSD Birds 200 (CUB-200-2011) dataset, which contains 11,788 annotated images of 200 bird species. The methodology involves converting images to grey scale to reduce computational complexity, followed by the application of DCNNs using TensorFlow to extract hierarchical features from images such as edges, textures, and complex patterns. The neural network architecture includes convolutional layers for feature extraction, pooling layers for dimensionality reduction, activation layers for non-linearity, and fully connected layers for classification. Key findings show the DCNN model achieved a testing accuracy of 80\% and training accuracy of 93\%, with a validation accuracy of around 75\%, indicating robust performance across different data splits. The study highlights the effectiveness of combining multiple features (head, body, color, beak) over single-feature classification, with generated autographs and score sheets facilitating identification. The system's usability is enhanced through a web interface for image uploads, and future directions propose mobile app development and cloud integration to improve accessibility and scalability. However, the research also identifies limitations such as the dependency on the quality and diversity of the dataset, potential overfitting due to the complexity of the model, and the computational resources required for training deep learning models. Addressing these limitations could further enhance the model's accuracy and applicability in real-world scenarios.\\
+
+The research paper `Bird species classification from an Image using VGG-16 Network' utilizes machine learning and deep learning techniques has shown significant advancements in both methodology and accuracy. The primary focus has been on the creation and utilization of diverse datasets, with a notable example being the dataset of 1600 images across 27 bird species, as well as the Caltech-UCSD Birds-200-2011 Dataset. Methodologically, the use of Convolutional Neural Networks (CNNs), particularly the VGG-16 model, has been prevalent due to its effectiveness in feature extraction from images. This approach has been complemented by transfer learning techniques, which have notably improved classification accuracies, as seen in the use of pre-trained networks like AlexNet and VGG-16, achieving accuracies up to 85.4\% and 92.13\% respectively. The application of machine learning algorithms such as SVM with a linear kernel and KNN has also been explored, with SVM achieving an accuracy of 89\% after parameter optimization. Additionally, the integration of computer vision methods to extract Histogram Oriented Gradients and RGB histogram values has further enhanced classification performance. Despite these advancements, the studies have encountered limitations, including the challenge of accurately classifying bird species from various angles and positions, and the need for extensive preprocessing to remove noise from datasets. Overall, the body of work demonstrates a trend towards higher accuracy in bird species classification through the innovative use of deep learning techniques and sophisticated feature extraction methods, though challenges remain in dealing with the variability of natural images and the computational demands of processing large datasets.\\
+
+This research paper presents significant advancements in the field of `Automatic bird species identification through the integration of audio signal processing and neural networks'. The study, conducted by Chandu B, Akash Munikoti, Karthik S Murthy, Ganesh Murthy V, and Chaitra Nagaraj from the BNM Institute of Technology, outlines a robust methodology for identifying bird species from audio recordings, leveraging a combination of meticulously curated datasets and sophisticated machine learning techniques. The dataset, a critical component of the study, was manually compiled from both local recordings and online resources such as xeno-canto.com, featuring audio clips from species like cuckoo, sparrow, crow, and laughing dove, as well as ambient noise and human voices to simulate real-world conditions. Pre-processing techniques including pre-emphasis, framing, silence removal, and reconstruction were applied to the audio clips to enhance the relevant frequency components and eliminate unnecessary noise, ensuring the purity of the dataset. Spectrograms of these processed clips were generated and used as input for training a convolutional neural network (CNN), specifically AlexNet, chosen for its high accuracy in image classification tasks. Through transfer learning, AlexNet was adapted to recognize bird species from the spectrograms, achieving a classification accuracy of 97\% in controlled environments. However, recognizing the variability of real-world conditions, the researchers retrained the model with datasets containing ambient noise, achieving a real-time classification accuracy of 91\%. Despite these promising results, the study acknowledges limitations such as the relatively small size of the dataset and the need for further tuning of performance parameters to improve robustness. The potential for future applications is vast, including the development of mobile applications and hardware implementations for ecological monitoring, highlighting both the scientific and practical significance of automated bird species identification systems.\\
+
+The paper `An Ensemble of Convolutional Neural Networks for Audio Classification' delves into a comprehensive study on CNN classification using different architectures, data augmentation techniques, and audio signal representations, aimed at enhancing audio classification tasks across various datasets. The study employs three datasets: BIRDZ, CAT, and ESC-50, each offering unique challenges in audio classification. The methodology involves training five convolutional neural networks (CNNs) with four audio representations combined with six different data augmentation methods, resulting in thirty-five subtypes of ensembles. The audio representations include techniques such as the Discrete Gabor Transform (DGT), Waveform Similarity OverLap Add (WSOLA), and Phase Vocoder. The data augmentation methods encompass procedures like short spectrogram augmentation, random time shift, and frequency masking. The CNN architectures are pre-trained models fine-tuned with these augmented datasets to boost classification accuracy. The findings reveal that the ensemble method outperforms standalone networks, achieving 97\% accuracy on the BIRDZ dataset, 90.51\% on the CAT dataset, and 88.65\% on the ESC-50 dataset. The study also highlights that the best-performing CNNs are VGG16 and VGG19, with DGT as the most effective signal representation. However, the study acknowledges limitations, such as the computational cost of training ensembles and the variability in performance across different augmentation techniques. Notably, no single augmentation protocol consistently outperforms others across all datasets. The results underscore the potential of combining different CNNs and augmentation policies to enhance performance, although this approach demands significant computational resources. Additionally, the study provides the MATLAB source code for reproducibility, contributing to the research community's efforts in advancing audio classification technologies.\\
+
+The literature on `Bird species identification using deep learning techniques' provides a comprehensive exploration of the datasets, methodologies, findings, results, and limitations associated with this field. The study utilized the largest publicly available dataset, consisting of over 33,000 recordings of 999 different bird species, highlighting the substantial challenge due to the extensive diversity and volume of data. The methodology employed a convolutional neural network (CNN) architecture with five convolutional layers and one dense layer, utilizing rectified activation functions and max-pooling layers for feature extraction. Preprocessing involved separating sound files into signal and noise parts, computing their spectrograms, and dividing these into equally sized chunks to serve as training and testing samples. Data augmentation techniques, such as time shifts and pitch shifts, were crucial in enhancing the model's generalization capability. The results were notable, with the model achieving a mean average precision (MAP) score of 0.69 and an accuracy score of 0.58, marking the highest recorded performance in the BirdCLEF 2016 Recognition Challenge. Despite these successes, the study acknowledged several limitations, including the difficulty of distinguishing between multiple birds singing simultaneously and the challenges posed by variable recording lengths and background noise. Additionally, attempts to improve the model using methods like bi-directional LSTM recurrent neural networks and non-square filters did not yield better performance. Future improvements could involve using an ensemble of neural networks, incorporating meta-data such as date, time, and location, and addressing the disproportionate influence of longer files on the model's predictions.\\
+
+The literature review focused on the `analysis of bird call datasets sourced from Xeno-Canto', comprising 72,172 samples from 264 bird species in 16-bit wav format with a 16 kHz sampling rate. The methodology involved preprocessing the audio data to filter out low-frequency noise and normalize signal amplitude, followed by generating Mel-spectrograms and Mel-Frequency Cepstral Coefficients (MFCCs) as inputs for deep learning models. The Mel-spectrograms were produced using discrete Fourier transform (DFT), and the MFCCs were derived by applying discrete cosine transform (DCT) to the Mel-spectrogram. The study employed various metrics to evaluate the performance of these methods, including ROC analysis to visualize model effectiveness. Findings indicated that the proposed models showed significant promise in identifying bird species from their calls, with improvements in classification accuracy compared to previous approaches. However, limitations were noted, including potential biases in the dataset due to uneven sample distribution across species and the challenge of background noise affecting signal quality. Future work suggested enhancing noise reduction techniques and exploring more sophisticated neural network architectures to further improve model robustness and accuracy.\\
+
+The study conducted an in-depth analysis of `bird species recognition through acoustic monitoring', utilizing a robust dataset of bird sound samples, meticulously annotated and validated for accuracy. The dataset, referred to as SD, comprises multispecies bird sound recordings, each labeled with species name and sample ID, along with corresponding metadata, providing a comprehensive foundation for model training and evaluation. Methodologically, the research employed a spectrogram-based feature extraction approach, leveraging Short-Time Fourier Transform (STFT) to capture the intricate temporal and spectral characteristics of bird sounds. This was followed by the application of a Multilayer Perceptron (MLP) classifier to distinguish between different bird species. The findings reveal that the proposed model achieved high recognition accuracy, with some species being identified with perfect precision, recall, and accuracy (100\%), though the performance varied across species, with a few showing lower recognition rates (86.9\%) and precision/recall values ranging between 50-75\%. The results demonstrated an overall classification accuracy of 96\%, with cross-validation accuracy standing at 81.4\%, highlighting the model's robustness yet indicating room for improvement in generalizability across diverse datasets. Despite the promising results, the study acknowledges several limitations, including the variability in recognition accuracy among different species and the potential influence of environmental noise on model performance. Future work is suggested to explore feature and model fusion techniques, integrate the model with cloud-based systems for real-time recognition, and expand the dataset to include a broader range of bird species to enhance the model's applicability and accuracy in practical scenarios.\\
 \\
-The Hough Line Transformation is a powerful image processing technique that has found widespread application in computer vision, image analysis, and pattern recognition. Proposed by Paul Hough in 1962, this method was initially designed for detecting straight lines in binary images, providing a robust solution to overcome the limitations of edge-based approaches. Over the years, researchers have extended and refined the Hough Line Transformation, making it a fundamental tool in computer vision for detecting and characterizing linear features in images. The Hough technique is particularly useful for computing a global description of features where the number of solution classes need not be known prior, given (possibly noisy) local measurements. The motivating idea behind the Hough technique for line detection is that each input measurement (e.g. coordinate point) indicates its contribution to a globally consistent solution (e.g. the physical line which gave rise to that image point)\cite{Ballard1982ComputerVision}. 
-
 \chapter{Methodology}
 \section*{}
 \begin{figure}[h]
@@ -555,7 +535,7 @@ We have completed the design and development of the system along with the requir
     %\label{fig:my_label}
 %\end{figure}
 
-
+\newpage
 
 %Reference
 \renewcommand\bibname{REFERENCES} % Change heading to References
