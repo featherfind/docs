@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  4 JUN 2024 00:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  4 JUN 2024 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**KECReport.tex
+**KECReport.tex --interaction=nonstopmode --synctex=1
 (./KECReport.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
@@ -881,7 +881,7 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 65.
-<images/logo.png, id=144, 102.3825pt x 102.3825pt>
+<images/logo.png, id=148, 102.3825pt x 102.3825pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
 Package pdftex.def Info: images/logo.png  used on input line 67.
@@ -896,7 +896,8 @@ Type  H <return>  for immediate help.
                                                   
 l.67 \KECcoverpage
                   
-? 
+? R
+OK, entering \nonstopmode...
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.png>]
@@ -909,7 +910,10 @@ Type  H <return>  for immediate help.
                                                   
 l.68 \KECtitlepage
                   
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -954,12 +958,6 @@ ac-ter Recog-ni-tion, Bi-na-riza-tion, Thresh-old-ing, De-nois-ing, Bound-
 
 ]
 Chapter 1.
-
-Overfull \hbox (94.92635pt too wide) in paragraph at lines 181--182
-\OT1/ptm/m/n/12 tion by the Jour-nal of Threat-ened Taxa. (https://threatenedta
-xa.org/index.php/JoTT/article/view/2855/3903) 
- []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -968,138 +966,133 @@ l.188
        [1
 
 ] [2] [3] [4]
-<images/GanttChart.png, id=274, 1204.5pt x 552.0625pt>
+<images/GanttChart.png, id=286, 1204.5pt x 552.0625pt>
 File: images/GanttChart.png Graphic file (type png)
 <use images/GanttChart.png>
-Package pdftex.def Info: images/GanttChart.png  used on input line 266.
+Package pdftex.def Info: images/GanttChart.png  used on input line 273.
 (pdftex.def)             Requested size: 421.58131pt x 193.22476pt.
 
-Overfull \hbox (4.74843pt too wide) in paragraph at lines 266--267
+Overfull \hbox (4.74843pt too wide) in paragraph at lines 273--274
  [][] 
  []
 
 [5 <./images/GanttChart.png>] [6] [7]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--311
+Underfull \hbox (badness 10000) in paragraph at lines 315--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--311
+Underfull \hbox (badness 10000) in paragraph at lines 315--318
 
  []
 
 [8
 
 ]
-
-LaTeX Warning: Citation `gautam2023audio' on page 9 undefined on input line 313
-.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
 [9]
-Overfull \hbox (2.80316pt too wide) in paragraph at lines 317--318
+Overfull \hbox (2.80316pt too wide) in paragraph at lines 324--325
 []\OT1/ptm/m/n/12 The re-search pa-per `Bird Species Iden-ti-fi-ca-tion us-ing 
 Deep Learn-ing' presents a method-
  []
 
 
-Overfull \hbox (6.63106pt too wide) in paragraph at lines 317--318
+Overfull \hbox (6.63106pt too wide) in paragraph at lines 324--325
 \OT1/ptm/m/n/12 lever-ag-ing the Caltech-UCSD Birds 200 (CUB-200-2011) dataset,
  which con-tains 11,788
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+
+LaTeX Warning: Citation `pahuja2021soundf' on page 14 undefined on input line 3
+34.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--336
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--336
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
-
- []
-
-[15]
+[14] [15]
 Chapter 3.
-<images/Methodology.png, id=326, 798.985pt x 1049.9225pt>
+<images/Methodology.png, id=352, 798.985pt x 1049.9225pt>
 File: images/Methodology.png Graphic file (type png)
 <use images/Methodology.png>
-Package pdftex.def Info: images/Methodology.png  used on input line 335.
+Package pdftex.def Info: images/Methodology.png  used on input line 340.
 (pdftex.def)             Requested size: 367.53755pt x 482.97021pt.
 [16
 
  <./images/Methodology.png>]
 
 LaTeX Warning: Citation `Ishfar2020DocumentDetection' on page 17 undefined on i
-nput line 340.
+nput line 345.
 
 
 LaTeX Warning: Citation `Ishfar2020DocumentDetection' on page 17 undefined on i
-nput line 347.
+nput line 352.
 
 [17]
 
 LaTeX Warning: Citation `Ishfar2020DocumentDetection' on page 18 undefined on i
-nput line 356.
+nput line 361.
 
-<images/Data_overview.png, id=336, 868.24374pt x 483.8075pt>
+<images/Data_overview.png, id=362, 868.24374pt x 483.8075pt>
 File: images/Data_overview.png Graphic file (type png)
 <use images/Data_overview.png>
-Package pdftex.def Info: images/Data_overview.png  used on input line 359.
+Package pdftex.def Info: images/Data_overview.png  used on input line 364.
 (pdftex.def)             Requested size: 390.70607pt x 217.71136pt.
 
 LaTeX Warning: Citation `Ishfar2020DocumentDetection' on page 18 undefined on i
-nput line 362.
+nput line 367.
 
-<images/EMNIST_Dataset.png, id=337, 713.66624pt x 150.5625pt>
+<images/EMNIST_Dataset.png, id=363, 713.66624pt x 150.5625pt>
 File: images/EMNIST_Dataset.png Graphic file (type png)
 <use images/EMNIST_Dataset.png>
-Package pdftex.def Info: images/EMNIST_Dataset.png  used on input line 366.
+Package pdftex.def Info: images/EMNIST_Dataset.png  used on input line 371.
 (pdftex.def)             Requested size: 321.14684pt x 67.75249pt.
-<images/CNN_model.png, id=338, 829.0975pt x 603.25375pt>
+<images/CNN_model.png, id=364, 829.0975pt x 603.25375pt>
 File: images/CNN_model.png Graphic file (type png)
 <use images/CNN_model.png>
-Package pdftex.def Info: images/CNN_model.png  used on input line 371.
+Package pdftex.def Info: images/CNN_model.png  used on input line 376.
 (pdftex.def)             Requested size: 373.09044pt x 271.46167pt.
 [18]
 
@@ -1109,91 +1102,91 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 NN_model.png>]
 
 LaTeX Warning: Citation `shelar2020named' on page 21 undefined on input line 41
-0.
+5.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--412
+Underfull \hbox (badness 10000) in paragraph at lines 415--417
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-14.
+19.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [21] [22] [23]
-<output/usecase.png, id=380, 492.84125pt x 597.23125pt>
+<output/usecase.png, id=406, 492.84125pt x 597.23125pt>
 File: output/usecase.png Graphic file (type png)
 <use output/usecase.png>
-Package pdftex.def Info: output/usecase.png  used on input line 424.
+Package pdftex.def Info: output/usecase.png  used on input line 429.
 (pdftex.def)             Requested size: 344.98651pt x 418.05902pt.
 
 [24 <./output/usecase.png>]
-<output/activity.jpg, id=387, 437.38406pt x 640.64343pt>
+<output/activity.jpg, id=413, 437.38406pt x 640.64343pt>
 File: output/activity.jpg Graphic file (type jpg)
 <use output/activity.jpg>
-Package pdftex.def Info: output/activity.jpg  used on input line 430.
+Package pdftex.def Info: output/activity.jpg  used on input line 435.
 (pdftex.def)             Requested size: 306.16675pt x 448.44734pt.
  [25 <./output/activity.jpg>]
-<images/SDLC.png, id=392, 845.1575pt x 502.87875pt>
+<images/SDLC.png, id=418, 845.1575pt x 502.87875pt>
 File: images/SDLC.png Graphic file (type png)
 <use images/SDLC.png>
-Package pdftex.def Info: images/SDLC.png  used on input line 439.
+Package pdftex.def Info: images/SDLC.png  used on input line 444.
 (pdftex.def)             Requested size: 380.31737pt x 226.29333pt.
  [26 <./images/SDLC.png>]
 Chapter 4.
 [27
 
 ]
-<output/original.jpg, id=405, 1541.76pt x 2055.68pt>
+<output/original.jpg, id=432, 1541.76pt x 2055.68pt>
 File: output/original.jpg Graphic file (type jpg)
 <use output/original.jpg>
-Package pdftex.def Info: output/original.jpg  used on input line 457.
+Package pdftex.def Info: output/original.jpg  used on input line 462.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/thresholded.jpg, id=406, 963.6pt x 1284.8pt>
+<output/thresholded.jpg, id=433, 963.6pt x 1284.8pt>
 File: output/thresholded.jpg Graphic file (type jpg)
 <use output/thresholded.jpg>
-Package pdftex.def Info: output/thresholded.jpg  used on input line 462.
+Package pdftex.def Info: output/thresholded.jpg  used on input line 467.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/closed.jpg, id=407, 963.6pt x 1284.8pt>
+<output/closed.jpg, id=434, 963.6pt x 1284.8pt>
 File: output/closed.jpg Graphic file (type jpg)
 <use output/closed.jpg>
-Package pdftex.def Info: output/closed.jpg  used on input line 470.
+Package pdftex.def Info: output/closed.jpg  used on input line 475.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/edges.jpg, id=408, 963.6pt x 1284.8pt>
+<output/edges.jpg, id=435, 963.6pt x 1284.8pt>
 File: output/edges.jpg Graphic file (type jpg)
 <use output/edges.jpg>
-Package pdftex.def Info: output/edges.jpg  used on input line 475.
+Package pdftex.def Info: output/edges.jpg  used on input line 480.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/hough_line.jpg, id=409, 963.6pt x 1284.8pt>
+<output/hough_line.jpg, id=436, 963.6pt x 1284.8pt>
 File: output/hough_line.jpg Graphic file (type jpg)
 <use output/hough_line.jpg>
-Package pdftex.def Info: output/hough_line.jpg  used on input line 483.
+Package pdftex.def Info: output/hough_line.jpg  used on input line 488.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/intersection_point_output.jpg, id=410, 963.6pt x 1284.8pt>
+<output/intersection_point_output.jpg, id=437, 963.6pt x 1284.8pt>
 File: output/intersection_point_output.jpg Graphic file (type jpg)
 <use output/intersection_point_output.jpg>
 Package pdftex.def Info: output/intersection_point_output.jpg  used on input li
-ne 488.
+ne 493.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
 
-Underfull \hbox (badness 1097) in paragraph at lines 489--489
+Underfull \hbox (badness 1097) in paragraph at lines 494--494
 []\OT1/ptm/m/n/12 Figure 4.6: |In-ter-sec-tion
  []
 
-<output/grouped.jpg, id=411, 963.6pt x 1284.8pt>
+<output/grouped.jpg, id=438, 963.6pt x 1284.8pt>
 File: output/grouped.jpg Graphic file (type jpg)
 <use output/grouped.jpg>
-Package pdftex.def Info: output/grouped.jpg  used on input line 497.
+Package pdftex.def Info: output/grouped.jpg  used on input line 502.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 498--498
+Underfull \hbox (badness 10000) in paragraph at lines 503--503
 []\OT1/ptm/m/n/12 Figure 4.7: |K-means
  []
 
-<output/output.jpg, id=412, 730.73pt x 1028.84375pt>
+<output/output.jpg, id=439, 730.73pt x 1028.84375pt>
 File: output/output.jpg Graphic file (type jpg)
 <use output/output.jpg>
-Package pdftex.def Info: output/output.jpg  used on input line 502.
+Package pdftex.def Info: output/output.jpg  used on input line 507.
 (pdftex.def)             Requested size: 125.05113pt x 176.06284pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1201,41 +1194,47 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [28 <./output/original.jpg> <./output/thresholded.jpg> <./output/closed.jpg> <.
 /output/edges.jpg> <./output/hough_line.jpg> <./output/intersection_point_outpu
 t.jpg>]
-<output/home.jpg, id=417, 658.71094pt x 1355.0625pt>
+<output/home.jpg, id=444, 658.71094pt x 1355.0625pt>
 File: output/home.jpg Graphic file (type jpg)
 <use output/home.jpg>
-Package pdftex.def Info: output/home.jpg  used on input line 512.
+Package pdftex.def Info: output/home.jpg  used on input line 517.
 (pdftex.def)             Requested size: 197.61479pt x 406.5219pt.
-<output/add.png, id=418, 658.71094pt x 1355.0625pt>
+<output/add.png, id=445, 658.71094pt x 1355.0625pt>
 File: output/add.png Graphic file (type png)
 <use output/add.png>
-Package pdftex.def Info: output/add.png  used on input line 518.
+Package pdftex.def Info: output/add.png  used on input line 523.
 (pdftex.def)             Requested size: 197.61479pt x 406.5219pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [29 <./output/grouped.jpg> <./output/output.jpg> <./output/home.jpg>] [30 <./ou
-tput/add.png>]
-No file KECReport.bbl.
+tput/add.png>] (./KECReport.bbl [31
+
+])
 ! Too many }'s.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.550 \end{figure}
+l.555 \end{figure}
                   
-? 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 ! Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
-l.550 \end{figure}
+l.555 \end{figure}
                   
-? 
+Things are pretty mixed up, but I think the worst is over.
+
 ! Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.550 \end{figure}
+l.555 \end{figure}
                   
-? 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -1243,30 +1242,34 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.550 \end{figure}
+l.555 \end{figure}
                   
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.550 \end{figure}
+l.555 \end{figure}
                   
-? 
-(./KECReport.aux)
+Things are pretty mixed up, but I think the worst is over.
+
+[32] (./KECReport.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `KECReport.out' has not changed.
-(rerunfilecheck)             Checksum: DBBE906F1A8B8F6AB30E06B7BBCCD000;4874.
+(rerunfilecheck)             Checksum: 2C0AF588799D89F45B84DAE7904C98E1;4966.
  ) 
 Here is how much of TeX's memory you used:
- 17422 strings out of 478287
- 319603 string characters out of 5849289
- 595243 words of memory out of 5000000
- 35272 multiletter control sequences out of 15000+600000
- 490679 words of font info for 69 fonts, out of 8000000 for 9000
+ 17455 strings out of 478287
+ 320157 string characters out of 5849289
+ 595612 words of memory out of 5000000
+ 35289 multiletter control sequences out of 15000+600000
+ 490681 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,82p,2116b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,11n,82p,2183b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
@@ -1276,10 +1279,10 @@ ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on KECReport.pdf (37 pages, 2720489 bytes).
+Output written on KECReport.pdf (39 pages, 2724951 bytes).
 PDF statistics:
- 502 PDF objects out of 1000 (max. 8388607)
- 412 compressed objects within 5 object streams
- 113 named destinations out of 1000 (max. 500000)
- 376 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 543 PDF objects out of 1000 (max. 8388607)
+ 451 compressed objects within 5 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 384 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,7 +5,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Problem Statement}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Objectives}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Objectives}{2}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Application Scope}{3}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Features}{3}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Feasibility Study}{4}{section.1.6}%
@@ -36,3 +36,4 @@
 \contentsline {section}{\numberline {4.1}Result}{27}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Work Done}{27}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Work Remaining}{30}{section.4.3}%
+\contentsline {chapter}{References}{31}{Item.20}%
