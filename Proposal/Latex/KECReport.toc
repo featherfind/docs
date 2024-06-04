@@ -22,24 +22,25 @@
 \contentsline {chapter}{\numberline {3}Methodology}{15}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Working Mechanism}{16}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Dataset}{16}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Data Preprocessing}{16}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Data Splitting}{17}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Data Augmentation}{17}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Audio Splitting}{17}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Feature Extraction}{18}{subsection.3.1.6}%
-\contentsline {subsubsection}{Spectrogram}{18}{subsection.3.1.6}%
-\contentsline {subsubsection}{Mel-Frequency Cepstral Coefficients (MFCC)}{18}{equation.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.7}Convolutional Neural Networks (CNN)}{19}{subsection.3.1.7}%
-\contentsline {subsection}{\numberline {3.1.8}Long Short-Term Memory Networks (LSTM)}{20}{subsection.3.1.8}%
-\contentsline {subsection}{\numberline {3.1.9}Combined CNN and LSTM (CNN+LSTM)}{22}{subsection.3.1.9}%
-\contentsline {section}{\numberline {3.2}Hyperparameter Optimization using Genetic Algorithm}{22}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Algorithm Used}{24}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Genetic Algorithm}{24}{subsection.3.3.1}%
-\contentsline {subsubsection}{Fitness Function}{24}{ALC@unique.9}%
-\contentsline {section}{\numberline {3.4}System Diagrams}{25}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Software Development Model}{27}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Result And Discussion}{28}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Result}{28}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Work Done}{28}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Work Remaining}{31}{section.4.3}%
-\contentsline {chapter}{References}{32}{Item.21}%
+\contentsline {subsection}{\numberline {3.1.2}Dataset Overview}{17}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Data Preprocessing}{17}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Data Splitting}{17}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Data Augmentation}{18}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Audio Splitting}{18}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Feature Extraction}{18}{subsection.3.1.7}%
+\contentsline {subsubsection}{Spectrogram}{19}{subsection.3.1.7}%
+\contentsline {subsubsection}{Mel-Frequency Cepstral Coefficients (MFCC)}{19}{equation.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.8}Convolutional Neural Networks (CNN)}{20}{subsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.1.9}Long Short-Term Memory Networks (LSTM)}{21}{subsection.3.1.9}%
+\contentsline {subsection}{\numberline {3.1.10}Combined CNN and LSTM (CNN+LSTM)}{23}{subsection.3.1.10}%
+\contentsline {section}{\numberline {3.2}Hyperparameter Optimization using Genetic Algorithm}{23}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Algorithm Used}{25}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Genetic Algorithm}{25}{subsection.3.3.1}%
+\contentsline {subsubsection}{Fitness Function}{25}{ALC@unique.9}%
+\contentsline {section}{\numberline {3.4}System Diagrams}{26}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Software Development Model}{28}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Result And Discussion}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Result}{29}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Work Done}{29}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Work Remaining}{32}{section.4.3}%
+\contentsline {chapter}{References}{33}{Item.21}%
