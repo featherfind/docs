@@ -74,4 +74,14 @@ H.~Wang, Y.~Xu, Y.~Yu, Y.~Lin, and J.~Ran, ``An efficient model for a vast
   number of bird species identification based on acoustic features,''
   \emph{Animals}, vol.~12, no.~18, p. 2434, 2022.
 
+\bibitem{pahuja2021sound}
+R.~Pahuja and A.~Kumar, ``Sound-spectrogram based automatic bird species
+  recognition using mlp classifier,'' \emph{Applied Acoustics}, vol. 180, p.
+  108077, 2021.
+
+\bibitem{9058307}
+A.~Reiling, W.~Mitchell, S.~Westberg, E.~Balster, and T.~Taha, ``Cnn
+  optimization with a genetic algorithm,'' in \emph{2019 IEEE National
+  Aerospace and Electronics Conference (NAECON)}, 2019, pp. 340--344.
+
 \end{thebibliography}

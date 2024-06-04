@@ -1,7 +1,5 @@
 \include{KECReportFormat} %includes the file KecReportFormat.tex that include all  necessary formattings
 \usepackage{amsmath}
-\usepackage{algorithm}
-\usepackage{algorithmic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Define Macros for Details of your Project
 \newcommand{\project}{Major Project } %Specify "Major Project" or "Minor Project"
@@ -269,7 +267,7 @@ technically possible if one has the necessary information and resources.
 % \newpage
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.4]{images/GanttChart.png}
+    \includegraphics[scale=0.35]{images/GanttChart.png}
     \caption{Gantt Chart}\label{fig:my_label}
 \end{figure}
 \section{System Requirements}
@@ -288,7 +286,7 @@ technically possible if one has the necessary information and resources.
         IDEs: VSCode, Android Studio & Storage: \(>\)= 50 GB\\ \hline
     \end{tabular}
 \end{table}
-
+\newpage
 \subsection{Deployment Requirements}
 \begin{table}[ht]
     \centering
@@ -334,273 +332,94 @@ The literature review focused on the `analysis of bird call datasets sourced fro
 The study conducted an in-depth analysis of `bird species recognition through acoustic monitoring', utilizing a robust dataset of bird sound samples, meticulously annotated and validated for accuracy. The dataset, referred to as SD, comprises multispecies bird sound recordings, each labeled with species name and sample ID, along with corresponding metadata, providing a comprehensive foundation for model training and evaluation. Methodologically, the research employed a spectrogram-based feature extraction approach, leveraging Short-Time Fourier Transform (STFT) to capture the intricate temporal and spectral characteristics of bird sounds. This was followed by the application of a Multilayer Perceptron (MLP) classifier to distinguish between different bird species. The findings reveal that the proposed model achieved high recognition accuracy, with some species being identified with perfect precision, recall, and accuracy (100\%), though the performance varied across species, with a few showing lower recognition rates (86.9\%) and precision/recall values ranging between 50-75\%. The results demonstrated an overall classification accuracy of 96\%, with cross-validation accuracy standing at 81.4\%, highlighting the model's robustness yet indicating room for improvement in generalizability across diverse datasets. Despite the promising results, the study acknowledges several limitations, including the variability in recognition accuracy among different species and the potential influence of environmental noise on model performance. Future work is suggested to explore feature and model fusion techniques, integrate the model with cloud-based systems for real-time recognition, and expand the dataset to include a broader range of bird species to enhance the model's applicability and accuracy in practical scenarios.\cite{pahuja2021sound}\\
 \\
 \chapter{Methodology}
-% \section*{}
-\begin{figure}[h!]
+\section*{}
+\begin{figure}[h]
     \centering
-        \includegraphics[scale=0.37]{images/Methodology.png}
+        \includegraphics[scale=0.46]{images/Methodology.png}
         \caption{Block diagram for the working mechanism of the system}%\label{fig:fig1}
     \end{figure}
 \newpage
 \section{Working Mechanism}
-The methodology for the project "Bird Classification from Audio" as outlined in the provided paper involves a comprehensive approach that spans from data collection to the implementation of a novel deep learning model. This methodology is designed to accurately classify bird species based on their calls, leveraging advanced signal processing and machine learning techniques. The following sections detail the methodology:
-
-\subsection{Dataset}
-
-For this project, we are using the CharaNet dataset, which is specifically curated to include audio files of Nepal's endangered bird species. This dataset was collected from \textit{xeno-canto.org}, a platform where bird sounds from around the world are shared by contributors who travel extensively to capture these sounds. From this source, we gathered 2215 audio recordings representing 41 bird species, 38 of which are listed as endangered in Nepal.
-
-To augment the dataset, we employed a 10-second split method, which expanded the dataset to 6733 audio recordings. Additionally, for bird species with fewer than 30 recordings, we added Gaussian noise to further increase the number of samples. This resulted in a robust dataset comprising 5407 audio recordings for training, 639 for validation, and 687 for testing. This comprehensive dataset ensures that our model can learn effectively and generalize well to new, unseen data.
-
-\subsection{Data Preprocessing}
-
-The collected audio data undergoes thorough preprocessing to ensure its suitability for model training. This process includes:
-\begin{itemize}
-    \item \textbf{Cleaning:} Removing any background noise and irrelevant sounds that could interfere with the training process.
-    \item \textbf{Segmentation:} Dividing the continuous audio recordings into smaller, more manageable segments, ensuring consistency in input length.
-    \item \textbf{Labeling:} Assigning the correct bird species labels to each audio segment, which is crucial for supervised learning.
-\end{itemize}
-
-\subsection{Data Splitting}
-
-After preprocessing, the data is split into three sets:
-\begin{itemize}
-    \item \textbf{Training Data:} Used to train the machine learning models.
-    \item \textbf{Testing Data:} Used to evaluate the model's performance during training.
-    \item \textbf{Validation Data:} Used to validate the final model's performance and prevent overfitting.
-\end{itemize}
-
-This structured approach ensures that the model can learn effectively from the training data while being evaluated on unseen data to measure its generalization capabilities.
-
-\subsection{Data Augmentation}
-
-To further enhance the robustness of the model, data augmentation techniques are applied to the training data. This includes adding various types of noise to the audio segments to create more diverse training samples and prevent the model from overfitting to specific patterns in the data.
-\begin{eqnarray}
-    \text{Augmented Data} = \text{Original Data} + \text{Noise} 
-\end{eqnarray}
-
-By introducing these variations, the model becomes more resilient to different audio conditions and better at generalizing to new recordings.
-
-\subsection{Audio Splitting}
-
-The augmented audio data is then split into smaller 3-second clips. This standardization ensures that the input size remains consistent, which is essential for the feature extraction and modeling stages.
-
-\subsection{Feature Extraction}
-
-Feature extraction is a critical step where the audio clips are transformed into a format that can be fed into machine learning models. We use two primary techniques for feature extraction: Spectrograms and Mel-Frequency Cepstral Coefficients (MFCC).
-
-\subsubsection{Spectrogram}
-
-A spectrogram is a visual representation of the spectrum of frequencies in a sound signal as they vary with time. It is generated by applying the Short-Time Fourier Transform (STFT) to the audio signal. This transformation provides insight into how the frequency content of the signal changes over time.
-\begin{eqnarray}
-    X(n) = \sum_{m=0}^{N-1} x(m) \cdot w(n-m) 
-\end{eqnarray}
-% \[
-% X(n) = \sum_{m=0}^{N-1} x(m) \cdot w(n-m)
-% \]
-
-where \( x(m) \) is the audio signal and \( w(n) \) is the window function.
-
-\subsubsection{Mel-Frequency Cepstral Coefficients (MFCC)}
-
-MFCCs are coefficients that collectively describe the short-term power spectrum of a sound signal. The process of obtaining MFCCs involves several steps:
-\begin{figure}[h!]
+The methodology diagram is shown above fig no. 3.1 which consists of several stages such as image acquisition i.e.testing image, pre-processing (grayscale conversion, binarization, document detection), segmentation (lines, words, and characters), feature extraction, and classification using CNN layers into\cite{Ishfar2020DocumentDetection} character classes.
+\subsection{Image Acquisition}
+The first step is to obtain a handwritten script through  scanning physical documentation or images using a camera.
+\subsection{Pre-processing}
+It is essential to enhance the quality and prepare the image for further analysis. This step includes Grayscale Conversion, Binarization, Noise Removal and skew correction. Grayscale conversion is used to reduce complexity of handling multiple color channels ( 24-bit to 8-bit). Binarization is used to convert grayscale images into black and white to make it easier for segmentation.\newline
+Noise removal is used to remove unwanted variations in pixel intensity that degrade image quality. The proposed method uses a median filter to efficiently remove salt and pepper noise. This filter sorts adjacent pixel values and replaces the current pixel value with the median, reducing the noise and improving image.
+\subsection{Document Detection}
+The document detection is used for auto-cropping the image and correcting the perspective angle of the page of interest. For that quadrilateral points are obtained through the merged process of canny edge detection and hough transformation then KMeans Clustering that clusters the intersection points into 4 groups which are the quadrilaterals. Then through the quadrilaterals, perspective transformation is performed to get a good perspective of the page\cite{Ishfar2020DocumentDetection}.
+\subsection{Segmentation}
+In the segmentation process, we first tackle Line Segmentation, where the input image is analyzed to identify lines of text. By finding dark centroids in the image, we can mark the positions of each line. We employ a projection profile-based algorithm for this task and address the issue of skewed text by applying skew correction techniques.\newline 
+Moving on to Word Segmentation, our approach involves morphological dilation, which allows us to connect individual characters in a line, ultimately helping us to extract separate words. Using labeling techniques, we efficiently isolate and extract words from the connected components.\newline 
+Character Segmentation is a crucial step, particularly for cursive handwriting. To address the challenges of cursive characters, we implement skeletonization and vertical projection techniques to detect potential segmentation points. A distance-based approach is utilized to avoid over-segmentation, ensuring that characters like 'm', 'n', 'u', 'v', 'w', etc., are correctly identified. For untouched characters, a vertical projection is employed to identify spaces between characters, facilitating their separation.\newline
+Through these segmentation processes, we break down the handwriting image into lines, words, and individual characters, which is essential for accurate and efficient handwriting recognition.
+\subsection{Features Extraction}
+Feature extraction involves identifying important image features and saving them for further processing. It bridges the gap between pictorial and data representation in image processing. The proposed method employs a Convolutional Neural Network (CNN) for effective feature extraction, making the process more efficient and accurate.
+\subsubsection{Training of Convolutional Neural Network}
+The configured layers of Convolution Neural Network are shown below. To train the neural network, the dataset is divided into two sets: the training data and the testing data. The complex handwritten character dataset has data format of 28x28 ".png" format picture. The data set has a total of 62 categories of 0-9, a-z and A-Z, corresponding to the files "0" to "61" in the order of "label.txt". The data set is divided into two parts, the unprocessed original data image is stored in the "0" to "61" in the "V0.3/data" folder, and the binarized data image Stored in "0" to "61" in the "V0.3/data-bin" folder\cite{Ishfar2020DocumentDetection}.
+\begin{figure}[h]
     \centering
-        \includegraphics[scale=0.5]{images/MFCC.jpg}
-        \caption{Feature Extraction Using Spectrogram and MFCC}%\label{fig:fig1}
+        \includegraphics[scale=0.45]{images/Data_overview.png}
+        \caption{Dataset overview for the A good CHoiCe}%\label{fig:fig1}
     \end{figure}
-\begin{enumerate}
-    \item \textbf{Framing:} Divide the audio signal into short frames.
-    \item \textbf{Discrete Fourier Transform (DFT):} Convert each frame to the frequency domain.
-    \begin{eqnarray}
-        X(k) = \sum_{n=0}^{N-1} x(n) \cdot e^{-j \frac{2\pi}{N} kn}
-    \end{eqnarray}
-    
+    The EMNIST also has 62 character classes divided into digit classes and letter classes containing a total 814,255 samples\cite{Ishfar2020DocumentDetection}.
+    \begin{figure}[h]
 
-    \item \textbf{Log Function:} Apply a logarithm to the amplitude spectrum.
-    \begin{eqnarray}
-        S_{\text{log}}(k) = \log(|X(k)|)
-    \end{eqnarray}
-    
-
-    \item \textbf{Mel-Scaling:} Map the frequencies to the Mel scale, which better represents how humans perceive sound.
-    \begin{eqnarray}
-        f_{\text{mel}} = 2595 \cdot \log_{10}(1 + \frac{f}{700})
-    \end{eqnarray}
-    
-
-    \item \textbf{Discrete Cosine Transform (DCT):} Convert the Mel spectrum to the cepstral domain, yielding the MFCC features.
-    \begin{eqnarray}
-        C(n) = \sum_{k=0}^{K-1} S_{\text{mel}}(k) \cdot \cos \left( \frac{\pi n (k+0.5)}{K} \right)
-    \end{eqnarray}
-   
-
-\end{enumerate}
-
-\subsection{Convolutional Neural Networks (CNN)}
-
-Convolutional Neural Networks (CNNs) are highly effective for extracting spatial features from spectrograms, making them well-suited for audio classification tasks. CNNs use convolutional layers to detect patterns and features in the input data by applying convolutional filters across the input spectrogram.
-
-\begin{figure}[h!]
-    \centering
-        \includegraphics{images/Convolution.png}
-        \caption{CNN architecture}%\label{fig:fig1}
-        % citation link: https://medium.com/techiepedia/binary-image-classifier-cnn-using-tensorflow-a3f5d6746697
-    \end{figure}
-
-The basic operations involved in a CNN include:
-\begin{itemize}
-    \item \textbf{Convolution:} This operation involves applying a set of learnable filters (kernels) across the input spectrogram to produce feature maps.
-    \begin{eqnarray}
-        (f * x)(t) = \sum_{\tau = -\infty}^{\infty} x(\tau) \cdot f(t - \tau)
-    \end{eqnarray}
-    
-    \item \textbf{Activation Function:} The rectified linear unit (ReLU) activation function is applied to introduce non-linearity into the model.
-    \begin{eqnarray}
-        f(x) = \max(0, x)
-    \end{eqnarray}
-    
-    \item \textbf{Pooling:} Pooling layers reduce the spatial dimensions of the feature maps, typically using max pooling to retain the most significant features.
-    \item \textbf{Fully Connected Layers:} After several convolutional and pooling layers, the feature maps are flattened and passed through fully connected layers to produce the final classification output.
-\end{itemize}
-
-\subsection{Long Short-Term Memory Networks (LSTM)}
-
-Long Short-Term Memory (LSTM) networks are a type of recurrent neural network (RNN) capable of capturing temporal dependencies in sequential data. This makes them well-suited for processing audio signals where the order of data points matters. LSTMs are designed to overcome the limitations of traditional RNNs by addressing the vanishing gradient problem through the use of gates that regulate the flow of information.
-
-\begin{figure}[h!]
-    \centering
-        \includegraphics[scale=0.4]{images/LSTM.png}
-        % citation link: https://medium.com/@ottaviocalzone/an-intuitive-explanation-of-lstm-a035eb6ab42c
-        \caption{LSTM architecture}%\label{fig:fig1}
-    \end{figure}
-
-
-
-The key components of an LSTM cell include:
-\begin{itemize}
-    \item \textbf{Forget Gate:} Determines which information from the previous cell state should be discarded.
-    \begin{eqnarray}
-        f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
-    \end{eqnarray}
-    
-    \item \textbf{Input Gate:} Decides which new information should be added to the cell state.
-    \begin{eqnarray}
-        i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)    
-    \end{eqnarray}
-
-    \item \textbf{Candidate Cell State:} Creates new candidate values that could be added to the cell state.
-    \begin{eqnarray}
-        \tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)        
-    \end{eqnarray}
-    
-    \item \textbf{Cell State:} The cell state is updated based on the input gate and the forget gate.
-    \begin{eqnarray}
-        C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t        
-    \end{eqnarray}
-    
-    \item \textbf{Output Gate:} Determines the output of the LSTM cell.
-    \begin{eqnarray}
-        o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)        
-    \end{eqnarray}
-    
-    \begin{eqnarray}
-        h_t = o_t \cdot \tanh(C_t)        
-    \end{eqnarray}
-   
-\end{itemize}
-
-\subsection{Combined CNN and LSTM (CNN+LSTM)}
-A hybrid model that leverages the strengths of both CNN and LSTM architectures is developed. In this combined model, the CNN processes spectrograms to extract spatial features, which are then fed into LSTM layers to capture temporal patterns. The integration of these two models aims to utilize both spatial and temporal information, thereby improving the overall classification accuracy. Fully connected layers at the end perform the final classification based on the features extracted by both CNN and LSTM components.
-
-
-\section{Hyperparameter Optimization using Genetic Algorithm}
-Genetic algorithms (GAs) are a powerful method for optimizing hyperparameters in machine learning models. Genetic Algorithm have proven to significantly improve the performance metrics of the CNN model instead of using hand tuned approach for hyperparameters. This section outlines the steps involved in using GAs for hyperparameter optimization\cite{9058307}.
-\begin{itemize}
-    \item \textbf{Encoding the Hyperparameters}
-    \begin{itemize}
-        \item Hyperparameters are represented as a chromosome, where each hyperparameter is a gene in the chromosome.
-        \item For example, in a neural network, a chromosome might include genes for the learning rate, number of layers, number of neurons per layer, and activation functions.
-    \end{itemize}
-
-
-    \item \textbf{Initial Population}
-    \begin{itemize}
-        \item An initial population of chromosomes is generated randomly, with each chromosome representing a different set of hyperparameters.
-    \end{itemize}
-
-    \item \textbf{Fitness Function}
-    \begin{itemize}
-        \item A fitness function is defined to evaluate the performance of each set of hyperparameters.
-        \item This typically involves training the model with the given hyperparameters and measuring its performance on a validation set.
-    \end{itemize}
-
-    \item \textbf{Selection}
-    \begin{itemize}
-        \item Selection involves choosing the best-performing chromosomes to serve as parents for the next generation.
-        \item Various selection methods can be employed, such as tournament selection, roulette wheel selection, or rank-based selection.
-    \end{itemize}
-
-    \item \textbf{Crossover (Recombination)}
-    \begin{itemize}
-        \item Crossover combines pairs of parent chromosomes to produce offspring for the next generation.
-        \item This is done by swapping segments of parent chromosomes to create new chromosomes, thereby combining features of both parents.
-    \end{itemize}
-
-    \item \textbf{Mutation}
-    \begin{itemize}
-        \item Mutation introduces random changes to some of the genes in the offspring chromosomes.
-        \item This helps maintain genetic diversity in the population and allows the algorithm to explore a broader search space.
-    \end{itemize}
-
-    \item \textbf{Replacement}
-    \begin{itemize}
-        \item The current population is partially or entirely replaced with the new generation of chromosomes, ensuring that better solutions are carried forward while allowing for exploration of new possibilities.
-    \end{itemize}
-
-    \item \textbf{Termination}
-    \begin{itemize}
-        \item The process of selection, crossover, mutation, and replacement is repeated until a termination criterion is met.
-        \item This could be a set number of generations, convergence of fitness scores, or achieving a satisfactory performance level.
-    \end{itemize}
-
-    \item \textbf{Best Solution}
-    \begin{itemize}
-        \item The best chromosome at the end of the process represents the optimal or near-optimal set of hyperparameters for the model.
-    \end{itemize}
-\end{itemize}
-
-
-\section{Algorithm Used}
-
-\subsection{Genetic Algorithm}
-\begin{algorithm}[H]
-\caption{Genetic Algorithm for Hyperparameter Optimization}
-\begin{algorithmic}[1]
-\STATE Initialize the population with random hyperparameters.
-\FOR{generation = 1 to $N$}
-    \STATE Evaluate the fitness of each individual in the population.
-    \STATE Select individuals to be parents based on their fitness scores.
-    \STATE Generate offspring through crossover.
-    \STATE Apply mutation to the offspring.
-    \STATE Replace the old population with the new generation.
-\ENDFOR
-\STATE Return the best solution found.
-\end{algorithmic}
-\end{algorithm}
-
-\subsubsection{Fitness Function}
-The fitness function evaluates the performance of hyperparameters by training and validating the model:
-
-\begin{algorithm}[H]
-\caption{Fitness Function}
-\begin{algorithmic}[1]
-\STATE Train the model with given hyperparameters.
-\STATE Evaluate the model's performance on a validation set.
-\RETURN Performance metric (e.g., accuracy, F1 score).
-\end{algorithmic}
-\end{algorithm}
-
-
+        \centering
+            \includegraphics[scale=0.45]{images/EMNIST_Dataset.png}
+            \caption{Visual representation of E MNIST dataset}%\label{fig:fig1}
+        \end{figure}  
+    \begin{figure}[h!]
+        \centering
+            \includegraphics[scale=0.45]{images/CNN_model.png}
+            \caption{Configured layers of Convolution Neural Network}%\label{fig:fig1}
+        \end{figure} 
+    \newpage
 \newpage
+\subsubsection{Document Recognition} 
+The neural network used for image recognition involves four primary operations: Convolution, Non-Linearity (ReLU), Pooling, and Fully Connected Layer.
+\begin{enumerate}
+    
+    \item Convolution: The convolution operation extracts features from the input image M using a filter matrix N. The resulting feature map \( f_{\text{con}}(k,l)\) can be calculated as follows:
+    \begin{eqnarray}
+        f_{\text{con}} = \text{convolution}(m,n) 
+    \end{eqnarray}
+     \begin{eqnarray}
+         (m\bigotimes n)(k,l) = \sum_{m} \sum_{n}    M(m,n)  N(k-m,l-n) \quad
+     \end{eqnarray}   
+        
+    
+    
+    
+    \item Non-Linearity (ReLU): The ReLU function is applied element-wise to the feature map to introduce non-linearity and obtain the rectified feature map frec(xk): 
+    \begin{eqnarray}
+    f_{\text{Rec}} = \text{ReLU}(x,l) = \max(0, x_k)  \quad
+    \end{eqnarray}   
+
+    \item Pooling: Pooling reduces feature map dimensionality while preserving important information. The Max pooling technique selects the maximum value from a defined spatial matrix (e.g. 2x2):
+    \begin{eqnarray}
+    f_{\text{pool}}(k,l) = \max(x_k)
+    \end{eqnarray}   
+
+    \item Fully Connected Layer: In this layer, all neurons are connected to each other, and the output is used for classification.\newline
+    Finally, the Softmax Layer outputs probabilities for each class of the handwritten characters. The Softmax function calculates the probability for an input element xk. belonging to label i as follows:
+    \begin{eqnarray}
+        p(O_i) = \text{softmax}(x_k) = \frac{\exp(x_k)}{\sum_{g = 1}^{y}   \exp(x_k)} 
+    \end{eqnarray}
+    
+    The Classification Layer then identifies the recognized character based on the highest probability assigned by the Softmax Layer.
+\end{enumerate}
+\subsection{Named Entity Extraction using spaCy}
+NER is a process in which anything that is denoted by a proper name or tag,for example, a location, an organization, or a person is identified as an entity.Named entities include things like geographical location, date, time, or money, and customization of the NER model for user-defined named entities is also possible\cite{shelar2020named}.\newline
+spaCy is a free, open source library that allows advanced Natural Language Processing in Python. This library will be used to extract the unique word which will be used as tags for the image while searching it. Unique words are generated through named entity recognition for which "en\_core\_web\_sm" is used, which is a linguistic model.\newline
+\section{Algorithm Used}
+\begin{itemize}
+    \item \textbf{Line Segmentation:} The Line Segmentation algorithm starts with image padding to avoid segmentation errors. It computes the horizontal projection to identify text regions and detects dark lanes using a threshold in the binary image. The algorithm labels and counts dark regions to determine total lines of text. Centroids are calculated for precise positioning and stored for further processing. x and y coordinates of centroids are extracted. Text regions are cropped based on consecutive y-coordinates for accurate segmentation, enabling proper division of each handwritten script line for improved recognition and analysis.
+    \item \textbf{Word Segmentation:} The Word Segmentation algorithm aims to extract individual words from previously segmented lines of handwritten text. It involves three steps: first, dilating the line image to expand the pixels and enhance visual distinction between connected components; second, labeling the connected components to identify distinct words; and finally, separating the labeled components to obtain individual images of each word. These separated images represent the segmented words of the handwritten text.
+    \item \textbf{Cursive Character Segmentation:} The Cursive Character Segmentation algorithm separates connected characters in a handwritten text image by skeletonizing the image and computing its vertical projection. It marks segmentation points using the "Segmentation Points" (SP) array, starting from the first character. For each column and row, it checks if certain conditions are met to identify connected characters. If these conditions are fulfilled, the algorithm stores the column in the SP array based on a threshold distance. After marking the segmentation points, it draws red lines on the word image for visualization and stores 0 in the rows of SP to disconnect the characters. This process paves the way for further character segmentation and recognition.
+    \item \textbf{Untouched Character Segmentation:} The Untouched Character Segmentation algorithm effectively segments individual characters in a handwritten text image that have not been separated previously. It begins by padding the image for better segmentation and computes the Vertical Projection (VP) to identify character zones. Applying a threshold to the binary image detects dark lanes between letters. Each dark region is labeled, and the total character count is determined. Centroids are calculated for precise character positioning, and their x and y coordinates are extracted. The algorithm then crops text regions assuming a line between consecutive x-coordinates, ensuring accurate character segmentation. Cropped regions are stored separately, facilitating proper segmentation for s subsequent recognition and analysis.
+  \end{itemize}
+  \newpage
 \section{System Diagrams}
 The usecase diagram and activity diagram for SNAPTAG are given below:
 \begin{figure}[h!]

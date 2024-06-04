@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  4 JUN 2024 12:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  5 JUN 2024 00:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,42 +756,61 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count301
 \enitdp@description=\count302
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks28
+\c@algorithm=\count303
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count304
+\c@ALC@line=\count305
+\c@ALC@rem=\count306
+\c@ALC@depth=\count307
+\ALC@tlm=\skip58
+\algorithmicindent=\skip59
+)
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 65.
+h' as default language. on input line 67.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 6
-5.
+7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (./KECReport.aux)
 \openout1 = `KECReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 67.
 LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 6
-5.
+7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    ... okay on input line 67.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -829,17 +848,17 @@ LaTeX Font Info:    ... okay on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count303
+\scratchcounter=\count308
 \scratchdimen=\dimen176
 \scratchbox=\box57
-\nofMPsegments=\count304
-\nofMParguments=\count305
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count306
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count311
 \MPscratchDim=\dimen177
-\MPnumerator=\count307
-\makeMPintoPDFobject=\count308
-\everyMPtoPDFconversion=\toks29
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks30
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -852,7 +871,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 65.
+Package hyperref Info: Link coloring OFF on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -863,11 +882,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count309
+\c@section@level=\count314
 )
-LaTeX Info: Redefining \ref on input line 65.
-LaTeX Info: Redefining \pageref on input line 65.
-LaTeX Info: Redefining \nameref on input line 65.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
 
 (./KECReport.out) (./KECReport.out)
 \@outlinefile=\write3
@@ -880,11 +899,11 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 65.
-<images/logo.png, id=148, 102.3825pt x 102.3825pt>
+or `english'. on input line 67.
+<images/logo.png, id=168, 102.3825pt x 102.3825pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
-Package pdftex.def Info: images/logo.png  used on input line 67.
+Package pdftex.def Info: images/logo.png  used on input line 69.
 (pdftex.def)             Requested size: 71.1361pt x 71.1361pt.
 
 
@@ -894,7 +913,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.67 \KECcoverpage
+l.69 \KECcoverpage
                   
 ? R
 OK, entering \nonstopmode...
@@ -908,7 +927,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 \KECtitlepage
+l.70 \KECtitlepage
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -918,24 +937,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68 \KECtitlepage
+l.70 \KECtitlepage
                    [1]
-Underfull \hbox (badness 10000) in paragraph at lines 89--106
+Underfull \hbox (badness 10000) in paragraph at lines 91--108
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 107
+LaTeX Font Info:    Trying to load font information for U+msa on input line 109
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 107
+LaTeX Font Info:    Trying to load font information for U+msb on input line 109
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (16.55275pt too wide) in paragraph at lines 107--108
+Overfull \hbox (16.55275pt too wide) in paragraph at lines 109--110
 []\OT1/ptm/m/it/12 Keywords$\OMS/cmsy/m/n/12 ^^@$\OT1/ptm/m/it/12 Optical Char-
 ac-ter Recog-ni-tion, Bi-na-riza-tion, Thresh-old-ing, De-nois-ing, Bound-
  []
@@ -962,21 +981,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.188 
+l.190 
        [1
 
 ] [2] [3] [4]
-<images/GanttChart.png, id=286, 1204.5pt x 552.0625pt>
+<images/GanttChart.png, id=312, 1002.74625pt x 423.5825pt>
 File: images/GanttChart.png Graphic file (type png)
 <use images/GanttChart.png>
-Package pdftex.def Info: images/GanttChart.png  used on input line 273.
-(pdftex.def)             Requested size: 421.58131pt x 193.22476pt.
+Package pdftex.def Info: images/GanttChart.png  used on input line 272.
+(pdftex.def)             Requested size: 401.0914pt x 169.43pt.
 
-Overfull \hbox (4.74843pt too wide) in paragraph at lines 273--274
- [][] 
- []
 
-[5 <./images/GanttChart.png>] [6] [7]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] [6 <./images/GanttChart.png>]
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 315--318
@@ -988,7 +1006,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 315--318
 
  []
 
-[8
+[7
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 320--321
@@ -1000,7 +1018,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
-[9]
+[8]
 Overfull \hbox (2.80316pt too wide) in paragraph at lines 324--325
 []\OT1/ptm/m/n/12 The re-search pa-per `Bird Species Iden-ti-fi-ca-tion us-ing 
 Deep Learn-ing' presents a method-
@@ -1017,17 +1035,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
-[10]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
-[11]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
-[12]
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
@@ -1037,12 +1055,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
-[13]
-
-LaTeX Warning: Citation `pahuja2021soundf' on page 14 undefined on input line 3
-34.
-
-
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 334--336
 
  []
@@ -1052,170 +1065,162 @@ Underfull \hbox (badness 10000) in paragraph at lines 334--336
 
  []
 
-[14] [15]
+[13] [14]
 Chapter 3.
-<images/Methodology.png, id=352, 798.985pt x 1049.9225pt>
+<images/Methodology.png, id=375, 1173.38374pt x 1660.2025pt>
 File: images/Methodology.png Graphic file (type png)
 <use images/Methodology.png>
 Package pdftex.def Info: images/Methodology.png  used on input line 340.
-(pdftex.def)             Requested size: 367.53755pt x 482.97021pt.
-[16
+(pdftex.def)             Requested size: 434.14519pt x 614.26532pt.
+
+Overfull \hbox (17.3123pt too wide) in paragraph at lines 340--341
+ [][] 
+ []
+
+[15
 
  <./images/Methodology.png>]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
+57.
 
-LaTeX Warning: Citation `Ishfar2020DocumentDetection' on page 17 undefined on i
-nput line 345.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [16] [17]
+<images/MFCC.jpg, id=391, 814.04124pt x 312.16624pt>
+File: images/MFCC.jpg Graphic file (type jpg)
+<use images/MFCC.jpg>
+Package pdftex.def Info: images/MFCC.jpg  used on input line 407.
+(pdftex.def)             Requested size: 407.01962pt x 156.08273pt.
+ [18 <./images/MFCC.jpg>]
+<images/Convolution.png, id=402, 437.38406pt x 216.05719pt>
+File: images/Convolution.png Graphic file (type png)
+<use images/Convolution.png>
+Package pdftex.def Info: images/Convolution.png  used on input line 444.
+(pdftex.def)             Requested size: 437.38298pt x 216.05664pt.
 
+Overfull \hbox (20.5501pt too wide) in paragraph at lines 444--445
+ [][] 
+ []
 
-LaTeX Warning: Citation `Ishfar2020DocumentDetection' on page 17 undefined on i
-nput line 352.
-
-[17]
-
-LaTeX Warning: Citation `Ishfar2020DocumentDetection' on page 18 undefined on i
-nput line 361.
-
-<images/Data_overview.png, id=362, 868.24374pt x 483.8075pt>
-File: images/Data_overview.png Graphic file (type png)
-<use images/Data_overview.png>
-Package pdftex.def Info: images/Data_overview.png  used on input line 364.
-(pdftex.def)             Requested size: 390.70607pt x 217.71136pt.
-
-LaTeX Warning: Citation `Ishfar2020DocumentDetection' on page 18 undefined on i
-nput line 367.
-
-<images/EMNIST_Dataset.png, id=363, 713.66624pt x 150.5625pt>
-File: images/EMNIST_Dataset.png Graphic file (type png)
-<use images/EMNIST_Dataset.png>
-Package pdftex.def Info: images/EMNIST_Dataset.png  used on input line 371.
-(pdftex.def)             Requested size: 321.14684pt x 67.75249pt.
-<images/CNN_model.png, id=364, 829.0975pt x 603.25375pt>
-File: images/CNN_model.png Graphic file (type png)
-<use images/CNN_model.png>
-Package pdftex.def Info: images/CNN_model.png  used on input line 376.
-(pdftex.def)             Requested size: 373.09044pt x 271.46167pt.
-[18]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19 <./images/Data_overview.png> <./images/EMNIST_Dataset.png>] [20 <./images/C
-NN_model.png>]
+[19]
+<images/LSTM.png, id=419, 987.69pt x 500.87125pt>
+File: images/LSTM.png Graphic file (type png)
+<use images/LSTM.png>
+Package pdftex.def Info: images/LSTM.png  used on input line 471.
+(pdftex.def)             Requested size: 395.069pt x 200.34494pt.
 
-LaTeX Warning: Citation `shelar2020named' on page 21 undefined on input line 41
-5.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--417
-
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-19.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [21] [22] [23]
-<output/usecase.png, id=406, 492.84125pt x 597.23125pt>
+[20 <./images/Convolution.png>] [21 <./images/LSTM.png>] [22]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 576.
+ [23] [24]
+<output/usecase.png, id=467, 492.84125pt x 597.23125pt>
 File: output/usecase.png Graphic file (type png)
 <use output/usecase.png>
-Package pdftex.def Info: output/usecase.png  used on input line 429.
+Package pdftex.def Info: output/usecase.png  used on input line 608.
 (pdftex.def)             Requested size: 344.98651pt x 418.05902pt.
 
-[24 <./output/usecase.png>]
-<output/activity.jpg, id=413, 437.38406pt x 640.64343pt>
+[25 <./output/usecase.png>]
+<output/activity.jpg, id=473, 437.38406pt x 640.64343pt>
 File: output/activity.jpg Graphic file (type jpg)
 <use output/activity.jpg>
-Package pdftex.def Info: output/activity.jpg  used on input line 435.
+Package pdftex.def Info: output/activity.jpg  used on input line 614.
 (pdftex.def)             Requested size: 306.16675pt x 448.44734pt.
- [25 <./output/activity.jpg>]
-<images/SDLC.png, id=418, 845.1575pt x 502.87875pt>
+ [26 <./output/activity.jpg>]
+<images/SDLC.png, id=478, 845.1575pt x 502.87875pt>
 File: images/SDLC.png Graphic file (type png)
 <use images/SDLC.png>
-Package pdftex.def Info: images/SDLC.png  used on input line 444.
+Package pdftex.def Info: images/SDLC.png  used on input line 623.
 (pdftex.def)             Requested size: 380.31737pt x 226.29333pt.
- [26 <./images/SDLC.png>]
+ [27 <./images/SDLC.png>]
 Chapter 4.
-[27
+[28
 
 ]
-<output/original.jpg, id=432, 1541.76pt x 2055.68pt>
+<output/original.jpg, id=491, 1541.76pt x 2055.68pt>
 File: output/original.jpg Graphic file (type jpg)
 <use output/original.jpg>
-Package pdftex.def Info: output/original.jpg  used on input line 462.
+Package pdftex.def Info: output/original.jpg  used on input line 641.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/thresholded.jpg, id=433, 963.6pt x 1284.8pt>
+<output/thresholded.jpg, id=492, 963.6pt x 1284.8pt>
 File: output/thresholded.jpg Graphic file (type jpg)
 <use output/thresholded.jpg>
-Package pdftex.def Info: output/thresholded.jpg  used on input line 467.
+Package pdftex.def Info: output/thresholded.jpg  used on input line 646.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/closed.jpg, id=434, 963.6pt x 1284.8pt>
+<output/closed.jpg, id=493, 963.6pt x 1284.8pt>
 File: output/closed.jpg Graphic file (type jpg)
 <use output/closed.jpg>
-Package pdftex.def Info: output/closed.jpg  used on input line 475.
+Package pdftex.def Info: output/closed.jpg  used on input line 654.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/edges.jpg, id=435, 963.6pt x 1284.8pt>
+<output/edges.jpg, id=494, 963.6pt x 1284.8pt>
 File: output/edges.jpg Graphic file (type jpg)
 <use output/edges.jpg>
-Package pdftex.def Info: output/edges.jpg  used on input line 480.
+Package pdftex.def Info: output/edges.jpg  used on input line 659.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/hough_line.jpg, id=436, 963.6pt x 1284.8pt>
+<output/hough_line.jpg, id=495, 963.6pt x 1284.8pt>
 File: output/hough_line.jpg Graphic file (type jpg)
 <use output/hough_line.jpg>
-Package pdftex.def Info: output/hough_line.jpg  used on input line 488.
+Package pdftex.def Info: output/hough_line.jpg  used on input line 667.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/intersection_point_output.jpg, id=437, 963.6pt x 1284.8pt>
+<output/intersection_point_output.jpg, id=496, 963.6pt x 1284.8pt>
 File: output/intersection_point_output.jpg Graphic file (type jpg)
 <use output/intersection_point_output.jpg>
 Package pdftex.def Info: output/intersection_point_output.jpg  used on input li
-ne 493.
+ne 672.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
 
-Underfull \hbox (badness 1097) in paragraph at lines 494--494
+Underfull \hbox (badness 1097) in paragraph at lines 673--673
 []\OT1/ptm/m/n/12 Figure 4.6: |In-ter-sec-tion
  []
 
-<output/grouped.jpg, id=438, 963.6pt x 1284.8pt>
+<output/grouped.jpg, id=497, 963.6pt x 1284.8pt>
 File: output/grouped.jpg Graphic file (type jpg)
 <use output/grouped.jpg>
-Package pdftex.def Info: output/grouped.jpg  used on input line 502.
+Package pdftex.def Info: output/grouped.jpg  used on input line 681.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--503
+Underfull \hbox (badness 10000) in paragraph at lines 682--682
 []\OT1/ptm/m/n/12 Figure 4.7: |K-means
  []
 
-<output/output.jpg, id=439, 730.73pt x 1028.84375pt>
+<output/output.jpg, id=498, 730.73pt x 1028.84375pt>
 File: output/output.jpg Graphic file (type jpg)
 <use output/output.jpg>
-Package pdftex.def Info: output/output.jpg  used on input line 507.
+Package pdftex.def Info: output/output.jpg  used on input line 686.
 (pdftex.def)             Requested size: 125.05113pt x 176.06284pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28 <./output/original.jpg> <./output/thresholded.jpg> <./output/closed.jpg> <.
+[29 <./output/original.jpg> <./output/thresholded.jpg> <./output/closed.jpg> <.
 /output/edges.jpg> <./output/hough_line.jpg> <./output/intersection_point_outpu
 t.jpg>]
-<output/home.jpg, id=444, 658.71094pt x 1355.0625pt>
+<output/home.jpg, id=503, 658.71094pt x 1355.0625pt>
 File: output/home.jpg Graphic file (type jpg)
 <use output/home.jpg>
-Package pdftex.def Info: output/home.jpg  used on input line 517.
+Package pdftex.def Info: output/home.jpg  used on input line 696.
 (pdftex.def)             Requested size: 197.61479pt x 406.5219pt.
-<output/add.png, id=445, 658.71094pt x 1355.0625pt>
+<output/add.png, id=504, 658.71094pt x 1355.0625pt>
 File: output/add.png Graphic file (type png)
 <use output/add.png>
-Package pdftex.def Info: output/add.png  used on input line 523.
+Package pdftex.def Info: output/add.png  used on input line 702.
 (pdftex.def)             Requested size: 197.61479pt x 406.5219pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29 <./output/grouped.jpg> <./output/output.jpg> <./output/home.jpg>] [30 <./ou
-tput/add.png>] (./KECReport.bbl [31
+[30 <./output/grouped.jpg> <./output/output.jpg> <./output/home.jpg>] [31 <./ou
+tput/add.png>] (./KECReport.bbl [32
 
 ])
 ! Too many }'s.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.555 \end{figure}
+l.734 \end{figure}
                   
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1223,14 +1228,14 @@ Such booboos are generally harmless, so keep going.
 ! Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
-l.555 \end{figure}
+l.734 \end{figure}
                   
 Things are pretty mixed up, but I think the worst is over.
 
 ! Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.555 \end{figure}
+l.734 \end{figure}
                   
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1242,7 +1247,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.555 \end{figure}
+l.734 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1251,38 +1256,38 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.555 \end{figure}
+l.734 \end{figure}
                   
 Things are pretty mixed up, but I think the worst is over.
 
-[32] (./KECReport.aux)
-
-LaTeX Warning: There were undefined references.
-
+[33] (./KECReport.aux)
 Package rerunfilecheck Info: File `KECReport.out' has not changed.
-(rerunfilecheck)             Checksum: 2C0AF588799D89F45B84DAE7904C98E1;4966.
+(rerunfilecheck)             Checksum: B4C3953893463DE7E220931E52425918;6064.
  ) 
 Here is how much of TeX's memory you used:
- 17455 strings out of 478287
- 320157 string characters out of 5849289
- 595612 words of memory out of 5000000
- 35289 multiletter control sequences out of 15000+600000
- 490681 words of font info for 69 fonts, out of 8000000 for 9000
+ 17768 strings out of 478287
+ 324840 string characters out of 5849289
+ 598899 words of memory out of 5000000
+ 35559 multiletter control sequences out of 15000+600000
+ 492267 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,82p,2183b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,11n,82p,2183b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8
-a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on KECReport.pdf (39 pages, 2724951 bytes).
+/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmri8a.pfb>
+Output written on KECReport.pdf (40 pages, 2921001 bytes).
 PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
- 451 compressed objects within 5 object streams
- 127 named destinations out of 1000 (max. 500000)
- 384 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 621 PDF objects out of 1000 (max. 8388607)
+ 522 compressed objects within 6 object streams
+ 159 named destinations out of 1000 (max. 500000)
+ 424 words of extra memory for PDF output out of 10000 (max. 10000000)
 
