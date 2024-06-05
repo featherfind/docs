@@ -22,7 +22,7 @@
 \BIBdecl
 
 \bibitem{ioc_updates}
-I.~O. Union, ``Updates - ioc world bird list,''
+I.~O. Union, ``Ioc world bird list,''
   \url{https://www.worldbirdnames.org/new/updates/}, 2024, accessed:
   2024-06-04.
 
@@ -78,6 +78,11 @@ H.~Wang, Y.~Xu, Y.~Yu, Y.~Lin, and J.~Ran, ``An efficient model for a vast
 R.~Pahuja and A.~Kumar, ``Sound-spectrogram based automatic bird species
   recognition using mlp classifier,'' \emph{Applied Acoustics}, vol. 180, p.
   108077, 2021.
+
+\bibitem{9850832}
+M.~Dhakal, A.~Chhetri, A.~K. Gupta, P.~Lamichhane, S.~Pandey, and S.~Shakya,
+  ``Automatic speech recognition for the nepali language using cnn,
+  bidirectional lstm and resnet,'' pp. 515--521, 2022.
 
 \bibitem{9058307}
 A.~Reiling, W.~Mitchell, S.~Westberg, E.~Balster, and T.~Taha, ``Cnn

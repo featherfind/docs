@@ -5,7 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Define Macros for Details of your Project
 \newcommand{\project}{Major Project } %Specify "Major Project" or "Minor Project"
-\newcommand{\projectTitle}{BIRD SPECIES IDENTIFICATION FROM AUDIO AND IMAGE USING DCNN} %specify "Title" of Your Project
+\newcommand{\projectTitle}{FEATHERFIND : BIRD SPECIES IDENTIFICATION FROM AUDIO AND IMAGE} %specify "Title" of Your Project
 \newcommand{\doc}{Proposal} % specify the document you are preparing eg. "Proposal", "Mid-Term Report" or "Final Report"32
 % Note that You have to sibmit "Final Report" for Pre-final defense as well.
 \newcommand{\subCode}{CT654} %specify Subject of Your Project
@@ -13,10 +13,11 @@
 \newcommand{\submittedBy}%Specify Names and Roll/Symbol Numbers of the Project Group Members
 {
 %Edit Member Names and Roll/Symbol No. and adjust width (\makebox[width]) if necessary 
-\makebox[10cm]{Gaurav Giri \hfill [Kan077bct034]}\\
-\makebox[10cm]{Iza K.C. \hfill [Kan077bct039]}\\
-\makebox[10cm]{Prajwal Khatiwada\hfill [Kan077bct56]}\\
+\makebox[10.15cm]{Gaurav Giri🗌🗌🗌🗌🗌 \hfill [Kan077bct034]}\\
+\makebox[10.15cm]{Iza K.C.🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌\hfill [Kan077bct039]}\\
+\makebox[10cm]{Prajwal Khatiwada \hfill [Kan077bct56]}\\
 \makebox[10cm]{Samrat Kumar Adhikari \hfill [Kan077bct74]}\\
+
 %\makebox[9cm]{Member Name \hfill [Roll/Symbol No.]}\\
 } % Note that You must write your "Symbol Numbers"(Exam Roll Numbers) for Final Defenses
 
@@ -341,7 +342,7 @@ The study conducted an in-depth analysis of `bird species recognition through ac
         \caption{Block diagram for the working mechanism of the system}%\label{fig:fig1}
     \end{figure}
 \newpage
-\section{Working Mechanism}
+\section{Working Mechanism for Identification using Audio}
 The methodology for the project "Bird Classification from Audio" as outlined in the provided paper involves a comprehensive approach that spans from data collection to the implementation of a novel deep learning model. This methodology is designed to accurately classify bird species based on their calls, leveraging advanced signal processing and machine learning techniques. The following sections detail the methodology:
 
 \subsection{Dataset}
@@ -350,7 +351,7 @@ For this project, we are using the CharaNet dataset, which is specifically curat
 
 To augment the dataset, we employed a 10-second split method, which expanded the dataset to 6733 audio recordings. Additionally, for bird species with fewer than 30 recordings, we added Gaussian noise to further increase the number of samples. This resulted in a robust dataset comprising 5407 audio recordings for training, 639 for validation, and 687 for testing. This comprehensive dataset ensures that our model can learn effectively and generalize well to new, unseen data.
 \newpage
-\subsection{Dataset Overview}
+\subsection{Dataset Overview for Audio}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.4]{images/TrainingDataset.png}
@@ -371,6 +372,7 @@ To augment the dataset, we employed a 10-second split method, which expanded the
 \hspace{3.5cm}
 \begin{figure}[h!]
     \centering
+    \label{SampleData}
     \includegraphics[scale=0.38]{images/SampleData.png}
     \caption{Sample of the Data}
 \end{figure}
@@ -379,8 +381,9 @@ To augment the dataset, we employed a 10-second split method, which expanded the
 
 The collected audio data undergoes thorough preprocessing to ensure its suitability for model training. This process includes:
 \begin{itemize}
-    \item \textbf{Cleaning:} Removing any background noise and irrelevant sounds that could interfere with the training process.
+    \item \textbf{Silence Gap Removal:} After observing some of the data samples, it was found that the audio has some silence gaps in either of the ends as seen in \ref{SampleData}. These could be removed employing the silence removal algorithm. The processing starts from both ends and moves toward the center. In that processing, the local mean of the window segment of the audio wave is calculated and compared with the audio’s global mean. If the local mean is smaller than the global mean, the window segment is considered to contain insignificant data, thus the segment is clipped from the original audio\cite{9850832}. Algorithm \ref{alg:Silence_Removal} clarifies this.
     \item \textbf{Segmentation:} Dividing the continuous audio recordings into smaller, more manageable segments, ensuring consistency in input length.
+    \item \textbf{Cleaning:} Removing any background noise and irrelevant sounds that could interfere with the training process.
     \item \textbf{Labeling:} Assigning the correct bird species labels to each audio segment, which is crucial for supervised learning.
 \end{itemize}
 
@@ -526,7 +529,6 @@ The key components of an LSTM cell include:
     \begin{eqnarray}
         o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)        
     \end{eqnarray}
-    
     \begin{eqnarray}
         h_t = o_t \cdot \tanh(C_t)        
     \end{eqnarray}
@@ -563,7 +565,7 @@ Genetic algorithms (GAs) are a powerful method for optimizing hyperparameters in
         \item Selection involves choosing the best-performing chromosomes to serve as parents for the next generation.
         \item Various selection methods can be employed, such as tournament selection, roulette wheel selection, or rank-based selection.
     \end{itemize}
-
+    \newpage
     \item \textbf{Crossover (Recombination)}
     \begin{itemize}
         \item Crossover combines pairs of parent chromosomes to produce offspring for the next generation.
@@ -592,9 +594,46 @@ Genetic algorithms (GAs) are a powerful method for optimizing hyperparameters in
         \item The best chromosome at the end of the process represents the optimal or near-optimal set of hyperparameters for the model.
     \end{itemize}
 \end{itemize}
+\newpage
 
+\section{Algorithms Used}
+\subsection{Silent Gaps Removal}
+\label{alg:Silence_Removal}
+\begin{algorithm}
+    \caption{Clipping of silent gaps from both ends}
+    \begin{algorithmic}[1]
+    \STATE $ \text{wav} \gets \text{sampled audio signal} $
+    \STATE $ \Delta \gets \text{appropriate window length} $
+    \STATE \text{/* In our code, $ \Delta = 500 $ for 16KHz sampling rate */}
+    \STATE \textbf{INPUT:} $ \text{wav}, \Delta $
+    \STATE \textbf{PROCESS:}
+    \STATE $ \text{wavAvg} \gets \text{Average}(|\text{wav}|) $
+    \STATE $ N \gets \text{Length}(\text{wav}) $
+    
+    \STATE \text{/* Removing the silent gap from the start */}
+    \FOR{$ \text{idx} = 0, \Delta, 2\Delta, \ldots, N - \Delta $}
+        \STATE $ \text{win} \gets \text{wav}[\text{idx} : \text{idx} + \Delta] $
+        \STATE $ \text{winAvg} \gets \text{Average}(|\text{win}|) $
+        \IF{$ \text{winAvg} > \text{wavAvg} $}
+            \STATE $ \text{wav} \gets \text{wav}[\text{idx} :] $
+            \STATE \textbf{break}
+        \ENDIF
+    \ENDFOR
+    
+    \STATE \text{/* Removing the silent gap from the end */}
+    \FOR{$ \text{idx} = N - \Delta, N - 2\Delta, \ldots, 0 $}
+        \STATE $ \text{win} \gets \text{wav}[\text{idx} : \text{idx} + \Delta] $
+        \STATE $ \text{winAvg} \gets \text{Average}(|\text{win}|) $
+        \IF{$ \text{winAvg} > \text{wavAvg} $}
+            \STATE $ \text{wav} \gets \text{wav}[: \text{idx}] $
+            \STATE \textbf{break}
+        \ENDIF
+    \ENDFOR
+    
+    \STATE \textbf{OUTPUT:} $ \text{processed\_wav} \gets \text{wav} $
+    \end{algorithmic}
+    \end{algorithm}
 
-\section{Algorithm Used}
 
 \subsection{Genetic Algorithm}
 \begin{algorithm}[H]
@@ -612,7 +651,7 @@ Genetic algorithms (GAs) are a powerful method for optimizing hyperparameters in
 \end{algorithmic}
 \end{algorithm}
 
-\subsubsection{Fitness Function}
+\subsection{Fitness Function}
 The fitness function evaluates the performance of hyperparameters by training and validating the model:
 
 \begin{algorithm}[H]
@@ -625,22 +664,24 @@ The fitness function evaluates the performance of hyperparameters by training an
 \end{algorithm}
 
 
+
 \newpage
 \section{System Diagrams}
-The usecase diagram and activity diagram for SNAPTAG are given below:
+The usecase diagram for Bird species identification from Audio and Image is given below:
+\vspace{1 cm}
 \begin{figure}[h!]
     \centering
-        \includegraphics[scale=0.7]{output/usecase.png}
+        \includegraphics[scale=0.5]{images/usecase.png}
         \caption{UseCase Diagram}%\label{fig:fig1}
     \end{figure}
-\newpage
-\begin{figure}[h!]
-     \centering
-        \includegraphics[scale=0.7]{output/activity.jpg}
-        \caption{Activity Diagram}%\label{fig:fig1}
-     \end{figure}
-     \newpage
-\newpage
+
+% \begin{figure}[h!]
+%      \centering
+%         \includegraphics[scale=0.7]{output/activity.jpg}
+%         \caption{Activity Diagram}%\label{fig:fig1}
+%      \end{figure}
+%      \newpage
+% \newpage
 \section{Software Development Model}
 This project is developed using an incremental methodology since it offers a functioning prototype at an early stage of development. The requirements and scope of the project can be altered as necessary by studying the prototype. The rationale for the preference for this software development strategy is the flexibility offered by adopting the incremental technique. In this paradigm, the project goes through several releases or iterations prior to its official release.
 \begin{figure}[h!]
@@ -649,100 +690,8 @@ This project is developed using an incremental methodology since it offers a fun
         \caption{Incremental Model for development of SnapTag}%\label{fig:fig1}
     \end{figure}
 \newpage
-\chapter{Result And Discussion}
-%\addcontentsline{toc}{chapter}{Result And Discussion}
-\section{Result}
-We have completed the design and development of the system along with the required output of the project. The project currently allows user to register and log-in into the system. User can post queries, answer, vote, follow other users and search queries.  Trending section shows most relevant post using half life decay algorithm.
-\section{Work Done}
-\begin{enumerate}
-    \item Preprocessing: Common processing steps like Thresholding, De-noising, Resizing were done. In threshold, we used Otsu's Binarization due to its automatic optimal threshold value determination and avoiding having to choose a value. In order to do so, the cv2.threshold() function was used. Processing high resolution images are quite resource intensive. So, images were scaled down for faster processing using cv2.resize() function. And we performed de-noising to remove noise from images. To do this, we used cv2.fastNlMeansDenoising() function because of its faster processing while maintaining the denoising performance.
-    \item Opening and closing: Opening and Closing are used as morphological operations to manipulate the shapes and structures of objects within an image. Closing and opening was used to improve the quality of the input image for further process of edge detection by reducing noise,smoothing contours . 
-    \item Hough line transformation: Hough transformation was used after using Canny edge detection as this edge description is commonly obtained using Canny may be noisy, i.e. it may contain multiple edge fragments corresponding to a single whole feature. Furthermore, the output of an edge detector like Canny defines only where features are in an image, the work of the Hough transform is to determine both what the features are and how many of them exist in the image. 
-    \newpage
-    \newpage
-    \begin{figure}[h]
-        \centering
-        \begin{minipage}[b]{0.30\linewidth}
-            \includegraphics[width=\linewidth]{output/original.jpg}
-            \caption{Original image}
-        \end{minipage}
-        \hspace{3cm}
-        \begin{minipage}[b]{0.30\linewidth}
-            \includegraphics[width=\linewidth]{output/thresholded.jpg}
-            \caption{Threshold Image}
-        \end{minipage}
-        
-    \end{figure}
-    \begin{figure}[h]
-        \centering
-        \begin{minipage}[b]{0.30\linewidth}
-            \includegraphics[width=\linewidth]{output/closed.jpg}
-            \caption{Closed Image}
-        \end{minipage}
-        \hspace{3cm}
-        \begin{minipage}[b]{0.30\linewidth}
-            \includegraphics[width=\linewidth]{output/edges.jpg}
-            \caption{Canny Edge}
-        \end{minipage}
-        
-    \end{figure}
-    \begin{figure}[h!]
-        \centering
-        \begin{minipage}[b]{0.30\linewidth}
-            \includegraphics[width=\linewidth]{output/hough_line.jpg}
-            \caption{Hough Line Image}
-        \end{minipage}
-        \hspace{3cm}
-        \begin{minipage}[b]{0.30\linewidth}
-            \includegraphics[width=\linewidth]{output/intersection_point_output.jpg}
-            \caption{Intersection Point Image}
-        \end{minipage}
-        
-    \end{figure}
-    
-    \begin{figure}[h]
-        \centering
-        \begin{minipage}[b]{0.30\linewidth}
-            \includegraphics[width=\linewidth]{output/grouped.jpg}
-            \caption{K-means Clustering Image}
-        \end{minipage}
-        \hspace{3cm}
-        \begin{minipage}[b]{0.30\linewidth}
-            \includegraphics[width=\linewidth]{output/output.jpg}
-            \caption{Preprocessing Output Image}
-        \end{minipage}
-        
-    \end{figure}
-    \newpage
-\newpage
-    \item Mobile App: The Mobile app for SnapTag has been developed using Flutter.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[scale=0.3]{output/home.jpg}
-        \caption{Homepage}
-        % \label{fig:segmented_image}
-    \end{figure}
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[scale=0.3]{output/add.png}
-        \caption{Image Capturing }
-        % \label{fig:segmented_image}
-    \end{figure}
-\end{enumerate}
-\newpage
-\section{Work Remaining}
-\begin{enumerate}
-    \item Segmentation: Till now, Line Segmentation has been done which still needs some improvements. After that, our immediate work will be segmentation words and characters. The following is the result produced using traditional Contour-Based Segmentation for lines.
-    \item Model Training: The efficiency of the trained model is 82\% and we are working on improving the efficiency.
-\end{enumerate}
-%\section{Schedule}
+\chapter{Epilogue}
 
-%\begin{figure}[ht]
- %   \centering
-  %  \includegraphics[scale=0.5]{photo/ganttchart.png}
-   % \caption{Gantt Chart}
-    %\label{fig:my_label}
-%\end{figure}
 
 \newpage
 

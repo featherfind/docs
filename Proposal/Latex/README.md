@@ -1,13 +1,12 @@
 Run `./gen.sh` to generate Report!
 
-
-@INPROCEEDINGS{9058307,
-  author={Reiling, Anthony and Mitchell, William and Westberg, Stefan and Balster, Eric and Taha, Tarek},
-  booktitle={2019 IEEE National Aerospace and Electronics Conference (NAECON)}, 
-  title={CNN Optimization with a Genetic Algorithm}, 
-  year={2019},
+@INPROCEEDINGS{9850832,
+  author={Dhakal, Manish and Chhetri, Arman and Gupta, Aman Kumar and Lamichhane, Prabin and Pandey, Suraj and Shakya, Subarna},
+  booktitle={2022 International Conference on Inventive Computation Technologies (ICICT)}, 
+  title={Automatic speech recognition for the Nepali language using CNN, bidirectional LSTM and ResNet}, 
+  year={2022},
   volume={},
   number={},
-  pages={340-344},
-  keywords={Genetic algorithms;Biological cells;Kernel;Optimization;Machine learning;Computer architecture;Training},
-  doi={10.1109/NAECON46414.2019.9058307}}
+  pages={515-521},
+  keywords={Training;Error analysis;Neural networks;Predictive models;Convolutional neural networks;Feeds;Mel frequency cepstral coefficient;Nepali Speech Recognition;Residual Network;Convolutional Neural Network;Bidirectional Long Short Term Memory},
+  doi={10.1109/ICICT54344.2022.9850832}}
