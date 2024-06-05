@@ -90,6 +90,14 @@ A.~Reiling, W.~Mitchell, S.~Westberg, E.~Balster, and T.~Taha, ``Cnn
   Aerospace and Electronics Conference (NAECON)}, 2019, pp. 340--344.
 
 \bibitem{WahCUB_200_2011}
-Tech. Rep.
+C.~Wah, S.~Branson, P.~Welinder, P.~Perona, and S.~Belongie, ``Cub-200-2011
+  dataset,'' Tech. Rep., 2011.
+
+\bibitem{bangar2022vgg}
+\BIBentryALTinterwordspacing
+S.~Bangar, ``Vgg-net architecture explained,'' \emph{Medium}, Jun 2022,
+  computer Science Student @Trinity College Dublin. [Online]. Available:
+  \url{https://medium.com/@siddheshb008/vgg-net-architecture-explained-71179310050f}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

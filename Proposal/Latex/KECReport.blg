@@ -8,60 +8,58 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: library.bib
-You're missing a field part---line 115 of file library.bib
- :  title = 
- :          ,
+I was expecting a `,' or a `}'---line 118 of file library.bib
+ :  
+ :  Institution = {California Institute of Technology},
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty journal in gautam2023audio
 Warning--empty journal in 9850832
-Warning--empty author in WahCUB_200_2011
-Warning--empty title in WahCUB_200_2011
 Warning--missing institution in WahCUB_200_2011
-Warning--empty year in WahCUB_200_2011
 
 Done.
-You've used 14 entries,
+You've used 15 entries,
             4087 wiz_defined-function locations,
-            903 strings with 10173 characters,
-and the built_in function-call counts, 9592 in all, are:
-= -- 756
-> -- 262
+            913 strings with 10461 characters,
+and the built_in function-call counts, 10296 in all, are:
+= -- 823
+> -- 286
 < -- 57
-+ -- 135
-- -- 53
-* -- 461
-:= -- 1449
-add.period$ -- 28
-call.type$ -- 14
-change.case$ -- 15
++ -- 146
+- -- 59
+* -- 493
+:= -- 1591
+add.period$ -- 31
+call.type$ -- 15
+change.case$ -- 18
 chr.to.int$ -- 114
-cite$ -- 20
-duplicate$ -- 729
-empty$ -- 764
-format.name$ -- 64
-if$ -- 2217
+cite$ -- 18
+duplicate$ -- 781
+empty$ -- 815
+format.name$ -- 71
+if$ -- 2373
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 144
-newline$ -- 65
-num.names$ -- 13
-pop$ -- 352
+int.to.str$ -- 15
+missing$ -- 155
+newline$ -- 70
+num.names$ -- 15
+pop$ -- 372
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 743
+skip$ -- 795
 stack$ -- 0
-substring$ -- 311
-swap$ -- 561
+substring$ -- 315
+swap$ -- 601
 text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 14
-warning$ -- 6
-while$ -- 38
-width$ -- 16
-write$ -- 150
+type$ -- 15
+warning$ -- 3
+while$ -- 40
+width$ -- 17
+write$ -- 165
 (There was 1 error message)

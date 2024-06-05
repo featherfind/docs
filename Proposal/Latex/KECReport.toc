@@ -44,8 +44,14 @@
 \contentsline {subsection}{\numberline {3.2.1}Dataset}{30}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Dataset Overview for Image}{30}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Data Preprocessing}{31}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}VGG16}{31}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}System Diagrams}{33}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Software Development Model}{33}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Epilogue}{35}{chapter.4}%
-\contentsline {chapter}{References}{36}{chapter.4}%
+\contentsline {subsection}{\numberline {3.2.4}VGG16}{32}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Max Pooling}{33}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Softmax}{33}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Algorithms Used}{34}{subsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.7.1}Data Augmentation}{34}{subsubsection.3.2.7.1}%
+\contentsline {subsubsection}{\numberline {3.2.7.2}Normalization}{34}{subsubsection.3.2.7.2}%
+\contentsline {subsubsection}{\numberline {3.2.7.3}Stochastic Gradient Descent (SGD)}{35}{subsubsection.3.2.7.3}%
+\contentsline {section}{\numberline {3.3}Mapping Location of Bird in Map}{35}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Software Development Model}{36}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Epilogue}{37}{chapter.4}%
+\contentsline {chapter}{References}{38}{chapter.4}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/CVE-2023-32700 patched) (preloaded format=pdflatex 2024.6.5)  5 JUN 2024 23:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/CVE-2023-32700 patched) (preloaded format=pdflatex 2024.6.5)  6 JUN 2024 00:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -792,41 +792,41 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \algorithmicindent=\skip59
 )
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 68.
+h' as default language. on input line 65.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 6
-8.
+5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (./KECReport.aux)
 \openout1 = `KECReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 65.
 LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 6
-8.
+5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    ... okay on input line 65.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -887,7 +887,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 68.
+Package hyperref Info: Link coloring OFF on input line 65.
 
 (./KECReport.out) (./KECReport.out)
 \@outlinefile=\write3
@@ -900,271 +900,12 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 68.
-<images/logo.png, id=175, 102.3825pt x 102.3825pt>
+or `english'. on input line 65.
+<images/logo.png, id=187, 102.3825pt x 102.3825pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
-Package pdftex.def Info: images/logo.png  used on input line 70.
+Package pdftex.def Info: images/logo.png  used on input line 67.
 (pdftex.def)             Requested size: 71.1361pt x 71.1361pt.
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-? R
-OK, entering \nonstopmode...
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 \KECcoverpage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
 
 
 ! LaTeX Error: There's no line here to end.
@@ -1173,324 +914,74 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.70 \KECcoverpage
+l.67 \KECcoverpage
                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+? R
+OK, entering \nonstopmode...
+! Undefined control sequence.
+<recently read> \defDay 
+                        
+l.67 \KECcoverpage
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.png>]
 
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🗌 (U+1F5CC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \KECtitlepage
-                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.71 \KECtitlepage
+l.68 \KECtitlepage
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
+
+! Undefined control sequence.
+<recently read> \defDay 
+                        
+l.68 \KECtitlepage
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.71 \KECtitlepage
-                   [1]
-Underfull \hbox (badness 10000) in paragraph at lines 92--109
+l.68 \KECtitlepage
+                   [1] [1
 
- []
+] (./KECReport.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 110
-.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 110
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (16.55275pt too wide) in paragraph at lines 110--111
-[]\OT1/ptm/m/it/12 Keywords$\OMS/cmsy/m/n/12 ^^@$\OT1/ptm/m/it/12 Optical Char-
-ac-ter Recog-ni-tion, Bi-na-riza-tion, Thresh-old-ing, De-nois-ing, Bound-
- []
-
-[1
-
-] (./KECReport.toc [2
+) [2
 
 ])
 \tf@toc=\write4
 \openout4 = `KECReport.toc'.
 
- [3] (./KECReport.lof)
+ [3]
+(./KECReport.lof)
 \tf@lof=\write5
 \openout5 = `KECReport.lof'.
 
@@ -1505,14 +996,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.203 
+l.205 
        [1
 
 ] [2] [3] [4]
-<images/GanttChart.png, id=317, 1002.74625pt x 423.5825pt>
+<images/GanttChart.png, id=328, 1002.74625pt x 423.5825pt>
 File: images/GanttChart.png Graphic file (type png)
 <use images/GanttChart.png>
-Package pdftex.def Info: images/GanttChart.png  used on input line 285.
+Package pdftex.def Info: images/GanttChart.png  used on input line 314.
 (pdftex.def)             Requested size: 401.0914pt x 169.43pt.
 
 
@@ -1521,151 +1012,157 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [5] [6 <./images/GanttChart.png>]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--331
+Underfull \hbox (badness 10000) in paragraph at lines 357--379
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--331
+Underfull \hbox (badness 10000) in paragraph at lines 357--379
 
  []
 
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
+Underfull \hbox (badness 10000) in paragraph at lines 381--408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 409--436
 
  []
 
 [8]
-Overfull \hbox (2.80316pt too wide) in paragraph at lines 337--338
+Overfull \hbox (2.80316pt too wide) in paragraph at lines 437--460
 []\OT1/ptm/m/n/12 The re-search pa-per `Bird Species Iden-ti-fi-ca-tion us-ing 
 Deep Learn-ing' presents a method-
  []
 
 
-Overfull \hbox (6.63106pt too wide) in paragraph at lines 337--338
+Overfull \hbox (6.63106pt too wide) in paragraph at lines 437--460
 \OT1/ptm/m/n/12 lever-ag-ing the Caltech-UCSD Birds 200 (CUB-200-2011) dataset,
  which con-tains 11,788
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 437--460
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 461--485
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 486--514
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
+Underfull \hbox (badness 10000) in paragraph at lines 515--542
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
+Underfull \hbox (badness 10000) in paragraph at lines 543--560
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 347--349
+Underfull \hbox (badness 10000) in paragraph at lines 561--586
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--349
+Underfull \hbox (badness 10000) in paragraph at lines 561--586
 
  []
 
 [13] [14]
 Chapter 3.
-<images/Methodology1.png, id=380, 1068.99374pt x 1601.985pt>
+<images/Methodology1.png, id=391, 1068.99374pt x 1601.985pt>
 File: images/Methodology1.png Graphic file (type png)
 <use images/Methodology1.png>
-Package pdftex.def Info: images/Methodology1.png  used on input line 355.
+Package pdftex.def Info: images/Methodology1.png  used on input line 593.
 (pdftex.def)             Requested size: 352.76903pt x 528.6567pt.
 [15
 
- <./images/Methodology1.png>] [16]
-<images/TrainingDataset.png, id=390, 1008.76875pt x 709.65125pt>
+ <./images/Methodology1.png>]
+Overfull \hbox (5.73024pt too wide) in paragraph at lines 597--598
+[]\OT1/ptm/m/n/12 The work-ing mech-a-nism for bird iden-ti-fi-ca-tion from au-
+dio uti-lizes the Cha-raNET dataset,
+ []
+
+[16]
+<images/TrainingDataset.png, id=402, 1008.76875pt x 709.65125pt>
 File: images/TrainingDataset.png Graphic file (type png)
 <use images/TrainingDataset.png>
-Package pdftex.def Info: images/TrainingDataset.png  used on input line 370.
+Package pdftex.def Info: images/TrainingDataset.png  used on input line 617.
 (pdftex.def)             Requested size: 403.50035pt x 283.85547pt.
-<images/ValidationDataset.png, id=391, 999.735pt x 709.65125pt>
+<images/ValidationDataset.png, id=403, 999.735pt x 709.65125pt>
 File: images/ValidationDataset.png Graphic file (type png)
 <use images/ValidationDataset.png>
-Package pdftex.def Info: images/ValidationDataset.png  used on input line 376.
+Package pdftex.def Info: images/ValidationDataset.png  used on input line 623.
 (pdftex.def)             Requested size: 399.88692pt x 283.85547pt.
  [17 <./images/TrainingDataset.png> <./images/ValidationDataset.png>]
-<images/TestDataset.png, id=398, 999.735pt x 709.65125pt>
+<images/TestDataset.png, id=410, 999.735pt x 709.65125pt>
 File: images/TestDataset.png Graphic file (type png)
 <use images/TestDataset.png>
-Package pdftex.def Info: images/TestDataset.png  used on input line 382.
+Package pdftex.def Info: images/TestDataset.png  used on input line 629.
 (pdftex.def)             Requested size: 449.87659pt x 319.3401pt.
 
-Overfull \hbox (33.0437pt too wide) in paragraph at lines 382--383
+Overfull \hbox (33.0437pt too wide) in paragraph at lines 629--630
  [][] 
  []
 
-<images/SampleData.png, id=399, 1171.37625pt x 471.7625pt>
+<images/SampleData.png, id=411, 1171.37625pt x 471.7625pt>
 File: images/SampleData.png Graphic file (type png)
 <use images/SampleData.png>
-Package pdftex.def Info: images/SampleData.png  used on input line 389.
+Package pdftex.def Info: images/SampleData.png  used on input line 636.
 (pdftex.def)             Requested size: 445.12761pt x 179.2716pt.
 
-Overfull \hbox (28.29472pt too wide) in paragraph at lines 389--390
+Overfull \hbox (28.29472pt too wide) in paragraph at lines 636--637
  [][] 
  []
 
 [18 <./images/TestDataset.png> <./images/SampleData.png>]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-97.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
+45.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
-Package caption Warning: \label without proper reference on input line 388.
+Package caption Warning: \label without proper reference on input line 635.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `SampleData' on page 19 undefined on input line 397.
+LaTeX Warning: Reference `SampleData' on page 19 undefined on input line 645.
 
 [19] [20]
-<images/MFCC.jpg, id=423, 814.04124pt x 312.16624pt>
+<images/MFCC.jpg, id=435, 814.04124pt x 312.16624pt>
 File: images/MFCC.jpg Graphic file (type jpg)
 <use images/MFCC.jpg>
-Package pdftex.def Info: images/MFCC.jpg  used on input line 448.
+Package pdftex.def Info: images/MFCC.jpg  used on input line 711.
 (pdftex.def)             Requested size: 407.01962pt x 156.08273pt.
  [21 <./images/MFCC.jpg>]
-<images/Convolution.png, id=443, 437.38406pt x 216.05719pt>
+<images/Convolution.png, id=456, 437.38406pt x 216.05719pt>
 File: images/Convolution.png Graphic file (type png)
 <use images/Convolution.png>
-Package pdftex.def Info: images/Convolution.png  used on input line 485.
+Package pdftex.def Info: images/Convolution.png  used on input line 748.
 (pdftex.def)             Requested size: 437.38298pt x 216.05664pt.
 
-Overfull \hbox (20.5501pt too wide) in paragraph at lines 485--486
+Overfull \hbox (20.5501pt too wide) in paragraph at lines 748--749
  [][] 
  []
 
 [22 <./images/Convolution.png>]
-<images/LSTM.png, id=452, 987.69pt x 500.87125pt>
+<images/LSTM.png, id=465, 987.69pt x 500.87125pt>
 File: images/LSTM.png Graphic file (type png)
 <use images/LSTM.png>
-Package pdftex.def Info: images/LSTM.png  used on input line 512.
+Package pdftex.def Info: images/LSTM.png  used on input line 780.
 (pdftex.def)             Requested size: 395.069pt x 200.34494pt.
 
 
@@ -1673,13 +1170,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [23] [24 <./images/LSTM.png>] [25] [26]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 616.
+put line 907.
  [27]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.690     \STATE \hspace{10}
-                             Choose number of mel bands $N_{\text{mel}}$.
+l.981         \STATE \hspace{10}
+                                 Choose number of mel bands $N_{\text{mel}}$.
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1690,7 +1187,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.692         \STATE \hspace{10}
+l.983         \STATE \hspace{10}
                                  Convert $f_{\text{min}}$ and $f_{\text{max}...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1702,7 +1199,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.693         \STATE \hspace{10}
+l.984         \STATE \hspace{10}
                                  Divide Mel scale range into $N_{\text{mel}}...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1714,7 +1211,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.694         \STATE \hspace{10}
+l.985         \STATE \hspace{10}
                                  Convert center frequencies of Mel bands bac...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1726,7 +1223,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.695         \STATE \hspace{10}
+l.986         \STATE \hspace{10}
                                  Round center frequencies to nearest bins.
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1738,7 +1235,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.696         \STATE \hspace{10}
+l.987         \STATE \hspace{10}
                                  Design triangular band pass filters for eac...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1750,7 +1247,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.697         \STATE \hspace{10}
+l.988         \STATE \hspace{10}
                                  Apply mel filter banks to $S_{\text{dB}}(f,...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1760,80 +1257,73 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 [28]
-<images/Methodology2.png, id=558, 1069.9975pt x 1393.205pt>
+<images/Methodology2.png, id=571, 1069.9975pt x 1393.205pt>
 File: images/Methodology2.png Graphic file (type png)
 <use images/Methodology2.png>
-Package pdftex.def Info: images/Methodology2.png  used on input line 725.
+Package pdftex.def Info: images/Methodology2.png  used on input line 1015.
 (pdftex.def)             Requested size: 353.10027pt x 459.75908pt.
 
-Overfull \hbox (5.90038pt too wide) in paragraph at lines 728--729
+Overfull \hbox (5.90038pt too wide) in paragraph at lines 1018--1019
 \OT1/ptm/m/n/12 VGG16 have been proven to clas-sify bird spe-ices with ac-cu-ra
 cy of 92.13% us-ing Caltech-
  []
 
 [29 <./images/Methodology2.png>]
-<images/cubdataset.png, id=566, 992.70876pt x 992.70876pt>
+<images/cubdataset.png, id=579, 992.70876pt x 992.70876pt>
 File: images/cubdataset.png Graphic file (type png)
 <use images/cubdataset.png>
-Package pdftex.def Info: images/cubdataset.png  used on input line 736.
+Package pdftex.def Info: images/cubdataset.png  used on input line 1028.
 (pdftex.def)             Requested size: 446.71481pt x 446.71481pt.
 
-Overfull \hbox (29.88193pt too wide) in paragraph at lines 736--737
+Overfull \hbox (29.88193pt too wide) in paragraph at lines 1028--1029
  [][] 
  []
 
 [30 <./images/cubdataset.png>] [31]
-<images/VGG16.png, id=578, 492.84125pt x 427.5975pt>
+<images/VGG16.png, id=596, 722.7pt x 733.74126pt>
 File: images/VGG16.png Graphic file (type png)
 <use images/VGG16.png>
-Package pdftex.def Info: images/VGG16.png  used on input line 749.
-(pdftex.def)             Requested size: 394.27351pt x 342.07846pt.
- [32 <./images/VGG16.png (PNG copy)>]
-<images/usecase.png, id=583, 799.98875pt x 665.48625pt>
-File: images/usecase.png Graphic file (type png)
-<use images/usecase.png>
-Package pdftex.def Info: images/usecase.png  used on input line 761.
-(pdftex.def)             Requested size: 399.9934pt x 332.74231pt.
-<images/SDLC.png, id=584, 845.1575pt x 502.87875pt>
+Package pdftex.def Info: images/VGG16.png  used on input line 1069.
+(pdftex.def)             Requested size: 361.3491pt x 366.86974pt.
+ [32 <./images/VGG16.png>] [33] [34]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+199.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [35]
+<images/SDLC.png, id=641, 1660.2025pt x 1173.38374pt>
 File: images/SDLC.png Graphic file (type png)
 <use images/SDLC.png>
-Package pdftex.def Info: images/SDLC.png  used on input line 779.
-(pdftex.def)             Requested size: 422.57771pt x 251.43875pt.
-
-Overfull \hbox (5.74483pt too wide) in paragraph at lines 779--780
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[33 <./images/usecase.png>] [34 <./images/SDLC.png>]
+Package pdftex.def Info: images/SDLC.png  used on input line 1233.
+(pdftex.def)             Requested size: 415.0496pt x 293.34521pt.
+ [36 <./images/SDLC.png (PNG copy)>]
 Chapter 4.
-[35
+[37
 
-] (./KECReport.bbl [36
+] (./KECReport.bbl [38
 
 ])
 ! Too many }'s.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.799 \end{figure}
-                  
+l.1252 \end{figure}
+                   
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
 ! Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
-l.799 \end{figure}
-                  
+l.1252 \end{figure}
+                   
 Things are pretty mixed up, but I think the worst is over.
 
 ! Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.799 \end{figure}
-                  
+l.1252 \end{figure}
+                   
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
@@ -1844,8 +1334,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.799 \end{figure}
-                  
+l.1252 \end{figure}
+                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1853,25 +1343,25 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.799 \end{figure}
-                  
+l.1252 \end{figure}
+                   
 Things are pretty mixed up, but I think the worst is over.
 
-[37] (./KECReport.aux)
+[39] (./KECReport.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `KECReport.out' has not changed.
-(rerunfilecheck)             Checksum: C1F41D5210500781E7A32F121AEFF38C;6769.
+(rerunfilecheck)             Checksum: 987207BF358E9EF48EEECAD8E9B10D81;7218.
  ) 
 Here is how much of TeX's memory you used:
- 18005 strings out of 476175
- 330937 string characters out of 5796272
+ 18080 strings out of 476175
+ 331910 string characters out of 5796272
  1867793 words of memory out of 6000000
- 37856 multiletter control sequences out of 15000+600000
- 535299 words of font info for 75 fonts, out of 8000000 for 9000
+ 37886 multiletter control sequences out of 15000+600000
+ 535816 words of font info for 77 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 79i,11n,82p,2183b,686s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,11n,82p,1055b,694s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
@@ -1881,13 +1371,14 @@ ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on KECReport.pdf (44 pages, 1062328 bytes).
+/usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on KECReport.pdf (46 pages, 1186981 bytes).
 PDF statistics:
- 717 PDF objects out of 1000 (max. 8388607)
- 612 compressed objects within 7 object streams
- 218 named destinations out of 1000 (max. 500000)
- 420 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 789 PDF objects out of 1000 (max. 8388607)
+ 682 compressed objects within 7 object streams
+ 259 named destinations out of 1000 (max. 500000)
+ 439 words of extra memory for PDF output out of 10000 (max. 10000000)
 
