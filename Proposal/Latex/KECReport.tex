@@ -15,8 +15,8 @@
 %Edit Member Names and Roll/Symbol No. and adjust width (\makebox[width]) if necessary 
 \makebox[10.15cm]{Gaurav Giri🗌🗌🗌🗌🗌 \hfill [Kan077bct034]}\\
 \makebox[10.15cm]{Iza K.C.🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌🗌\hfill [Kan077bct039]}\\
-\makebox[10cm]{Prajwal Khatiwada \hfill [Kan077bct56]}\\
-\makebox[10cm]{Samrat Kumar Adhikari \hfill [Kan077bct74]}\\
+\makebox[10cm]{Prajwal Khatiwada \hfill [Kan077bct056]}\\
+\makebox[10cm]{Samrat Kumar Adhikari \hfill [Kan077bct074]}\\
 
 %\makebox[9cm]{Member Name \hfill [Roll/Symbol No.]}\\
 } % Note that You must write your "Symbol Numbers"(Exam Roll Numbers) for Final Defenses
@@ -63,7 +63,7 @@
   %class = symbol
 %}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\setcounter{secnumdepth}{3}
 %The Document
 \begin{document}
 
@@ -153,12 +153,24 @@ metadata that enhances the document's categorization and searchability.
 \addcontentsline{toc}{chapter}{Abbreviations}
 \begin{tabbing}
 \hspace{50mm}\=\kill
-CNN \>  Convolutional Neural Network \\
-EMNIST \> Extended Modified National Institute of Standards and Technology\\
-NER \> Named Entity Recognition\\
-OCR \> Optical Character Recognition\\
-PDF \> Portable File Document\\
-ReLU \> Rectified Linear Unit\\
+CNN \> Convolutional Neural Network\\
+CUB \> Caltech-UCSD Birds\\
+DCNN \> Deep Convolutional Neural Network\\
+DCT \> Discrete Cosine Transform\\
+DFT \> Discrete Fourier Transform\\
+GA \> Genetic Algorithm\\
+GPS \> Global Positioning System\\
+GRU \> Gated Recurrent Network\\
+LSTM \> Long Short-Term Memory\\
+MAP \> Mean Average Precision\\
+MFCCs \> Mel-Frequency Cepstral Coefficients\\
+MLP \> Multilayer Perceptron\\
+RGB \> Reg Green Blue\\
+ROC \> Receiver Operating characteristics\\
+RNN \> Recurrent Neural Network\\
+STFT \> Short-Time Fourier Transform\\
+UCSD \> University of California San Diego\\
+VGG \> Visual Geometry Group\\
 % \DeclareAcronym{CNN}{
 %  short = \ensuremath{a} , % use \ensuremath{a} instead of $a$
 %  long  = Convolutional Neural Network,
@@ -336,13 +348,14 @@ The study conducted an in-depth analysis of `bird species recognition through ac
 \\
 \chapter{Methodology}
 % \section*{}
+This chapters describes bird identification using audio and image separately.
+\section{Working Mechanism for Identification using Audio}
 \begin{figure}[h!]
     \centering
-        \includegraphics[scale=0.37]{images/Methodology.png}
+        \includegraphics[scale=0.33]{images/Methodology1.png}
         \caption{Block diagram for the working mechanism of the system}%\label{fig:fig1}
     \end{figure}
 \newpage
-\section{Working Mechanism for Identification using Audio}
 The methodology for the project "Bird Classification from Audio" as outlined in the provided paper involves a comprehensive approach that spans from data collection to the implementation of a novel deep learning model. This methodology is designed to accurately classify bird species based on their calls, leveraging advanced signal processing and machine learning techniques. The following sections detail the methodology:
 
 \subsection{Dataset}
@@ -539,7 +552,7 @@ The key components of an LSTM cell include:
 A hybrid model that leverages the strengths of both CNN and LSTM architectures is developed. In this combined model, the CNN processes spectrograms to extract spatial features, which are then fed into LSTM layers to capture temporal patterns. The integration of these two models aims to utilize both spatial and temporal information, thereby improving the overall classification accuracy. Fully connected layers at the end perform the final classification based on the features extracted by both CNN and LSTM components.
 
 
-\section{Hyperparameter Optimization using Genetic Algorithm}
+\subsection{Hyperparameter Optimization using Genetic Algorithm}
 Genetic algorithms (GAs) are a powerful method for optimizing hyperparameters in machine learning models. Genetic Algorithm have proven to significantly improve the performance metrics of the CNN model instead of using hand tuned approach for hyperparameters. This section outlines the steps involved in using GAs for hyperparameter optimization\cite{9058307}.
 \begin{itemize}
     \item \textbf{Encoding the Hyperparameters}
@@ -596,8 +609,8 @@ Genetic algorithms (GAs) are a powerful method for optimizing hyperparameters in
 \end{itemize}
 \newpage
 
-\section{Algorithms Used}
-\subsection{Silent Gaps Removal}
+\subsection{Algorithms Used}
+\subsubsection{Silent Gaps Removal}
 \label{alg:Silence_Removal}
 \begin{algorithm}
     \caption{Clipping of silent gaps from both ends}
@@ -635,7 +648,7 @@ Genetic algorithms (GAs) are a powerful method for optimizing hyperparameters in
     \end{algorithm}
 
 
-\subsection{Genetic Algorithm}
+\subsubsection{Genetic Algorithm}
 \begin{algorithm}[H]
 \caption{Genetic Algorithm for Hyperparameter Optimization}
 \begin{algorithmic}[1]
@@ -651,7 +664,7 @@ Genetic algorithms (GAs) are a powerful method for optimizing hyperparameters in
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{Fitness Function}
+\subsubsection{Fitness Function}
 The fitness function evaluates the performance of hyperparameters by training and validating the model:
 
 \begin{algorithm}[H]
@@ -663,6 +676,80 @@ The fitness function evaluates the performance of hyperparameters by training an
 \end{algorithmic}
 \end{algorithm}
 
+\subsubsection{Mel Spectrogram}
+% The mel spectrogram of audio signals are extracted following the given series of steps:
+\begin{algorithm}[H]
+    \caption{Mel Spectrogram Extraction}
+    \begin{algorithmic}[1]
+        
+    \STATE \textbf{Input:} Audio signal $x(t)$. 
+    \STATE \textbf{Output:} Mel spectrogram $S_{\text{mel}}$.
+    \STATE Apply STFT to generate spectrogram $S(f, t)$. 
+    \STATE Convert amplitudes of $S(f, t)$ to dB scale, obtaining $S_{\text{dB}}(f, t)$.
+    \STATE \textbf{Convert frequencies to Mel scale}. 
+    \STATE \hspace{10} Choose number of mel bands $N_{\text{mel}}$.
+    \STATE \textbf{Construct mel filter banks}.
+        \STATE \hspace{10} Convert $f_{\text{min}}$ and $f_{\text{max}}$ of $S_{\text{dB}}(f, t)$ to Mel scale. 
+        \STATE \hspace{10} Divide Mel scale range into $N_{\text{mel}}$ intervals. 
+        \STATE \hspace{10} Convert center frequencies of Mel bands back to Hertz. 
+        \STATE \hspace{10} Round center frequencies to nearest bins. 
+        \STATE \hspace{10} Design triangular band pass filters for each Mel band. 
+        \STATE \hspace{10} Apply mel filter banks to $S_{\text{dB}}(f, t)$ to obtain $S_{\text{mel}}$. 
+    \end{algorithmic}
+\end{algorithm}
+
+
+\subsubsection{Mel-Frequency Cepstral Coefficients Extraction}
+% The extraction of MFCCs of a signal involves the following steps:
+
+\begin{algorithm}[H]
+    \caption{MFCC Extraction}
+    \begin{algorithmic}[1]
+        
+    \STATE \textbf{Input:} Audio signal $x(t)$
+    \STATE \textbf{Output:} MFCC coefficients.
+    \STATE Frame the signal into short frames.
+    \STATE Apply a window function to the frames.
+    \STATE Apply DFT to generate the frequency spectrum of each frame.
+    \STATE Apply logarithm to the spectrum to get log amplitude spectrum.
+    \STATE Perform Mel scaling using filter banks to get Mel spectrogram.
+    \STATE Apply DCT to the Mel spectrogram to get MFCCs.
+    \end{algorithmic}
+\end{algorithm}
+
+\newpage
+
+\section{Working Mechanism for Identification using Image}
+\begin{figure}[h!]
+    \centering
+        \includegraphics[scale=0.33]{images/Methodology2.png}
+        \caption{Block diagram for the working mechanism of the system}%\label{fig:fig1}
+    \end{figure}
+The working mechanism for the bird identification using image is to be done by VGG16. VGG16 have been proven to classify bird speices with accuracy of 92.13\% using Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset which had 1600 images across 27 bird species\cite{islam2019bird}. Our project aims to achieve similar result for 200 bird species.
+
+\subsection{Dataset}
+For the identification of bird species using image, we are using CUB-200-2011 dataset, which is an extended version of the CUB-200 dataset. It consists of 11,788 number of images across 200 species categories\cite{WahCUB_200_2011}.
+
+\subsection{Dataset Overview for Image}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.45]{images/cubdataset.png}
+    \caption{Dataset distribution for Top 50 Bird Species among 200 Species}
+\end{figure}
+After observing the distribution of the images across the species, most of them have 60 images per species while few of them ranges from 45 to 60.
+
+\subsection{Data Preprocessing}
+For the image classification of bird species, the data preprocessing stage is crucial for enhancing model performance and ensuring the input data is in the correct format. Initially, all images are resized to 224x224 pixels with 3 channels (RGB) to match the input size requirement of the model architecture. This uniformity is essential for the model to process the images efficiently. Following resizing, images undergo normalization, where pixel values are scaled to a range of 0 to 1. This step is vital as it helps in speeding up the convergence by reducing the variability in input data, making the optimization landscape smoother. Additionally, to augment the dataset and introduce more variability, data augmentation techniques such as flipping, rescaling, and shearing are applied. These techniques not only help in generating a more robust dataset but also prevent overfitting by simulating various perspectives and conditions. Finally, the dataset is split into training, validation, and test sets, ensuring that the model can learn effectively, validate its learning without bias, and finally, be tested on unseen data to evaluate its generalization capability. This comprehensive preprocessing pipeline is instrumental in preparing the dataset for effective training and evaluation of the model for bird species classification.
+
+\subsection{VGG16}
+For bird species image classification, the VGG-16 model serves as a powerful convolutional neural network (CNN) framework, originally developed by the Visual Geometry Group (VGG) at the University of Oxford. This model is distinguished by its depth, comprising 16 layers, which include 13 convolutional layers followed by 3 fully connected layers at the end. The architecture of VGG-16 is celebrated for its straightforward yet highly effective design, making it a robust tool for various computer vision tasks, notably in the realm of image classification and object detection. In the context of bird species classification, VGG-16's architecture is particularly beneficial. Its multiple convolutional layers, arranged in a deep stack followed by max-pooling layers, allow the model to capture and learn from the complex, hierarchical visual features specific to different bird species. This capability enables the model to distinguish between species with high accuracy, leveraging the depth of the network to process and recognize subtle differences in plumage, size, and shape among birds. Despite the emergence of newer models, VGG-16's combination of depth, simplicity, and performance ensures its continued relevance and effectiveness in classifying bird species from images, making it a preferred choice for researchers and practitioners in the field of ornithology and computer vision alike.
+
+\begin{figure}[h!]
+    \centering
+        \includegraphics[scale=0.8]{images/VGG16.png}
+        \caption{VGG16 architecture}%\label{fig:fig1}
+        % citation link: https://medium.com/techiepedia/binary-image-classifier-cnn-using-tensorflow-a3f5d6746697
+    \end{figure}
 
 
 \newpage
@@ -675,6 +762,9 @@ The usecase diagram for Bird species identification from Audio and Image is give
         \caption{UseCase Diagram}%\label{fig:fig1}
     \end{figure}
 
+
+
+
 % \begin{figure}[h!]
 %      \centering
 %         \includegraphics[scale=0.7]{output/activity.jpg}
@@ -686,10 +776,11 @@ The usecase diagram for Bird species identification from Audio and Image is give
 This project is developed using an incremental methodology since it offers a functioning prototype at an early stage of development. The requirements and scope of the project can be altered as necessary by studying the prototype. The rationale for the preference for this software development strategy is the flexibility offered by adopting the incremental technique. In this paradigm, the project goes through several releases or iterations prior to its official release.
 \begin{figure}[h!]
     % \centering
-        \includegraphics[scale=0.45]{images/SDLC.png}
+        \includegraphics[scale=0.5]{images/SDLC.png}
         \caption{Incremental Model for development of SnapTag}%\label{fig:fig1}
     \end{figure}
 \newpage
+
 \chapter{Epilogue}
 
 

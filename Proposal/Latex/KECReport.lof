@@ -12,6 +12,9 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Feature Extraction Using Spectrogram and MFCC\relax }}{21}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces CNN architecture\relax }}{22}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces LSTM architecture\relax }}{24}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces UseCase Diagram\relax }}{29}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Incremental Model for development of SnapTag\relax }}{30}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Block diagram for the working mechanism of the system\relax }}{29}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Dataset distribution for Top 50 Bird Species among 200 Species\relax }}{30}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces VGG16 architecture\relax }}{32}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces UseCase Diagram\relax }}{33}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Incremental Model for development of SnapTag\relax }}{34}{figure.caption.21}%
 \addvspace {10\p@ }
