@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  5 JUN 2024 01:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  5 JUN 2024 10:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -985,7 +985,7 @@ l.190
        [1
 
 ] [2] [3] [4]
-<images/GanttChart.png, id=323, 1002.74625pt x 423.5825pt>
+<images/GanttChart.png, id=325, 1002.74625pt x 423.5825pt>
 File: images/GanttChart.png Graphic file (type png)
 <use images/GanttChart.png>
 Package pdftex.def Info: images/GanttChart.png  used on input line 272.
@@ -1067,7 +1067,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 334--336
 
 [13] [14]
 Chapter 3.
-<images/Methodology.png, id=386, 1173.38374pt x 1660.2025pt>
+<images/Methodology.png, id=388, 1173.38374pt x 1660.2025pt>
 File: images/Methodology.png Graphic file (type png)
 <use images/Methodology.png>
 Package pdftex.def Info: images/Methodology.png  used on input line 340.
@@ -1079,170 +1079,177 @@ Overfull \hbox (17.3123pt too wide) in paragraph at lines 340--341
 
 [15
 
- <./images/Methodology.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
-
- []
-
-[16]
-<images/TrainingDataset.png, id=396, 1008.76875pt x 709.65125pt>
+ <./images/Methodology.png>] [16]
+<images/TrainingDataset.png, id=398, 1008.76875pt x 709.65125pt>
 File: images/TrainingDataset.png Graphic file (type png)
 <use images/TrainingDataset.png>
-Package pdftex.def Info: images/TrainingDataset.png  used on input line 357.
-(pdftex.def)             Requested size: 187.57352pt x 131.95477pt.
-<images/ValidationDataset.png, id=397, 999.735pt x 709.65125pt>
+Package pdftex.def Info: images/TrainingDataset.png  used on input line 356.
+(pdftex.def)             Requested size: 403.50035pt x 283.85547pt.
+<images/ValidationDataset.png, id=399, 999.735pt x 709.65125pt>
 File: images/ValidationDataset.png Graphic file (type png)
 <use images/ValidationDataset.png>
 Package pdftex.def Info: images/ValidationDataset.png  used on input line 362.
-(pdftex.def)             Requested size: 187.57352pt x 133.1459pt.
-<images/TestDataset.png, id=398, 999.735pt x 709.65125pt>
+(pdftex.def)             Requested size: 399.88692pt x 283.85547pt.
+ [17 <./images/TrainingDataset.png> <./images/ValidationDataset.png>]
+<images/TestDataset.png, id=406, 999.735pt x 709.65125pt>
 File: images/TestDataset.png Graphic file (type png)
 <use images/TestDataset.png>
-Package pdftex.def Info: images/TestDataset.png  used on input line 370.
-(pdftex.def)             Requested size: 187.57352pt x 133.1459pt.
-<images/SampleData.png, id=399, 1171.37625pt x 471.7625pt>
-File: images/SampleData.png Graphic file (type png)
-<use images/SampleData.png>
-Package pdftex.def Info: images/SampleData.png  used on input line 375.
-(pdftex.def)             Requested size: 187.57352pt x 75.54112pt.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-84.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [17 <./images/TrainingDataset.png> <./images/ValidationDataset.png> <./images
-/TestDataset.png> <./images/SampleData.png>] [18]
-<images/MFCC.jpg, id=415, 814.04124pt x 312.16624pt>
-File: images/MFCC.jpg Graphic file (type jpg)
-<use images/MFCC.jpg>
-Package pdftex.def Info: images/MFCC.jpg  used on input line 434.
-(pdftex.def)             Requested size: 407.01962pt x 156.08273pt.
- [19 <./images/MFCC.jpg>]
-<images/Convolution.png, id=430, 437.38406pt x 216.05719pt>
-File: images/Convolution.png Graphic file (type png)
-<use images/Convolution.png>
-Package pdftex.def Info: images/Convolution.png  used on input line 471.
-(pdftex.def)             Requested size: 437.38298pt x 216.05664pt.
+Package pdftex.def Info: images/TestDataset.png  used on input line 368.
+(pdftex.def)             Requested size: 449.87659pt x 319.3401pt.
 
-Overfull \hbox (20.5501pt too wide) in paragraph at lines 471--472
+Overfull \hbox (33.0437pt too wide) in paragraph at lines 368--369
  [][] 
  []
 
-[20 <./images/Convolution.png>]
-<images/LSTM.png, id=443, 987.69pt x 500.87125pt>
-File: images/LSTM.png Graphic file (type png)
-<use images/LSTM.png>
-Package pdftex.def Info: images/LSTM.png  used on input line 498.
-(pdftex.def)             Requested size: 395.069pt x 200.34494pt.
+<images/SampleData.png, id=407, 1171.37625pt x 471.7625pt>
+File: images/SampleData.png Graphic file (type png)
+<use images/SampleData.png>
+Package pdftex.def Info: images/SampleData.png  used on input line 374.
+(pdftex.def)             Requested size: 445.12761pt x 179.2716pt.
+
+Overfull \hbox (28.29472pt too wide) in paragraph at lines 374--375
+ [][] 
+ []
+
+[18 <./images/TestDataset.png> <./images/SampleData.png>]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
+82.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [19]
+<images/MFCC.jpg, id=421, 814.04124pt x 312.16624pt>
+File: images/MFCC.jpg Graphic file (type jpg)
+<use images/MFCC.jpg>
+Package pdftex.def Info: images/MFCC.jpg  used on input line 432.
+(pdftex.def)             Requested size: 407.01962pt x 156.08273pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21] [22 <./images/LSTM.png>] [23]
+[20]
+<images/Convolution.png, id=432, 437.38406pt x 216.05719pt>
+File: images/Convolution.png Graphic file (type png)
+<use images/Convolution.png>
+Package pdftex.def Info: images/Convolution.png  used on input line 469.
+(pdftex.def)             Requested size: 437.38298pt x 216.05664pt.
+
+Overfull \hbox (20.5501pt too wide) in paragraph at lines 469--470
+ [][] 
+ []
+
+[21 <./images/MFCC.jpg>] [22 <./images/Convolution.png>]
+<images/LSTM.png, id=455, 987.69pt x 500.87125pt>
+File: images/LSTM.png Graphic file (type png)
+<use images/LSTM.png>
+Package pdftex.def Info: images/LSTM.png  used on input line 496.
+(pdftex.def)             Requested size: 395.069pt x 200.34494pt.
+ [23 <./images/LSTM.png>] [24] [25]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 603.
- [24] [25]
-<output/usecase.png, id=490, 492.84125pt x 597.23125pt>
+put line 601.
+ [26]
+<output/usecase.png, id=496, 492.84125pt x 597.23125pt>
 File: output/usecase.png Graphic file (type png)
 <use output/usecase.png>
-Package pdftex.def Info: output/usecase.png  used on input line 635.
+Package pdftex.def Info: output/usecase.png  used on input line 633.
 (pdftex.def)             Requested size: 344.98651pt x 418.05902pt.
- [26 <./output/usecase.png>]
-<output/activity.jpg, id=496, 437.38406pt x 640.64343pt>
+ [27 <./output/usecase.png>]
+<output/activity.jpg, id=502, 437.38406pt x 640.64343pt>
 File: output/activity.jpg Graphic file (type jpg)
 <use output/activity.jpg>
-Package pdftex.def Info: output/activity.jpg  used on input line 641.
+Package pdftex.def Info: output/activity.jpg  used on input line 639.
 (pdftex.def)             Requested size: 306.16675pt x 448.44734pt.
-
-[27 <./output/activity.jpg>]
-<images/SDLC.png, id=501, 845.1575pt x 502.87875pt>
+ [28 <./output/activity.jpg>]
+<images/SDLC.png, id=507, 845.1575pt x 502.87875pt>
 File: images/SDLC.png Graphic file (type png)
 <use images/SDLC.png>
-Package pdftex.def Info: images/SDLC.png  used on input line 650.
+Package pdftex.def Info: images/SDLC.png  used on input line 648.
 (pdftex.def)             Requested size: 380.31737pt x 226.29333pt.
- [28 <./images/SDLC.png>]
+
+[29 <./images/SDLC.png>]
 Chapter 4.
-[29
+[30
 
 ]
-<output/original.jpg, id=514, 1541.76pt x 2055.68pt>
+<output/original.jpg, id=521, 1541.76pt x 2055.68pt>
 File: output/original.jpg Graphic file (type jpg)
 <use output/original.jpg>
-Package pdftex.def Info: output/original.jpg  used on input line 668.
+Package pdftex.def Info: output/original.jpg  used on input line 666.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/thresholded.jpg, id=515, 963.6pt x 1284.8pt>
+<output/thresholded.jpg, id=522, 963.6pt x 1284.8pt>
 File: output/thresholded.jpg Graphic file (type jpg)
 <use output/thresholded.jpg>
-Package pdftex.def Info: output/thresholded.jpg  used on input line 673.
+Package pdftex.def Info: output/thresholded.jpg  used on input line 671.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/closed.jpg, id=516, 963.6pt x 1284.8pt>
+<output/closed.jpg, id=523, 963.6pt x 1284.8pt>
 File: output/closed.jpg Graphic file (type jpg)
 <use output/closed.jpg>
-Package pdftex.def Info: output/closed.jpg  used on input line 681.
+Package pdftex.def Info: output/closed.jpg  used on input line 679.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/edges.jpg, id=517, 963.6pt x 1284.8pt>
+<output/edges.jpg, id=524, 963.6pt x 1284.8pt>
 File: output/edges.jpg Graphic file (type jpg)
 <use output/edges.jpg>
-Package pdftex.def Info: output/edges.jpg  used on input line 686.
+Package pdftex.def Info: output/edges.jpg  used on input line 684.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/hough_line.jpg, id=518, 963.6pt x 1284.8pt>
+<output/hough_line.jpg, id=525, 963.6pt x 1284.8pt>
 File: output/hough_line.jpg Graphic file (type jpg)
 <use output/hough_line.jpg>
-Package pdftex.def Info: output/hough_line.jpg  used on input line 694.
+Package pdftex.def Info: output/hough_line.jpg  used on input line 692.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
-<output/intersection_point_output.jpg, id=519, 963.6pt x 1284.8pt>
+<output/intersection_point_output.jpg, id=526, 963.6pt x 1284.8pt>
 File: output/intersection_point_output.jpg Graphic file (type jpg)
 <use output/intersection_point_output.jpg>
 Package pdftex.def Info: output/intersection_point_output.jpg  used on input li
-ne 699.
+ne 697.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
 
-Underfull \hbox (badness 1097) in paragraph at lines 700--700
+Underfull \hbox (badness 1097) in paragraph at lines 698--698
 []\OT1/ptm/m/n/12 Figure 4.6: |In-ter-sec-tion
  []
 
-<output/grouped.jpg, id=520, 963.6pt x 1284.8pt>
+<output/grouped.jpg, id=527, 963.6pt x 1284.8pt>
 File: output/grouped.jpg Graphic file (type jpg)
 <use output/grouped.jpg>
-Package pdftex.def Info: output/grouped.jpg  used on input line 708.
+Package pdftex.def Info: output/grouped.jpg  used on input line 706.
 (pdftex.def)             Requested size: 125.05113pt x 166.71619pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 709--709
+Underfull \hbox (badness 10000) in paragraph at lines 707--707
 []\OT1/ptm/m/n/12 Figure 4.7: |K-means
  []
 
-<output/output.jpg, id=521, 730.73pt x 1028.84375pt>
+<output/output.jpg, id=528, 730.73pt x 1028.84375pt>
 File: output/output.jpg Graphic file (type jpg)
 <use output/output.jpg>
-Package pdftex.def Info: output/output.jpg  used on input line 713.
+Package pdftex.def Info: output/output.jpg  used on input line 711.
 (pdftex.def)             Requested size: 125.05113pt x 176.06284pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[30 <./output/original.jpg> <./output/thresholded.jpg> <./output/closed.jpg> <.
+[31 <./output/original.jpg> <./output/thresholded.jpg> <./output/closed.jpg> <.
 /output/edges.jpg> <./output/hough_line.jpg> <./output/intersection_point_outpu
 t.jpg>]
-<output/home.jpg, id=527, 658.71094pt x 1355.0625pt>
+<output/home.jpg, id=533, 658.71094pt x 1355.0625pt>
 File: output/home.jpg Graphic file (type jpg)
 <use output/home.jpg>
-Package pdftex.def Info: output/home.jpg  used on input line 723.
+Package pdftex.def Info: output/home.jpg  used on input line 721.
 (pdftex.def)             Requested size: 197.61479pt x 406.5219pt.
-<output/add.png, id=528, 658.71094pt x 1355.0625pt>
+<output/add.png, id=534, 658.71094pt x 1355.0625pt>
 File: output/add.png Graphic file (type png)
 <use output/add.png>
-Package pdftex.def Info: output/add.png  used on input line 729.
+Package pdftex.def Info: output/add.png  used on input line 727.
 (pdftex.def)             Requested size: 197.61479pt x 406.5219pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[31 <./output/grouped.jpg> <./output/output.jpg> <./output/home.jpg>] [32 <./ou
-tput/add.png>] (./KECReport.bbl [33
+[32 <./output/grouped.jpg> <./output/output.jpg> <./output/home.jpg>] [33 <./ou
+tput/add.png>] (./KECReport.bbl [34
 
 ])
 ! Too many }'s.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.761 \end{figure}
+l.759 \end{figure}
                   
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1250,14 +1257,14 @@ Such booboos are generally harmless, so keep going.
 ! Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
-l.761 \end{figure}
+l.759 \end{figure}
                   
 Things are pretty mixed up, but I think the worst is over.
 
 ! Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.761 \end{figure}
+l.759 \end{figure}
                   
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1269,7 +1276,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.761 \end{figure}
+l.759 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1278,20 +1285,20 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.761 \end{figure}
+l.759 \end{figure}
                   
 Things are pretty mixed up, but I think the worst is over.
 
-[34] (./KECReport.aux)
+[35] (./KECReport.aux)
 Package rerunfilecheck Info: File `KECReport.out' has not changed.
 (rerunfilecheck)             Checksum: 4D1102BE589FA26ACF277A529FC8D95F;6210.
  ) 
 Here is how much of TeX's memory you used:
- 17801 strings out of 478287
- 325692 string characters out of 5849289
+ 17804 strings out of 478287
+ 325733 string characters out of 5849289
  598900 words of memory out of 5000000
  35584 multiletter control sequences out of 15000+600000
- 492268 words of font info for 71 fonts, out of 8000000 for 9000
+ 492269 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,82p,2183b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1306,10 +1313,10 @@ cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on KECReport.pdf (41 pages, 3159613 bytes).
+Output written on KECReport.pdf (42 pages, 3159961 bytes).
 PDF statistics:
- 645 PDF objects out of 1000 (max. 8388607)
- 537 compressed objects within 6 object streams
- 163 named destinations out of 1000 (max. 500000)
+ 651 PDF objects out of 1000 (max. 8388607)
+ 542 compressed objects within 6 object streams
+ 166 named destinations out of 1000 (max. 500000)
  452 words of extra memory for PDF output out of 10000 (max. 10000000)
 

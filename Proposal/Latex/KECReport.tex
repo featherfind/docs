@@ -348,35 +348,33 @@ The methodology for the project "Bird Classification from Audio" as outlined in 
 
 For this project, we are using the CharaNet dataset, which is specifically curated to include audio files of Nepal's endangered bird species. This dataset was collected from \textit{xeno-canto.org}, a platform where bird sounds from around the world are shared by contributors who travel extensively to capture these sounds. From this source, we gathered 2215 audio recordings representing 41 bird species, 38 of which are listed as endangered in Nepal.
 
-To augment the dataset, we employed a 10-second split method, which expanded the dataset to 6733 audio recordings. Additionally, for bird species with fewer than 30 recordings, we added Gaussian noise to further increase the number of samples. This resulted in a robust dataset comprising 5407 audio recordings for training, 639 for validation, and 687 for testing. This comprehensive dataset ensures that our model can learn effectively and generalize well to new, unseen data.\\
+To augment the dataset, we employed a 10-second split method, which expanded the dataset to 6733 audio recordings. Additionally, for bird species with fewer than 30 recordings, we added Gaussian noise to further increase the number of samples. This resulted in a robust dataset comprising 5407 audio recordings for training, 639 for validation, and 687 for testing. This comprehensive dataset ensures that our model can learn effectively and generalize well to new, unseen data.
 \newpage
 \subsection{Dataset Overview}
-    \begin{figure}[h]
-        \centering
-        \begin{minipage}[b]{0.45\linewidth}
-            \includegraphics[width=\linewidth]{images/TrainingDataset.png}
-            \caption{Training Dataset}
-        \end{minipage}
-        \hspace{1cm}
-        \begin{minipage}[b]{0.45\linewidth}
-            \includegraphics[width=\linewidth]{images/ValidationDataset.png}
-            \caption{Validation Dataset}
-        \end{minipage}
-        
-    \end{figure}
-    \begin{figure}[h]
-        \centering
-        \begin{minipage}[b]{0.45\linewidth}
-            \includegraphics[width=\linewidth]{images/TestDataset.png}
-            \caption{Testing Dataset}
-        \end{minipage}
-        \hspace{1cm}
-        \begin{minipage}[b]{0.45\linewidth}
-            \includegraphics[width=\linewidth]{images/SampleData.png}
-            \caption{Sample of the Data}
-        \end{minipage}
-        
-    \end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.4]{images/TrainingDataset.png}
+    \caption{Training Dataset}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.4]{images/ValidationDataset.png}
+    \caption{Validation Dataset}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.45]{images/TestDataset.png}
+    \caption{Testing Dataset}
+\end{figure}
+\hspace{3.5cm}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.38]{images/SampleData.png}
+    \caption{Sample of the Data}
+\end{figure}
+\newpage
 \subsection{Data Preprocessing}
 
 The collected audio data undergoes thorough preprocessing to ensure its suitability for model training. This process includes:
