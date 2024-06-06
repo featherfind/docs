@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  6 JUN 2024 11:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  6 JUN 2024 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1017,168 +1017,145 @@ Underfull \hbox (badness 10000) in paragraph at lines 361--383
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 385--412
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 413--440
+Underfull \hbox (badness 10000) in paragraph at lines 410--434
 
  []
 
 [8]
-Overfull \hbox (2.80316pt too wide) in paragraph at lines 441--464
+Overfull \hbox (2.80316pt too wide) in paragraph at lines 435--453
 []\OT1/ptm/m/n/12 The re-search pa-per `Bird Species Iden-ti-fi-ca-tion us-ing 
 Deep Learn-ing' presents a method-
  []
 
 
-Overfull \hbox (6.63106pt too wide) in paragraph at lines 441--464
+Overfull \hbox (6.63106pt too wide) in paragraph at lines 435--453
 \OT1/ptm/m/n/12 lever-ag-ing the Caltech-UCSD Birds 200 (CUB-200-2011) dataset,
  which con-tains 11,788
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--464
+Underfull \hbox (badness 10000) in paragraph at lines 435--453
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 465--489
+Underfull \hbox (badness 10000) in paragraph at lines 454--478
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--499
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 490--518
+Underfull \hbox (badness 10000) in paragraph at lines 500--521
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 519--546
+Underfull \hbox (badness 10000) in paragraph at lines 522--539
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--564
-
- []
-
-[12]
-! Undefined control sequence.
-l.579 ...ion/recall values ranging between 50\dash
-                                                  75\%. The results demonstr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 565--590
+Underfull \hbox (badness 10000) in paragraph at lines 540--565
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 565--590
+Underfull \hbox (badness 10000) in paragraph at lines 540--565
 
  []
 
-[13] [14]
+[12] [13]
 Chapter 3.
-<images/Methodology1.png, id=391, 1068.99374pt x 1601.985pt>
+<images/Methodology1.png, id=385, 1068.99374pt x 1601.985pt>
 File: images/Methodology1.png Graphic file (type png)
 <use images/Methodology1.png>
-Package pdftex.def Info: images/Methodology1.png  used on input line 597.
+Package pdftex.def Info: images/Methodology1.png  used on input line 572.
 (pdftex.def)             Requested size: 352.76903pt x 528.6567pt.
-[15
+[14
 
  <./images/Methodology1.png>]
-Overfull \hbox (5.73024pt too wide) in paragraph at lines 601--607
+Overfull \hbox (5.73024pt too wide) in paragraph at lines 576--582
 []\OT1/ptm/m/n/12 The work-ing mech-a-nism for bird iden-ti-fi-ca-tion from au-
 dio uti-lizes the Cha-raNET dataset,
  []
 
-[16]
-<images/TrainingDataset.png, id=403, 1008.76875pt x 709.65125pt>
+[15]
+<images/TrainingDataset.png, id=398, 1008.76875pt x 709.65125pt>
 File: images/TrainingDataset.png Graphic file (type png)
 <use images/TrainingDataset.png>
-Package pdftex.def Info: images/TrainingDataset.png  used on input line 625.
+Package pdftex.def Info: images/TrainingDataset.png  used on input line 600.
 (pdftex.def)             Requested size: 403.50035pt x 283.85547pt.
-<images/ValidationDataset.png, id=404, 999.735pt x 709.65125pt>
+<images/ValidationDataset.png, id=399, 999.735pt x 709.65125pt>
 File: images/ValidationDataset.png Graphic file (type png)
 <use images/ValidationDataset.png>
-Package pdftex.def Info: images/ValidationDataset.png  used on input line 631.
+Package pdftex.def Info: images/ValidationDataset.png  used on input line 606.
 (pdftex.def)             Requested size: 399.88692pt x 283.85547pt.
- [17 <./images/TrainingDataset.png> <./images/ValidationDataset.png>]
-<images/TestDataset.png, id=411, 999.735pt x 709.65125pt>
+ [16 <./images/TrainingDataset.png> <./images/ValidationDataset.png>]
+<images/TestDataset.png, id=406, 999.735pt x 709.65125pt>
 File: images/TestDataset.png Graphic file (type png)
 <use images/TestDataset.png>
-Package pdftex.def Info: images/TestDataset.png  used on input line 637.
+Package pdftex.def Info: images/TestDataset.png  used on input line 612.
 (pdftex.def)             Requested size: 449.87659pt x 319.3401pt.
 
-Overfull \hbox (33.0437pt too wide) in paragraph at lines 637--638
+Overfull \hbox (33.0437pt too wide) in paragraph at lines 612--613
  [][] 
  []
 
-<images/SampleData.png, id=412, 1171.37625pt x 471.7625pt>
+<images/SampleData.png, id=407, 1171.37625pt x 471.7625pt>
 File: images/SampleData.png Graphic file (type png)
 <use images/SampleData.png>
-Package pdftex.def Info: images/SampleData.png  used on input line 643.
+Package pdftex.def Info: images/SampleData.png  used on input line 618.
 (pdftex.def)             Requested size: 445.12761pt x 179.2716pt.
 
-Overfull \hbox (28.29472pt too wide) in paragraph at lines 643--644
+Overfull \hbox (28.29472pt too wide) in paragraph at lines 618--619
  [][] 
  []
 
-[18 <./images/TestDataset.png> <./images/SampleData.png>]
+[17 <./images/TestDataset.png> <./images/SampleData.png>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
-52.
+28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-
-Package caption Warning: \label without proper reference on input line 642.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `SampleData' on page 19 undefined on input line 653.
-
-[19] [20]
-<images/MFCC.jpg, id=436, 814.04124pt x 312.16624pt>
+) [18] [19]
+<images/MFCC.jpg, id=431, 814.04124pt x 312.16624pt>
 File: images/MFCC.jpg Graphic file (type jpg)
 <use images/MFCC.jpg>
-Package pdftex.def Info: images/MFCC.jpg  used on input line 723.
+Package pdftex.def Info: images/MFCC.jpg  used on input line 699.
 (pdftex.def)             Requested size: 407.01962pt x 156.08273pt.
- [21 <./images/MFCC.jpg>]
-<images/Convolution.png, id=457, 437.38406pt x 216.05719pt>
+ [20 <./images/MFCC.jpg>]
+<images/Convolution.png, id=452, 437.38406pt x 216.05719pt>
 File: images/Convolution.png Graphic file (type png)
 <use images/Convolution.png>
-Package pdftex.def Info: images/Convolution.png  used on input line 760.
+Package pdftex.def Info: images/Convolution.png  used on input line 736.
 (pdftex.def)             Requested size: 437.38298pt x 216.05664pt.
 
-Overfull \hbox (20.5501pt too wide) in paragraph at lines 760--761
+Overfull \hbox (20.5501pt too wide) in paragraph at lines 736--737
  [][] 
  []
 
-[22 <./images/Convolution.png>]
-<images/LSTM.png, id=466, 987.69pt x 500.87125pt>
+[21 <./images/Convolution.png>]
+<images/LSTM.png, id=461, 987.69pt x 500.87125pt>
 File: images/LSTM.png Graphic file (type png)
 <use images/LSTM.png>
-Package pdftex.def Info: images/LSTM.png  used on input line 794.
+Package pdftex.def Info: images/LSTM.png  used on input line 770.
 (pdftex.def)             Requested size: 395.069pt x 200.34494pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23] [24 <./images/LSTM.png>] [25] [26]
+[22] [23 <./images/LSTM.png>] [24] [25]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 921.
- [27]
+put line 897.
+ [26]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.995         \STATE \hspace{10}
+l.971         \STATE \hspace{10}
                                  Choose number of mel bands $N_{\text{mel}}$.
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1190,7 +1167,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.997         \STATE \hspace{10}
+l.973         \STATE \hspace{10}
                                  Convert $f_{\text{min}}$ and $f_{\text{max}...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1202,7 +1179,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.998         \STATE \hspace{10}
+l.974         \STATE \hspace{10}
                                  Divide Mel scale range into $N_{\text{mel}}...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1214,7 +1191,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.999         \STATE \hspace{10}
+l.975         \STATE \hspace{10}
                                  Convert center frequencies of Mel bands bac...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1226,8 +1203,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1000         \STATE \hspace{10}
-                                  Round center frequencies to nearest bins.
+l.976         \STATE \hspace{10}
+                                 Round center frequencies to nearest bins.
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1238,8 +1215,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1001         \STATE \hspace{10}
-                                  Design triangular band pass filters for ea...
+l.977         \STATE \hspace{10}
+                                 Design triangular band pass filters for eac...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1250,8 +1227,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1002         \STATE \hspace{10}
-                                  Apply mel filter banks to $S_{\text{dB}}(f...
+l.978         \STATE \hspace{10}
+                                 Apply mel filter banks to $S_{\text{dB}}(f,...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1259,58 +1236,58 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-[28]
-<images/Methodology2.png, id=572, 1069.9975pt x 1393.205pt>
+[27]
+<images/Methodology2.png, id=567, 1069.9975pt x 1393.205pt>
 File: images/Methodology2.png Graphic file (type png)
 <use images/Methodology2.png>
-Package pdftex.def Info: images/Methodology2.png  used on input line 1029.
+Package pdftex.def Info: images/Methodology2.png  used on input line 1005.
 (pdftex.def)             Requested size: 353.10027pt x 459.75908pt.
 
-Overfull \hbox (5.90038pt too wide) in paragraph at lines 1032--1035
+Overfull \hbox (5.90038pt too wide) in paragraph at lines 1008--1011
 \OT1/ptm/m/n/12 VGG16 have been proven to clas-sify bird spe-ices with ac-cu-ra
 cy of 92.13% us-ing Caltech-
  []
 
-[29 <./images/Methodology2.png>]
-<images/cubdataset.png, id=580, 992.70876pt x 992.70876pt>
+[28 <./images/Methodology2.png>]
+<images/cubdataset.png, id=575, 992.70876pt x 992.70876pt>
 File: images/cubdataset.png Graphic file (type png)
 <use images/cubdataset.png>
-Package pdftex.def Info: images/cubdataset.png  used on input line 1044.
+Package pdftex.def Info: images/cubdataset.png  used on input line 1020.
 (pdftex.def)             Requested size: 446.71481pt x 446.71481pt.
 
-Overfull \hbox (29.88193pt too wide) in paragraph at lines 1044--1045
+Overfull \hbox (29.88193pt too wide) in paragraph at lines 1020--1021
  [][] 
  []
 
-[30 <./images/cubdataset.png>] [31]
-<images/VGG16.png, id=597, 722.7pt x 733.74126pt>
+[29 <./images/cubdataset.png>] [30]
+<images/VGG16.png, id=592, 722.7pt x 733.74126pt>
 File: images/VGG16.png Graphic file (type png)
 <use images/VGG16.png>
-Package pdftex.def Info: images/VGG16.png  used on input line 1096.
+Package pdftex.def Info: images/VGG16.png  used on input line 1072.
 (pdftex.def)             Requested size: 361.3491pt x 366.86974pt.
- [32 <./images/VGG16.png>] [33]
+ [31 <./images/VGG16.png>] [32]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-226.
+202.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [34] [35]
-<images/SDLC.png, id=649, 1660.2025pt x 1173.38374pt>
+) [33] [34]
+<images/SDLC.png, id=644, 1660.2025pt x 1173.38374pt>
 File: images/SDLC.png Graphic file (type png)
 <use images/SDLC.png>
-Package pdftex.def Info: images/SDLC.png  used on input line 1260.
+Package pdftex.def Info: images/SDLC.png  used on input line 1236.
 (pdftex.def)             Requested size: 415.0496pt x 293.34521pt.
- [36 <./images/SDLC.png (PNG copy)>]
+ [35 <./images/SDLC.png (PNG copy)>]
 Chapter 4.
-[37
+[36
 
-] (./KECReport.bbl [38
+] (./KECReport.bbl [37
 
 ])
 ! Too many }'s.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.1279 \end{figure}
+l.1255 \end{figure}
                    
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1318,14 +1295,14 @@ Such booboos are generally harmless, so keep going.
 ! Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
-l.1279 \end{figure}
+l.1255 \end{figure}
                    
 Things are pretty mixed up, but I think the worst is over.
 
 ! Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.1279 \end{figure}
+l.1255 \end{figure}
                    
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1337,7 +1314,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1279 \end{figure}
+l.1255 \end{figure}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1346,23 +1323,20 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.1279 \end{figure}
+l.1255 \end{figure}
                    
 Things are pretty mixed up, but I think the worst is over.
 
-[39] (./KECReport.aux)
-
-LaTeX Warning: There were undefined references.
-
+[38] (./KECReport.aux)
 Package rerunfilecheck Info: File `KECReport.out' has not changed.
 (rerunfilecheck)             Checksum: 987207BF358E9EF48EEECAD8E9B10D81;7218.
  ) 
 Here is how much of TeX's memory you used:
- 17882 strings out of 478287
- 326347 string characters out of 5849289
- 606159 words of memory out of 5000000
+ 17881 strings out of 478287
+ 326344 string characters out of 5849289
+ 606122 words of memory out of 5000000
  35573 multiletter control sequences out of 15000+600000
- 492788 words of font info for 73 fonts, out of 8000000 for 9000
+ 492787 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,82p,1055b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1378,10 +1352,10 @@ cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on KECReport.pdf (46 pages, 1185585 bytes).
+Output written on KECReport.pdf (45 pages, 1183811 bytes).
 PDF statistics:
- 790 PDF objects out of 1000 (max. 8388607)
- 683 compressed objects within 7 object streams
- 259 named destinations out of 1000 (max. 500000)
+ 784 PDF objects out of 1000 (max. 8388607)
+ 678 compressed objects within 7 object streams
+ 258 named destinations out of 1000 (max. 500000)
  439 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -614,9 +614,10 @@ demonstrating the efficacy of such an approach. \newpage
 \end{figure}
 \hspace{3.5cm}
 \begin{figure}[h!]
-    \centering\label{SampleData}
+    \centering
     \includegraphics[scale=0.38]{images/SampleData.png}
     \caption{Sample of the Data}
+    \label{fig:SampleData}
 \end{figure}
 \newpage
 \subsection{Data Preprocessing}
@@ -625,7 +626,7 @@ The collected audio data undergoes thorough preprocessing to ensure its
 suitability for model training. This process includes:
 \begin{itemize}
     \item \textbf{Silence Gap Removal:} After observing some of the data samples, it was found that the audio has some silence gaps
-     in either of the ends as seen in \ref{SampleData}. These could be removed employing the silence removal algorithm. The processing
+     in either of the ends as seen in \ref{fig:SampleData}. These could be removed employing the silence removal algorithm. The processing
       starts from both ends and moves toward the center. In that processing, the local mean of the window segment of the audio wave is
        calculated and compared with the audio’s global mean. If the local mean is smaller than the global mean, the window segment is c
        onsidered to contain insignificant data, thus the segment is clipped from the original audio\cite{9850832}. Algorithm \ref{alg:Silence_Removal} 
