@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  6 JUN 2024 12:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  6 JUN 2024 12:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -900,7 +900,7 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 65.
-<images/logo.png, id=187, 102.3825pt x 102.3825pt>
+<images/logo.png, id=191, 102.3825pt x 102.3825pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
 Package pdftex.def Info: images/logo.png  used on input line 67.
@@ -997,7 +997,7 @@ l.208
        [1
 
 ] [2] [3] [4]
-<images/GanttChart.png, id=328, 1002.74625pt x 423.5825pt>
+<images/GanttChart.png, id=335, 1002.74625pt x 423.5825pt>
 File: images/GanttChart.png Graphic file (type png)
 <use images/GanttChart.png>
 Package pdftex.def Info: images/GanttChart.png  used on input line 317.
@@ -1070,7 +1070,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 540--565
 
 [12] [13]
 Chapter 3.
-<images/Methodology1.png, id=385, 1068.99374pt x 1601.985pt>
+<images/Methodology1.png, id=392, 1068.99374pt x 1601.985pt>
 File: images/Methodology1.png Graphic file (type png)
 <use images/Methodology1.png>
 Package pdftex.def Info: images/Methodology1.png  used on input line 572.
@@ -1084,18 +1084,18 @@ dio uti-lizes the Cha-raNET dataset,
  []
 
 [15]
-<images/TrainingDataset.png, id=398, 1008.76875pt x 709.65125pt>
+<images/TrainingDataset.png, id=405, 1008.76875pt x 709.65125pt>
 File: images/TrainingDataset.png Graphic file (type png)
 <use images/TrainingDataset.png>
 Package pdftex.def Info: images/TrainingDataset.png  used on input line 600.
 (pdftex.def)             Requested size: 403.50035pt x 283.85547pt.
-<images/ValidationDataset.png, id=399, 999.735pt x 709.65125pt>
+<images/ValidationDataset.png, id=406, 999.735pt x 709.65125pt>
 File: images/ValidationDataset.png Graphic file (type png)
 <use images/ValidationDataset.png>
 Package pdftex.def Info: images/ValidationDataset.png  used on input line 606.
 (pdftex.def)             Requested size: 399.88692pt x 283.85547pt.
  [16 <./images/TrainingDataset.png> <./images/ValidationDataset.png>]
-<images/TestDataset.png, id=406, 999.735pt x 709.65125pt>
+<images/TestDataset.png, id=413, 999.735pt x 709.65125pt>
 File: images/TestDataset.png Graphic file (type png)
 <use images/TestDataset.png>
 Package pdftex.def Info: images/TestDataset.png  used on input line 612.
@@ -1105,7 +1105,7 @@ Overfull \hbox (33.0437pt too wide) in paragraph at lines 612--613
  [][] 
  []
 
-<images/SampleData.png, id=407, 1171.37625pt x 471.7625pt>
+<images/SampleData.png, id=414, 1171.37625pt x 471.7625pt>
 File: images/SampleData.png Graphic file (type png)
 <use images/SampleData.png>
 Package pdftex.def Info: images/SampleData.png  used on input line 618.
@@ -1122,13 +1122,13 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [18] [19]
-<images/MFCC.jpg, id=431, 814.04124pt x 312.16624pt>
+<images/MFCC.jpg, id=438, 814.04124pt x 312.16624pt>
 File: images/MFCC.jpg Graphic file (type jpg)
 <use images/MFCC.jpg>
 Package pdftex.def Info: images/MFCC.jpg  used on input line 699.
 (pdftex.def)             Requested size: 407.01962pt x 156.08273pt.
  [20 <./images/MFCC.jpg>]
-<images/Convolution.png, id=452, 437.38406pt x 216.05719pt>
+<images/Convolution.png, id=459, 437.38406pt x 216.05719pt>
 File: images/Convolution.png Graphic file (type png)
 <use images/Convolution.png>
 Package pdftex.def Info: images/Convolution.png  used on input line 736.
@@ -1139,7 +1139,7 @@ Overfull \hbox (20.5501pt too wide) in paragraph at lines 736--737
  []
 
 [21 <./images/Convolution.png>]
-<images/LSTM.png, id=461, 987.69pt x 500.87125pt>
+<images/LSTM.png, id=468, 987.69pt x 500.87125pt>
 File: images/LSTM.png Graphic file (type png)
 <use images/LSTM.png>
 Package pdftex.def Info: images/LSTM.png  used on input line 770.
@@ -1237,7 +1237,7 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 [27]
-<images/Methodology2.png, id=567, 1069.9975pt x 1393.205pt>
+<images/Methodology2.png, id=574, 1069.9975pt x 1393.205pt>
 File: images/Methodology2.png Graphic file (type png)
 <use images/Methodology2.png>
 Package pdftex.def Info: images/Methodology2.png  used on input line 1005.
@@ -1249,7 +1249,7 @@ cy of 92.13% us-ing Caltech-
  []
 
 [28 <./images/Methodology2.png>]
-<images/cubdataset.png, id=575, 992.70876pt x 992.70876pt>
+<images/cubdataset.png, id=582, 992.70876pt x 992.70876pt>
 File: images/cubdataset.png Graphic file (type png)
 <use images/cubdataset.png>
 Package pdftex.def Info: images/cubdataset.png  used on input line 1020.
@@ -1260,7 +1260,7 @@ Overfull \hbox (29.88193pt too wide) in paragraph at lines 1020--1021
  []
 
 [29 <./images/cubdataset.png>] [30]
-<images/VGG16.png, id=592, 722.7pt x 733.74126pt>
+<images/VGG16.png, id=599, 722.7pt x 733.74126pt>
 File: images/VGG16.png Graphic file (type png)
 <use images/VGG16.png>
 Package pdftex.def Info: images/VGG16.png  used on input line 1072.
@@ -1272,22 +1272,28 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [33] [34]
-<images/SDLC.png, id=644, 1660.2025pt x 1173.38374pt>
+<images/usecase.png, id=651, 799.98875pt x 665.48625pt>
+File: images/usecase.png Graphic file (type png)
+<use images/usecase.png>
+Package pdftex.def Info: images/usecase.png  used on input line 1223.
+(pdftex.def)             Requested size: 399.9934pt x 332.74231pt.
+ [35 <./images/usecase.png>]
+<images/SDLC.png, id=657, 1660.2025pt x 1173.38374pt>
 File: images/SDLC.png Graphic file (type png)
 <use images/SDLC.png>
-Package pdftex.def Info: images/SDLC.png  used on input line 1236.
+Package pdftex.def Info: images/SDLC.png  used on input line 1245.
 (pdftex.def)             Requested size: 415.0496pt x 293.34521pt.
- [35 <./images/SDLC.png (PNG copy)>]
+ [36 <./images/SDLC.png (PNG copy)>]
 Chapter 4.
-[36
+[37
 
-] (./KECReport.bbl [37
+] (./KECReport.bbl [38
 
 ])
 ! Too many }'s.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.1255 \end{figure}
+l.1264 \end{figure}
                    
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1295,14 +1301,14 @@ Such booboos are generally harmless, so keep going.
 ! Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
-l.1255 \end{figure}
+l.1264 \end{figure}
                    
 Things are pretty mixed up, but I think the worst is over.
 
 ! Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.1255 \end{figure}
+l.1264 \end{figure}
                    
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1314,7 +1320,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1255 \end{figure}
+l.1264 \end{figure}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1323,20 +1329,20 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.1255 \end{figure}
+l.1264 \end{figure}
                    
 Things are pretty mixed up, but I think the worst is over.
 
-[38] (./KECReport.aux)
+[39] (./KECReport.aux)
 Package rerunfilecheck Info: File `KECReport.out' has not changed.
-(rerunfilecheck)             Checksum: 987207BF358E9EF48EEECAD8E9B10D81;7218.
+(rerunfilecheck)             Checksum: 4D9C08C42893F8C2D2D7270834C1BA99;7346.
  ) 
 Here is how much of TeX's memory you used:
- 17881 strings out of 478287
- 326344 string characters out of 5849289
+ 17892 strings out of 478287
+ 326542 string characters out of 5849289
  606122 words of memory out of 5000000
- 35573 multiletter control sequences out of 15000+600000
- 492787 words of font info for 73 fonts, out of 8000000 for 9000
+ 35580 multiletter control sequences out of 15000+600000
+ 492788 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,82p,1055b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1352,10 +1358,10 @@ cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on KECReport.pdf (45 pages, 1183811 bytes).
+Output written on KECReport.pdf (46 pages, 1238507 bytes).
 PDF statistics:
- 784 PDF objects out of 1000 (max. 8388607)
- 678 compressed objects within 7 object streams
- 258 named destinations out of 1000 (max. 500000)
- 439 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 798 PDF objects out of 1000 (max. 8388607)
+ 689 compressed objects within 7 object streams
+ 261 named destinations out of 1000 (max. 500000)
+ 452 words of extra memory for PDF output out of 10000 (max. 10000000)
 
