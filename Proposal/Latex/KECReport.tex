@@ -351,11 +351,11 @@ schedule feasibility requirements.
 
 \chapter{Literature Review}
 
-Regardless of whether they are documented or not, every project has helped to
-shape the world as it is today. Other researchers can benefit from documented
-projects by learning specifics about problems and how to solve them.
-Additionally, they boostproject efficiency by removing the need to start the
-project from the beginning and specifying the starting point.
+This literature review explores the progression of methodologies and technologies in the field,
+with a particular focus on the use of Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) 
+networks for audio-based bird species identification. The review also examines the challenges associated
+with dataset quality and diversity, and the innovative strategies employed to address these issues,
+providing a comprehensive overview of the current state of research and future directions in avian bioacoustics.
 
 \section{Related Works}
 BirdNET is a cutting-edge research platform developed through collaboration
@@ -402,13 +402,10 @@ Transform. The EfficientNet architecture utilized compound scaling for network
 depth, width, and resolution. The findings indicated that the proposed approach
 achieved satisfactory results in classifying the bird species. However,
 limitations include the relatively small dataset size and the need for further
-enhancement in model robustness and accuracy. Future enhancements could involve
-expanding the dataset, exploring additional feature extraction techniques, and
-incorporating more advanced deep learning models to improve classification
-performance. This research contributes significantly to the conservation
-efforts by providing a reliable method for automatic bird species
-identification, aiding in monitoring and protecting endangered
-species.\cite{gautam2023audio}\\
+enhancement in model robustness and accuracy. %Future enhancements could involve
+% expanding the dataset, exploring additional feature extraction techniques, and
+% incorporating more advanced deep learning models to improve classification
+% performance.\cite{gautam2023audio}\\
 
 The paper `Audio Bird Classification with Inception-v4 extended with Time and
 Time-Frequency Attention Mechanisms' presents an innovative adaptation of the
@@ -420,9 +417,7 @@ sound classification as an image classification problem through transfer
 learning. The Inception-v4 model, initially pre-trained on ImageNet, was
 adapted to process time-frequency representations of bird sounds by converting
 these sounds into RGB images using three log-spectrograms generated via fast
-Fourier transform at different scales (128, 512, 2048 bins). Data augmentation
-techniques, common in computer vision, were applied to these spectrograms to
-enhance the robustness of the model. The findings demonstrate that the model,
+Fourier transform at different scales (128, 512, 2048 bins).The findings demonstrate that the model,
 termed `Soundception', integrates time and time-frequency attention mechanisms
 effectively, significantly improving classification accuracy. The results
 highlight Soundception's outstanding performance, achieving a mean average
@@ -431,8 +426,7 @@ background species, and 0.288 MAP for soundscapes with time-codes, making it
 the top model in the BirdClef2017 challenge across multiple tasks. However,
 limitations include the incomplete convergence of the model due to
 computational constraints and the extensive GPU resources required for
-training, which restricted the full potential realization within the
-challenge's timeframe. The paper concludes with a discussion on future
+training. The paper concludes with a discussion on future
 improvements, such as exploring different scalable optimizations and
 incorporating stacked GRU layers for better audio-to-image representation
 learning, underscoring the potential of transfer learning from advanced image
@@ -452,12 +446,10 @@ achieved a testing accuracy of 80\% and training accuracy of 93\%, with a
 validation accuracy of around 75\%, indicating robust performance across
 different data splits. The study highlights the effectiveness of combining
 multiple features (head, body, color, beak) over single-feature classification,
-with generated autographs and score sheets facilitating identification. The
-system's usability is enhanced through a web interface for image uploads, and
-future directions propose mobile app development and cloud integration to
-improve accessibility and scalability. However, the research also identifies
-limitations such as the dependency on the quality and diversity of the dataset,
-potential overfitting due to the complexity of the model, and the computational
+with generated autographs and score sheets facilitating identification.However,
+the research also identifies limitations such as the dependency on the quality 
+and diversity of the dataset,potential overfitting due to the complexity of the
+model, and the computational
 resources required for training deep learning models. Addressing these
 limitations could further enhance the model's accuracy and applicability in
 real-world scenarios.\cite{Gavali2019Bird}\\
@@ -617,7 +609,8 @@ further increase the number of samples. This augmentation process is expected to
 comprising 5407 audio recordings for training, 639 for validation, and 687 for testing. This comprehensive 
 dataset will ensure that our model can learn effectively and generalize well to new, unseen data.
 
-This augmentation methodology and the CharaNet dataset have been referenced in prior research\cite{gautam2023audio}, demonstrating the efficacy of such an approach. \newpage
+This augmentation methodology and the CharaNet dataset have been referenced in prior research\cite{gautam2023audio}, 
+demonstrating the efficacy of such an approach. \newpage
 \subsection{Dataset Overview for Audio}
 \begin{figure}[h!]
     \centering
@@ -773,8 +766,10 @@ The basic operations involved in a CNN include:
               f(x) = \max(0, x)
           \end{eqnarray}
 
-    \item \textbf{Pooling:} Pooling layers reduce the spatial dimensions of the feature maps, typically using max pooling to retain the most significant features.
-    \item \textbf{Fully Connected Layers:} After several convolutional and pooling layers, the feature maps are flattened and passed through fully connected layers to produce the final classification output.
+    \item \textbf{Pooling:} Pooling layers reduce the spatial dimensions of the feature maps, typically using
+     max pooling to retain the most significant features.
+    \item \textbf{Fully Connected Layers:} After several convolutional and pooling layers, the feature maps 
+    are flattened and passed through fully connected layers to produce the final classification output.
 \end{itemize}
 
 \subsection{Long Short-Term Memory Networks (LSTM)}
@@ -1026,7 +1021,9 @@ and validating the model:
     \includegraphics[scale=0.33]{images/Methodology2.png}
     \caption{Block diagram for the working mechanism of the system}%\label{fig:fig1}
 \end{figure}
-The working mechanism for the bird identification using image is to be done by VGG16. VGG16 have been proven to classify bird speices with accuracy of 92.13\% using Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset which had 1600 images across 27 bird species\cite{islam2019bird}. Our project aims to achieve similar result for 200 bird species.
+The working mechanism for the bird identification using image is to be done by VGG16. VGG16 have been proven 
+to classify bird speices with accuracy of 92.13\% using Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset 
+which had 1600 images across 27 bird species\cite{islam2019bird}. Our project aims to achieve similar result for 200 bird species.
 
 \subsection{Dataset}
 For the identification of bird species using image,CUB-200-2011
@@ -1049,13 +1046,24 @@ requirements. Here are the key points that highlight the importance of each
 preprocessing step:
 
 \begin{enumerate}
-    \item \textbf{Image Resizing}: All images are resized to 224x224 pixels with 3 RGB channels. This standardization is crucial for the model to process images efficiently, as it ensures that all input data has a uniform dimensionality, matching the model's input size requirement.
+    \item \textbf{Image Resizing}: All images are resized to 224x224 pixels with 3 RGB channels. This standardization 
+    is crucial for the model to process images efficiently, as it ensures that all input data has a uniform dimensionality, 
+    matching the model's input size requirement.
 
-    \item \textbf{Normalization}: Pixel values are scaled to a range of 0 to 1. Normalization is a critical step because it reduces the variability in the input data, which can significantly speed up the convergence of the model during training. By ensuring that the pixel values are within a similar range, the model can navigate the optimization landscape more smoothly, leading to better learning outcomes.
+    \item \textbf{Normalization}: Pixel values are scaled to a range of 0 to 1. Normalization is a critical step because 
+    it reduces the variability in the input data, which can significantly speed up the convergence of the model during training.
+     By ensuring that the pixel values are within a similar range, the model can navigate the optimization landscape more smoothly,
+      leading to better learning outcomes.
 
-    \item \textbf{Data Augmentation}: To enhance the dataset and introduce more variability, data augmentation techniques such as flipping, rescaling, and shearing are employed. These methods are instrumental in creating a more robust dataset by simulating different viewing conditions and perspectives. Data augmentation is particularly effective in preventing overfitting, as it allows the model to learn from a more diverse set of examples.
+    \item \textbf{Data Augmentation}: To enhance the dataset and introduce more variability, data augmentation techniques such as flipping, 
+    rescaling, and shearing are employed. These methods are instrumental in creating a more robust dataset by simulating different viewing
+     conditions and perspectives. Data augmentation is particularly effective in preventing overfitting, as it allows the model to learn 
+     from a more diverse set of examples.
 
-    \item \textbf{Train-Validation-Test Split}: The dataset is divided into training, validation, and test sets. This division is essential for a comprehensive training process, where the model is trained on a diverse set of images, validated on a separate set to adjust hyperparameters without bias, and finally, tested on unseen data to assess its generalization capability. Such a split ensures that the model can learn effectively and perform reliably on new, unseen images.
+    \item \textbf{Train-Validation-Test Split}: The dataset is divided into training, validation, and test sets. This division 
+    is essential for a comprehensive training process, where the model is trained on a diverse set of images, validated on a 
+    separate set to adjust hyperparameters without bias, and finally, tested on unseen data to assess its generalization capability. 
+    Such a split ensures that the model can learn effectively and perform reliably on new, unseen images.
 \end{enumerate}
 
 These preprocessing steps form a comprehensive pipeline that prepares the
