@@ -13,7 +13,7 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces CNN architecture\relax }}{21}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces LSTM architecture\relax }}{23}{figure.caption.16}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Block diagram for the working mechanism of the system\relax }}{28}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Dataset distribution for Top 50 Bird Species among 200 Species\relax }}{29}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Image Dataset distribution for Top 50 Bird Species among 200 Species\relax }}{29}{figure.caption.18}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces VGG16 architecture\relax }}{31}{figure.caption.19}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Usecase Diagram for FeatherFind\relax }}{35}{figure.caption.20}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Incremental Model for development of FeatherFind\relax }}{36}{figure.caption.21}%
@@ -22,4 +22,4 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Homepage\relax }}{38}{figure.caption.23}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Recording Page \relax }}{38}{figure.caption.23}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Capture Page\relax }}{39}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces classified Image\relax }}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Classified Page\relax }}{39}{figure.caption.24}%
