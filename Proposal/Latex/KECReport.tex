@@ -165,7 +165,10 @@
 
 \chapter{Introduction}
 \section{Background}\label{sec:bkgrnd}%label your section if you require to refer them somewhere else in your document.
-Globally, the avian kingdom is vast, with over 11,000 species, a testament to nature's complexity and evolutionary prowess. This figure, sourced from the International Ornithological Committee as of April 2023, merely scratches the surface of avian diversity, each species a unique entity with its own ecological role and evolutionary story.\cite{ioc_updates}
+Globally, the avian kingdom is vast, with over 11,000 species, a testament to nature's complexity 
+and evolutionary prowess. This figure, sourced from the International Ornithological Committee as 
+of April 2023, merely scratches the surface of avian diversity, each species a unique entity with 
+its own ecological role and evolutionary story.\cite{ioc_updates}
 
 Turning our gaze to Nepal, a country of remarkable biodiversity and varied
 ecosystems, from the lowland Terai to the towering Himalayas, it is home to
@@ -203,19 +206,19 @@ markers through image classification. Such a method promises to automate the
 identification process, enhancing accuracy and efficiency in monitoring
 endangered species.
 
-Implementing audio recognition and image classification technologies, however,
-raises several challenges, including the effective training of these systems to
-recognize the specific calls and visual markers of Nepal's endangered birds.
-This requires collecting and curating extensive datasets, a task complicated by
-the elusive nature of many species and the complex acoustics of their habitats.
-Additionally, integrating these technologies into conservation strategies is
-crucial for not just identifying but also protecting these species from various
-threats. A multidisciplinary approach, combining expertise in ornithology,
-conservation biology, machine learning, and environmental science, is essential
-to develop a robust system. Such a system could provide reliable data on
-species distribution, population trends, and habitat use, thereby informing
-targeted conservation actions and policies to preserve Nepal's rich avian
-biodiversity.
+% Implementing audio recognition and image classification technologies, however,
+% raises several challenges, including the effective training of these systems to
+% recognize the specific calls and visual markers of Nepal's endangered birds.
+% This requires collecting and curating extensive datasets, a task complicated by
+% the elusive nature of many species and the complex acoustics of their habitats.
+% Additionally, integrating these technologies into conservation strategies is
+% crucial for not just identifying but also protecting these species from various
+% threats. A multidisciplinary approach, combining expertise in ornithology,
+% conservation biology, machine learning, and environmental science, is essential
+% to develop a robust system. Such a system could provide reliable data on
+% species distribution, population trends, and habitat use, thereby informing
+% targeted conservation actions and policies to preserve Nepal's rich avian
+% biodiversity.
 
 \section{Objectives}
 \begin{enumerate}[label=\roman*]
@@ -234,8 +237,9 @@ biodiversity.
     \item \textbf{Ecological Research:}\\ Researchers can use the system to study bird migration,
           and habitat use, providing crucial data for modeling ecosystems and understanding ecological interactions.
     \item \textbf{Environmental Education and Awareness:}\\Integrated into educational programs, this tool will
-          raise public awareness about biodiversity and conservation, engaging students and citizen scientists in bird identification.
-    \item \textbf{Bird viewing:}\\Bird enthusiasts will benefit from these systems as they will enhance bird watching experiences by providing instant identification of bird species
+          raise public awareness about biodiversity and conservation, engaging students and scientists in bird identification.
+    \item \textbf{Bird viewing:}\\Bird enthusiasts will benefit from this system as it will enhance bird watching 
+          experiences by providing instant identification of bird species
 \end{enumerate}
 \section{Features}
 \begin{enumerate}
@@ -308,12 +312,12 @@ scheduling is done according to an incremental model where different modules
 are planned to be assigned to the group members.So, the project fulfills the
 schedule feasibility requirements.
 %(GAntt chart here)
-% \newpage
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.4]{images/GanttChart.png}
     \caption{Gantt Chart}\label{fig:my_label}
 \end{figure}
+\newpage
 \section{System Requirements}
 
 \subsection{Development Requirements}
@@ -594,23 +598,26 @@ This chapters describes bird identification using audio and image separately.
     \caption{Block diagram for the working mechanism of the system}%\label{fig:fig1}
 \end{figure}
 \newpage
-The working mechanism for bird identification from audio utilizes the CharaNET dataset, housing a diverse collection of avian vocalizations. Our methodology revolves around the utilization of Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) architectures. The primary objective of this study is to achieve high levels of accuracy in identifying a broad spectrum of 41 distinct bird species. Here lies the detailed explaination of the methodology from working mechanism to model training.
+The working mechanism for bird identification from audio utilizes the CharaNET dataset, 
+housing a diverse collection of avian vocalizations. Our methodology revolves around the 
+utilization of Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) architectures. 
+The primary objective of this study is to achieve high levels of accuracy in identifying a 
+broad spectrum of 41 distinct bird species. Here lies the detailed explaination of the methodology 
+from working mechanism to model training.
 \subsection{Dataset}
+For this project, we will utilize the CharaNet dataset, which is specifically curated to include 
+audio files of Nepal's endangered bird species. This dataset was collected from \textit{xeno-canto.org}, 
+a platform where bird sounds from around the world are shared by contributors who travel extensively to 
+capture these sounds. From this source, we will gather 2215 audio recordings representing 41 bird species, 
+38 of which are listed as endangered in Nepal.
 
-For this project, we are using the CharaNet dataset, which is specifically
-curated to include audio files of Nepal's endangered bird species. This dataset
-was collected from \textit{xeno-canto.org}, a platform where bird sounds from
-around the world are shared by contributors who travel extensively to capture
-these sounds. From this source, we gathered 2215 audio recordings representing
-41 bird species, 38 of which are listed as endangered in Nepal.
+To augment the dataset, we propose employing a 10-second split method, which will expand the dataset to 6733 
+audio recordings. Additionally, for bird species with fewer than 30 recordings, we will add Gaussian noise to 
+further increase the number of samples. This augmentation process is expected to result in a robust dataset
+comprising 5407 audio recordings for training, 639 for validation, and 687 for testing. This comprehensive 
+dataset will ensure that our model can learn effectively and generalize well to new, unseen data.
 
-To augment the dataset, we employed a 10-second split method, which expanded
-the dataset to 6733 audio recordings. Additionally, for bird species with fewer
-than 30 recordings, we added Gaussian noise to further increase the number of
-samples. This resulted in a robust dataset comprising 5407 audio recordings for
-training, 639 for validation, and 687 for testing. This comprehensive dataset
-ensures that our model can learn effectively and generalize well to new, unseen
-data. \newpage
+This augmentation methodology and the CharaNet dataset have been referenced in prior research\cite{gautam2023audio}, demonstrating the efficacy of such an approach. \newpage
 \subsection{Dataset Overview for Audio}
 \begin{figure}[h!]
     \centering
@@ -631,8 +638,7 @@ data. \newpage
 \end{figure}
 \hspace{3.5cm}
 \begin{figure}[h!]
-    \centering
-    \label{SampleData}
+    \centering\label{SampleData}
     \includegraphics[scale=0.38]{images/SampleData.png}
     \caption{Sample of the Data}
 \end{figure}
@@ -642,7 +648,12 @@ data. \newpage
 The collected audio data undergoes thorough preprocessing to ensure its
 suitability for model training. This process includes:
 \begin{itemize}
-    \item \textbf{Silence Gap Removal:} After observing some of the data samples, it was found that the audio has some silence gaps in either of the ends as seen in \ref{SampleData}. These could be removed employing the silence removal algorithm. The processing starts from both ends and moves toward the center. In that processing, the local mean of the window segment of the audio wave is calculated and compared with the audio’s global mean. If the local mean is smaller than the global mean, the window segment is considered to contain insignificant data, thus the segment is clipped from the original audio\cite{9850832}. Algorithm \ref{alg:Silence_Removal} clarifies this.
+    \item \textbf{Silence Gap Removal:} After observing some of the data samples, it was found that the audio has some silence gaps
+     in either of the ends as seen in \ref{SampleData}. These could be removed employing the silence removal algorithm. The processing
+      starts from both ends and moves toward the center. In that processing, the local mean of the window segment of the audio wave is
+       calculated and compared with the audio’s global mean. If the local mean is smaller than the global mean, the window segment is c
+       onsidered to contain insignificant data, thus the segment is clipped from the original audio\cite{9850832}. Algorithm \ref{alg:Silence_Removal} 
+       clarifies this.
     \item \textbf{Segmentation:} Dividing the continuous audio recordings into smaller, more manageable segments, ensuring consistency in input length.
     \item \textbf{Cleaning:} Removing any background noise and irrelevant sounds that could interfere with the training process.
     \item \textbf{Labeling:} Assigning the correct bird species labels to each audio segment, which is crucial for supervised learning.
@@ -1018,8 +1029,8 @@ and validating the model:
 The working mechanism for the bird identification using image is to be done by VGG16. VGG16 have been proven to classify bird speices with accuracy of 92.13\% using Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset which had 1600 images across 27 bird species\cite{islam2019bird}. Our project aims to achieve similar result for 200 bird species.
 
 \subsection{Dataset}
-For the identification of bird species using image, we are using CUB-200-2011
-dataset, which is an extended version of the CUB-200 dataset. It consists of
+For the identification of bird species using image,CUB-200-2011
+dataset will be, which is an extended version of the CUB-200 dataset. It consists of
 11,788 number of images across 200 species categories\cite{WahCUB_200_2011}.
 
 \subsection{Dataset Overview for Image}
@@ -1121,11 +1132,11 @@ where:
 
 \subsubsection{Data Augmentation}
 
-Data augmentation is a technique used to increase the diversity of training
-data without collecting new data. It involves applying random transformations
-such as rotation, translation, flipping, and scaling to the original dataset.
-This helps improve the robustness and generalization ability of machine
-learning models.
+% Data augmentation is a technique used to increase the diversity of training
+% data without collecting new data. It involves applying random transformations
+% such as rotation, translation, flipping, and scaling to the original dataset.
+% This helps improve the robustness and generalization ability of machine
+% learning models.
 
 \begin{algorithm}
     \caption{Data Augmentation}
@@ -1146,10 +1157,10 @@ learning models.
 
 \subsubsection{Normalization}
 
-Normalization is a preprocessing step used to scale the pixel values of images
-to a specific range, typically [0, 1]. This helps in speeding up the
-convergence by reducing the variability in input data, making the optimization
-landscape smoother.
+% Normalization is a preprocessing step used to scale the pixel values of images
+% to a specific range, typically [0, 1]. This helps in speeding up the
+% convergence by reducing the variability in input data, making the optimization
+% landscape smoother.
 
 \begin{algorithm}
     \caption{Normalization}
@@ -1167,12 +1178,12 @@ landscape smoother.
 
 \subsubsection{Stochastic Gradient Descent (SGD)}
 
-Stochastic Gradient Descent is an iterative optimization algorithm used to
-minimize the loss function in machine learning models, especially neural
-networks. Unlike batch gradient descent, which uses the entire dataset, SGD
-updates the model parameters using a single training example or a mini-batch at
-each iteration. This approach provides faster convergence and is especially
-useful for large datasets.
+% Stochastic Gradient Descent is an iterative optimization algorithm used to
+% minimize the loss function in machine learning models, especially neural
+% networks. Unlike batch gradient descent, which uses the entire dataset, SGD
+% updates the model parameters using a single training example or a mini-batch at
+% each iteration. This approach provides faster convergence and is especially
+% useful for large datasets.
 
 \begin{algorithm}
     \caption{Stochastic Gradient Descent (SGD)}
@@ -1231,7 +1242,7 @@ release.
 \begin{figure}[h!]
     % \centering
     \includegraphics[scale=0.25]{images/SDLC.png}
-    \caption{Incremental Model for development of FeatureFind}%\label{fig:fig1}
+    \caption{Incremental Model for development of FeatherFind}%\label{fig:fig1}
 \end{figure}
 \newpage
 
