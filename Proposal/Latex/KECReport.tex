@@ -5,11 +5,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Define Macros for Details of your Project
 \newcommand{\project}{Major Project } %Specify "Major Project" or "Minor Project"
-\newcommand{\projectTitle}{FEATHERFIND : BIRD SPECIES IDENTIFICATION FROM AUDIO AND IMAGE} %specify "Title" of Your Project
+\newcommand{\projectTitle}{FEATHERFIND : BIRD SPECIES IDENTIFICATION FROM AUDIO
+    AND IMAGE} %specify "Title" of Your Project
 \newcommand{\doc}{Proposal} % specify the document you are preparing eg. "Proposal", "Mid-Term Report" or "Final Report"32
 % Note that You have to sibmit "Final Report" for Pre-final defense as well.
 \newcommand{\subCode}{CT654} %specify Subject of Your Project
-\newcommand{\degree}{Bachelor in Computer Engineering} %specify your degree
+\newcommand{\degree}{Bachelor in Computer Engineering}
+%specify your degree
 \newcommand{\submittedBy}%Specify Names and Roll/Symbol Numbers of the Project Group Members
 {
     %Edit Member Names and Roll/Symbol No. and adjust width (\makebox[width]) if necessary 
@@ -21,7 +23,8 @@
     %\makebox[9cm]{Member Name \hfill [Roll/Symbol No.]}\\
 } % Note that You must write your "Symbol Numbers"(Exam Roll Numbers) for Final Defenses
 
-\newcommand{\submittedTo}{Department of Computer and Electronics Engineering} %specify your department
+\newcommand{\submittedTo}{Department of Computer and Electronics Engineering}
+%specify your department
 \newcommand{\hod}{Er. Rabindra Khati \\ Associate Professor}
 %specify Head ot the department
 \newcommand{\defYear}{2024} %Defense Year
@@ -32,9 +35,11 @@
 \hassupervisorfalse % to display supervisor name use command- \hassupervisortrue
 
 \newcommand{\supervisor}{Er. Bishal Thapa}
-\newcommand{\degSup}{Project Coordinator\\ Department of Computer and Electronics Engineering}
+\newcommand{\degSup}{Project Coordinator\\ Department of Computer and
+    Electronics Engineering}
 \newcommand{\external}{External's Name}
-\newcommand{\degExternal}{Designation of External\\Second line if required} %Specify Name of External for Major Project (Required for Black Book) , use multiple lines (\\) if necessary
+\newcommand{\degExternal}{Designation of External\\Second line if required}
+%Specify Name of External for Major Project (Required for Black Book) , use multiple lines (\\) if necessary
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -86,7 +91,23 @@
 %to display members name under Acknowledgement
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}%to include this chapter in TOC 
-
+This report presents "FeatherFind", a comprehensive model designed for
+identifying bird species using both audio recordings and images. The audio
+identification process involves collecting and preprocessing bird sound
+datasets, isolating key features using methods like Mel-Frequency Cepstral
+Coefficients (MFCC), and employing a combination of Convolutional Neural
+Networks (CNN) and Long Short-Term Memory networks (LSTM) to accurately
+recognize bird calls. For image identification, the model utilizes the VGG16
+architecture, a type of deep CNN, to analyze bird photos. This involves
+enhancing image quality and extracting features such as color, size, shape, and
+patterns, which are then compared to a comprehensive database of bird images to
+identify the species. The integrated approach aims to enhance the accuracy and
+efficiency of bird species identification, facilitating better conservation
+efforts, biodiversity monitoring, ecological research, and environmental
+education. By combining advanced machine learning techniques with extensive
+datasets, FeatherFind promises to offer a robust solution for the automated identification
+and monitoring of bird species, particularly those that are endangered, thereby
+contributing significantly to the field of avian research and conservation.
     % {\textit{Keywords$-$Optical Character Recognition, Binarization, Thresholding, Denoising, Boundary Detection, Hough Line Transformation, K-Means Clustering, Convolutional Neural Network}}
 
     %{\par
@@ -105,8 +126,10 @@
         % to add vskip of 18 point which is reduced when parskip is set to 0 in \LECadjustspacings
         \def\@makeschapterhead#1{%
             %\vspace*{50\p@}% Remove the vertical space
-            {\newpage \parindent \z@ \raggedright \normalfont \interlinepenalty\@M
-                    \center\fontsize{16pt}{1} \bfseries \MakeUppercase{#1}\par\nobreak
+            {\newpage \parindent \z@ \raggedright \normalfont
+                    \interlinepenalty\@M
+                    \center\fontsize{16pt}{1} \bfseries
+                    \MakeUppercase{#1}\par\nobreak
                     \vskip 18\p@ % adjust space after heading 18pt
                 }}
         \makeatother
@@ -165,9 +188,12 @@
 
 \chapter{Introduction}
 \section{Background}\label{sec:bkgrnd}%label your section if you require to refer them somewhere else in your document.
-Globally, the avian kingdom is vast, with over 11,000 species, a testament to nature's complexity 
-and evolutionary prowess. This figure, sourced from the International Ornithological Committee as 
-of April 2023, merely scratches the surface of avian diversity, each species a unique entity with 
+Globally, the avian kingdom is vast, with over 11,000 species, a testament to
+nature's complexity
+and evolutionary prowess. This figure, sourced from the International
+Ornithological Committee as
+of April 2023, merely scratches the surface of avian diversity, each species a
+unique entity with
 its own ecological role and evolutionary story.\cite{ioc_updates}
 
 Turning our gaze to Nepal, a country of remarkable biodiversity and varied
@@ -222,51 +248,77 @@ endangered species.
 
 \section{Objectives}
 \begin{enumerate}[label=\roman*]
-    \item To develop and implement an integrated technological solution that utilizes
-          advanced audio recognition and image classification techniques for the accurate
-          identification and monitoring of bird species in Nepal, with an emphasis on
+    \item To develop and implement an integrated technological solution that
+          utilizes
+          advanced audio recognition and image classification techniques for
+          the accurate
+          identification and monitoring of bird species in Nepal, with an
+          emphasis on
           endangered species.
 \end{enumerate}
 
 \section{Application Scope}
 \begin{enumerate}
-    \item \textbf{Conservation Efforts:}\\This system will enhance conservation by enabling accurate monitoring
-          of bird populations, helping track endangered species and take a step towards habitat protection.
-    \item \textbf{Biodiversity Monitoring:}\\Automated identification will aid biodiversity monitoring by
-          processing large datasets, helping detect species distribution on bird communities.
-    \item \textbf{Ecological Research:}\\ Researchers can use the system to study bird migration,
-          and habitat use, providing crucial data for modeling ecosystems and understanding ecological interactions.
-    \item \textbf{Environmental Education and Awareness:}\\Integrated into educational programs, this tool will
-          raise public awareness about biodiversity and conservation, engaging students and scientists in bird identification.
-    \item \textbf{Bird viewing:}\\Bird enthusiasts will benefit from this system as it will enhance bird watching 
+    \item \textbf{Conservation Efforts:}\\This system will enhance conservation
+          by enabling accurate monitoring
+          of bird populations, helping track endangered species and take a step
+          towards habitat protection.
+    \item \textbf{Biodiversity Monitoring:}\\Automated identification will aid
+          biodiversity monitoring by
+          processing large datasets, helping detect species distribution on
+          bird communities.
+    \item \textbf{Ecological Research:}\\ Researchers can use the system to
+          study bird migration,
+          and habitat use, providing crucial data for modeling ecosystems and
+          understanding ecological interactions.
+    \item \textbf{Environmental Education and Awareness:}\\Integrated into
+          educational programs, this tool will
+          raise public awareness about biodiversity and conservation, engaging
+          students and scientists in bird identification.
+    \item \textbf{Bird viewing:}\\Bird enthusiasts will benefit from this
+          system as it will enhance bird watching
           experiences by providing instant identification of bird species
 \end{enumerate}
 \section{Features}
 \begin{enumerate}
     \item \textbf{Species Identification Using Audio:}\\
-          The app allows users to record bird sounds in real-time using their device's microphone or
-          upload pre-recorded audio files. Advanced noise filtering techniques isolate bird calls from
-          background noise, and sound wave analysis helps in identifying distinct frequency patterns.
-          Machine learning algorithms, trained on a vast database of bird calls, match the recorded
+          The app allows users to record bird sounds in real-time using their
+          device's microphone or
+          upload pre-recorded audio files. Advanced noise filtering techniques
+          isolate bird calls from
+          background noise, and sound wave analysis helps in identifying
+          distinct frequency patterns.
+          Machine learning algorithms, trained on a vast database of bird
+          calls, match the recorded
           sound to identify the bird species accurately.
 
     \item \textbf{Species Identification Using Image:}\\
-          Users can capture photos of birds using the app's camera or upload images from their gallery.
-          The app enhances image quality and analyzes features such as color, size, shape, and patterns.
-          Utilizing computer vision models, the app identifies the bird species by comparing the image
+          Users can capture photos of birds using the app's camera or upload
+          images from their gallery.
+          The app enhances image quality and analyzes features such as color,
+          size, shape, and patterns.
+          Utilizing computer vision models, the app identifies the bird species
+          by comparing the image
           with a comprehensive database of bird images.
 
     \item \textbf{Mapping Identified Bird Habitat:}\\
-          The app tags the location of identified birds using GPS, providing detailed habitat information
-          typical of each species. Integrating with mapping services, it displays bird sightings on an
-          interactive map, generating heat maps to show species density and distribution. Additionally,
-          it tracks and visualizes bird migration patterns over time, helping users understand seasonal
+          The app tags the location of identified birds using GPS, providing
+          detailed habitat information
+          typical of each species. Integrating with mapping services, it
+          displays bird sightings on an
+          interactive map, generating heat maps to show species density and
+          distribution. Additionally,
+          it tracks and visualizes bird migration patterns over time, helping
+          users understand seasonal
           movements.
 
     \item \textbf{Provide Description About the Birds:}\\
-          For each identified bird species, the app offers detailed profiles that include scientific and
-          common names, physical descriptions, and conservation status. It also provides audio and visual
-          media for reference, along with information on the bird's behavior, diet, and typical habitats,
+          For each identified bird species, the app offers detailed profiles
+          that include scientific and
+          common names, physical descriptions, and conservation status. It also
+          provides audio and visual
+          media for reference, along with information on the bird's behavior,
+          diet, and typical habitats,
           enriching the user's understanding of the species.
 
 \end{enumerate}
@@ -326,12 +378,18 @@ schedule feasibility requirements.
     \caption{Development Requirements}
     \begin{tabular}{|l|l|}
         \hline
-        \textbf{Software Requirements}                 & \textbf{Hardware Requirements} \\ \hline
-        Programming Language: Python, Dart, Javascript & Camera: \(>\)= 12 Megapixels   \\ \hline
-        Design Tools: Figma, Canva, Draw.io            & RAM: \(>\)= 8 GB               \\ \hline
-        Libraries: Librosa, PyAudio, Pytorch           & CPU: i5 10th (Recommended)     \\ \hline
-        Framework: Flutter, Django RestFramework       & GPU: P100                      \\ \hline
-        IDEs: VSCode, Android Studio                   & Storage: \(>\)= 50 GB          \\ \hline
+        \textbf{Software Requirements}                 & \textbf{Hardware
+        Requirements}                                                          \\ \hline
+        Programming Language: Python, Dart, Javascript & Camera: \(>\)= 12
+        Megapixels                                                             \\ \hline
+        Design Tools: Figma, Canva, Draw.io            & RAM: \(>\)= 8 GB
+        \\ \hline
+        Libraries: Librosa, PyAudio, Pytorch           & CPU: i5 10th
+        (Recommended)                                                          \\ \hline
+        Framework: Flutter, Django RestFramework       & GPU: P100
+        \\ \hline
+        IDEs: VSCode, Android Studio                   & Storage: \(>\)= 50 GB
+        \\ \hline
     \end{tabular}
 \end{table}
 
@@ -341,21 +399,31 @@ schedule feasibility requirements.
     \caption{Deployment Requirements}
     \begin{tabular}{|l|l|}
         \hline
-        \textbf{Software Requirements} & \textbf{Hardware Requirements}            \\ \hline
-        Android: \(>\)= 10             & Camera: \(>\)= 12 Megapixels              \\ \hline
-        Read/Write FileSystem          & RAM: \(>\) 4 GB                           \\ \hline
-        Internet Accessibility         & Storage: \(>\)= 20 GB                     \\ \hline
-        Database: Sqlfite              & Recording Quality \(>\)= 256 Kbps, 48 KHz \\ \hline
+        \textbf{Software Requirements} & \textbf{Hardware Requirements}
+        \\ \hline
+        Android: \(>\)= 10             & Camera: \(>\)= 12 Megapixels
+        \\ \hline
+        Read/Write FileSystem          & RAM: \(>\) 4 GB
+        \\ \hline
+        Internet Accessibility         & Storage: \(>\)= 20 GB
+        \\ \hline
+        Database: Sqlfite              & Recording Quality \(>\)= 256 Kbps, 48
+        KHz                                                                    \\ \hline
     \end{tabular}
 \end{table}
 
 \chapter{Literature Review}
 
-This literature review explores the progression of methodologies and technologies in the field,
-with a particular focus on the use of Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) 
-networks for audio-based bird species identification. The review also examines the challenges associated
-with dataset quality and diversity, and the innovative strategies employed to address these issues,
-providing a comprehensive overview of the current state of research and future directions in avian bioacoustics.
+This literature review explores the progression of methodologies and
+technologies in the field,
+with a particular focus on the use of Convolutional Neural Networks (CNN) and
+Long Short-Term Memory (LSTM)
+networks for audio-based bird species identification. The review also examines
+the challenges associated
+with dataset quality and diversity, and the innovative strategies employed to
+address these issues,
+providing a comprehensive overview of the current state of research and future
+directions in avian bioacoustics.
 
 \section{Related Works}
 BirdNET is a cutting-edge research platform developed through collaboration
@@ -402,7 +470,8 @@ Transform. The EfficientNet architecture utilized compound scaling for network
 depth, width, and resolution. The findings indicated that the proposed approach
 achieved satisfactory results in classifying the bird species. However,
 limitations include the relatively small dataset size and the need for further
-enhancement in model robustness and accuracy. %Future enhancements could involve
+enhancement in model robustness and accuracy.
+%Future enhancements could involve
 % expanding the dataset, exploring additional feature extraction techniques, and
 % incorporating more advanced deep learning models to improve classification
 % performance.\cite{gautam2023audio}\\
@@ -417,7 +486,8 @@ sound classification as an image classification problem through transfer
 learning. The Inception-v4 model, initially pre-trained on ImageNet, was
 adapted to process time-frequency representations of bird sounds by converting
 these sounds into RGB images using three log-spectrograms generated via fast
-Fourier transform at different scales (128, 512, 2048 bins).The findings demonstrate that the model,
+Fourier transform at different scales (128, 512, 2048 bins).The findings
+demonstrate that the model,
 termed `Soundception', integrates time and time-frequency attention mechanisms
 effectively, significantly improving classification accuracy. The results
 highlight Soundception's outstanding performance, achieving a mean average
@@ -447,9 +517,10 @@ validation accuracy of around 75\%, indicating robust performance across
 different data splits. The study highlights the effectiveness of combining
 multiple features (head, body, color, beak) over single-feature classification,
 with generated autographs and score sheets facilitating identification.However,
-the research also identifies limitations such as the dependency on the quality 
+the research also identifies limitations such as the dependency on the quality
 and diversity of the dataset,potential overfitting due to the complexity of the
-model, and the computational resources required for training deep learning models\cite{Gavali2019Bird}.\\
+model, and the computational resources required for training deep learning
+models\cite{Gavali2019Bird}.\\
 
 The research paper `Bird species classification from an Image using VGG-16
 Network' utilizes machine learning which has shown
@@ -478,10 +549,13 @@ processing large datasets.\cite{islam2019bird}\\
 
 This research paper presents significant advancements in the field of
 `Automatic bird species identification through the integration of audio signal
-processing and neural networks'. The study, conducted by Chandu B et al. outlines a robust methodology for identifying bird
+processing and neural networks'. The study, conducted by Chandu B et al.
+outlines a robust methodology for identifying bird
 species from audio recordings, leveraging a combination of meticulously curated
-datasets and  machine learning techniques. The dataset was manually compiled from both local recordings and
-online resources such as xeno-canto.org, which apart from bird songs also contains ambient noise and
+datasets and  machine learning techniques. The dataset was manually compiled
+from both local recordings and
+online resources such as xeno-canto.org, which apart from bird songs also
+contains ambient noise and
 human voices to simulate real-world conditions. Pre-processing techniques
 including pre-emphasis, framing, silence removal, and reconstruction were
 applied to the audio clips to enhance the relevant frequency components and
@@ -495,7 +569,8 @@ recognizing the variability of real-world conditions, the researchers retrained
 the model with datasets containing ambient noise, achieving a real-time
 classification accuracy of 91\%. Despite these promising results, the study
 acknowledges limitations such as the relatively small size of the dataset and
-the need for further tuning of performance parameters to improve robustness\cite{chandu2020automated}.\\
+the need for further tuning of performance parameters to improve
+robustness\cite{chandu2020automated}.\\
 
 The paper `An Ensemble of Convolutional Neural Networks for Audio
 Classification' delves into a comprehensive study on CNN classification using
@@ -570,29 +645,45 @@ This chapters describes bird identification using audio and image separately.
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.33]{images/Methodology1.png}
-    \caption{Block diagram for the working mechanism of the system}%\label{fig:fig1}
+    \caption{Block diagram for the working mechanism of the
+        system}%\label{fig:fig1}
 \end{figure}
 \newpage
-The working mechanism for bird identification from audio utilizes the CharaNET dataset, 
-housing a diverse collection of avian vocalizations. Our methodology revolves around the 
-utilization of Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) architectures. 
-The primary objective of this study is to achieve high levels of accuracy in identifying a 
-broad spectrum of 41 distinct bird species. Here lies the detailed explaination of the methodology 
+The working mechanism for bird identification from audio utilizes the CharaNET
+dataset,
+housing a diverse collection of avian vocalizations. Our methodology revolves
+around the
+utilization of Convolutional Neural Networks (CNN) and Long Short-Term Memory
+(LSTM) architectures.
+The primary objective of this study is to achieve high levels of accuracy in
+identifying a
+broad spectrum of 41 distinct bird species. Here lies the detailed explaination
+of the methodology
 from working mechanism to model training.
 \subsection{Dataset}
-For this project, we will utilize the CharaNet dataset, which is specifically curated to include 
-audio files of Nepal's endangered bird species. This dataset was collected from \textit{xeno-canto.org}, 
-a platform where bird sounds from around the world are shared by contributors who travel extensively to 
-capture these sounds. From this source, we will gather 2215 audio recordings representing 41 bird species, 
+For this project, we will utilize the CharaNet dataset, which is specifically
+curated to include
+audio files of Nepal's endangered bird species. This dataset was collected from
+\textit{xeno-canto.org},
+a platform where bird sounds from around the world are shared by contributors
+who travel extensively to
+capture these sounds. From this source, we will gather 2215 audio recordings
+representing 41 bird species,
 38 of which are listed as endangered in Nepal.
 
-To augment the dataset, we propose employing a 10-second split method, which will expand the dataset to 6733 
-audio recordings. Additionally, for bird species with fewer than 30 recordings, we will add Gaussian noise to 
-further increase the number of samples. This augmentation process is expected to result in a robust dataset
-comprising 5407 audio recordings for training, 639 for validation, and 687 for testing. This comprehensive 
-dataset will ensure that our model can learn effectively and generalize well to new, unseen data.
+To augment the dataset, we propose employing a 10-second split method, which
+will expand the dataset to 6733
+audio recordings. Additionally, for bird species with fewer than 30 recordings,
+we will add Gaussian noise to
+further increase the number of samples. This augmentation process is expected
+to result in a robust dataset
+comprising 5407 audio recordings for training, 639 for validation, and 687 for
+testing. This comprehensive
+dataset will ensure that our model can learn effectively and generalize well to
+new, unseen data.
 
-This augmentation methodology and the CharaNet dataset have been referenced in prior research\cite{gautam2023audio}, 
+This augmentation methodology and the CharaNet dataset have been referenced in
+prior research\cite{gautam2023audio},
 demonstrating the efficacy of such an approach. \newpage
 \subsection{Dataset Overview for Audio}
 \begin{figure}[h!]
@@ -609,13 +700,13 @@ demonstrating the efficacy of such an approach. \newpage
 \newpage
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.45]{images/TestDataset.png}
+    \includegraphics[scale=0.4]{images/TestDataset.png}
     \caption{Testing Dataset for audio}
 \end{figure}
 \hspace{3.5cm}
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.38]{images/SampleData.png}
+    \includegraphics[scale=0.3]{images/SampleData.png}
     \caption{Sample of the Data}
     \label{fig:SampleData}
 \end{figure}
@@ -625,15 +716,23 @@ demonstrating the efficacy of such an approach. \newpage
 The collected audio data undergoes thorough preprocessing to ensure its
 suitability for model training. This process includes:
 \begin{itemize}
-    \item \textbf{Silence Gap Removal:} After observing some of the data samples, it was found that the audio has some silence gaps
-     in either of the ends as seen in \ref{fig:SampleData}. These could be removed employing the silence removal algorithm. The processing
-      starts from both ends and moves toward the center. In that processing, the local mean of the window segment of the audio wave is
-       calculated and compared with the audio’s global mean. If the local mean is smaller than the global mean, the window segment is c
-       onsidered to contain insignificant data, thus the segment is clipped from the original audio\cite{9850832}. Algorithm \ref{alg:Silence_Removal} 
-       clarifies this.
-    \item \textbf{Segmentation:} Dividing the continuous audio recordings into smaller, more manageable segments, ensuring consistency in input length.
-    \item \textbf{Cleaning:} Removing any background noise and irrelevant sounds that could interfere with the training process.
-    \item \textbf{Labeling:} Assigning the correct bird species labels to each audio segment, which is crucial for supervised learning.
+    \item \textbf{Silence Gap Removal:} After observing some of the data
+          samples, it was found that the audio has some silence gaps
+          in either of the ends as seen in \ref{fig:SampleData}. These could be
+          removed employing the silence removal algorithm. The processing
+          starts from both ends and moves toward the center. In that processing,
+          the local mean of the window segment of the audio wave is
+          calculated and compared with the audio’s global mean. If the local mean
+          is smaller than the global mean, the window segment is c
+          onsidered to contain insignificant data, thus the segment is clipped
+          from the original audio\cite{9850832}. Algorithm \ref{alg:Silence_Removal}
+          clarifies this.
+    \item \textbf{Segmentation:} Dividing the continuous audio recordings into
+          smaller, more manageable segments, ensuring consistency in input length.
+    \item \textbf{Cleaning:} Removing any background noise and irrelevant
+          sounds that could interfere with the training process.
+    \item \textbf{Labeling:} Assigning the correct bird species labels to each
+          audio segment, which is crucial for supervised learning.
 \end{itemize}
 
 \subsection{Data Splitting}
@@ -641,8 +740,10 @@ suitability for model training. This process includes:
 After preprocessing, the data is split into three sets:
 \begin{itemize}
     \item \textbf{Training Data:} Used to train the machine learning models.
-    \item \textbf{Testing Data:} Used to evaluate the model's performance during training.
-    \item \textbf{Validation Data:} Used to validate the final model's performance and prevent overfitting.
+    \item \textbf{Testing Data:} Used to evaluate the model's performance
+          during training.
+    \item \textbf{Validation Data:} Used to validate the final model's
+          performance and prevent overfitting.
 \end{itemize}
 
 This structured approach ensures that the model can learn effectively from the
@@ -697,11 +798,13 @@ of a sound signal. The process of obtaining MFCCs involves several steps:
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.5]{images/MFCC.jpg}
-    \caption{Feature Extraction Using Spectrogram and MFCC}%\label{fig:fig1}
+    \caption{Feature Extraction Using Spectrogram and
+        MFCC}%\label{fig:fig1}
 \end{figure}
 \begin{enumerate}
     \item \textbf{Framing:} Divide the audio signal into short frames.
-    \item \textbf{Discrete Fourier Transform (DFT):} Convert each frame to the frequency domain.
+    \item \textbf{Discrete Fourier Transform (DFT):} Convert each frame to the
+          frequency domain.
           \begin{eqnarray}
               X(k) = \sum_{n=0}^{N-1} x(n) \cdot e^{-j \frac{2\pi}{N} kn}
           \end{eqnarray}
@@ -711,14 +814,17 @@ of a sound signal. The process of obtaining MFCCs involves several steps:
               S_{\text{log}}(k) = \log(|X(k)|)
           \end{eqnarray}
 
-    \item \textbf{Mel-Scaling:} Map the frequencies to the Mel scale, which better represents how humans perceive sound.
+    \item \textbf{Mel-Scaling:} Map the frequencies to the Mel scale, which
+          better represents how humans perceive sound.
           \begin{eqnarray}
               f_{\text{mel}} = 2595 \cdot \log_{10}(1 + \frac{f}{700})
           \end{eqnarray}
 
-    \item \textbf{Discrete Cosine Transform (DCT):} Convert the Mel spectrum to the cepstral domain, yielding the MFCC features.
+    \item \textbf{Discrete Cosine Transform (DCT):} Convert the Mel spectrum to
+          the cepstral domain, yielding the MFCC features.
           \begin{eqnarray}
-              C(n) = \sum_{k=0}^{K-1} S_{\text{mel}}(k) \cdot \cos \left( \frac{\pi n (k+0.5)}{K} \right)
+              C(n) = \sum_{k=0}^{K-1} S_{\text{mel}}(k) \cdot \cos \left(
+              \frac{\pi n (k+0.5)}{K} \right)
           \end{eqnarray}
 
 \end{enumerate}
@@ -740,20 +846,27 @@ spectrogram.
 
 The basic operations involved in a CNN include:
 \begin{itemize}
-    \item \textbf{Convolution:} This operation involves applying a set of learnable filters (kernels) across the input spectrogram to produce feature maps.
+    \item \textbf{Convolution:} This operation involves applying a set of
+          learnable filters (kernels) across the input spectrogram to produce feature
+          maps.
           \begin{eqnarray}
-              (f * x)(t) = \sum_{\tau = -\infty}^{\infty} x(\tau) \cdot f(t - \tau)
+              (f * x)(t) = \sum_{\tau = -\infty}^{\infty} x(\tau) \cdot f(t -
+              \tau)
           \end{eqnarray}
 
-    \item \textbf{Activation Function:} The rectified linear unit (ReLU) activation function is applied to introduce non-linearity into the model.
+    \item \textbf{Activation Function:} The rectified linear unit (ReLU)
+          activation function is applied to introduce non-linearity into the model.
           \begin{eqnarray}
               f(x) = \max(0, x)
           \end{eqnarray}
 
-    \item \textbf{Pooling:} Pooling layers reduce the spatial dimensions of the feature maps, typically using
-     max pooling to retain the most significant features.
-    \item \textbf{Fully Connected Layers:} After several convolutional and pooling layers, the feature maps 
-    are flattened and passed through fully connected layers to produce the final classification output.
+    \item \textbf{Pooling:} Pooling layers reduce the spatial dimensions of the
+          feature maps, typically using
+          max pooling to retain the most significant features.
+    \item \textbf{Fully Connected Layers:} After several convolutional and
+          pooling layers, the feature maps
+          are flattened and passed through fully connected layers to produce the
+          final classification output.
 \end{itemize}
 
 \subsection{Long Short-Term Memory Networks (LSTM)}
@@ -774,22 +887,26 @@ regulate the flow of information.
 
 The key components of an LSTM cell include:
 \begin{itemize}
-    \item \textbf{Forget Gate:} Determines which information from the previous cell state should be discarded.
+    \item \textbf{Forget Gate:} Determines which information from the previous
+          cell state should be discarded.
           \begin{eqnarray}
               f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
           \end{eqnarray}
 
-    \item \textbf{Input Gate:} Decides which new information should be added to the cell state.
+    \item \textbf{Input Gate:} Decides which new information should be added to
+          the cell state.
           \begin{eqnarray}
               i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
           \end{eqnarray}
 
-    \item \textbf{Candidate Cell State:} Creates new candidate values that could be added to the cell state.
+    \item \textbf{Candidate Cell State:} Creates new candidate values that
+          could be added to the cell state.
           \begin{eqnarray}
               \tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)
           \end{eqnarray}
 
-    \item \textbf{Cell State:} The cell state is updated based on the input gate and the forget gate.
+    \item \textbf{Cell State:} The cell state is updated based on the input
+          gate and the forget gate.
           \begin{eqnarray}
               C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t
           \end{eqnarray}
@@ -822,69 +939,86 @@ GAs for hyperparameter optimization\cite{9058307}.
 \begin{itemize}
     \item \textbf{Encoding the Hyperparameters}
           \begin{itemize}
-              \item Hyperparameters are represented as a chromosome, where each hyperparameter is a
+              \item Hyperparameters are represented as a chromosome, where each
+                    hyperparameter is a
                     gene in the chromosome.
-              \item For example, in a neural network, a chromosome might include genes for the
-                    learning rate, number of layers, number of neurons per layer, and activation
+              \item For example, in a neural network, a chromosome might
+                    include genes for the
+                    learning rate, number of layers, number of neurons per
+                    layer, and activation
                     functions.
           \end{itemize}
 
     \item \textbf{Initial Population}
           \begin{itemize}
-              \item An initial population of chromosomes is generated randomly, with each
+              \item An initial population of chromosomes is generated randomly,
+                    with each
                     chromosome representing a different set of hyperparameters.
           \end{itemize}
 
     \item \textbf{Fitness Function}
           \begin{itemize}
-              \item A fitness function is defined to evaluate the performance of each set of
+              \item A fitness function is defined to evaluate the performance
+                    of each set of
                     hyperparameters.
-              \item This typically involves training the model with the given hyperparameters and
+              \item This typically involves training the model with the given
+                    hyperparameters and
                     measuring its performance on a validation set.
           \end{itemize}
 
     \item \textbf{Selection}
           \begin{itemize}
-              \item Selection involves choosing the best-performing chromosomes to serve as parents
+              \item Selection involves choosing the best-performing chromosomes
+                    to serve as parents
                     for the next generation.
-              \item Various selection methods can be employed, such as tournament selection,
+              \item Various selection methods can be employed, such as
+                    tournament selection,
                     roulette wheel selection, or rank-based selection.
           \end{itemize}
           \newpage
     \item \textbf{Crossover (Recombination)}
           \begin{itemize}
-              \item Crossover combines pairs of parent chromosomes to produce offspring for the
+              \item Crossover combines pairs of parent chromosomes to produce
+                    offspring for the
                     next generation.
-              \item This is done by swapping segments of parent chromosomes to create new
+              \item This is done by swapping segments of parent chromosomes to
+                    create new
                     chromosomes, thereby combining features of both parents.
           \end{itemize}
 
     \item \textbf{Mutation}
           \begin{itemize}
-              \item Mutation introduces random changes to some of the genes in the offspring
+              \item Mutation introduces random changes to some of the genes in
+                    the offspring
                     chromosomes.
-              \item This helps maintain genetic diversity in the population and allows the
+              \item This helps maintain genetic diversity in the population and
+                    allows the
                     algorithm to explore a broader search space.
           \end{itemize}
 
     \item \textbf{Replacement}
           \begin{itemize}
-              \item The current population is partially or entirely replaced with the new
-                    generation of chromosomes, ensuring that better solutions are carried forward
+              \item The current population is partially or entirely replaced
+                    with the new
+                    generation of chromosomes, ensuring that better solutions
+                    are carried forward
                     while allowing for exploration of new possibilities.
           \end{itemize}
 
     \item \textbf{Termination}
           \begin{itemize}
-              \item The process of selection, crossover, mutation, and replacement is repeated
+              \item The process of selection, crossover, mutation, and
+                    replacement is repeated
                     until a termination criterion is met.
-              \item This could be a set number of generations, convergence of fitness scores, or
+              \item This could be a set number of generations, convergence of
+                    fitness scores, or
                     achieving a satisfactory performance level.
           \end{itemize}
 
     \item \textbf{Best Solution}
           \begin{itemize}
-              \item The best chromosome at the end of the process represents the optimal or
+              \item The best chromosome at the end of the process represents
+                    the optimal or
                     near-optimal set of hyperparameters for the model.
           \end{itemize}
 \end{itemize}
@@ -898,7 +1032,8 @@ GAs for hyperparameter optimization\cite{9058307}.
     \begin{algorithmic}[1]
         \STATE $ \text{wav} \gets \text{sampled audio signal} $
         \STATE $ \Delta \gets \text{appropriate window length} $
-        \STATE \text{/* In our code, $ \Delta = 500 $ for 16KHz sampling rate */}
+        \STATE \text{/* In our code, $ \Delta = 500 $ for 16KHz sampling rate
+            */}
         \STATE \textbf{INPUT:} $ \text{wav}, \Delta $
         \STATE \textbf{PROCESS:}
         \STATE $ \text{wavAvg} \gets \text{Average}(|\text{wav}|) $
@@ -906,7 +1041,8 @@ GAs for hyperparameter optimization\cite{9058307}.
 
         \STATE \text{/* Removing the silent gap from the start */}
         \FOR{$ \text{idx} = 0, \Delta, 2\Delta, \ldots, N - \Delta $}
-        \STATE $ \text{win} \gets \text{wav}[\text{idx} : \text{idx} + \Delta] $
+        \STATE $ \text{win} \gets \text{wav}[\text{idx} : \text{idx} + \Delta]
+        $
         \STATE $ \text{winAvg} \gets \text{Average}(|\text{win}|) $
         \IF{$ \text{winAvg} > \text{wavAvg} $}
         \STATE $ \text{wav} \gets \text{wav}[\text{idx} :] $
@@ -916,7 +1052,8 @@ GAs for hyperparameter optimization\cite{9058307}.
 
         \STATE \text{/* Removing the silent gap from the end */}
         \FOR{$ \text{idx} = N - \Delta, N - 2\Delta, \ldots, 0 $}
-        \STATE $ \text{win} \gets \text{wav}[\text{idx} : \text{idx} + \Delta] $
+        \STATE $ \text{win} \gets \text{wav}[\text{idx} : \text{idx} + \Delta]
+        $
         \STATE $ \text{winAvg} \gets \text{Average}(|\text{win}|) $
         \IF{$ \text{winAvg} > \text{wavAvg} $}
         \STATE $ \text{wav} \gets \text{wav}[: \text{idx}] $
@@ -966,16 +1103,22 @@ and validating the model:
         \STATE \textbf{Input:} Audio signal $x(t)$.
         \STATE \textbf{Output:} Mel spectrogram $S_{\text{mel}}$.
         \STATE Apply STFT to generate spectrogram $S(f, t)$.
-        \STATE Convert amplitudes of $S(f, t)$ to dB scale, obtaining $S_{\text{dB}}(f, t)$.
+        \STATE Convert amplitudes of $S(f, t)$ to dB scale, obtaining
+        $S_{\text{dB}}(f, t)$.
         \STATE \textbf{Convert frequencies to Mel scale}.
         \STATE \hspace{10} Choose number of mel bands $N_{\text{mel}}$.
         \STATE \textbf{Construct mel filter banks}.
-        \STATE \hspace{10} Convert $f_{\text{min}}$ and $f_{\text{max}}$ of $S_{\text{dB}}(f, t)$ to Mel scale.
-        \STATE \hspace{10} Divide Mel scale range into $N_{\text{mel}}$ intervals.
-        \STATE \hspace{10} Convert center frequencies of Mel bands back to Hertz.
+        \STATE \hspace{10} Convert $f_{\text{min}}$ and $f_{\text{max}}$ of
+        $S_{\text{dB}}(f, t)$ to Mel scale.
+        \STATE \hspace{10} Divide Mel scale range into $N_{\text{mel}}$
+        intervals.
+        \STATE \hspace{10} Convert center frequencies of Mel bands back to
+        Hertz.
         \STATE \hspace{10} Round center frequencies to nearest bins.
-        \STATE \hspace{10} Design triangular band pass filters for each Mel band.
-        \STATE \hspace{10} Apply mel filter banks to $S_{\text{dB}}(f, t)$ to obtain $S_{\text{mel}}$.
+        \STATE \hspace{10} Design triangular band pass filters for each Mel
+        band.
+        \STATE \hspace{10} Apply mel filter banks to $S_{\text{dB}}(f, t)$ to
+        obtain $S_{\text{mel}}$.
     \end{algorithmic}
 \end{algorithm}
 
@@ -1003,24 +1146,30 @@ and validating the model:
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.33]{images/Methodology2.png}
-    \caption{Block diagram for the working mechanism of the system}%\label{fig:fig1}
+    \caption{Block diagram for the working mechanism of the
+        system}%\label{fig:fig1}
 \end{figure}
-The working mechanism for the bird identification using image is to be done by VGG16. VGG16 have been proven 
-to classify bird speices with accuracy of 92.13\% using Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset 
-which had 1600 images across 27 bird species\cite{islam2019bird}. Our project aims to achieve similar result for 200 bird species.
+The working mechanism for the bird identification using image is to be done by
+VGG16. VGG16 have been proven
+to classify bird speices with accuracy of 92.13\% using Caltech-UCSD
+Birds-200-2011 (CUB-200-2011) dataset
+which had 1600 images across 27 bird species\cite{islam2019bird}. Our project
+aims to achieve similar result for 200 bird species.
 
 \subsection{Dataset}
 For the identification of bird species using image,CUB-200-2011
-dataset will be, which is an extended version of the CUB-200 dataset. It consists of
+dataset will be, which is an extended version of the CUB-200 dataset. It
+consists of
 11,788 number of images across 200 species categories\cite{WahCUB_200_2011}.
 
 \subsection{Dataset Overview for Image}
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.45]{images/cubdataset.png}
+    \includegraphics[scale=0.35]{images/cubdataset.png}
     \caption{Dataset distribution for Top 50 Bird Species among 200 Species}
 \end{figure}
-After observing the distribution of the images across the species, most of them have 60 images per species while few of them ranges from 45 to 60.
+After observing the distribution of the images across the species, most of them
+have 60 images per species while few of them ranges from 45 to 60.
 
 \subsection{Data Preprocessing}
 In the context of bird species image classification using deep learning models
@@ -1030,24 +1179,36 @@ requirements. Here are the key points that highlight the importance of each
 preprocessing step:
 
 \begin{enumerate}
-    \item \textbf{Image Resizing}: All images are resized to 224x224 pixels with 3 RGB channels. This standardization 
-    is crucial for the model to process images efficiently, as it ensures that all input data has a uniform dimensionality, 
-    matching the model's input size requirement.
+    \item \textbf{Image Resizing}: All images are resized to 224x224 pixels
+          with 3 RGB channels. This standardization
+          is crucial for the model to process images efficiently, as it ensures that
+          all input data has a uniform dimensionality,
+          matching the model's input size requirement.
 
-    \item \textbf{Normalization}: Pixel values are scaled to a range of 0 to 1. Normalization is a critical step because 
-    it reduces the variability in the input data, which can significantly speed up the convergence of the model during training.
-     By ensuring that the pixel values are within a similar range, the model can navigate the optimization landscape more smoothly,
-      leading to better learning outcomes.
+    \item \textbf{Normalization}: Pixel values are scaled to a range of 0 to 1.
+          Normalization is a critical step because
+          it reduces the variability in the input data, which can significantly speed
+          up the convergence of the model during training.
+          By ensuring that the pixel values are within a similar range, the model
+          can navigate the optimization landscape more smoothly,
+          leading to better learning outcomes.
 
-    \item \textbf{Data Augmentation}: To enhance the dataset and introduce more variability, data augmentation techniques such as flipping, 
-    rescaling, and shearing are employed. These methods are instrumental in creating a more robust dataset by simulating different viewing
-     conditions and perspectives. Data augmentation is particularly effective in preventing overfitting, as it allows the model to learn 
-     from a more diverse set of examples.
+    \item \textbf{Data Augmentation}: To enhance the dataset and introduce more
+          variability, data augmentation techniques such as flipping,
+          rescaling, and shearing are employed. These methods are instrumental in
+          creating a more robust dataset by simulating different viewing
+          conditions and perspectives. Data augmentation is particularly effective
+          in preventing overfitting, as it allows the model to learn
+          from a more diverse set of examples.
 
-    \item \textbf{Train-Validation-Test Split}: The dataset is divided into training, validation, and test sets. This division 
-    is essential for a comprehensive training process, where the model is trained on a diverse set of images, validated on a 
-    separate set to adjust hyperparameters without bias, and finally, tested on unseen data to assess its generalization capability. 
-    Such a split ensures that the model can learn effectively and perform reliably on new, unseen images.
+    \item \textbf{Train-Validation-Test Split}: The dataset is divided into
+          training, validation, and test sets. This division
+          is essential for a comprehensive training process, where the model is
+          trained on a diverse set of images, validated on a
+          separate set to adjust hyperparameters without bias, and finally, tested on
+          unseen data to assess its generalization capability.
+          Such a split ensures that the model can learn effectively and perform
+          reliably on new, unseen images.
 \end{enumerate}
 
 These preprocessing steps form a comprehensive pipeline that prepares the
@@ -1092,11 +1253,13 @@ The equation for max pooling can be expressed as follows:
 
 where:
 \begin{itemize}
-    \item \( y(i, j, k) \) is the output value at position \((i, j)\) in the \(k\)-th channel.
+    \item \( y(i, j, k) \) is the output value at position \((i, j)\) in the
+          \(k\)-th channel.
     \item \( x \) is the input feature map.
     \item \( W \) is the pooling window.
     \item \( s \) is the stride of the pooling window.
-    \item \( m \) and \( n \) iterate over the dimensions of the pooling window.
+    \item \( m \) and \( n \) iterate over the dimensions of the pooling
+          window.
 \end{itemize}
 
 \subsection{Softmax}
@@ -1184,10 +1347,13 @@ where:
         \FOR{each epoch}
         \STATE Shuffle the training data
         \FOR{each training example \((x_i, y_i)\)}
-        \STATE Compute the prediction \(\hat{y}_i\) using the current model parameters
+        \STATE Compute the prediction \(\hat{y}_i\) using the current model
+        parameters
         \STATE Calculate the loss \(L(\hat{y}_i, y_i)\)
-        \STATE Compute the gradient of the loss with respect to the model parameters
-        \STATE Update the model parameters using the gradient and the learning rate \(\eta\):
+        \STATE Compute the gradient of the loss with respect to the model
+        parameters
+        \STATE Update the model parameters using the gradient and the learning
+        rate \(\eta\):
         \[
             \theta = \theta - \eta \nabla L(\hat{y}_i, y_i)
         \]
@@ -1199,7 +1365,8 @@ where:
 \section{Mapping Location of Bird in Map}
 
 Mapping the location of a bird in an application using
-\texttt{google\_maps\_flutter} and \texttt{geolocator} involves using the classified bird data to
+\texttt{google\_maps\_flutter} and \texttt{geolocator} involves using the
+classified bird data to
 pinpoint its location on a map. This is particularly useful for bird watchers
 and researchers to track bird sightings.
 
@@ -1216,13 +1383,15 @@ and researchers to track bird sightings.
 \end{algorithm}
 \newpage
 \section{System Diagram}
-The usecase diagram for Bird species identification from Audio and Image is given
+The usecase diagram for Bird species identification from Audio and Image is
+given
 below:
 \begin{figure}[h!]
-     \centering
-        \includegraphics[scale=0.5]{images/usecase.png}
-        \caption{Usecase Diagram for FeatherFind}%\label{fig:fig1}
-     \end{figure}
+    \centering
+    \includegraphics[scale=0.5]{images/usecase.png}
+    \caption{Usecase Diagram for
+        FeatherFind}%\label{fig:fig1}
+\end{figure}
 
 % \begin{figure}[h!]
 %      \centering
@@ -1243,12 +1412,44 @@ release.
 \begin{figure}[h!]
     % \centering
     \includegraphics[scale=0.25]{images/SDLC.png}
-    \caption{Incremental Model for development of FeatherFind}%\label{fig:fig1}
+    \caption{Incremental Model for development of
+        FeatherFind}%\label{fig:fig1}
 \end{figure}
 \newpage
 
 \chapter{Epilogue}
-
+The expected output of FeatherFind designed using \texttt{Figma} are displayed
+below:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.6]{images/onboarding_mockup.png}
+    \caption{Onboarding Screen of
+        FeatherFing}%\label{fig:fig1}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{images/homepage.png}
+        \caption{Homepage}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{images/RecordingPage.png}
+        \caption{Recording Page }
+    \end{minipage}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{images/CapturePage.png}
+        \caption{Capture Page}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{images/Identifiedimage.png}
+        \caption{classified Image}
+    \end{minipage}
+\end{figure}
 \newpage
 
 %Reference
