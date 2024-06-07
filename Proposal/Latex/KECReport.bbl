@@ -36,6 +36,11 @@ C.~Inskipp, H.~S. Baral, T.~Inskipp, A.~P. Khatiwada, M.~P. Khatiwada, L.~P.
   Poudyal, and R.~Amin, ``Nepal's national red list of birds,'' \emph{Journal
   of Threatened Taxa}, vol.~9, no.~1, pp. 9700--9722, 2017.
 
+\bibitem{gautam2023audio}
+R.~Gautam, B.~Khatiwada, B.~P. Subedi, N.~Duwal, and K.~C. Dahal, ``Audio
+  classifier for automatic identification of endangered bird species of
+  nepal,'' 2023.
+
 \bibitem{sevilla2017audio}
 A.~Sevilla and H.~Glotin, ``Audio bird classification with inception-v4
   extended with time and time-frequency attention mechanisms.'' \emph{CLEF
@@ -73,11 +78,6 @@ H.~Wang, Y.~Xu, Y.~Yu, Y.~Lin, and J.~Ran, ``An efficient model for a vast
 R.~Pahuja and A.~Kumar, ``Sound-spectrogram based automatic bird species
   recognition using mlp classifier,'' \emph{Applied Acoustics}, vol. 180, p.
   108077, 2021.
-
-\bibitem{gautam2023audio}
-R.~Gautam, B.~Khatiwada, B.~P. Subedi, N.~Duwal, and K.~C. Dahal, ``Audio
-  classifier for automatic identification of endangered bird species of
-  nepal,'' 2023.
 
 \bibitem{9850832}
 M.~Dhakal, A.~Chhetri, A.~K. Gupta, P.~Lamichhane, S.~Pandey, and S.~Shakya,
