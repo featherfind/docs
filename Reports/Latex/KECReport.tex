@@ -5,8 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Define Macros for Details of your Project
 \newcommand{\project}{Major Project } %Specify "Major Project" or "Minor Project"
-\newcommand{\projectTitle}{FEATHERFIND : BIRD SPECIES IDENTIFICATION FROM AUDIO
-    AND IMAGE} %specify "Title" of Your Project
+\newcommand{\projectTitle}{FEATHERFIND : BIRD SPECIES IDENTIFICATION FROM AUDIO} %specify "Title" of Your Project
 \newcommand{\doc}{Proposal} % specify the document you are preparing eg. "Proposal", "Mid-Term Report" or "Final Report"32
 % Note that You have to sibmit "Final Report" for Pre-final defense as well.
 \newcommand{\subCode}{CT707} %specify Subject of Your Project
@@ -152,7 +151,6 @@ contributing significantly to the field of avian research and conservation.
 \begin{tabbing}
     \hspace{50mm}\=\kill
     CNN \> Convolutional Neural Network\\
-    CUB \> Caltech-UCSD Birds\\
     DCNN \> Deep Convolutional Neural Network\\
     DCT \> Discrete Cosine Transform\\
     DFT \> Discrete Fourier Transform\\
@@ -167,9 +165,6 @@ contributing significantly to the field of avian research and conservation.
     ROC \> Receiver Operating characteristics\\
     RNN \> Recurrent Neural Network\\
     STFT \> Short-Time Fourier Transform\\
-    SGD \> Stochastic Gradient Descent\\
-    UCSD \> University of California San Diego\\
-    VGG \> Visual Geometry Group\\
     % \DeclareAcronym{CNN}{
     %  short = \ensuremath{a} , % use \ensuremath{a} instead of $a$
     %  long  = Convolutional Neural Network,
@@ -186,37 +181,28 @@ contributing significantly to the field of avian research and conservation.
 \newpage
 \pagenumbering{arabic}
 
-\chapter{Introduction}
-\section{Background}\label{sec:bkgrnd}%label your section if you require to refer them somewhere else in your document.
-Globally, the avian kingdom is vast, with over 11,000 species, a testament to
-nature's complexity
-and evolutionary prowess. This figure, sourced from the International
-Ornithological Committee as
-of April 2023, merely scratches the surface of avian diversity, each species a
-unique entity with
-its own ecological role and evolutionary story.\cite{ioc_updates}
+\chapter{Introduction}label{sec}
+Globally, the avian kingdom is vast, with over 11,000 species, showing nature's
+complexity and evolutionary skill. This number, from the International Ornithological
+Committee as of April 2023, shows the great bird diversity, with each species having 
+its own role and story.\cite{ioc_updates}
 
-Turning our gaze to Nepal, a country of remarkable biodiversity and varied
-ecosystems, from the lowland Terai to the towering Himalayas, it is home to
-more than 887 bird species, as reported by the Himalayan Nature organization.
-This represents more than 8\% of the world's known bird species, a significant
-figure given Nepal's relatively small geographical footprint.\cite{himalayan}
+In Nepal, a country known for its rich nature and varied ecosystems, from the lowland 
+Terai to the high Himalayas, there are more than 887 bird species, according to the 
+Himalayan Nature organization. This is over 8\% of the world's known bird species, 
+a big number given Nepal's small size.\cite{himalayan}
 
-Among these, a number are endangered, their existence threatened by habitat
-loss, climate change, and human activities. The National Red List of Nepal's
-Birds, a comprehensive assessment of the country's avian biodiversity,
-identifies several species at risk. Specifically, Nepal harbors 168 nationally
-threatened bird species, including 68 Critically Endangered, 38 Endangered, and
-62 Vulnerable species, as detailed in a publication by the Journal of
-Threatened Taxa.\cite{inskipp2017nepala}
+Many of these species are endangered due to habitat loss, climate change, and human
+ activities. The National Red List of Nepal's Birds identifies 168 nationally 
+ threatened bird species, including 68 Critically Endangered, 38 Endangered, 
+ and 62 Vulnerable species, as detailed in a publication by the Journal of 
+ Threatened Taxa.\cite{inskipp2017nepala}
 
-The plight of these endangered species underscores the urgency of conservation
-efforts. Technologies such as audio recognition and image classification offer
-innovative tools for identifying and monitoring bird populations. By analyzing
-the unique sounds and visual characteristics of birds, researchers can enhance
-our understanding of species distribution, behavior, and threats. Such
-technologies not only aid in the conservation of endangered species but also
-contribute to the broader field of biodiversity research.
+The situation of these endangered species shows the need for conservation efforts.
+Technologies such as audio recognition provide new methods for identifying and monitoring 
+bird populations. By analyzing bird sounds and pictures, researchers can better understand
+species distribution, behavior, and threats. These technologies not only help conserve 
+endangered species but also support broader biodiversity research.
 
 \section{Problem Statement}
 In Nepal, a hotspot of avian biodiversity, accurately identifying and
@@ -250,7 +236,7 @@ endangered species.
 \begin{enumerate}[label=\roman*]
     \item To develop and implement an integrated technological solution that
           utilizes
-          advanced audio recognition and image classification techniques for
+          advanced audio recognition technique for
           the accurate
           identification and monitoring of bird species in Nepal, with an
           emphasis on
@@ -291,15 +277,6 @@ endangered species.
           Machine learning algorithms, trained on a vast database of bird
           calls, match the recorded
           sound to identify the bird species accurately.
-
-    \item \textbf{Species Identification Using Image:}\\
-          Users can capture photos of birds using the app's camera or upload
-          images from their gallery.
-          The app enhances image quality and analyzes features such as color,
-          size, shape, and patterns.
-          Utilizing computer vision models, the app identifies the bird species
-          by comparing the image
-          with a comprehensive database of bird images.
 
     \item \textbf{Mapping Identified Bird Habitat:}\\
           The app tags the location of identified birds using GPS, providing
@@ -380,15 +357,15 @@ schedule feasibility requirements.
         \hline
         \textbf{Software Requirements}                 & \textbf{Hardware
         Requirements}                                                          \\ \hline
-        Programming Language: Python, Dart, Javascript & Camera: \(>\)= 12
+        Programming Language: Python, Dart, Javascript & RAM: \(>\)= 8 GB
         Megapixels                                                             \\ \hline
-        Design Tools: Figma, Canva, Draw.io            & RAM: \(>\)= 8 GB
+        Design Tools: Figma, Canva, Draw.io            & CPU: i5 10th 
         \\ \hline
-        Libraries: Librosa, PyAudio, Pytorch           & CPU: i5 10th
+        Libraries: Librosa, PyAudio, Pytorch           & GPU: P100
         (Recommended)                                                          \\ \hline
-        Framework: Flutter, Django RestFramework       & GPU: P100
+        Framework: Flutter, Django RestFramework       & Storage: \(>\)= 50 GB
         \\ \hline
-        IDEs: VSCode, Android Studio                   & Storage: \(>\)= 50 GB
+        IDEs: VSCode, Android Studio                  &
         \\ \hline
     \end{tabular}
 \end{table}
@@ -401,14 +378,14 @@ schedule feasibility requirements.
         \hline
         \textbf{Software Requirements} & \textbf{Hardware Requirements}
         \\ \hline
-        Android: \(>\)= 10             & Camera: \(>\)= 12 Megapixels
+        Android: \(>\)= 10             & RAM: \(>\) 4 GB
         \\ \hline
-        Read/Write FileSystem          & RAM: \(>\) 4 GB
+        Read/Write FileSystem          & Storage: \(>\)= 20 GB
         \\ \hline
-        Internet Accessibility         & Storage: \(>\)= 20 GB
+        Internet Accessibility         & Recording Quality \(>\)= 256 Kbps, 48
+        KHz 
         \\ \hline
-        Database: Sqlfite              & Recording Quality \(>\)= 256 Kbps, 48
-        KHz                                                                    \\ \hline
+        Database: Sqlfite              &                                                               \\ \hline
     \end{tabular}
 \end{table}
 
@@ -502,51 +479,6 @@ incorporating stacked GRU layers for better audio-to-image representation
 learning, underscoring the potential of transfer learning from advanced image
 classification models to acoustic domains.\cite{sevilla2017audio}\\
 
-The research paper `Bird Species Identification using Deep Learning' presents a
-methodology using Deep Convolutional Neural Networks (DCNNs) to classify bird
-species, leveraging the Caltech-UCSD Birds 200 (CUB-200-2011) dataset, which
-contains 11,788 annotated images of 200 bird species. The methodology involves
-converting images to grey scale to reduce computational complexity, followed by
-the application of DCNNs using TensorFlow to extract hierarchical features from
-images such as edges, textures, and complex patterns. The neural network
-architecture includes convolutional layers for feature extraction, pooling
-layers for dimensionality reduction, activation layers for non-linearity, and
-fully connected layers for classification. Key findings show the DCNN model
-achieved a testing accuracy of 80\% and training accuracy of 93\%, with a
-validation accuracy of around 75\%, indicating robust performance across
-different data splits. The study highlights the effectiveness of combining
-multiple features (head, body, color, beak) over single-feature classification,
-with generated autographs and score sheets facilitating identification.However,
-the research also identifies limitations such as the dependency on the quality
-and diversity of the dataset,potential overfitting due to the complexity of the
-model, and the computational resources required for training deep learning
-models\cite{Gavali2019Bird}.\\
-
-The research paper `Bird species classification from an Image using VGG-16
-Network' utilizes machine learning which has shown
-significant advancements in both methodology and accuracy. The primary focus
-has been on the creation and utilization of diverse datasets, with a notable
-example being the dataset of 1600 images across 27 bird species, as well as the
-Caltech-UCSD Birds-200-2011 Dataset. Methodologically, the use of Convolutional
-Neural Networks (CNNs), particularly the VGG-16 model, has been prevalent due
-to its effectiveness in feature extraction from images. This approach has been
-complemented by transfer learning techniques, which have notably improved
-classification accuracies, as seen in the use of pre-trained networks like
-AlexNet and VGG-16, achieving accuracies up to 85.4\% and 92.13\% respectively.
-The application of machine learning algorithms such as SVM with a linear kernel
-and KNN has also been explored, with SVM achieving an accuracy of 89\% after
-parameter optimization. Additionally, the integration of computer vision
-methods to extract Histogram Oriented Gradients and RGB histogram values has
-further enhanced classification performance. Despite these advancements, the
-studies have encountered limitations, including the challenge of accurately
-classifying bird species from various angles and positions, and the need for
-extensive preprocessing to remove noise from datasets. Overall, the body of
-work demonstrates a trend towards higher accuracy in bird species
-classification through the innovative use of deep learning techniques and
-sophisticated feature extraction methods, though challenges remain in dealing
-with the variability of natural images and the computational demands of
-processing large datasets.\cite{islam2019bird}\\
-
 This research paper presents significant advancements in the field of
 `Automatic bird species identification through the integration of audio signal
 processing and neural networks'. The study, conducted by Chandu B et al.
@@ -594,7 +526,7 @@ representation. However, the study acknowledges limitations, such as the
 computational cost of training ensembles and the variability in performance
 across different augmentation techniques\cite{nanni2021ensemble}.\\
 
-The literature review focused on the `analysis of bird call datasets sourced
+The literature review focused on the `Analysis of bird call datasets sourced
 from Xeno-Canto', comprising 72,172 samples from 264 bird species in 16-bit wav
 format with a 16 kHz sampling rate. The methodology involved preprocessing the
 audio data to filter out low-frequency noise and normalize signal amplitude,
@@ -1142,225 +1074,6 @@ and validating the model:
 
 \newpage
 
-\section{Working Mechanism for Identification using Image}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.33]{images/Methodology2.png}
-    \caption{Block diagram for the working mechanism of the
-        system}%\label{fig:fig1}
-\end{figure}
-The working mechanism for the bird identification using image is to be done by
-VGG16. VGG16 have been proven
-to classify bird speices with accuracy of 92.13\% using Caltech-UCSD
-Birds-200-2011 (CUB-200-2011) dataset
-which had 1600 images across 27 bird species\cite{islam2019bird}. Our project
-aims to achieve similar result for 200 bird species.
-
-\subsection{Dataset}
-For the identification of bird species using image,CUB-200-2011
-dataset will be, which is an extended version of the CUB-200 dataset. It
-consists of
-11,788 number of images across 200 species categories\cite{WahCUB_200_2011}.
-
-\subsection{Dataset Overview for Image}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.35]{images/cubdataset.png}
-    \caption{Image Dataset distribution for Top 50 Bird Species among 200 Species}
-\end{figure}
-After observing the distribution of the images across the species, most of them
-have 60 images per species while few of them ranges from 45 to 60.
-
-\subsection{Data Preprocessing}
-In the context of bird species image classification using deep learning models
-like VGG-16, the data preprocessing stage plays a pivotal role in optimizing
-model performance and ensuring the input data aligns with the model's
-requirements. Here are the key points that highlight the importance of each
-preprocessing step:
-
-\begin{enumerate}
-    \item \textbf{Image Resizing}: All images are resized to 224x224 pixels
-          with 3 RGB channels. This standardization
-          is crucial for the model to process images efficiently, as it ensures that
-          all input data has a uniform dimensionality,
-          matching the model's input size requirement.
-
-    \item \textbf{Normalization}: Pixel values are scaled to a range of 0 to 1.
-          Normalization is a critical step because
-          it reduces the variability in the input data, which can significantly speed
-          up the convergence of the model during training.
-          By ensuring that the pixel values are within a similar range, the model
-          can navigate the optimization landscape more smoothly,
-          leading to better learning outcomes.
-
-    \item \textbf{Data Augmentation}: To enhance the dataset and introduce more
-          variability, data augmentation techniques such as flipping,
-          rescaling, and shearing are employed. These methods are instrumental in
-          creating a more robust dataset by simulating different viewing
-          conditions and perspectives. Data augmentation is particularly effective
-          in preventing overfitting, as it allows the model to learn
-          from a more diverse set of examples.
-
-    \item \textbf{Train-Validation-Test Split}: The dataset is divided into
-          training, validation, and test sets. This division
-          is essential for a comprehensive training process, where the model is
-          trained on a diverse set of images, validated on a
-          separate set to adjust hyperparameters without bias, and finally, tested on
-          unseen data to assess its generalization capability.
-          Such a split ensures that the model can learn effectively and perform
-          reliably on new, unseen images.
-\end{enumerate}
-
-These preprocessing steps form a comprehensive pipeline that prepares the
-dataset for effective training and evaluation, ultimately enhancing the model's
-ability to classify bird species accurately.
-
-\subsection{VGG16}
-For bird species image classification, the VGG-16 model is a powerful
-convolutional neural network (CNN) developed by the Visual Geometry Group at
-the University of Oxford. This model includes 13 convolutional layers followed
-by 3 fully connected layers, making up its 16 layers. VGG-16's straightforward
-yet effective design excels in image classification and object detection. Its
-deep stack of convolutional and max-pooling layers captures complex,
-hierarchical visual features, allowing the model to distinguish bird species
-with high accuracy by recognizing subtle differences in plumage, size, and
-shape. Despite newer models, VGG-16 remains relevant and effective for
-classifying bird species, making it a preferred choice in ornithology and
-computer vision \cite{bangar2022vgg}.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{images/VGG16.png}
-    \caption{VGG16 architecture}%\label{fig:fig1}
-\end{figure}
-\newpage
-
-\subsection{Max Pooling}
-
-Max pooling is a down-sampling operation commonly used in convolutional neural
-networks (CNNs) to reduce the spatial dimensions (height and width) of the
-input feature maps. This reduction helps to decrease the computational load and
-the number of parameters, which mitigates overfitting. Max pooling works by
-sliding a window (typically of size 2x2) over the input feature map and
-selecting the maximum value within each window. This operation retains the most
-prominent features while discarding the less significant ones.
-
-The equation for max pooling can be expressed as follows:
-
-\[
-    y(i, j, k) = \max_{(m, n) \in W} x(s \cdot i + m, s \cdot j + n, k)
-\]
-
-where:
-\begin{itemize}
-    \item \( y(i, j, k) \) is the output value at position \((i, j)\) in the
-          \(k\)-th channel.
-    \item \( x \) is the input feature map.
-    \item \( W \) is the pooling window.
-    \item \( s \) is the stride of the pooling window.
-    \item \( m \) and \( n \) iterate over the dimensions of the pooling
-          window.
-\end{itemize}
-
-\subsection{Softmax}
-
-The softmax function is often used in the final layer of a neural network for
-classification tasks. It converts the raw scores (logits) from the neural
-network into probabilities, enabling a probabilistic interpretation of the
-output. Each class's probability is proportional to the exponent of its
-corresponding logit, normalized by the sum of the exponents of all logits.
-
-The equation for the softmax function is given by:
-
-\[
-    \sigma(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}
-\]
-
-where:
-\begin{itemize}
-    \item \( \sigma(z_i) \) is the softmax output for the \(i\)-th class.
-    \item \( z_i \) is the logit (raw score) for the \(i\)-th class.
-    \item \( K \) is the total number of classes.
-\end{itemize}
-
-\subsection{Algorithms Used}
-
-\subsubsection{Data Augmentation}
-
-% Data augmentation is a technique used to increase the diversity of training
-% data without collecting new data. It involves applying random transformations
-% such as rotation, translation, flipping, and scaling to the original dataset.
-% This helps improve the robustness and generalization ability of machine
-% learning models.
-
-\begin{algorithm}
-    \caption{Data Augmentation}
-    \begin{algorithmic}[1]
-        \FOR{each image in the training dataset}
-        \STATE Apply random transformations such as:
-        \begin{itemize}
-            \item Horizontal/vertical flip
-            \item Random rotation
-            \item Zoom in/out
-            \item Shear transformation
-            \item Color jitter
-        \end{itemize}
-        \STATE Add the augmented image to the training dataset
-        \ENDFOR
-    \end{algorithmic}
-\end{algorithm}
-
-\subsubsection{Normalization}
-
-% Normalization is a preprocessing step used to scale the pixel values of images
-% to a specific range, typically [0, 1]. This helps in speeding up the
-% convergence by reducing the variability in input data, making the optimization
-% landscape smoother.
-
-\begin{algorithm}
-    \caption{Normalization}
-    \begin{algorithmic}[1]
-        \FOR{each image \(x\) in the dataset}
-        \FOR{each pixel value \(x_{i,j}\)}
-        \STATE Normalize the pixel value:
-        \[
-            x_{i,j} = \frac{x_{i,j} - \min(x)}{\max(x) - \min(x)}
-        \]
-        \ENDFOR
-        \ENDFOR
-    \end{algorithmic}
-\end{algorithm}
-
-\subsubsection{Stochastic Gradient Descent (SGD)}
-
-% Stochastic Gradient Descent is an iterative optimization algorithm used to
-% minimize the loss function in machine learning models, especially neural
-% networks. Unlike batch gradient descent, which uses the entire dataset, SGD
-% updates the model parameters using a single training example or a mini-batch at
-% each iteration. This approach provides faster convergence and is especially
-% useful for large datasets.
-
-\begin{algorithm}
-    \caption{Stochastic Gradient Descent (SGD)}
-    \begin{algorithmic}[1]
-        \STATE Initialize the model parameters (weights and biases)
-        \FOR{each epoch}
-        \STATE Shuffle the training data
-        \FOR{each training example \((x_i, y_i)\)}
-        \STATE Compute the prediction \(\hat{y}_i\) using the current model
-        parameters
-        \STATE Calculate the loss \(L(\hat{y}_i, y_i)\)
-        \STATE Compute the gradient of the loss with respect to the model
-        parameters
-        \STATE Update the model parameters using the gradient and the learning
-        rate \(\eta\):
-        \[
-            \theta = \theta - \eta \nabla L(\hat{y}_i, y_i)
-        \]
-        \ENDFOR
-        \ENDFOR
-    \end{algorithmic}
-\end{algorithm}
 
 \section{Mapping Location of Bird in Map}
 
@@ -1438,18 +1151,6 @@ below:
         \caption{Recording Page }
     \end{minipage}
 \end{figure}
-\begin{figure}[h!]
-    \centering
-    \begin{minipage}[b]{0.4\linewidth}
-        \includegraphics[width=\linewidth]{images/CapturePage.png}
-        \caption{Capture Page}
-    \end{minipage}
-    \hspace{1cm}
-    \begin{minipage}[b]{0.4\linewidth}
-        \includegraphics[width=\linewidth]{images/Identifiedimage.png}
-        \caption{Classified Page}
-    \end{minipage}
-\end{figure}
 \newpage
 
 %Reference
@@ -1462,6 +1163,5 @@ below:
 
 %\addcontentsline{toc}{chapter}{Appendix}
 
-\end{figure}
 
 \end{document}

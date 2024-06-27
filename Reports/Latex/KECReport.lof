@@ -4,22 +4,17 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Gantt Chart\relax }}{5}{figure.caption.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Block diagram for the working mechanism of the system\relax }}{14}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Training Dataset for audio\relax }}{16}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Validation Dataset for audio\relax }}{16}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Testing Dataset for audio\relax }}{17}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Sample of the Data\relax }}{17}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Feature Extraction Using Spectrogram and MFCC\relax }}{20}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces CNN architecture\relax }}{21}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces LSTM architecture\relax }}{23}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Block diagram for the working mechanism of the system\relax }}{28}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Image Dataset distribution for Top 50 Bird Species among 200 Species\relax }}{29}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces VGG16 architecture\relax }}{31}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Usecase Diagram for FeatherFind\relax }}{35}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Incremental Model for development of FeatherFind\relax }}{36}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Block diagram for the working mechanism of the system\relax }}{13}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Training Dataset for audio\relax }}{15}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Validation Dataset for audio\relax }}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Testing Dataset for audio\relax }}{16}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Sample of the Data\relax }}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Feature Extraction Using Spectrogram and MFCC\relax }}{19}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces CNN architecture\relax }}{20}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces LSTM architecture\relax }}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Usecase Diagram for FeatherFind\relax }}{28}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Incremental Model for development of FeatherFind\relax }}{29}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Onboarding Screen of FeatherFing\relax }}{37}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Homepage\relax }}{38}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Recording Page \relax }}{38}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Capture Page\relax }}{39}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Classified Page\relax }}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Onboarding Screen of FeatherFing\relax }}{30}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Homepage\relax }}{31}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Recording Page \relax }}{31}{figure.caption.20}%

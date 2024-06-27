@@ -46,17 +46,6 @@ A.~Sevilla and H.~Glotin, ``Audio bird classification with inception-v4
   extended with time and time-frequency attention mechanisms.'' \emph{CLEF
   (Working Notes)}, vol. 1866, pp. 1--8, 2017.
 
-\bibitem{Gavali2019Bird}
-P.~Gavali, P.~A. Mhetre, N.~C. Patil, N.~S. Bamane, and H.~D. Buva, ``Bird
-  species identification using deep learning,'' \emph{International Journal of
-  Engineering Research and Technology}, vol.~8, no.~4, April 2019.
-
-\bibitem{islam2019bird}
-S.~Islam, S.~I.~A. Khan, M.~M. Abedin, K.~M. Habibullah, and A.~K. Das, ``Bird
-  species classification from an image using vgg-16 network,'' in
-  \emph{Proceedings of the 7th international conference on computer and
-  communications management}, 2019, pp. 38--42.
-
 \bibitem{chandu2020automated}
 B.~Chandu, A.~Munikoti, K.~S. Murthy, G.~Murthy, and C.~Nagaraj, ``Automated
   bird species identification using audio signal processing and neural
@@ -88,16 +77,5 @@ M.~Dhakal, A.~Chhetri, A.~K. Gupta, P.~Lamichhane, S.~Pandey, and S.~Shakya,
 A.~Reiling, W.~Mitchell, S.~Westberg, E.~Balster, and T.~Taha, ``Cnn
   optimization with a genetic algorithm,'' in \emph{2019 IEEE National
   Aerospace and Electronics Conference (NAECON)}, 2019, pp. 340--344.
-
-\bibitem{WahCUB_200_2011}
-C.~Wah, S.~Branson, P.~Welinder, P.~Perona, and S.~Belongie, ``Cub-200-2011
-  dataset,'' Tech. Rep., 2011.
-
-\bibitem{bangar2022vgg}
-\BIBentryALTinterwordspacing
-S.~Bangar, ``Vgg-net architecture explained,'' \emph{Medium}, Jun 2022,
-  computer Science Student @Trinity College Dublin. [Online]. Available:
-  \url{https://medium.com/@siddheshb008/vgg-net-architecture-explained-71179310050f}
-\BIBentrySTDinterwordspacing
 
 \end{thebibliography}
