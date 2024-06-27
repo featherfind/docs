@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  27 JUN 2024 22:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  28 JUN 2024 00:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -993,70 +993,70 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.224 
+l.216 
        [1
 
 ] [2] [3]
 <images/GanttChart.png, id=283, 1002.74625pt x 423.5825pt>
 File: images/GanttChart.png Graphic file (type png)
 <use images/GanttChart.png>
-Package pdftex.def Info: images/GanttChart.png  used on input line 350.
+Package pdftex.def Info: images/GanttChart.png  used on input line 342.
 (pdftex.def)             Requested size: 401.0914pt x 169.43pt.
  [4] [5 <./images/GanttChart.png>] [6]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--432
+Underfull \hbox (badness 10000) in paragraph at lines 402--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--432
+Underfull \hbox (badness 10000) in paragraph at lines 402--424
 
  []
 
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 460--485
+Underfull \hbox (badness 10000) in paragraph at lines 449--474
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 486--510
+Underfull \hbox (badness 10000) in paragraph at lines 475--499
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 511--532
+Underfull \hbox (badness 10000) in paragraph at lines 500--521
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 533--550
+Underfull \hbox (badness 10000) in paragraph at lines 522--539
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 551--576
+Underfull \hbox (badness 10000) in paragraph at lines 540--565
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--576
+Underfull \hbox (badness 10000) in paragraph at lines 540--565
 
  []
 
 [11] [12]
 Chapter 3.
-<images/Methodology1.png, id=339, 1068.99374pt x 1601.985pt>
-File: images/Methodology1.png Graphic file (type png)
-<use images/Methodology1.png>
-Package pdftex.def Info: images/Methodology1.png  used on input line 583.
-(pdftex.def)             Requested size: 352.76903pt x 528.6567pt.
+<images/Methodology.png, id=339, 1154.3125pt x 1601.985pt>
+File: images/Methodology.png Graphic file (type png)
+<use images/Methodology.png>
+Package pdftex.def Info: images/Methodology.png  used on input line 572.
+(pdftex.def)             Requested size: 380.9243pt x 528.6567pt.
 [13
 
- <./images/Methodology1.png>]
-Overfull \hbox (5.73024pt too wide) in paragraph at lines 588--599
+ <./images/Methodology.png>]
+Overfull \hbox (5.73024pt too wide) in paragraph at lines 577--588
 []\OT1/ptm/m/n/12 The work-ing mech-a-nism for bird iden-ti-fi-ca-tion from au-
 dio uti-lizes the Cha-raNET dataset,
  []
@@ -1065,28 +1065,28 @@ dio uti-lizes the Cha-raNET dataset,
 <images/TrainingDataset.png, id=351, 1008.76875pt x 709.65125pt>
 File: images/TrainingDataset.png Graphic file (type png)
 <use images/TrainingDataset.png>
-Package pdftex.def Info: images/TrainingDataset.png  used on input line 627.
+Package pdftex.def Info: images/TrainingDataset.png  used on input line 616.
 (pdftex.def)             Requested size: 403.50035pt x 283.85547pt.
 <images/ValidationDataset.png, id=352, 999.735pt x 709.65125pt>
 File: images/ValidationDataset.png Graphic file (type png)
 <use images/ValidationDataset.png>
-Package pdftex.def Info: images/ValidationDataset.png  used on input line 633.
+Package pdftex.def Info: images/ValidationDataset.png  used on input line 622.
 (pdftex.def)             Requested size: 399.88692pt x 283.85547pt.
  [15 <./images/TrainingDataset.png> <./images/ValidationDataset.png>]
 <images/TestDataset.png, id=359, 999.735pt x 709.65125pt>
 File: images/TestDataset.png Graphic file (type png)
 <use images/TestDataset.png>
-Package pdftex.def Info: images/TestDataset.png  used on input line 639.
+Package pdftex.def Info: images/TestDataset.png  used on input line 628.
 (pdftex.def)             Requested size: 399.88692pt x 283.85547pt.
 <images/SampleData.png, id=360, 1171.37625pt x 471.7625pt>
 File: images/SampleData.png Graphic file (type png)
 <use images/SampleData.png>
-Package pdftex.def Info: images/SampleData.png  used on input line 645.
+Package pdftex.def Info: images/SampleData.png  used on input line 634.
 (pdftex.def)             Requested size: 351.41559pt x 141.52983pt.
 
 [16 <./images/TestDataset.png> <./images/SampleData.png>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
-55.
+44.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -1094,16 +1094,16 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 <images/MFCC.jpg, id=384, 814.04124pt x 312.16624pt>
 File: images/MFCC.jpg Graphic file (type jpg)
 <use images/MFCC.jpg>
-Package pdftex.def Info: images/MFCC.jpg  used on input line 736.
+Package pdftex.def Info: images/MFCC.jpg  used on input line 725.
 (pdftex.def)             Requested size: 407.01962pt x 156.08273pt.
  [19 <./images/MFCC.jpg>]
 <images/Convolution.png, id=404, 437.38406pt x 216.05719pt>
 File: images/Convolution.png Graphic file (type png)
 <use images/Convolution.png>
-Package pdftex.def Info: images/Convolution.png  used on input line 778.
+Package pdftex.def Info: images/Convolution.png  used on input line 767.
 (pdftex.def)             Requested size: 437.38298pt x 216.05664pt.
 
-Overfull \hbox (20.5501pt too wide) in paragraph at lines 778--779
+Overfull \hbox (20.5501pt too wide) in paragraph at lines 767--768
  [][] 
  []
 
@@ -1111,7 +1111,7 @@ Overfull \hbox (20.5501pt too wide) in paragraph at lines 778--779
 <images/LSTM.png, id=413, 987.69pt x 500.87125pt>
 File: images/LSTM.png Graphic file (type png)
 <use images/LSTM.png>
-Package pdftex.def Info: images/LSTM.png  used on input line 819.
+Package pdftex.def Info: images/LSTM.png  used on input line 808.
 (pdftex.def)             Requested size: 395.069pt x 200.34494pt.
 
 
@@ -1119,12 +1119,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [21] [22 <./images/LSTM.png>] [23] [24]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 967.
+put line 956.
  [25]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1045         \STATE \hspace{10}
+l.1034         \STATE \hspace{10}
                                   Choose number of mel bands $N_{\text{mel}}$.
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1136,7 +1136,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1047         \STATE \hspace{10}
+l.1036         \STATE \hspace{10}
                                   Convert $f_{\text{min}}$ and $f_{\text{max...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1148,7 +1148,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1049         \STATE \hspace{10}
+l.1038         \STATE \hspace{10}
                                   Divide Mel scale range into $N_{\text{mel}}$
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1160,7 +1160,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1051         \STATE \hspace{10}
+l.1040         \STATE \hspace{10}
                                   Convert center frequencies of Mel bands ba...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1172,7 +1172,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1053         \STATE \hspace{10}
+l.1042         \STATE \hspace{10}
                                   Round center frequencies to nearest bins.
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1184,7 +1184,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1054         \STATE \hspace{10}
+l.1043         \STATE \hspace{10}
                                   Design triangular band pass filters for ea...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1196,7 +1196,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1056         \STATE \hspace{10}
+l.1045         \STATE \hspace{10}
                                   Apply mel filter banks to $S_{\text{dB}}(f...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1207,38 +1207,38 @@ two letters. (See Chapter 27 of The TeXbook.)
 
 [26]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-085.
+074.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [27]
-<images/usecase.png, id=531, 799.98875pt x 665.48625pt>
+<images/usecase.png, id=531, 798.985pt x 664.4825pt>
 File: images/usecase.png Graphic file (type png)
 <use images/usecase.png>
-Package pdftex.def Info: images/usecase.png  used on input line 1108.
-(pdftex.def)             Requested size: 399.9934pt x 332.74231pt.
+Package pdftex.def Info: images/usecase.png  used on input line 1097.
+(pdftex.def)             Requested size: 399.49152pt x 332.24043pt.
  [28 <./images/usecase.png>]
 <images/SDLC.png, id=538, 1660.2025pt x 1173.38374pt>
 File: images/SDLC.png Graphic file (type png)
 <use images/SDLC.png>
-Package pdftex.def Info: images/SDLC.png  used on input line 1131.
+Package pdftex.def Info: images/SDLC.png  used on input line 1120.
 (pdftex.def)             Requested size: 415.0496pt x 293.34521pt.
  [29 <./images/SDLC.png (PNG copy)>]
 Chapter 4.
 <images/onboarding_mockup.png, id=543, 271.0125pt x 602.25pt>
 File: images/onboarding_mockup.png Graphic file (type png)
 <use images/onboarding_mockup.png>
-Package pdftex.def Info: images/onboarding_mockup.png  used on input line 1142.
+Package pdftex.def Info: images/onboarding_mockup.png  used on input line 1131.
 
 (pdftex.def)             Requested size: 162.60875pt x 361.35278pt.
 <images/homepage.png, id=544, 361.35pt x 803.0pt>
 File: images/homepage.png Graphic file (type png)
 <use images/homepage.png>
-Package pdftex.def Info: images/homepage.png  used on input line 1149.
+Package pdftex.def Info: images/homepage.png  used on input line 1138.
 (pdftex.def)             Requested size: 166.7306pt x 370.51173pt.
 <images/RecordingPage.png, id=545, 361.35pt x 803.0pt>
 File: images/RecordingPage.png Graphic file (type png)
 <use images/RecordingPage.png>
-Package pdftex.def Info: images/RecordingPage.png  used on input line 1154.
+Package pdftex.def Info: images/RecordingPage.png  used on input line 1143.
 (pdftex.def)             Requested size: 166.7306pt x 370.51173pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1255,7 +1255,7 @@ Package rerunfilecheck Info: File `KECReport.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  17829 strings out of 478287
- 325765 string characters out of 5849289
+ 325758 string characters out of 5849289
  605925 words of memory out of 5000000
  35567 multiletter control sequences out of 15000+600000
  492782 words of font info for 73 fonts, out of 8000000 for 9000
@@ -1274,7 +1274,7 @@ cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on KECReport.pdf (40 pages, 1293802 bytes).
+Output written on KECReport.pdf (40 pages, 1295571 bytes).
 PDF statistics:
  672 PDF objects out of 1000 (max. 8388607)
  572 compressed objects within 6 object streams

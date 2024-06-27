@@ -91,16 +91,12 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}%to include this chapter in TOC 
 This report presents "FeatherFind", a comprehensive model designed for
-identifying bird species using both audio recordings and images. The audio
+identifying bird species using audio recordings. The audio
 identification process involves collecting and preprocessing bird sound
 datasets, isolating key features using methods like Mel-Frequency Cepstral
 Coefficients (MFCC), and employing a combination of Convolutional Neural
 Networks (CNN) and Long Short-Term Memory networks (LSTM) to accurately
-recognize bird calls. For image identification, the model utilizes the VGG16
-architecture, a type of deep CNN, to analyze bird photos. This involves
-enhancing image quality and extracting features such as color, size, shape, and
-patterns, which are then compared to a comprehensive database of bird images to
-identify the species. The integrated approach aims to enhance the accuracy and
+recognize bird calls.The approach aims to enhance the accuracy and
 efficiency of bird species identification, facilitating better conservation
 efforts, biodiversity monitoring, ecological research, and environmental
 education. By combining advanced machine learning techniques with extensive
@@ -568,12 +564,12 @@ range of bird species to enhance the model's applicability and accuracy in
 practical scenarios.\cite{pahuja2021sound}\\ \\
 \chapter{Methodology}
 % \section*{}
-This chapters describes bird identification using audio and image separately.
+This chapters describes bird identification using audio.
 \section{Working Mechanism for Identification using Audio}
 % https://www.geeksforgeeks.org/vgg-16-cnn-model/
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.33]{images/Methodology1.png}
+    \includegraphics[scale=0.33]{images/Methodology.png}
     \caption{Block diagram for the working mechanism of the
         system}%\label{fig:fig1}
 \end{figure}
@@ -1134,7 +1130,7 @@ below:
     \centering
     \includegraphics[scale=0.6]{images/onboarding_mockup.png}
     \caption{Onboarding Screen of
-        FeatherFing}%\label{fig:fig1}
+        FeatherFind}%\label{fig:fig1}
 \end{figure}
 \begin{figure}[h!]
     \centering
