@@ -427,27 +427,24 @@ which are collected from various environments and feature a wide range of bird
 species.
 \section{Related Research}
 
-The research paper `Audio Classifier for Automatic Identification of Endangered
-Bird Species of Nepal' focuses on developing an audio classifier to identify
-endangered bird species in Nepal using deep learning techniques. The dataset,
-collected from xeno-canto.org, comprises 2215 audio recordings of 41 bird
-species, 38 of which are endangered. This dataset was expanded to 6733
-recordings through 10-second audio splitting and Gaussian noise augmentation,
-with 5407 recordings used for training, 639 for validation, and 687 for
-testing. The methodology involved handling imbalanced class distribution
-through data augmentation, employing Mel spectrograms and Mel-Frequency
-Cepstral Coefficients (MFCCs) for feature extraction, and developing a custom
-Convolutional Neural Network (CNN) model and an EfficientNet model. The
-hyperparameters of these models were optimized using a genetic algorithm. The
-Mel spectrograms were created using Short-Time Fourier Transform, converting
-amplitudes to decibel scale, and applying Mel filter banks to the spectrograms.
-Similarly, MFCCs were derived by framing the audio signals, applying Discrete
-Fourier Transform, logarithmic scaling, Mel scaling, and Discrete Cosine
-Transform. The EfficientNet architecture utilized compound scaling for network
-depth, width, and resolution. The findings indicated that the proposed approach
-achieved satisfactory results in classifying the bird species. However,
-limitations include the relatively small dataset size and the need for further
-enhancement in model robustness and accuracy.\cite{gautam2023audio}
+The research paper "Audio Classifier for Automatic Identification of Endangered Bird Species
+of Nepal" focuses on using deep learning techniques to identify endangered bird species from 
+audio recordings. The dataset, collected from xeno-canto.org, comprises 2215 audio recordings 
+of 41 bird species, 38 of which are endangered. This dataset was expanded to 6733 recordings 
+through 10-second audio splitting and Gaussian noise augmentation, with 5407 recordings used for 
+training, 639 for validation, and 687 for testing. The methodology involved handling imbalanced 
+class distribution through data augmentation, employing Mel spectrograms and Mel-Frequency Cepstral 
+Coefficients (MFCCs) for feature extraction, and developing a custom Convolutional Neural Network (CNN) 
+model and an EfficientNet model. The hyperparameters of these models were optimized using a genetic
+ algorithm. The Mel spectrograms were created using Short-Time Fourier Transform, converting amplitudes 
+ to decibel scale, and applying Mel filter banks to the spectrograms. Similarly, MFCCs were derived by 
+ framing the audio signals, applying Discrete Fourier Transform, logarithmic scaling, Mel scaling, and 
+ Discrete Cosine Transform. The EfficientNet architecture utilized compound scaling for network depth, 
+ width, and resolution. The findings indicated that the proposed approach achieved satisfactory results 
+ in classifying the bird species. Model I, using Mel Spectrogram and EfficientNet, achieved an F1-score of 
+ 79\%, while Model II, using Mel Spectrogram and Custom CNN, achieved 64\%, and Model III, using MFCC and 
+ EfficientNet, achieved 72\%. However, limitations include the relatively small dataset size and the need 
+ for further enhancement in model robustness and accuracy. \cite{gautam2023audio}
 %Future enhancements could involve
 % expanding the dataset, exploring additional feature extraction techniques, and
 % incorporating more advanced deep learning models to improve classification
