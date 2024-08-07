@@ -15,6 +15,11 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Usecase Diagram for FeatherFind\relax }}{28}{figure.caption.17}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Incremental Model for development of FeatherFind\relax }}{29}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Onboarding Screen of FeatherFind\relax }}{30}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Homepage\relax }}{31}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Recording Page \relax }}{31}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualization of audio features for Himalayan Munal\relax }}{30}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualization of silence removal for Himalayan Munal\relax }}{31}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualization of audio cleaning for Himalayan Munal\relax }}{31}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Data augmentation for Himalayan Munal\relax }}{32}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Feature extraction for Himalayan Munal\relax }}{32}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Performance of the CNN model.\relax }}{33}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Classification report of the customized CNN model.\relax }}{34}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Confusion matrix for the customized CNN model.\relax }}{35}{figure.caption.26}%

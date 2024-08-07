@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  7 JUN 2024 22:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  7 AUG 2024 22:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/iza/codes/MajorProject/docs/Proposal/Latex/KECReportFormat.tex
-(/home/iza/codes/MajorProject/docs/Proposal/Latex/KECReportFormat.tex
+**/home/iza/codes/MajorProject/docs/Reports/Latex/KECReportFormat.tex
+(/home/iza/codes/MajorProject/docs/Reports/Latex/KECReportFormat.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
@@ -687,17 +687,17 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitdp@description=\count302
 ))
 ! Emergency stop.
-<*> ...ect/docs/Proposal/Latex/KECReportFormat.tex
+<*> ...ject/docs/Reports/Latex/KECReportFormat.tex
                                                   
 *** (job aborted, no legal \end found)
 
  
 Here is how much of TeX's memory you used:
  16010 strings out of 478287
- 286957 string characters out of 5849289
+ 286954 string characters out of 5849289
  569360 words of memory out of 5000000
  34084 multiletter control sequences out of 15000+600000
  469557 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,0n,77p,967b,47s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,0n,77p,966b,47s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
