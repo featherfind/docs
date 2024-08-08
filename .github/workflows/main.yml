@@ -33,9 +33,10 @@ jobs:
           restore-keys: ${{ runner.os }}-texmf-var
 
       - name: Run gen.sh script
+        working-directory: Reports/Latex
         run: |
-          chmod +x Reports/Latex/action_gen.sh
-          ./Reports/Latex/action_gen.sh
+          chmod +x action_gen.sh
+          ./action_gen.sh
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
