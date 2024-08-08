@@ -35,8 +35,8 @@ jobs:
       - name: Run gen.sh script
         working-directory: Reports/Latex
         run: |
-          chmod +x action_gen.sh
-          ./action_gen.sh
+          chmod +x gen.sh
+          ./gen.sh
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
