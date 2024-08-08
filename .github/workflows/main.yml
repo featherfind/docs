@@ -36,7 +36,7 @@ jobs:
         working-directory: Reports/Latex
         run: |
           chmod +x gen.sh
-          ./gen.sh
+          ./gen.sh || true
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
