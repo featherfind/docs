@@ -20,9 +20,9 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Accuracy and Cross-entropy loss for train and validation sets\relax }}{33}{figure.caption.21}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Confusion matrix for the model on test set.\relax }}{33}{figure.caption.22}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Classification report of the model.\relax }}{34}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Classification report of the model.\relax }}{35}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Classification report of the model.\relax }}{35}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Classification report of the model.\relax }}{36}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Classification report of the model.\relax }}{37}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Home Page of FeatherFind.\relax }}{37}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Audio Recording using FeatherFind.\relax }}{38}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Dataset distribution for freefield1010\relax }}{35}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Dataset distribution for warblrb10k\relax }}{36}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Confusion Matrix for Bird Sound Detection Model\relax }}{36}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces ROC Curve of the detection model\relax }}{37}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Home Page of FeatherFind.\relax }}{38}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Audio Recording using FeatherFind.\relax }}{39}{figure.caption.29}%

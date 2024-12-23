@@ -1242,45 +1242,49 @@ A FastAPI application was developed using the trained model and deployed on \tex
 
 \subsection{Bird Sound Detection Model Training}
 
-To enhance the reliability of the species classification system, we incorporated a Bird Sound Detection model as a preliminary step to verify the presence of bird sounds in recorded audio. This approach is inspired by Lasseck (2018) \cite{lasseck2018acoustic}, which demonstrated the effectiveness of using Deep Convolutional Neural Networks (DCNNs) for acoustic bird detection, achieving an AUC score exceeding 93.7\% on unseen data. Following this methodology, we employed a pre-trained InceptionV3 network for our binary classification task, achieving an initial AUC score of 87.7\%.
+To enhance the reliability of the species classification system, we incorporated a Bird Sound Detection model as a preliminary step to verify the presence of bird sounds in recorded audio. This approach is inspired by Lasseck (2018) \cite{lasseck2018acoustic}, which demonstrated the effectiveness of using Deep Convolutional Neural Networks (DCNNs) for acoustic bird detection, achieving an AUC score exceeding \textbf{93.7\%} on unseen data. Following this methodology, we employed a pre-trained InceptionV3 network for our binary classification task, achieving an initial AUC score of \textbf{83\%}.
 
-While our results are promising and validate the model's applicability, the specific preprocessing and data augmentation techniques outlined in the reference study, such as time and frequency stretching and the use of a high-pass filter, were not implemented. Incorporating these methods in future iterations could further enhance the model's performance and generalization to diverse recording conditions.
-
+Dataset used for the training of the Bird Sound Detection Model is Field recordings, worldwide ("freefield1010") - a collection of 7,690 excerpts from field recordings around the world, gathered by the FreeSound project, and then standardised for research. This collection is very diverse in location and environment, and for the BAD Challenge we have annotated it for the presence/absence of birds.
 % Image for Bird Sound Detection Model Training
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.45]{images/det_trainingdataset.png}
-    \caption{Classification report of the model.}
-    \label{fig:Classification report}
+    \caption{Dataset distribution for freefield1010}
+    \label{fig:freefield1010 dataset}
 \end{figure}
+
+
+Dataset used for the evaluating the model's performance is Crowdsourced dataset, UK ("warblrb10k") - 8,000 smartphone audio recordings from around the UK, crowdsourced by users of Warblr the bird recognition app. The audio covers a wide distribution of UK locations and environments, and includes weather noise, traffic noise, human speech and even human bird imitations.
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.45]{images/det_testingdataset.png}
-    \caption{Classification report of the model.}
-    \label{fig:Classification report}
+    \caption{Dataset distribution for warblrb10k}
+    \label{fig:warblrb10k dataset}
 \end{figure}
+\newpage
+After the model was subjected to the testing dataset, the following confusion matrix was obtained, yielding an accuracy of \textbf{87.28\%}.
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.45]{images/det_confusionmatrix.png}
-    \caption{Classification report of the model.}
-    \label{fig:Classification report}
+    \includegraphics[scale=0.35]{images/det_confusionmatrix.png}
+    \caption{Confusion Matrix for Bird Sound Detection Model}
+    \label{fig:Confusion Matrix for Detection Model}
 \end{figure}
+
+To assess the effectiveness of our model in distinguishing between the target classes, we analyzed its performance using the Receiver Operating Characteristic (ROC) curve. The ROC curve provides a comprehensive view of the trade-off between the true positive rate (TPR) and the false positive rate (FPR) at various threshold settings. The Area Under the Curve (AUC) metric, derived from the ROC curve, quantifies the overall discriminatory power of the model, with a higher AUC indicating better performance.
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.45]{images/det_roc.png}
-    \caption{Classification report of the model.}
-    \label{fig:Classification report}
+    \includegraphics[scale=0.35]{images/det_roc.png}
+    \caption{ROC Curve of the detection model}
+    \label{fig:ROC Curve}
 \end{figure}
+
+While our results are promising and validate the model's applicability, the specific preprocessing and data augmentation techniques outlined in the reference study, such as time and frequency stretching and the use of a high-pass filter, were not implemented. Incorporating these methods in future iterations could further enhance the model's performance and generalization to diverse recording conditions.
 
 \newpage
-\subsection{Species Classifier Model Training}
-We developed and trained a customized Convolutional Neural Network (CNN) model
- tailored for our classification task. During the initial analysis phase, the 
- model achieved a weighted average F1-score of 78\%, indicating a promising level 
- of performance and providing a solid foundation for further refinement and tuning.
+
 
 % Include image for model training
-
+\newpage
 
 \subsection{Mobile App Development}
 The mobile application allows the user to record the audio, visualize it with waveforms during recording, 
@@ -1289,7 +1293,7 @@ add their current location to the map.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.45]{images/homepage.png}
+    \includegraphics[scale=0.5]{images/homepage.png}
     \caption{Home Page of FeatherFind.}
 \end{figure}
 
