@@ -1,0 +1,46 @@
+name: Build LaTeX document
+
+on: [push]
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Cache TeX Live
+        id: cache-texlive
+        uses: actions/cache@v3
+        with:
+          path: /usr/local/texlive
+          key: ${{ runner.os }}-texlive
+          restore-keys: ${{ runner.os }}-texlive
+
+      - name: Install TeX Live
+        if: steps.cache-texlive.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-full
+
+      - name: Cache .texmf-var
+        id: cache-texmf-var
+        uses: actions/cache@v3
+        with:
+          path: ~/.texmf-var
+          key: ${{ runner.os }}-texmf-var
+          restore-keys: ${{ runner.os }}-texmf-var
+
+      - name: Run gen.sh script
+        working-directory: Reports/Latex
+        run: |
+          chmod +x gen.sh
+          ./gen.sh || true
+
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF
+          path: Reports/Latex/KECReport.pdf
+
