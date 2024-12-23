@@ -59,6 +59,7 @@
 \citation{nanni2021ensemble}
 \citation{wang2022efficient}
 \citation{pahuja2021sound}
+\citation{carvalho2023automatic}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Methodology}{13}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -110,29 +111,39 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Work Done}{30}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Visualization}{30}{subsection.4.1.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualization of audio features for Himalayan Munal\relax }}{30}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:visualization}{{4.1}{30}{Visualization of audio features for Himalayan Munal\relax }{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Preprocessing and Feature Extraction}{31}{subsection.4.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualization of silence removal for Himalayan Munal\relax }}{31}{figure.caption.20}\protected@file@percent }
-\newlabel{fig:visualization}{{4.2}{31}{Visualization of silence removal for Himalayan Munal\relax }{figure.caption.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualization of audio cleaning for Himalayan Munal\relax }}{31}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:visualization}{{4.3}{31}{Visualization of audio cleaning for Himalayan Munal\relax }{figure.caption.21}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Data augmentation for Himalayan Munal\relax }}{32}{figure.caption.22}\protected@file@percent }
-\newlabel{fig:visualization}{{4.4}{32}{Data augmentation for Himalayan Munal\relax }{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Feature extraction for Himalayan Munal\relax }}{32}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:visualization}{{4.5}{32}{Feature extraction for Himalayan Munal\relax }{figure.caption.23}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Model Training}{33}{subsection.4.1.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Performance of the CNN model.\relax }}{33}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:Model evaluation}{{4.6}{33}{Performance of the CNN model.\relax }{figure.caption.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Classification report of the customized CNN model.\relax }}{34}{figure.caption.25}\protected@file@percent }
-\newlabel{fig:Classification report}{{4.7}{34}{Classification report of the customized CNN model.\relax }{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Confusion matrix for the customized CNN model.\relax }}{35}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:Confusion matrix}{{4.8}{35}{Confusion matrix for the customized CNN model.\relax }{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Work Remaining}{35}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Improved Data Augmentation}{35}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Genetic Algorithm for Hyperparameter Tuning}{36}{subsection.4.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Model Training with CNN+LSTM}{36}{subsection.4.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Data Collection}{30}{subsection.4.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Data before performing augmentation\relax }}{30}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:visualization}{{4.1}{30}{Data before performing augmentation\relax }{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Data Augmentation}{31}{subsection.4.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Data after performing augmentation\relax }}{31}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:visualization}{{4.2}{31}{Data after performing augmentation\relax }{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Data Preprocessing}{32}{subsection.4.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Model Training}{32}{subsection.4.1.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Accuracy and Cross-entropy loss for train and validation sets\relax }}{33}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:visualization}{{4.3}{33}{Accuracy and Cross-entropy loss for train and validation sets\relax }{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Confusion matrix for the model on test set.\relax }}{33}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:Confusion matrix}{{4.4}{33}{Confusion matrix for the model on test set.\relax }{figure.caption.22}{}}
+\citation{lasseck2018acoustic}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Classification report of the model.\relax }}{34}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:Classification report}{{4.5}{34}{Classification report of the model.\relax }{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}Deployment to Huggingface spaces}{34}{subsection.4.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.6}Bird Sound Detection Model Training}{34}{subsection.4.1.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Classification report of the model.\relax }}{35}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:Classification report}{{4.6}{35}{Classification report of the model.\relax }{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Classification report of the model.\relax }}{35}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:Classification report}{{4.7}{35}{Classification report of the model.\relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.7}Species Classifier Model Training}{35}{subsection.4.1.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Classification report of the model.\relax }}{36}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:Classification report}{{4.8}{36}{Classification report of the model.\relax }{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.8}Mobile App Development}{36}{subsection.4.1.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Classification report of the model.\relax }}{37}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:Classification report}{{4.9}{37}{Classification report of the model.\relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Home Page of FeatherFind.\relax }}{37}{figure.caption.28}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Audio Recording using FeatherFind.\relax }}{38}{figure.caption.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Work Remaining}{38}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Model Training with CNN+LSTM}{38}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Genetic Algorithm for Hyperparameter Tuning}{39}{subsection.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Mobile App Integration}{39}{subsection.4.2.3}\protected@file@percent }
 \bibstyle{IEEEtran}
 \bibdata{library}
 \bibcite{ioc_updates}{1}
@@ -144,12 +155,14 @@
 \bibcite{nanni2021ensemble}{7}
 \bibcite{wang2022efficient}{8}
 \bibcite{pahuja2021sound}{9}
-\bibcite{9850832}{10}
-\bibcite{9058307}{11}
-\@writefile{toc}{\contentsline {chapter}{References}{37}{subsection.4.2.3}\protected@file@percent }
+\bibcite{carvalho2023automatic}{10}
+\bibcite{9850832}{11}
+\@writefile{toc}{\contentsline {chapter}{References}{40}{subsection.4.2.3}\protected@file@percent }
+\bibcite{9058307}{12}
+\bibcite{lasseck2018acoustic}{13}
 \ACRO{total-barriers}{1}
 \ACRO{usage}{}
 \ACRO{pages}{}
 \ACRO{barriers}{}
 \ACRO{readaux}
-\gdef \@abspage@last{45}
+\gdef \@abspage@last{48}

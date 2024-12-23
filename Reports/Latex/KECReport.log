@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  7 AUG 2024 23:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.24)  23 DEC 2024 09:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -776,9 +776,9 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \algorithmicindent=\skip59
 )
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 69.
+h' as default language. on input line 67.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 6
-9.
+7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -790,39 +790,45 @@ LaTeX Warning: Label `fig:visualization' multiply defined.
 LaTeX Warning: Label `fig:visualization' multiply defined.
 
 
-LaTeX Warning: Label `fig:visualization' multiply defined.
+LaTeX Warning: Label `fig:Classification report' multiply defined.
 
 
-LaTeX Warning: Label `fig:visualization' multiply defined.
+LaTeX Warning: Label `fig:Classification report' multiply defined.
+
+
+LaTeX Warning: Label `fig:Classification report' multiply defined.
+
+
+LaTeX Warning: Label `fig:Classification report' multiply defined.
 
 )
 \openout1 = `KECReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 67.
 LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 6
-9.
+7.
  (/usr/share/texlive/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    ... okay on input line 67.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -883,7 +889,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 69.
+Package hyperref Info: Link coloring OFF on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -896,9 +902,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count314
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
 
 (./KECReport.out) (./KECReport.out)
 \@outlinefile=\write3
@@ -911,11 +917,11 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 69.
-<images/logo.png, id=187, 102.3825pt x 102.3825pt>
+or `english'. on input line 67.
+<images/logo.png, id=208, 102.3825pt x 102.3825pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
-Package pdftex.def Info: images/logo.png  used on input line 71.
+Package pdftex.def Info: images/logo.png  used on input line 69.
 (pdftex.def)             Requested size: 71.1361pt x 71.1361pt.
 
 
@@ -925,10 +931,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.71 \KECcoverpage
+l.69 \KECcoverpage
                   
 ? R
 OK, entering \nonstopmode...
+! Undefined control sequence.
+<recently read> \defDay 
+                        
+l.69 \KECcoverpage
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.png>]
@@ -939,17 +956,28 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.72 \KECtitlepage
+l.70 \KECtitlepage
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+! Undefined control sequence.
+<recently read> \defDay 
+                        
+l.70 \KECtitlepage
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.72 \KECtitlepage
+l.70 \KECtitlepage
                    [1] [1
 
 ] (./KECReport.toc
@@ -983,125 +1011,130 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.216 
+l.214 
        [1
 
 ] [2] [3]
-<images/GanttChart.png, id=335, 1002.74625pt x 423.5825pt>
+<images/GanttChart.png, id=366, 1002.74625pt x 423.5825pt>
 File: images/GanttChart.png Graphic file (type png)
 <use images/GanttChart.png>
-Package pdftex.def Info: images/GanttChart.png  used on input line 342.
+Package pdftex.def Info: images/GanttChart.png  used on input line 340.
 (pdftex.def)             Requested size: 401.0914pt x 169.43pt.
  [4] [5 <./images/GanttChart.png>] [6]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--424
+Underfull \hbox (badness 10000) in paragraph at lines 400--422
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--424
+Underfull \hbox (badness 10000) in paragraph at lines 400--422
 
  []
 
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 449--474
+Underfull \hbox (badness 10000) in paragraph at lines 447--472
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 475--499
+Underfull \hbox (badness 10000) in paragraph at lines 473--497
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 500--521
+Underfull \hbox (badness 10000) in paragraph at lines 498--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--539
+Underfull \hbox (badness 10000) in paragraph at lines 520--537
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 540--565
+Underfull \hbox (badness 10000) in paragraph at lines 538--563
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 564--568
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--565
+Underfull \hbox (badness 10000) in paragraph at lines 564--568
 
  []
 
-[11] [12]
+[12]
 Chapter 3.
-<images/Methodology.png, id=390, 1154.3125pt x 1601.985pt>
+<images/Methodology.png, id=423, 1154.3125pt x 1601.985pt>
 File: images/Methodology.png Graphic file (type png)
 <use images/Methodology.png>
-Package pdftex.def Info: images/Methodology.png  used on input line 575.
+Package pdftex.def Info: images/Methodology.png  used on input line 577.
 (pdftex.def)             Requested size: 380.9243pt x 528.6567pt.
 [13
 
  <./images/Methodology.png>]
-Overfull \hbox (5.73024pt too wide) in paragraph at lines 580--591
+Overfull \hbox (5.73024pt too wide) in paragraph at lines 582--593
 []\OT1/ptm/m/n/12 The work-ing mech-a-nism for bird iden-ti-fi-ca-tion from au-
 dio uti-lizes the Cha-raNET dataset,
  []
 
 [14]
-<images/TrainingDataset.png, id=402, 1008.76875pt x 709.65125pt>
+<images/TrainingDataset.png, id=435, 1008.76875pt x 709.65125pt>
 File: images/TrainingDataset.png Graphic file (type png)
 <use images/TrainingDataset.png>
-Package pdftex.def Info: images/TrainingDataset.png  used on input line 619.
+Package pdftex.def Info: images/TrainingDataset.png  used on input line 622.
 (pdftex.def)             Requested size: 403.50035pt x 283.85547pt.
-<images/ValidationDataset.png, id=403, 999.735pt x 709.65125pt>
+<images/ValidationDataset.png, id=436, 999.735pt x 709.65125pt>
 File: images/ValidationDataset.png Graphic file (type png)
 <use images/ValidationDataset.png>
-Package pdftex.def Info: images/ValidationDataset.png  used on input line 625.
+Package pdftex.def Info: images/ValidationDataset.png  used on input line 628.
 (pdftex.def)             Requested size: 399.88692pt x 283.85547pt.
  [15 <./images/TrainingDataset.png> <./images/ValidationDataset.png>]
-<images/TestDataset.png, id=410, 999.735pt x 709.65125pt>
+<images/TestDataset.png, id=443, 999.735pt x 709.65125pt>
 File: images/TestDataset.png Graphic file (type png)
 <use images/TestDataset.png>
-Package pdftex.def Info: images/TestDataset.png  used on input line 631.
+Package pdftex.def Info: images/TestDataset.png  used on input line 634.
 (pdftex.def)             Requested size: 399.88692pt x 283.85547pt.
-<images/SampleData.png, id=411, 1171.37625pt x 471.7625pt>
+<images/SampleData.png, id=444, 1171.37625pt x 471.7625pt>
 File: images/SampleData.png Graphic file (type png)
 <use images/SampleData.png>
-Package pdftex.def Info: images/SampleData.png  used on input line 637.
+Package pdftex.def Info: images/SampleData.png  used on input line 640.
 (pdftex.def)             Requested size: 351.41559pt x 141.52983pt.
 
 [16 <./images/TestDataset.png> <./images/SampleData.png>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
-47.
+50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [17] [18]
-<images/MFCC.jpg, id=435, 814.04124pt x 312.16624pt>
+<images/MFCC.jpg, id=469, 814.04124pt x 312.16624pt>
 File: images/MFCC.jpg Graphic file (type jpg)
 <use images/MFCC.jpg>
-Package pdftex.def Info: images/MFCC.jpg  used on input line 728.
+Package pdftex.def Info: images/MFCC.jpg  used on input line 731.
 (pdftex.def)             Requested size: 407.01962pt x 156.08273pt.
  [19 <./images/MFCC.jpg>]
-<images/Convolution.png, id=456, 437.38406pt x 216.05719pt>
+<images/Convolution.png, id=489, 437.38406pt x 216.05719pt>
 File: images/Convolution.png Graphic file (type png)
 <use images/Convolution.png>
-Package pdftex.def Info: images/Convolution.png  used on input line 770.
+Package pdftex.def Info: images/Convolution.png  used on input line 773.
 (pdftex.def)             Requested size: 437.38298pt x 216.05664pt.
 
-Overfull \hbox (20.5501pt too wide) in paragraph at lines 770--771
+Overfull \hbox (20.5501pt too wide) in paragraph at lines 773--774
  [][] 
  []
 
 [20 <./images/Convolution.png>]
-<images/LSTM.png, id=465, 987.69pt x 500.87125pt>
+<images/LSTM.png, id=498, 987.69pt x 500.87125pt>
 File: images/LSTM.png Graphic file (type png)
 <use images/LSTM.png>
-Package pdftex.def Info: images/LSTM.png  used on input line 811.
+Package pdftex.def Info: images/LSTM.png  used on input line 814.
 (pdftex.def)             Requested size: 395.069pt x 200.34494pt.
 
 
@@ -1109,12 +1142,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [21] [22 <./images/LSTM.png>] [23] [24]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 959.
+put line 962.
  [25]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1037         \STATE \hspace{10}
+l.1040         \STATE \hspace{10}
                                   Choose number of mel bands $N_{\text{mel}}$.
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1126,7 +1159,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1039         \STATE \hspace{10}
+l.1042         \STATE \hspace{10}
                                   Convert $f_{\text{min}}$ and $f_{\text{max...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1138,7 +1171,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1041         \STATE \hspace{10}
+l.1044         \STATE \hspace{10}
                                   Divide Mel scale range into $N_{\text{mel}}$
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1150,7 +1183,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1043         \STATE \hspace{10}
+l.1046         \STATE \hspace{10}
                                   Convert center frequencies of Mel bands ba...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1162,7 +1195,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1045         \STATE \hspace{10}
+l.1048         \STATE \hspace{10}
                                   Round center frequencies to nearest bins.
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1174,7 +1207,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1046         \STATE \hspace{10}
+l.1049         \STATE \hspace{10}
                                   Design triangular band pass filters for ea...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1186,7 +1219,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.1048         \STATE \hspace{10}
+l.1051         \STATE \hspace{10}
                                   Apply mel filter banks to $S_{\text{dB}}(f...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1195,98 +1228,150 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-[26]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-077.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [27]
-<images/usecase.png, id=583, 798.985pt x 664.4825pt>
+[26] [27]
+<images/usecase.png, id=615, 798.985pt x 664.4825pt>
 File: images/usecase.png Graphic file (type png)
 <use images/usecase.png>
-Package pdftex.def Info: images/usecase.png  used on input line 1100.
+Package pdftex.def Info: images/usecase.png  used on input line 1103.
 (pdftex.def)             Requested size: 399.49152pt x 332.24043pt.
  [28 <./images/usecase.png>]
-<images/SDLC.png, id=589, 1660.2025pt x 1173.38374pt>
+<images/SDLC.png, id=621, 1660.2025pt x 1173.38374pt>
 File: images/SDLC.png Graphic file (type png)
 <use images/SDLC.png>
-Package pdftex.def Info: images/SDLC.png  used on input line 1123.
+Package pdftex.def Info: images/SDLC.png  used on input line 1126.
 (pdftex.def)             Requested size: 415.0496pt x 293.34521pt.
  [29 <./images/SDLC.png (PNG copy)>]
 Chapter 4.
-<images/vis_himalayan_monal.png, id=594, 1547.7825pt x 548.0475pt>
-File: images/vis_himalayan_monal.png Graphic file (type png)
-<use images/vis_himalayan_monal.png>
-Package pdftex.def Info: images/vis_himalayan_monal.png  used on input line 114
-2.
-(pdftex.def)             Requested size: 333.46758pt x 118.07042pt.
+<images/before_augmentation.png, id=626, 859.2903pt x 570.933pt>
+File: images/before_augmentation.png Graphic file (type png)
+<use images/before_augmentation.png>
+Package pdftex.def Info: images/before_augmentation.png  used on input line 114
+0.
+(pdftex.def)             Requested size: 333.46758pt x 221.56529pt.
 [30
 
- <./images/vis_himalayan_monal.png>]
-<images/silence_removal.jpg, id=601, 1606.0pt x 641.39626pt>
-File: images/silence_removal.jpg Graphic file (type jpg)
-<use images/silence_removal.jpg>
-Package pdftex.def Info: images/silence_removal.jpg  used on input line 1154.
-(pdftex.def)             Requested size: 333.46758pt x 133.1802pt.
-<images/audio_cleaning.jpg, id=602, 1606.0pt x 641.39626pt>
-File: images/audio_cleaning.jpg Graphic file (type jpg)
-<use images/audio_cleaning.jpg>
-Package pdftex.def Info: images/audio_cleaning.jpg  used on input line 1161.
-(pdftex.def)             Requested size: 333.46758pt x 133.1802pt.
- [31 <./images/silence_removal.jpg> <./images/audio_cleaning.jpg>]
-<images/data_aug.png, id=607, 927.465pt x 1146.2825pt>
-File: images/data_aug.png Graphic file (type png)
-<use images/data_aug.png>
-Package pdftex.def Info: images/data_aug.png  used on input line 1170.
-(pdftex.def)             Requested size: 333.46758pt x 412.13666pt.
-<images/feature_extraction.jpg, id=608, 1487.5575pt x 395.4775pt>
-File: images/feature_extraction.jpg Graphic file (type jpg)
-<use images/feature_extraction.jpg>
-Package pdftex.def Info: images/feature_extraction.jpg  used on input line 1177
+ <./images/before_augmentation.png>]
+<images/after_augmentation.png, id=633, 859.2903pt x 570.933pt>
+File: images/after_augmentation.png Graphic file (type png)
+<use images/after_augmentation.png>
+Package pdftex.def Info: images/after_augmentation.png  used on input line 1165
 .
-(pdftex.def)             Requested size: 333.46758pt x 88.65273pt.
- [32 <./images/data_aug.png> <./images/feature_extraction.jpg>]
-<images/model_training_image.png, id=614, 1401.235pt x 779.91376pt>
-File: images/model_training_image.png Graphic file (type png)
-<use images/model_training_image.png>
-Package pdftex.def Info: images/model_training_image.png  used on input line 11
-90.
-(pdftex.def)             Requested size: 333.46758pt x 185.60036pt.
-<images/classification_report.png, id=615, 612.2875pt x 920.43875pt>
+(pdftex.def)             Requested size: 333.46758pt x 221.56529pt.
+ [31 <./images/after_augmentation.png>]
+Overfull \hbox (2.08482pt too wide) in paragraph at lines 1181--1182
+[]\OT1/ptm/m/n/12 The spec-tro-grams were gen-er-ated with a Han-ning win-dow a
+nd 48 Mel bands. 
+ []
+
+<images/accuracy_and_loss.png, id=639, 619.113pt x 341.5962pt>
+File: images/accuracy_and_loss.png Graphic file (type png)
+<use images/accuracy_and_loss.png>
+Package pdftex.def Info: images/accuracy_and_loss.png  used on input line 1219.
+
+(pdftex.def)             Requested size: 333.46758pt x 183.99529pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/confusion_matrix.png, id=640, 1289.2968pt x 1300.1373pt>
+File: images/confusion_matrix.png Graphic file (type png)
+<use images/confusion_matrix.png>
+Package pdftex.def Info: images/confusion_matrix.png  used on input line 1226.
+(pdftex.def)             Requested size: 386.79202pt x 390.0442pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/classification_report.png, id=641, 629.4717pt x 715.473pt>
 File: images/classification_report.png Graphic file (type png)
 <use images/classification_report.png>
 Package pdftex.def Info: images/classification_report.png  used on input line 1
-197.
-(pdftex.def)             Requested size: 306.143pt x 460.21825pt.
+233.
+(pdftex.def)             Requested size: 283.25964pt x 321.95988pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[32] [33 <./images/accuracy_and_loss.png> <./images/confusion_matrix.png>]
+[34 <./images/classification_report.png>]
+<images/det_trainingdataset.png, id=659, 562.1pt x 451.6875pt>
+File: images/det_trainingdataset.png Graphic file (type png)
+<use images/det_trainingdataset.png>
+Package pdftex.def Info: images/det_trainingdataset.png  used on input line 125
+2.
+(pdftex.def)             Requested size: 252.94266pt x 203.25749pt.
+<images/det_testingdataset.png, id=660, 562.1pt x 451.6875pt>
+File: images/det_testingdataset.png Graphic file (type png)
+<use images/det_testingdataset.png>
+Package pdftex.def Info: images/det_testingdataset.png  used on input line 1258
+.
+(pdftex.def)             Requested size: 252.94266pt x 203.25749pt.
+<images/det_confusionmatrix.png, id=661, 932.48375pt x 792.9625pt>
+File: images/det_confusionmatrix.png Graphic file (type png)
+<use images/det_confusionmatrix.png>
+Package pdftex.def Info: images/det_confusionmatrix.png  used on input line 126
+4.
+(pdftex.def)             Requested size: 419.61382pt x 356.82982pt.
+
+Overfull \hbox (2.78093pt too wide) in paragraph at lines 1264--1265
+ [][] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/confusion_matrix.png, id=616, 1371.1225pt x 976.64874pt>
-File: images/confusion_matrix.png Graphic file (type png)
-<use images/confusion_matrix.png>
-Package pdftex.def Info: images/confusion_matrix.png  used on input line 1204.
-(pdftex.def)             Requested size: 411.33992pt x 292.99689pt.
+<images/det_roc.png, id=662, 992.70876pt x 792.9625pt>
+File: images/det_roc.png Graphic file (type png)
+<use images/det_roc.png>
+Package pdftex.def Info: images/det_roc.png  used on input line 1270.
+(pdftex.def)             Requested size: 446.71481pt x 356.82982pt.
+
+Overfull \hbox (29.88193pt too wide) in paragraph at lines 1270--1271
+ [][] 
+ []
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33 <./images/model_training_image.png>] [34 <./images/classification_report.pn
-g>] [35 <./images/confusion_matrix.png>] [36] (./KECReport.bbl [37
+[35 <./images/det_trainingdataset.png> <./images/det_testingdataset.png>]
+<images/homepage.png, id=667, 324.21124pt x 587.19376pt>
+File: images/homepage.png Graphic file (type png)
+<use images/homepage.png>
+Package pdftex.def Info: images/homepage.png  used on input line 1292.
+(pdftex.def)             Requested size: 145.8937pt x 264.23474pt.
 
-]) [38]
-(./KECReport.aux)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/Recordingpage.jpg, id=668, 857.2025pt x 1807.75375pt>
+File: images/Recordingpage.jpg Graphic file (type jpg)
+<use images/Recordingpage.jpg>
+Package pdftex.def Info: images/Recordingpage.jpg  used on input line 1298.
+(pdftex.def)             Requested size: 154.2898pt x 325.38164pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[36 <./images/det_confusionmatrix.png>]
+
+LaTeX Warning: Text page 37 contains only floats.
+
+
+Overfull \vbox (1.55766pt too high) has occurred while \output is active []
+
+
+[37 <./images/det_roc.png> <./images/homepage.png>] [38 <./images/Recordingpage
+.jpg>] [39] (./KECReport.bbl [40
+
+]) [41] (./KECReport.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `KECReport.out' has not changed.
-(rerunfilecheck)             Checksum: 81670702EF115BA0EB7BFF33DEA97FCC;7483.
+(rerunfilecheck)             Checksum: FC702A34F73B24D3DF3C6F8D4CB6725C;8424.
  ) 
 Here is how much of TeX's memory you used:
  17895 strings out of 478287
- 327379 string characters out of 5849289
- 606323 words of memory out of 5000000
- 35609 multiletter control sequences out of 15000+600000
- 492787 words of font info for 73 fonts, out of 8000000 for 9000
+ 327729 string characters out of 5849289
+ 606331 words of memory out of 5000000
+ 35598 multiletter control sequences out of 15000+600000
+ 492275 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,82p,1055b,693s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1298,14 +1383,13 @@ ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/times/utmri8a.pfb>
-Output written on KECReport.pdf (45 pages, 2073364 bytes).
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmri8a.pfb>
+Output written on KECReport.pdf (48 pages, 1860305 bytes).
 PDF statistics:
- 760 PDF objects out of 1000 (max. 8388607)
- 645 compressed objects within 7 object streams
- 230 named destinations out of 1000 (max. 500000)
- 469 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 808 PDF objects out of 1000 (max. 8388607)
+ 688 compressed objects within 7 object streams
+ 243 named destinations out of 1000 (max. 500000)
+ 524 words of extra memory for PDF output out of 10000 (max. 10000000)
 
