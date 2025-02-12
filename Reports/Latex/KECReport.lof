@@ -6,24 +6,22 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces System Overview}}{14}{figure.caption.9}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Block diagram for the working mechanism for Bird Detection}}{16}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Block diagram for the working mechanism for Bird Species Identification}}{17}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Data before performing augmentation}}{18}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Data after performing augmentation}}{19}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Feature Extraction Using Spectrogram and MFCC}}{21}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces EfficientNet architecture}}{22}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces CNN architecture}}{23}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces LSTM architecture}}{24}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Usecase Diagram for FeatherFind}}{31}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Incremental Model for development of FeatherFind}}{32}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Dataset distribution for freefield1010}}{16}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Dataset distribution for warblrb10k}}{17}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Distribution of the merged dataset}}{17}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Modified ResNet-50 architecture for Bird Sound Detection. The model processes mel spectrogram inputs, extracts deep features using frozen ResNet-50 layers, and classifies them using a custom fully connected layer.}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Block diagram for the working mechanism for Bird Species Identification}}{26}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Dataset before performing augmentation}}{27}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Dataset after performing augmentation}}{28}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Feature Extraction Using Spectrogram and MFCC}}{32}{figure.caption.19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Data before performing augmentation}}{33}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Data after performing augmentation}}{34}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Accuracy and Cross-entropy loss for train and validation sets}}{36}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Confusion matrix for the model on test set.}}{37}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Classification report of the model.}}{38}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Dataset distribution for freefield1010}}{39}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Dataset distribution for warblrb10k}}{39}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Confusion Matrix for Bird Sound Detection Model}}{40}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces ROC Curve of the detection model}}{40}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Home Page of FeatherFind.}}{42}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Audio Recording using FeatherFind.}}{43}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Confusion Matrix for Bird Sound Detection Model}}{36}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces ROC Curve of the detection model}}{37}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces GA CNN-LSTM.}}{38}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces GA Efficient-Net.}}{38}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Home Page of FeatherFind.}}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Mapped Birds in FeatherFind.}}{40}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Recording using FeatherFind.}}{41}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Confirmation for Audio Recognition.}}{42}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Bird Species Identification using FeatherFind.}}{43}{figure.caption.28}%
+\addvspace {10\p@ }

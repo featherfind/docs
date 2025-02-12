@@ -60,7 +60,7 @@
 % sort  = Area of Triangle , % string to compare for sorting symbols
 %class = symbol
 %}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \setcounter{secnumdepth}{3}
 %The Document
 \begin{document}
@@ -89,38 +89,37 @@
 \addcontentsline{toc}{chapter}{Abstract}%to include this chapter in TOC 
 % This report presents "FeatherFind", a comprehensive model designed for identifying bird species using audio recordings. The audio identification process involves collecting and preprocessing bird sound datasets, isolating key features using Mel Spectrogram, and employing EfficientNet, a state-of-the-art convolutional neural network, to accurately recognize bird calls.
 
+% {\textit{Keywords$-$Optical Character Recognition, Binarization, Thresholding, Denoising, Boundary Detection, Hough Line Transformation, K-Means Clustering, Convolutional Neural Network}}
 
-    % {\textit{Keywords$-$Optical Character Recognition, Binarization, Thresholding, Denoising, Boundary Detection, Hough Line Transformation, K-Means Clustering, Convolutional Neural Network}}
+%{\par
+%\begin{flushright}
+%\vskip -20pt
+%\setstretch{1.2}
+%\submittedBy
+%\end{flushright}}
 
-    %{\par
-    %\begin{flushright}
-    %\vskip -20pt
-    %\setstretch{1.2}
-    %\submittedBy
-    %\end{flushright}}
+%to adjust spacings for TOC, LOF, LOT
+{
 
-    %to adjust spacings for TOC, LOF, LOT
-    {
+    %TOC, LOF and LOT
+    \KECadjusttocspacings % defined in KECReportFormat.tex to adjust spacings
+    \makeatletter
+    % to add vskip of 18 point which is reduced when parskip is set to 0 in \LECadjustspacings
+    \def\@makeschapterhead#1{%
+        %\vspace*{50\p@}% Remove the vertical space
+        {\newpage \parindent\z@ \raggedright\normalfont
+                \interlinepenalty\@M
+                \center\fontsize{16pt}{1} \bfseries
+                \MakeUppercase{#1}\par\nobreak
+                \vskip 18\p@ % adjust space after heading 18pt
+            }}
+    \makeatother
 
-        %TOC, LOF and LOT
-        \KECadjusttocspacings % defined in KECReportFormat.tex to adjust spacings
-        \makeatletter
-        % to add vskip of 18 point which is reduced when parskip is set to 0 in \LECadjustspacings
-        \def\@makeschapterhead#1{%
-            %\vspace*{50\p@}% Remove the vertical space
-            {\newpage \parindent\z@ \raggedright\normalfont
-                    \interlinepenalty\@M
-                    \center\fontsize{16pt}{1} \bfseries
-                    \MakeUppercase{#1}\par\nobreak
-                    \vskip 18\p@ % adjust space after heading 18pt
-                }}
-        \makeatother
-
-        \tableofcontents % prints table of contents
-        \listoffigures % prints list of figures
-        \addcontentsline{toc}{chapter}{List Of Figures}
-        %\listoftables % prints list of table
-    }
+    \tableofcontents % prints table of contents
+    \listoffigures % prints list of figures
+    \addcontentsline{toc}{chapter}{List Of Figures}
+    %\listoftables % prints list of table
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %comment this chapter if you don't have List of Abbreviations
@@ -143,11 +142,9 @@
     % LSTM \> Long Short-Term Memory\\
     MAP \> Mean Average Precision\\
     % MFCCs \> Mel-Frequency Cepstral Coefficients\\
-    MLP \> Multilayer Perceptron\\
-    RGB \> Reg Green Blue\\
-    ROC \> Receiver Operating characteristics\\
-    RNN \> Recurrent Neural Network\\
-    STFT \> Short-Time Fourier Transform\\
+    MLP \> Multilayer Perceptron\\ RGB \> Reg Green Blue\\ ROC \> Receiver
+    Operating characteristics\\ RNN \> Recurrent Neural Network\\ STFT \>
+    Short-Time Fourier Transform\\
     % \DeclareAcronym{CNN}{
     %  short = \ensuremath{a} , % use \ensuremath{a} instead of $a$
     %  long  = Convolutional Neural Network,
@@ -164,29 +161,29 @@
 \newpage
 \pagenumbering{arabic}
 
-
 \chapter{Introduction}\label{sec}
 Globally, the avian kingdom is vast, with over 11,000 species, showing nature's
-complexity and evolutionary skill. This number, from the International Ornithological
-Committee as of April 2023, shows the great bird diversity, with each species having 
-its own role and story.\cite{ioc_updates}
+complexity and evolutionary skill. This number, from the International
+Ornithological Committee as of April 2023, shows the great bird diversity, with
+each species having its own role and story.\cite{ioc_updates}
 
-In Nepal, a country known for its rich nature and varied ecosystems, from the lowland 
-Terai to the high Himalayas, there are more than 887 bird species, according to the 
-Himalayan Nature organization. This is over 8\% of the world's known bird species, 
-a big number given Nepal's small size.\cite{himalayan}
+In Nepal, a country known for its rich nature and varied ecosystems, from the
+lowland Terai to the high Himalayas, there are more than 887 bird species,
+according to the Himalayan Nature organization. This is over 8\% of the world's
+known bird species, a big number given Nepal's small size.\cite{himalayan}
 
-Many of these species are endangered due to habitat loss, climate change, and human
- activities. The National Red List of Nepal's Birds identifies 168 nationally 
- threatened bird species, including 68 Critically Endangered, 38 Endangered, 
- and 62 Vulnerable species, as detailed in a publication by the Journal of 
- Threatened Taxa.\cite{inskipp2017nepala}
+Many of these species are endangered due to habitat loss, climate change, and
+human activities. The National Red List of Nepal's Birds identifies 168
+nationally threatened bird species, including 68 Critically Endangered, 38
+Endangered, and 62 Vulnerable species, as detailed in a publication by the
+Journal of Threatened Taxa.\cite{inskipp2017nepala}
 
-The situation of these endangered species shows the need for conservation efforts.
-Technologies such as audio recognition provide new methods for identifying and monitoring 
-bird populations. By analyzing bird sounds and pictures, researchers can better understand
-species distribution, behavior, and threats. These technologies not only help conserve 
-endangered species but also support broader biodiversity research.
+The situation of these endangered species shows the need for conservation
+efforts. Technologies such as audio recognition provide new methods for
+identifying and monitoring bird populations. By analyzing bird sounds and
+pictures, researchers can better understand species distribution, behavior, and
+threats. These technologies not only help conserve endangered species but also
+support broader biodiversity research.
 
 \section{Problem Statement}
 In Nepal, a hotspot of avian biodiversity, accurately identifying and
@@ -218,13 +215,9 @@ endangered species.
 
 \section{Objectives}
 \begin{enumerate}[label=\roman*]
-    \item To develop and implement an integrated technological solution that
-          utilizes
-          advanced audio recognition technique for
-          the accurate
-          identification and monitoring of bird species in Nepal, with an
-          emphasis on
-          endangered species.
+    \item To develop and implement an integrated technological solution that utilizes
+          advanced audio recognition technique for the accurate identification and
+          monitoring of bird species in Nepal, with an emphasis on endangered species.
 \end{enumerate}
 
 \section{Application Scope}
@@ -343,13 +336,13 @@ schedule feasibility requirements.
         Requirements}                                                          \\ \hline
         Programming Language: Python, Dart, Javascript & RAM: \(>\)= 8 GB
         Megapixels                                                             \\ \hline
-        Design Tools: Figma, Canva, Draw.io            & CPU: i5 10th 
+        Design Tools: Figma, Canva, Draw.io            & CPU: i5 10th
         \\ \hline
         Libraries: Librosa, PyAudio, Pytorch           & GPU: P100
         (Recommended)                                                          \\ \hline
         Framework: Flutter, Django RestFramework       & Storage: \(>\)= 50 GB
         \\ \hline
-        IDEs: VSCode, Android Studio                  &
+        IDEs: VSCode, Android Studio                   &
         \\ \hline
     \end{tabular}
 \end{table}
@@ -367,24 +360,21 @@ schedule feasibility requirements.
         Read/Write FileSystem          & Storage: \(>\)= 20 GB
         \\ \hline
         Internet Accessibility         & Recording Quality \(>\)= 256 Kbps, 48
-        KHz 
+        KHz
         \\ \hline
-        Database: Sqlfite              &                                                               \\ \hline
+        Database: Sqlfite              &                                       \\ \hline
     \end{tabular}
 \end{table}
 
 \chapter{Literature Review}
 
 This literature review explores the progression of methodologies and
-technologies in the field,
-with a particular focus on the use of Convolutional Neural Networks (CNN) and
-Long Short-Term Memory (LSTM)
-networks for audio-based bird species identification. The review also examines
-the challenges associated
-with dataset quality and diversity, and the innovative strategies employed to
-address these issues,
-providing a comprehensive overview of the current state of research and future
-directions in avian bioacoustics.
+technologies in the field, with a particular focus on the use of Convolutional
+Neural Networks (CNN) and Long Short-Term Memory (LSTM) networks for
+audio-based bird species identification. The review also examines the
+challenges associated with dataset quality and diversity, and the innovative
+strategies employed to address these issues, providing a comprehensive overview
+of the current state of research and future directions in avian bioacoustics.
 
 \section{Related Works}
 BirdNET is a cutting-edge research platform developed through collaboration
@@ -411,41 +401,47 @@ which are collected from various environments and feature a wide range of bird
 species.
 \section{Related Research}
 
-The study\cite{gautam2023audio} "Audio Classifier for Automatic Identification of Endangered Bird Species
-of Nepal" focuses on using deep learning techniques to identify endangered bird species from 
-audio recordings. The dataset, collected from xeno-canto.org, comprises 2215 audio recordings 
-of 41 bird species, 38 of which are endangered. This dataset was expanded to 6733 recordings 
-through 10-second audio splitting and Gaussian noise augmentation, with 5407 recordings used for 
-training, 639 for validation, and 687 for testing. The methodology involved handling imbalanced 
-class distribution through data augmentation, employing Mel spectrograms and Mel-Frequency Cepstral 
-Coefficients (MFCCs) for feature extraction, and developing a custom Convolutional Neural Network (CNN) 
-model and an EfficientNet model. The hyperparameters of these models were optimized using a genetic
- algorithm. The Mel spectrograms were created using Short-Time Fourier Transform, converting amplitudes 
- to decibel scale, and applying Mel filter banks to the spectrograms. Similarly, MFCCs were derived by 
- framing the audio signals, applying Discrete Fourier Transform, logarithmic scaling, Mel scaling, and 
- Discrete Cosine Transform. The EfficientNet architecture utilized compound scaling for network depth, 
- width, and resolution. The findings indicated that the proposed approach achieved satisfactory results 
- in classifying the bird species. Model I, using Mel Spectrogram and EfficientNet, achieved an F1-score of 
- 79\%, while Model II, using Mel Spectrogram and Custom CNN, achieved 64\%, and Model III, using MFCC and 
- EfficientNet, achieved 72\%. However, limitations include the relatively small dataset size and the need 
- for further enhancement in model robustness and accuracy. 
+The study\cite{gautam2023audio} "Audio Classifier for Automatic Identification
+of Endangered Bird Species of Nepal" focuses on using deep learning techniques
+to identify endangered bird species from audio recordings. The dataset,
+collected from xeno-canto.org, comprises 2215 audio recordings of 41 bird
+species, 38 of which are endangered. This dataset was expanded to 6733
+recordings through 10-second audio splitting and Gaussian noise augmentation,
+with 5407 recordings used for training, 639 for validation, and 687 for
+testing. The methodology involved handling imbalanced class distribution
+through data augmentation, employing Mel spectrograms and Mel-Frequency
+Cepstral Coefficients (MFCCs) for feature extraction, and developing a custom
+Convolutional Neural Network (CNN) model and an EfficientNet model. The
+hyperparameters of these models were optimized using a genetic algorithm. The
+Mel spectrograms were created using Short-Time Fourier Transform, converting
+amplitudes to decibel scale, and applying Mel filter banks to the spectrograms.
+Similarly, MFCCs were derived by framing the audio signals, applying Discrete
+Fourier Transform, logarithmic scaling, Mel scaling, and Discrete Cosine
+Transform. The EfficientNet architecture utilized compound scaling for network
+depth, width, and resolution. The findings indicated that the proposed approach
+achieved satisfactory results in classifying the bird species. Model I, using
+Mel Spectrogram and EfficientNet, achieved an F1-score of 79\%, while Model II,
+using Mel Spectrogram and Custom CNN, achieved 64\%, and Model III, using MFCC
+and EfficientNet, achieved 72\%. However, limitations include the relatively
+small dataset size and the need for further enhancement in model robustness and
+accuracy.
 %Future enhancements could involve
 % expanding the dataset, exploring additional feature extraction techniques, and
 % incorporating more advanced deep learning models to improve classification
 % performance.\cite{gautam2023audio}\\
 
-Sevilla et al.\cite{sevilla2017audio} introduced an innovative approach to bird sound classification with their study
-`Audio Bird Classification with Inception-v4 extended with Time and
-Time-Frequency Attention Mechanisms'. The datasets employed include
-various bird sounds, prominently from the BirdClef2017 challenge, consisting of
-1500 bird species recordings. The methodology revolves around treating bird
-sound classification as an image classification problem through transfer
-learning. The Inception-v4 model, initially pre-trained on ImageNet, was
-adapted to process time-frequency representations of bird sounds by converting
-these sounds into RGB images using three log-spectrograms generated via fast
-Fourier transform at different scales (128, 512, 2048 bins).The findings
-demonstrate that the model,
-termed `Soundception', integrates time and time-frequency attention mechanisms
+Sevilla et al.\cite{sevilla2017audio} introduced an innovative approach to bird
+sound classification with their study `Audio Bird Classification with
+Inception-v4 extended with Time and Time-Frequency Attention Mechanisms'. The
+datasets employed include various bird sounds, prominently from the
+BirdClef2017 challenge, consisting of 1500 bird species recordings. The
+methodology revolves around treating bird sound classification as an image
+classification problem through transfer learning. The Inception-v4 model,
+initially pre-trained on ImageNet, was adapted to process time-frequency
+representations of bird sounds by converting these sounds into RGB images using
+three log-spectrograms generated via fast Fourier transform at different scales
+(128, 512, 2048 bins).The findings demonstrate that the model, termed
+`Soundception', integrates time and time-frequency attention mechanisms
 effectively, significantly improving classification accuracy. The results
 highlight Soundception's outstanding performance, achieving a mean average
 precision (MAP) of 0.714 in classifying 1500 bird species, 0.616 MAP for
@@ -453,24 +449,26 @@ background species, and 0.288 MAP for soundscapes with time-codes, making it
 the top model in the BirdClef2017 challenge across multiple tasks. However,
 limitations include the incomplete convergence of the model due to
 computational constraints and the extensive GPU resources required for
-training. The paper concludes with a discussion on future
-improvements, such as exploring different scalable optimizations and
-incorporating stacked GRU layers for better audio-to-image representation
-learning, underscoring the potential of transfer learning from advanced image
-classification models to acoustic domains.\\
+training. The paper concludes with a discussion on future improvements, such as
+exploring different scalable optimizations and incorporating stacked GRU layers
+for better audio-to-image representation learning, underscoring the potential
+of transfer learning from advanced image classification models to acoustic
+domains.\\
 
-The study, conducted by Chandu B et al.\cite{chandu2020automated}, 
-outlines a robust methodology for identifying bird
-species from audio recordings, leveraging a combination of meticulously curated
-datasets and  machine learning techniques. The dataset was manually compiledThe working mechanism for bird identification from audio utilizes the dataset compiled from Xeno Canto, housing a diverse collection of avian vocalizations. 
-Our methodology revolves around the utilization of EfficientNet, a state-of-the-art convolutional neural network architecture known for 
-its balance between accuracy and efficiency.
+The study, conducted by Chandu B et al.\cite{chandu2020automated}, outlines a
+robust methodology for identifying bird species from audio recordings,
+leveraging a combination of meticulously curated datasets and machine learning
+techniques. The dataset was manually compiledThe working mechanism for bird
+identification from audio utilizes the dataset compiled from Xeno Canto,
+housing a diverse collection of avian vocalizations. Our methodology revolves
+around the utilization of EfficientNet, a state-of-the-art convolutional neural
+network architecture known for its balance between accuracy and efficiency.
 
-The primary objective of this study is to achieve high levels of accuracy in identifying a broad spectrum of 41 distinct bird species. 
-Here lies the detailed explanation of the methodology, from the working mechanism to model training.
-from both local recordings and
-online resources such as xeno-canto.org, which apart from bird songs also
-contains ambient noise and
+The primary objective of this study is to achieve high levels of accuracy in
+identifying a broad spectrum of 41 distinct bird species. Here lies the
+detailed explanation of the methodology, from the working mechanism to model
+training. from both local recordings and online resources such as
+xeno-canto.org, which apart from bird songs also contains ambient noise and
 human voices to simulate real-world conditions. Pre-processing techniques
 including pre-emphasis, framing, silence removal, and reconstruction were
 applied to the audio clips to enhance the relevant frequency components and
@@ -484,12 +482,11 @@ recognizing the variability of real-world conditions, the researchers retrained
 the model with datasets containing ambient noise, achieving a real-time
 classification accuracy of 91\%. Despite these promising results, the study
 acknowledges limitations such as the relatively small size of the dataset and
-the need for further tuning of performance parameters to improve
-robustness.\\
+the need for further tuning of performance parameters to improve robustness.\\
 
-In\cite{nanni2021ensemble} `An Ensemble of Convolutional Neural Networks for Audio
-Classification' delves into a comprehensive study on CNN classification using
-different architectures, data augmentation techniques, and audio signal
+In\cite{nanni2021ensemble} `An Ensemble of Convolutional Neural Networks for
+Audio Classification' delves into a comprehensive study on CNN classification
+using different architectures, data augmentation techniques, and audio signal
 representations, aimed at enhancing audio classification tasks across various
 datasets. The study employs three datasets: BIRDZ, CAT, and ESC-50, each
 offering unique challenges in audio classification. The methodology involves
@@ -502,26 +499,30 @@ methods encompass procedures like short spectrogram augmentation, random time
 shift, and frequency masking. The CNN architectures are pre-trained models
 fine-tuned with these augmented datasets to boost classification accuracy. The
 findings reveal that the ensemble method outperforms standalone networks,
-achieving 97\% accuracy on the BIRDZ dataset, 90.51\% on the CAT dataset, andThe working mechanism for bird identification from audio utilizes the dataset compiled from Xeno Canto, housing a diverse collection of avian vocalizations. 
-Our methodology revolves around the utilization of EfficientNet, a state-of-the-art convolutional neural network architecture known for 
-its balance between accuracy and efficiency.
+achieving 97\% accuracy on the BIRDZ dataset, 90.51\% on the CAT dataset,
+andThe working mechanism for bird identification from audio utilizes the
+dataset compiled from Xeno Canto, housing a diverse collection of avian
+vocalizations. Our methodology revolves around the utilization of EfficientNet,
+a state-of-the-art convolutional neural network architecture known for its
+balance between accuracy and efficiency.
 
-The primary objective of this study is to achieve high levels of accuracy in identifying a broad spectrum of 41 distinct bird species. 
-Here lies the detailed explanation of the methodology, from the working mechanism to model training.
-88.65\% on the ESC-50 dataset. The study also highlights that the
+The primary objective of this study is to achieve high levels of accuracy in
+identifying a broad spectrum of 41 distinct bird species. Here lies the
+detailed explanation of the methodology, from the working mechanism to model
+training. 88.65\% on the ESC-50 dataset. The study also highlights that the
 best-performing CNNs are VGG16 and VGG19, with DGT as the most effective signal
 representation. However, the study acknowledges limitations, such as the
 computational cost of training ensembles and the variability in performance
 across different augmentation techniques.\\
 
-In\cite{wang2022efficient} `Analysis of bird call datasets sourced
-from Xeno-Canto', comprising 72,172 samples from 264 bird species in 16-bit wav
+In\cite{wang2022efficient} `Analysis of bird call datasets sourced from
+Xeno-Canto', comprising 72,172 samples from 264 bird species in 16-bit wav
 format with a 16 kHz sampling rate. The methodology involved preprocessing the
 audio data to filter out low-frequency noise and normalize signal amplitude,
-followed by generating Mel-spectrograms and Mel-Frequency Cepstral Coefficients
-(MFCCs) as inputs for deep learning models. The Mel-spectrograms were produced
+followed by generating Mel Spectrograms and Mel-Frequency Cepstral Coefficients
+(MFCCs) as inputs for deep learning models. The Mel Spectrograms were produced
 using discrete Fourier transform (DFT), and the MFCCs were derived by applying
-discrete cosine transform (DCT) to the Mel-spectrogram. The study employed
+discrete cosine transform (DCT) to the Mel Spectrogram. The study employed
 various metrics to evaluate the performance of these methods, including ROC
 analysis to visualize model effectiveness. Findings indicated that the proposed
 models showed significant promise in identifying bird species from their calls,
@@ -532,913 +533,681 @@ noise affecting signal quality. Future work suggested enhancing noise reduction
 techniques and exploring more sophisticated neural network architectures to
 further improve model robustness and accuracy.\\
 
-The study\cite{pahuja2021sound} by Pahuja et al. conducted an in-depth analysis of bird species recognition through
-acoustic monitoring, utilizing a robust dataset of bird sound samples,
-meticulously annotated and validated for accuracy. The dataset, referred to as
-SD, comprises multispecies bird sound recordings, each labeled with species
-name and sample ID, along with corresponding metadata, providing a
-comprehensive foundation for model training and evaluation. Methodologically,
-the research employed a spectrogram-based feature extraction approach,
-leveraging Short-Time Fourier Transform (STFT) to capture the intricate
-temporal and spectral characteristics of bird sounds. This was followed by the
-application of a Multilayer Perceptron (MLP) classifier to distinguish between
-different bird species. The findings reveal that the proposed model achieved
-high recognition accuracy, with some species being identified with perfect
-precision, recall, and accuracy (100\%), though the performance varied across
-species, with a few showing lower recognition rates (86.9\%) and
-precision/recall values ranging between 50\-75\%. The results demonstrated an
-overall classification accuracy of 96\%, with cross-validation accuracy
-standing at 81.4\%, highlighting the model's robustness yet indicating room for
-improvement in generalizability across diverse datasets. Despite the promising
-results, the study acknowledges several limitations, including the variability
-in recognition accuracy among different species and the potential influence of
-environmental noise on model performance. Future work is suggested to explore
-feature and model fusion techniques, integrate the model with cloud-based
-systems for real-time recognition, and expand the dataset to include a broader
-range of bird species to enhance the model's applicability and accuracy in
-practical scenarios.\\ 
+The study\cite{pahuja2021sound} by Pahuja et al. conducted an in-depth analysis
+of bird species recognition through acoustic monitoring, utilizing a robust
+dataset of bird sound samples, meticulously annotated and validated for
+accuracy. The dataset, referred to as SD, comprises multispecies bird sound
+recordings, each labeled with species name and sample ID, along with
+corresponding metadata, providing a comprehensive foundation for model training
+and evaluation. Methodologically, the research employed a spectrogram-based
+feature extraction approach, leveraging Short-Time Fourier Transform (STFT) to
+capture the intricate temporal and spectral characteristics of bird sounds.
+This was followed by the application of a Multilayer Perceptron (MLP)
+classifier to distinguish between different bird species. The findings reveal
+that the proposed model achieved high recognition accuracy, with some species
+being identified with perfect precision, recall, and accuracy (100\%), though
+the performance varied across species, with a few showing lower recognition
+rates (86.9\%) and precision/recall values ranging between 50\-75\%. The
+results demonstrated an overall classification accuracy of 96\%, with
+cross-validation accuracy standing at 81.4\%, highlighting the model's
+robustness yet indicating room for improvement in generalizability across
+diverse datasets. Despite the promising results, the study acknowledges several
+limitations, including the variability in recognition accuracy among different
+species and the potential influence of environmental noise on model
+performance. Future work is suggested to explore feature and model fusion
+techniques, integrate the model with cloud-based systems for real-time
+recognition, and expand the dataset to include a broader range of bird species
+to enhance the model's applicability and accuracy in practical scenarios.\\
 
-The dataset used in this study\cite{carvalho2023automatic} comprises recordings labeled by species from California 
-and Nevada, USA. It includes 91 species, with 30 audio samples per species, amounting 
-to a total of 2,730 MP3 files. The methodology adopted involves three main steps: 
-pre-processing, feature extraction, and deep learning modeling.
-For feature extraction, MFCCs were obtained using the Python library python\_speech\_features, 
-with parameters such as sample rate, 13 cepstrum coefficients, 26 filterbank filters, and an 
-FFT size of 512. Mel spectrograms were extracted using the Librosa library, employing parameters 
-such as a sample rate, an FFT window size of 2048, a hop length of 512, and 128 Mel bands.
-In the deep learning modeling, CNNs and LSTMs were compared for their effectiveness in 
-classifying bird sounds. CNNs demonstrated superior training accuracy with Mel spectrogram 
-features, achieving 99.05\% and 98.76\% accuracy for 3-second and 1.5-second spectroThe working mechanism for bird identification from audio utilizes the dataset compiled from Xeno Canto, housing a diverse collection of avian vocalizations. 
-Our methodology revolves around the utilization of EfficientNet, a state-of-the-art convolutional neural network architecture known for 
-its balance between accuracy and efficiency.
+The dataset used in this study\cite{carvalho2023automatic} comprises recordings
+labeled by species from California and Nevada, USA. It includes 91 species,
+with 30 audio samples per species, amounting to a total of 2,730 MP3 files. The
+methodology adopted involves three main steps: pre-processing, feature
+extraction, and deep learning modeling. For feature extraction, MFCCs were
+obtained using the Python library python\_speech\_features, with parameters
+such as sample rate, 13 cepstrum coefficients, 26 filterbank filters, and an
+FFT size of 512. Mel spectrograms were extracted using the Librosa library,
+employing parameters such as a sample rate, an FFT window size of 2048, a hop
+length of 512, and 128 Mel bands. In the deep learning modeling, CNNs and LSTMs
+were compared for their effectiveness in classifying bird sounds. CNNs
+demonstrated superior training accuracy with Mel spectrogram features,
+achieving 99.05\% and 98.76\% accuracy for 3-second and 1.5-second spectroThe
+working mechanism for bird identification from audio utilizes the dataset
+compiled from Xeno Canto, housing a diverse collection of avian vocalizations.
+Our methodology revolves around the utilization of EfficientNet, a
+state-of-the-art convolutional neural network architecture known for its
+balance between accuracy and efficiency.
 
-The primary objective of this study is to achieve high levels of accuracy in identifying a broad spectrum of 41 distinct bird species. 
-Here lies the detailed explanation of the methodology, from the working mechanism to model training.grams, 
-respectively. In contrast, LSTMs achieved lower training accuracies of 75.85\% and 73.29\% 
-under similar conditions.These results highlight the superior ability of CNNs to leverage 
-the spatial and frequency-related patterns in Mel spectrograms for accurate bird species 
-classification.\\ 
+The primary objective of this study is to achieve high levels of accuracy in
+identifying a broad spectrum of 41 distinct bird species. Here lies the
+detailed explanation of the methodology, from the working mechanism to model
+training.grams, respectively. In contrast, LSTMs achieved lower training
+accuracies of 75.85\% and 73.29\% under similar conditions.These results
+highlight the superior ability of CNNs to leverage the spatial and
+frequency-related patterns in Mel spectrograms for accurate bird species
+classification.\\
 
-In the study\cite{lasseck2018acoustic}, 'Acoustic Bird Detection with Deep Convolution Neural Network', DCNNs pretrained 
-on ImageNet, have been widely used for bioacoustic classification, with preprocessing and 
-augmentation playing crucial roles in model performance. The preprocessing pipeline typically 
-involves applying a shallow high-pass filter (Q = 0.707) with a 2 kHz cutoff, resampling to 22,050 Hz, 
-and extracting around 4-second audio chunks, which are transformed into mel spectrograms with 310 mel bands 
-(160-10,300 Hz). Further processing includes removing extreme frequencies, normalizing power 
-spectrograms to decibel units, resizing to 224*224, and converting grayscale spectrograms to RGB 
-for compatibility with ResNet. To improve generalization, data augmentation techniques such as 
-jittering chunk duration, extracting chunks from random positions, adding noise from unrelated audio 
-files, and applying random amplitude scaling are employed. Additional augmentations in the frequency 
-domain include frequency shifting/stretching, piecewise time/frequency resizing, and color jittering 
-(brightness, contrast, saturation, hue). Among these, the most effective methods are noise addition 
-from random files, piecewise time and frequency stretching, and time interval dropout, which enhance 
-robustness by simulating real-world variations in bird vocalizations.\\
+Finally, in the study\cite{lasseck2018acoustic}, 'Acoustic Bird Detection with
+Deep Convolution Neural Network', DCNNs pretrained on ImageNet, have been used
+for bioacoustic classification, with preprocessing and augmentation playing
+crucial roles in model performance. The preprocessing pipeline typically
+involves applying a shallow high-pass filter (Q = 0.707) with a 2 kHz cutoff,
+resampling to 22,050 Hz, and extracting around 4-second audio chunks, which are
+transformed into mel spectrograms with 310 mel bands (160-10,300 Hz). Further
+processing includes removing extreme frequencies, normalizing power
+spectrograms to decibel units, resizing to 224*224, and converting grayscale
+spectrograms to RGB for compatibility with ResNet. To improve generalization,
+data augmentation techniques such as jittering chunk duration, extracting
+chunks from random positions, adding noise from unrelated audio files, and
+applying random amplitude scaling are employed. Additional augmentations in the
+frequency domain include frequency shifting/stretching, piecewise
+time/frequency resizing, and color jittering (brightness, contrast, saturation,
+hue). Among these, the most effective methods are noise addition from random
+files, piecewise time and frequency stretching, and time interval dropout,
+which enhance robustness by simulating real-world variations in bird
+vocalizations.\\
+
+\newpage
 
 \chapter{Methodology}
-% \section*{}
-This chapter describes the overall system including the bird sound detection and bird species classification.
+This chapter describes the overall system including the bird sound detection
+and bird species classification.
 
+% System Architecture
 \section{System Overview}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.65]{images/System Overview.png}
-    \caption{System Overview}%\label{fig:fig1}
+    \caption{System Overview}\label{fig:system_overview}
 \end{figure}
 
-Our project leverages a mobile application to capture audio recordings, which are then processed to identify bird species. The mobile app records the sound and visualizes it with waveforms during the recording process. Once the audio is captured, it is sent to our backend system for further analysis.
+Our project leverages a mobile application to capture audio recordings, which
+are then processed to identify bird species. The mobile app records the sound
+and visualizes it with waveforms during the recording process. Once the audio
+is captured, it is sent to our backend system for further analysis.
 
-The backend system, built using Django and Django Rest Framework, first passes the audio through a bird sound detection model. This model determines whether the recorded audio contains bird sounds. If bird sounds are detected, the audio is then forwarded to the bird species classifier model. The classifier identifies the specific bird species present in the recording.
+The backend system, built using Django and Django Rest Framework, first passes
+the audio through a bird sound detection model. This model determines whether
+the recorded audio contains bird sounds. If bird sounds are detected, the audio
+is then forwarded to the bird species classifier model. The classifier
+identifies the specific bird species present in the recording.
 
-Upon successful classification, the system maps the identified bird species to the location where the audio was recorded, utilizing the device's GPS data. This information is stored in a MySQL database, which handles all data management tasks. If the bird sound detection model does not detect any bird sounds, the recorded audio is labeled accordingly, indicating the absence of bird sounds.
+Upon successful classification, the system maps the identified bird species to
+the location where the audio was recorded, utilizing the device's GPS data.
+This information is stored in a MySQL database, which handles all data
+management tasks. If the bird sound detection model does not detect any bird
+sounds, the recorded audio is labeled accordingly, indicating the absence of
+bird sounds.
 
-This approach ensures that only relevant audio recordings are processed for species classification, enhancing the accuracy and efficiency of the system. The integration of Django, Django Rest Framework, and MySQL provides a robust and scalable backend infrastructure to support the application's functionality.
+This approach ensures that only relevant audio recordings are processed for
+species classification, enhancing the accuracy and efficiency of the system.
+The integration of Django, Django Rest Framework, and MySQL provides a robust
+and scalable backend infrastructure to support the application's functionality
+as shown in Figure \ref{fig:system_overview}.
 \\
 
-\section{Working Mechanism for Detection using Audio}
-The working mechanism for bird identification from audio utilizes the dataset compiled from Xeno Canto, housing a diverse collection of avian vocalizations. 
-Our methodology revolves around the utilization of EfficientNet, a state-of-the-art convolutional neural network architecture known for 
-its balance between accuracy and efficiency.
+\section{Working Mechanism for Bird Sound Detection}
+      % description about mechanism
+      % Image of the Working Mechanism
+      \begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.33]{images/DetectionMethodology.png}
+            \caption{Block diagram for the working mechanism for Bird Detection}%\label{fig:fig1}
+      \end{figure}
 
-The primary objective of this study is to achieve high levels of accuracy in identifying a broad spectrum of 41 distinct bird species. 
-Here lies the detailed explanation of the methodology, from the working mechanism to model training.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.33]{images/DetectionMethodology.png}
-    \caption{Block diagram for the working mechanism for Bird Detection}%\label{fig:fig1}
-\end{figure}
+      \subsection{Data Collection}
+      The dataset used for the Bird Sound Detection Model includes Field recordings, worldwide ("freefield1010") - a collection of 7,690 excerpts from field recordings around the world, gathered by the FreeSound project, and then standardised for research. This collection is very diverse in location and environment, and for the BAD Challenge, it has been annotated for the presence/absence of birds.
+      \begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.45]{images/dataset_detection-1.png}
+            \caption{Dataset distribution for freefield1010}
+            \label{fig:freefield1010 dataset}
+      \end{figure}
+      
+      Another dataset used is the Crowdsourced dataset, UK ("warblrb10k") - 8,000 smartphone audio recordings from around the UK, crowdsourced by users of Warblr, the bird recognition app. The audio covers a wide distribution of UK locations and environments and includes weather noise, traffic noise, human speech, and even human bird imitations.
+      \begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.45]{images/dataset_detection-2.png}
+            \caption{Dataset distribution for warblrb10k}
+            \label{fig:warblrb10k dataset}
+      \end{figure}
+
+      Instead of using the datasets separately, we merged them to create a single dataset comprising 15,690 audio recordings—7,710 without bird sounds and 7,980 with bird sounds. The merged dataset was then partitioned into training, testing, and validation sets in an 80:10:10 ratio, ensuring a comprehensive and balanced dataset for model training and evaluation.
+      \begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.45]{images/dataset_detection-3.png}
+            \caption{Distribution of the merged dataset}
+            \label{fig:merged_dataset}
+      \end{figure}         \newpage      
+
+      \subsection{Data Transformation}
+      To enhance the robustness and generalization of our bird sound detection model, we applied a series of transformations on both the raw audio signals and their corresponding Mel Spectrograms. These transformations include:
+
+      \begin{itemize}
+            \item \textbf{Add Gaussian Noise (Raw Audio):}\\
+            This transformation adds Gaussian noise to the raw audio signal. The noise is generated with a specified mean and standard deviation, and it is added to the audio signal with a certain probability. This helps in making the model robust to noisy environments.
+            \begin{equation}
+            \text{noise} = \mathcal{N}(\mu, \sigma^2)
+            \end{equation}
+
+            \item \textbf{Random Volume Scaling (Raw Audio):}\\
+            This transformation scales the volume of the raw audio signal by a random factor within a specified range. The scaling is applied with a certain probability, making the model resilient to variations in recording levels.
+            \begin{equation}
+            \text{audio} = \text{audio} \times \text{gain}
+            \end{equation}
+            
+            \item \textbf{Time Stretch (Raw Audio):}\\
+            This transformation stretches or compresses the time axis of the raw audio signal by a random factor within a specified range. The transformed audio is then converted into a Mel Spectrogram, which helps the model to handle variations in speed.
+            \begin{equation}
+            \text{audio} = \text{TimeStretch}(\text{audio}, \text{rate})
+            \end{equation}
+            
+            \item \textbf{Frequency Masking (Mel Spectrogram):}\\
+            This transformation masks a portion of the frequency bins in the Mel Spectrogram. The maximum number of frequency bins to be masked is specified, and the masking is applied with a certain probability. It encourages the model to focus on different frequency components.
+            \begin{equation}
+            \text{mel\_spec}[f:f+\text{max\_mask}] = 0
+            \end{equation}
+
+            \item \textbf{Time Masking (Mel Spectrogram):}\\
+            This transformation masks a portion of the time frames in the Mel Spectrogram. The maximum number of time frames to be masked is specified, and the masking is applied with a certain probability. This helps the model to focus on various temporal features.
+            \begin{equation}
+            \text{mel\_spec}[:, t:t+\text{max\_mask}] = 0
+            \end{equation}
+
+            \item \textbf{Random Content Mixing (Mel Spectrogram):}\\
+            This transformation mixes the Mel Spectrogram with another randomly selected noise Mel Spectrogram. The mixing ratio is chosen randomly within a specified range, and the mixing is applied with a certain probability. This aids in making the model robust to background noises.
+            \begin{equation}
+            \text{mel\_spec} = (1 - \text{mix\_ratio}) \times \text{mel\_spec} + \text{mix\_ratio} \times \text{noise\_spec}
+            \end{equation}
+
+            \item \textbf{Time Interval Dropout (Mel Spectrogram):}\\
+            This transformation randomly drops intervals of time frames in the Mel Spectrogram. The number of intervals and the width of each interval are chosen randomly within specified ranges, applied with a certain probability. This helps the model to cope with missing or corrupted audio segments.
+            \begin{equation}
+            \text{mel\_spec}[:, t:t+\text{width}] = 0
+            \end{equation}
+      \end{itemize}
+
+      \subsection{Feature Extraction}
+      The Mel Spectrogram transforms raw audio signals into a time-frequency image that captures the essential spectral characteristics required for bird sound detection. As demonstrated by Lasseck et al.\cite{lasseck2018acoustic}, this approach efficiently distinguishes recordings containing bird vocalizations from those without. For a comprehensive explanation of the computation, please refer to Section~\ref{sec:FeatureExtraction}.
+
+      \subsection{Model Architecture}
+
+      The bird sound detection model utilizes a pre-trained ResNet-50 architecture as a feature extractor, which has been modified to process mel spectrogram representations of audio signals. This section provides a detailed explanation of the ResNet-50 architecture and the modifications applied to adapt it for bird sound detection.
+
+      \subsubsection{ResNet-50: A Detailed Overview}
+      ResNet-50, or Residual Network-50, is a deep convolutional neural network (CNN) designed to overcome the vanishing gradient problem that commonly arises in deep networks. It achieves this through the use of residual learning, where shortcut connections (skip connections) allow gradients to bypass certain layers, ensuring efficient training even in very deep architectures.
+
+      \subsubsection{Architecture of ResNet-50}
+      ResNet-50 consists of multiple convolutional layers arranged into residual blocks. These blocks introduce identity mappings that help the model learn transformations efficiently. The network follows a hierarchical structure where initial layers focus on low-level features such as edges and textures, while deeper layers extract high-level representations.
+
+      The architecture is composed of four main stages, each containing bottleneck residual blocks. Each block consists of three convolutional layers: a \(1\times1\) convolution for dimensionality reduction, a \(3\times3\) convolution for feature extraction, and another \(1\times1\) convolution to restore dimensionality. By utilizing these bottleneck layers, ResNet-50 maintains computational efficiency while preserving representational power.
+
+      Another key component of ResNet-50 is batch normalization, which standardizes feature maps at each layer, leading to stable gradient flow and faster convergence. Additionally, ReLU activation functions introduce non-linearity, allowing the network to learn complex patterns in the data.
+
+      \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.9\textwidth]{resnet50_architecture.png}
+      \caption{Modified ResNet-50 architecture for Bird Sound Detection. The model processes mel spectrogram inputs, extracts deep features using frozen ResNet-50 layers, and classifies them using a custom fully connected layer.}
+      \label{fig:resnet50}
+      \end{figure}
+
+      \subsubsection{Components of ResNet-50 Architecture}
+      The ResNet-50 model consists of several essential components that contribute to its powerful feature extraction and classification capabilities:
+
+      \begin{itemize}
+            \item \textbf{Convolutional Layers:} These layers apply convolution operations to extract spatial features from input images. Early layers capture basic features (edges, textures), while deeper layers learn more abstract patterns.
+      
+            \item \textbf{Batch Normalization:} This technique normalizes activations at each layer to stabilize training, improve convergence, and prevent internal covariate shifts.
+      
+            \item \textbf{ReLU Activation:} A non-linear activation function that introduces sparsity and helps the network learn complex representations.
+      
+            \item \textbf{Residual Blocks:} The defining characteristic of ResNet, these blocks contain skip connections that allow gradients to bypass certain layers, mitigating the vanishing gradient problem.
+      
+            \item \textbf{Bottleneck Layers:} Each residual block consists of three convolutional layers: a \(1\times1\) convolution to reduce dimensionality, a \(3\times3\) convolution to extract features, and another \(1\times1\) convolution to restore the original depth.
+      
+            \item \textbf{Global Average Pooling:} Reduces the dimensionality of feature maps before passing them to the final classification layer, making the network more efficient.
+      
+            \item \textbf{Fully Connected Layer:} The final layer of the network that performs classification based on extracted features.
+      
+            \item \textbf{Softmax/Sigmoid Activation:} Applies a probability distribution to the output for classification, with softmax used for multi-class classification and sigmoid used for binary classification.
+      \end{itemize}
+
+      \subsubsection{Adaptation for Bird Sound Detection}
+      While ResNet-50 is originally designed for image classification, it can be adapted for processing spectrograms, which are visual representations of sound frequencies over time. In this model, several modifications have been applied to tailor ResNet-50 for the bird sound detection task (see Figure~\ref{fig:resnet50}):
+
+      \begin{itemize}
+            \item \textbf{Input Modification:} Since spectrograms are typically represented as grayscale images with a single channel, the original ResNet-50 architecture, which expects three-channel RGB images, has been adjusted to accept single-channel inputs. This allows the network to effectively process spectrogram data without requiring redundant channels.
+      
+            \item \textbf{Feature Extraction:} The pre-trained ResNet-50 model, trained on large-scale image datasets, is used as a feature extractor. The earlier layers remain unchanged, as they capture fundamental patterns useful for various classification tasks. These convolutional layers are frozen, meaning their weights are not updated during training. This strategy ensures that the model benefits from pre-learned visual features while focusing its learning on the final classification task.
+      
+            \item \textbf{Modified Classification Layer:} The original fully connected classification layer of ResNet-50 has been replaced with a custom classification head optimized for binary classification (presence or absence of bird sound). This new layer stack introduces additional non-linearity and dropout mechanisms to prevent overfitting, ultimately improving the model’s ability to generalize to new data.
+      
+      \end{itemize}
+
+      \subsubsection{Training and Generalization}
+      By freezing the early convolutional layers and training only the newly added classification layers, the model efficiently learns to distinguish bird sounds from other environmental noises. This transfer learning approach significantly reduces the training time and the amount of labeled data required, making the model robust in real-world scenarios.
+
+      The final model is designed to process mel spectrogram inputs and produce a probability score indicating the presence of bird sounds. The use of residual learning allows for deep feature extraction, making the model highly effective in distinguishing between subtle variations in audio patterns.
+      
+      
+
+      \subsection{Training Process}
+      The training process for the bird sound detection model was carefully designed to ensure optimal learning and generalization. The process incorporated several key components and strategies:
+
+      \begin{itemize}
+            \item \textbf{Training Parameters:}
+            \begin{itemize}
+                  \item Number of epochs: 20
+                  \item Batch size: 32
+                  \item Initial learning rate: 0.001
+                  \item Weight decay: 0.0001
+            \end{itemize}
+
+            \item \textbf{Loss Function:}
+            Binary Cross-Entropy Loss (BCE) was chosen as the loss function due to its effectiveness in binary classification tasks. For input predictions $\hat{y}$ and true labels $y$, the BCE loss is calculated as:
+            \begin{equation}
+                  L_{BCE} = -\frac{1}{N}\sum_{i=1}^{N}[y_i\log(\hat{y}_i) + (1-y_i)\log(1-\hat{y_i})]
+            \end{equation}
+
+            \item \textbf{Optimization:}
+            \begin{itemize}
+                  \item The Adam optimizer was employed with the following parameters:
+                        \begin{itemize}
+                              \item Learning rate: 0.001
+                              \item Weight decay: 0.0001
+                        \end{itemize}
+                  \item Learning rate scheduling was implemented using ReduceLROnPlateau with:
+                        \begin{itemize}
+                              \item Reduction factor: 0.2
+                              \item Patience: 3 epochs
+                        \end{itemize}
+            \end{itemize}
+
+            \item \textbf{Monitoring and Validation:}
+            \begin{itemize}
+                  \item Training and validation losses were monitored each epoch
+                  \item Learning rate adjustments were made based on validation loss plateaus
+                  \item Early stopping was implemented to prevent overfitting
+                  \item Model performance was evaluated on the test set after training completion
+            \end{itemize}
+      \end{itemize}      
+
+      \subsection{Evaluation}
+      To assess the effectiveness of our model in distinguishing between the target classes, we analyzed its performance using the Receiver Operating Characteristic (ROC) curve. Following the benchmark established by Lasseck et al.\cite{lasseck2018acoustic} for the freefield1010 and warblrb10k datasets, the Area Under the Curve (AUC) metric was chosen as the primary evaluation criterion.
+
+      The ROC curve provides a comprehensive visualization of the model's discriminative ability by plotting the True Positive Rate (TPR) against the False Positive Rate (FPR) at various classification thresholds. For our binary classification task:
+
+      \begin{itemize}
+      \item \textbf{True Positive Rate (Sensitivity):}
+      \begin{equation}
+            TPR = \frac{TP}{TP + FN}
+      \end{equation}
+      Measures the proportion of actual bird sounds correctly identified.
+
+      \item \textbf{False Positive Rate (1 - Specificity):}
+      \begin{equation}
+            FPR = \frac{FP}{FP + TN}
+      \end{equation}
+      Represents the proportion of non-bird sounds incorrectly classified as bird sounds.
+      \end{itemize}
+
+      The Area Under the ROC Curve (AUC) provides a single scalar value representing the model's overall classification performance. An AUC of 1.0 represents perfect classification, while 0.5 indicates random chance performance.
+
+      The ROC curve analysis reveals several important aspects of our model's performance:
+
+      \begin{itemize}
+      \item \textbf{Threshold Independence:} The ROC curve demonstrates the model's performance across all possible classification thresholds, providing a more robust evaluation than single-threshold metrics.
+      
+      \item \textbf{Class Imbalance Handling:} Unlike accuracy, the ROC curve remains effective even when dealing with imbalanced datasets, making it particularly suitable for real-world bird sound detection scenarios.
+      
+      \item \textbf{Operating Point Selection:} The curve enables the selection of optimal decision thresholds based on specific requirements for sensitivity versus specificity in deployment scenarios.
+      \end{itemize}
+
+      The high AUC score indicates that our model effectively separates bird sounds from background noise and other environmental sounds, making it reliable for real-world applications in bird sound detection.
 
 
-\section{Working Mechanism for Identification using Audio}
-The working mechanism for bird identification from audio utilizes the dataset compiled from Xeno Canto, housing a diverse collection of avian vocalizations. 
-Our methodology revolves around the utilization of EfficientNet, a state-of-the-art convolutional neural network architecture known for 
-its balance between accuracy and efficiency.
-
-The primary objective of this study is to achieve high levels of accuracy in identifying a broad spectrum of 41 distinct bird species. 
-Here lies the detailed explanation of the methodology, from the working mechanism to model training.
-% https://www.geeksforgeeks.org/vgg-16-cnn-model/
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.33]{images/IdentificationMethodology.png}
-    \caption{Block diagram for the working mechanism for Bird Species Identification}%\label{fig:fig1}
-\end{figure}
-\newpage
-
-\subsection{Dataset}
-For this project, we scraped audio data from Xeno-canto (\textit{xeno-canto.org}), a global repository of bird vocalizations contributed 
-by ornithologists and birding enthusiasts. Since the dataset was highly imbalanced, we applied a series of preprocessing and augmentation 
-techniques to ensure a more uniform distribution across bird species.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/before_augmentation.png}
-    \caption{Data before performing augmentation}
-    \label{fig:visualization}
-\end{figure}
-\newpage
 
 
-\subsection{Data Augmentation}
-Initial analysis of the collected data revealed significant class imbalance, with some species having over 400 recordings while others had fewer than 50. Additionally, the audio recordings varied in length. To address these issues:  
-\begin{itemize}
-    \item \textbf{Audio Clipping:}  
-    \begin{itemize}
-        \item Recordings were clipped into segments of 10 seconds each.  
-        \item Clips shorter than 5 seconds were discarded to avoid blank audio segments and insufficient data.  
-        \item Clips between 5 and 10 seconds were padded with silence at the end to standardize their length to 10 seconds.  
-    \end{itemize}
+\section{Working Mechanism for Bird Species Classification}
+      \subsubsection{Working Mechanism}
+        The working mechanism for bird identification from audio utilizes the dataset
+        compiled from Xeno Canto, housing a diverse collection of avian vocalizations.
+        Our methodology revolves around the utilization of EfficientNet, a
+        state-of-the-art convolutional neural network architecture known for its
+        balance between accuracy and efficiency.
 
-    \item \textbf{Augmentation Techniques:}  
-    To balance the dataset, augmentation techniques such as time stretching, phase shifting, and noise addition were applied. The parameters were varied to ensure diversity in the augmented data.  
-    \begin{itemize}
-        \item Each bird class was augmented to contain exactly 500 audio clips.
-    \end{itemize}
-\end{itemize}
+        The primary objective of this study is to achieve high levels of accuracy in
+        identifying a broad spectrum of 41 distinct bird species. Here lies the
+        detailed explanation of the methodology, from the working mechanism to model
+        training.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/after_augmentation.png}
-    \caption{Data after performing augmentation}
-    \label{fig:visualization}
-\end{figure}
+        % https://www.geeksforgeeks.org/vgg-16-cnn-model/
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.33]{images/IdentificationMethodology.png}
+            \caption{Block diagram for the working mechanism for Bird Species Identification}%\label{fig:fig1}
+        \end{figure}
 
 
+        \subsection{Data Collection}
+        For the bird species classification model, we scraped audio data from Xeno-canto
+        (\textit{xeno-canto.org}), a global repository of bird vocalizations
+        contributed by ornithologists and birding enthusiasts. Since the dataset was
+        highly imbalanced, we applied a series of preprocessing and augmentation
+        techniques to ensure a more uniform distribution across bird species.
+        
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=0.8\textwidth]{images/before_augmentation.png}
+            \caption{Dataset before performing augmentation}
+            \label{fig:visualization}
+        \end{figure}
 
-\newpage
+        \subsection{Data Augmentation}
+        Initial analysis of the collected data revealed significant class imbalance,
+        with some species having over 400 recordings while others had fewer than 50.
+        Additionally, the audio recordings varied in length. To address these issues:
+        \begin{itemize}
+            \item \textbf{Audio Clipping:}
+                \begin{itemize}
+                    \item Recordings were clipped into segments of 10 seconds each.
+                    \item Clips shorter than 5 seconds were discarded to avoid blank audio segments and
+                            insufficient data.
+                    \item Clips between 5 and 10 seconds were padded with silence at the end to
+                            standardize their length to 10 seconds.
+                \end{itemize}
+        
+            \item \textbf{Augmentation Techniques:}
+                To balance the dataset, augmentation techniques such as time stretching, phase shifting, and noise addition were applied. The parameters were varied to ensure diversity in the augmented data.
+                \begin{itemize}
+                    \item Each bird class was augmented to contain exactly 500 audio clips.
+                \end{itemize}
+        \end{itemize}
+        
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=0.8\textwidth]{images/after_augmentation.png}
+            \caption{Dataset after performing augmentation}
+            \label{fig:visualization}
+        \end{figure}
 
+        % Data Preprocessing
+        \subsection{Data Preprocessing}
+        The audio recordings were transformed into Mel Spectrograms for further
+        analysis.
 
-% \subsection{Dataset}
-% For this project, we scraped audio data from Xeno-canto (\textit{xeno-canto.org}), a global repository of bird vocalizations contributed 
-% by ornithologists and birding enthusiasts. Since the dataset was highly imbalanced, we applied a series of preprocessing and augmentation 
-% techniques to ensure a more uniform distribution across bird species.
+        \begin{itemize}
+            \item \textbf{Conversion Details:}
+                \begin{itemize}
+                    \item Audio files were converted using a sample rate of 32,000 Hz.
+                    \item The spectrograms were generated with a Hanning window and 48 Mel bands.
+                \end{itemize}
 
-% First, we split all audio files into 10-second segments. For recordings that were between 5 and 10 seconds, we padded them to make all audio 
-% files exactly 10 seconds long. To further augment the dataset and improve model generalization, we applied time stretching, phase shifting, 
-% and Gaussian noise addition to the audio samples.
+            \item \textbf{Dataset Expansion:}
+                \begin{itemize}
+                    \item Each audio file was converted into corresponding Mel
+                            Spectrogram images for CNN based models and MFCC vectors for LSTM based model.
+                    \item The resulting dataset was divided into training, validation, and testing sets
+                            for model development.
+                \end{itemize}
+        \end{itemize} 
 
-% At the end of this process, we obtained a balanced dataset consisting of 500 audio files per class across 41 bird species, ensuring a more 
-% robust and effective training set for our model.
-% \newpage
+      \subsection{Feature Extraction}
+      The Mel Spectrogram was employed to transform raw audio recordings into a two-dimensional time-frequency representation, effectively converting sound into an image-like format for processing by convolutional neural networks. This method captures both the temporal and spectral nuances of bird calls, allowing the classifier to discern distinguishing features among various species. As demonstrated in the work of Sevilla et al.\cite{sevilla2017audio}, such time-frequency representations enhance classification accuracy by emphasizing key frequency components inherent in bird vocalizations.
 
-% \subsection{Dataset Overview for Audio}
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[scale=0.4]{images/TrainingDataset.png}
-%     \caption{Training Dataset for audio}
-% \end{figure}
+      For a more detailed discussion on the Mel Spectrograms, please refer to the \nameref{sec:mel_spectrogram_explanation} in the Feature Extraction section.
 
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[scale=0.4]{images/ValidationDataset.png}
-%     \caption{Validation Dataset for audio}
-% \end{figure}
-% \newpage
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[scale=0.4]{images/TestDataset.png}
-%     \caption{Testing Dataset for audio}
-% \end{figure}
-% \hspace{3.5cm}
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[scale=0.3]{images/SampleData.png}
-%     \caption{Sample of the Data}
-%     \label{fig:SampleData}
-% \end{figure}
-% \newpage
+      
+      \subsection{Model Architecture}
+        The proposed model is based on EfficientNetB3, a deep convolutional neural network (CNN) known for its optimized accuracy and efficiency. EfficientNetB3 utilizes the compound scaling method, which uniformly scales network depth, width, and input resolution to achieve better performance with fewer parameters. The backbone of the model consists of Mobile Inverted Bottleneck Convolution (MBConv) blocks, squeeze-and-excitation (SE) modules for adaptive feature recalibration, and Swish activation for smooth gradient propagation.
 
-% \subsection{Dataset Overview for Audio}
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[scale=0.4]{images/PreAugmentation.png}
-%     \caption{Distribution of data before augmentation}
-% \end{figure}
+        To leverage pre-trained knowledge, transfer learning was applied by using EfficientNetB3 pre-trained on ImageNet as a feature extractor while fine-tuning specific layers for task-specific learning. The include\_top=False parameter was used to remove the original fully connected layers, allowing for a custom classification head to be added.
 
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[scale=0.4]{images/PostAugmentation.png}
-%     \caption{Distribution of data after augmentation}
-% \end{figure}
-% \newpage
+        After feature extraction, the output was flattened using a Flatten layer, converting the multi-dimensional feature maps into a 1D vector. A Dropout layer (0.3) was then applied to randomly deactivate neurons during training, reducing overfitting and improving generalization. Finally, a Dense layer with L2 regularization (λ = 1e-4) was used for classification, ensuring weight penalization to prevent overfitting. A softmax activation function was employed in the final layer to generate probability distributions across the target classes.
 
-% \subsection{Data Preprocessing}
+        This architecture effectively balances feature extraction, regularization, and classification accuracy, making it well-suited for image-based tasks, including fine-grained classification problems.
+     
+        \subsection{Training Process}
+        The training process utilizes the \textbf{categorical cross-entropy loss function}, which is suitable for multi-class classification problems. The Adam optimizer with a learning rate of \textbf{0.0001} was used to update model weights, and the model was trained for \textbf{30 epochs} with callbacks to enhance performance and prevent overfitting.
+        
+        A learning rate scheduler was implemented to adjust the learning rate dynamically. For the first five epochs, the learning rate remains constant, after which it follows an \textbf{exponential decay function}. Additionally, \textbf{early stopping} was employed, monitoring the validation loss with a patience of \textbf{3 epochs}, ensuring that the best model weights are restored. A \textbf{model checkpoint} callback saves the best model based on validation loss.
+        
+        The key hyperparameters used during training are summarized in Table \ref{tab:training_hyperparameters}.
+        
+        \begin{table}[h]
+            \centering
+            \caption{Training Hyperparameters}
+            \label{tab:training_hyperparameters}
+            \begin{tabular}{|c|c|}
+                \hline
+                \textbf{Hyperparameter} & \textbf{Value} \\
+                \hline
+                Batch Size & 4 \\
+                Image Size & \(128 \times 128\) \\
+                Learning Rate & 0.0001 \\
+                Loss Function & Categorical Cross-Entropy \\
+                Optimizer & Adam \\
+                Epochs & 30 \\
+                \hline
+            \end{tabular}
+        \end{table}
+        
+      
+    \subsection{Evaluation Metrics}
+        To assess the performance of the proposed model, the following evaluation metrics were used. These metrics provide a comprehensive understanding of the model’s classification ability by analyzing both correct predictions and class-wise performance.
+        
+        \begin{itemize}
+            \item \textbf{Accuracy:}  
+            Accuracy measures the overall correctness of the model by calculating the ratio of correctly classified samples to the total number of samples.
+            \begin{equation}
+                Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
+            \end{equation}
+        
+            \item \textbf{Recall:}  
+            Recall (also known as sensitivity or true positive rate) measures the model’s ability to correctly identify positive instances.
+            \begin{equation}
+                Recall = \frac{TP}{TP + FN}
+            \end{equation}
+        
+            \item \textbf{Precision:}  
+            Precision quantifies the proportion of correctly predicted positive instances out of all predicted positive instances.
+            \begin{equation}
+                Precision = \frac{TP}{TP + FP}
+            \end{equation}
+        
+            \item \textbf{F1-score:}  
+            The F1-score is the harmonic mean of precision and recall, providing a balanced measure when there is an uneven class distribution.
+            \begin{equation}
+                F1\text{-}score = 2 \times \frac{Precision \times Recall}{Precision + Recall}
+            \end{equation}
+        
+        \end{itemize}
+      
 
-% The collected audio data undergoes thorough preprocessing to ensure its
-% suitability for model training. This process includes:
-% \begin{itemize}
-%     \item \textbf{Silence Gap Removal:} After observing some of the data
-%           samples, it was found that the audio has some silence gaps
-%           in either of the ends as seen in \ref{fig:SampleData}. These could be
-%           removed employing the silence removal algorithm. The processing
-%           starts from both ends and moves toward the center. In that processing,
-%           the local mean of the window segment of the audio wave is
-%           calculated and compared with the audio's global mean. If the local mean
-%           is smaller than the global mean, the window segment is c
-%           onsidered to contain insignificant data, thus the segment is clipped
-%           from the original audio\cite{9850832}. Algorithm \ref{alg:Silence_Removal}
-%           clarifies this.
-%     \item \textbf{Segmentation:} Dividing the continuous audio recordings into
-%           smaller, more manageable segments, ensuring consistency in input length.
-%     \item \textbf{Cleaning:} Removing any background noise and irrelevant
-%           sounds that could interfere with the training process.
-%     \item \textbf{Labeling:} Assigning the correct bird species labels to each
-%           audio segment, which is crucial for supervised learning.
-% \end{itemize}
-
-% \subsection{Data Splitting}
-
-% After preprocessing, the data is split into three sets:
-% \begin{itemize}
-%     \item \textbf{Training Data:} Used to train the machine learning models.
-%     \item \textbf{Testing Data:} Used to evaluate the model's performance
-%           during training.
-%     \item \textbf{Validation Data:} Used to validate the final model's
-%           performance and prevent overfitting.
-% \end{itemize}
-
-% This structured approach ensures that the model can learn effectively from the
-% training data while being evaluated on unseen data to measure its
-% generalization capabilities.
-
-% \subsection{Data Augmentation}
-
-% To further enhance the robustness of the model, data augmentation techniques
-% are applied to the training data. This includes adding various types of noise
-% to the audio segments to create more diverse training samples and prevent the
-% model from overfitting to specific patterns in the data.
-% \begin{eqnarray}
-%     \text{Augmented Data} = \text{Original Data} + \text{Noise}
-% \end{eqnarray}
-
-% By introducing these variations, the model becomes more resilient to different
-% audio conditions and better at generalizing to new recordings.
-
-% \subsection{Audio Splitting}
-
-% The augmented audio data is then split into smaller 10-second clips. This
-% standardization ensures that the input size remains consistent, which is
-% essential for the feature extraction and modeling stages.
-
-
-\subsection{Data Preprocessing}
-The audio recordings were transformed into Mel Spectrograms for further analysis.  
-
-\begin{itemize}
-    \item \textbf{Conversion Details:}  
-    \begin{itemize}
-        \item Audio files were converted using a sample rate of 32,000 Hz.  
-        \item The spectrograms were generated with a Hanning window and 48 Mel bands.  
-    \end{itemize}
-
-    \item \textbf{Dataset Expansion:}  
-    \begin{itemize}
-        \item Each of the 500 audio files per bird class was converted into corresponding Mel Spectrogram images.  
-        \item The resulting dataset was divided into training, validation, and testing sets for model development.
-    \end{itemize}
-\end{itemize}
-
-\subsection{Model Training}  
-The classification model was built using \textbf{EfficientNetB3} as the base architecture.  
-
-\begin{itemize}
-    \item \textbf{Input Preprocessing:}  
-    \begin{itemize}
-        \item Mel Spectrogram images were resized to \(128 \times 128 \times 3\) and normalized using the preprocess\_input function of EfficientNet.  
-    \end{itemize}
-
-    \item \textbf{Regularization:}  
-    \begin{itemize}
-        \item Dropout layers and kernel regularizers were employed to mitigate overfitting.  
-    \end{itemize}
-
-    \item \textbf{Callback Functions:}  
-    \begin{itemize}
-        \item Early stopping, learning rate reduction on plateau, and checkpoint saving mechanisms were implemented to enhance training efficiency and performance.  
-    \end{itemize}
-
-    \item \textbf{Performance:}  
-    \begin{itemize}
-        \item On the test set, the model achieved an accuracy of \textbf{89.36\%} with a cross-entropy loss of \textbf{0.42}.  
-    \end{itemize}
-\end{itemize}
-
-\subsection{Genetic Algorithm for Hyperparameter Tuning}
-To optimize the performance of our model, we used genetic algorithm for hyperparameter tuning. 
-This approach helped us systematically explore and identify the most effective hyperparameter settings for our model, 
-including learning rates, batch sizes, and network architecture parameters. 
-The genetic algorithm enabled a more efficient and comprehensive search for optimal configurations.
-
-\subsection{Feature Extraction}
-Feature extraction is a critical step where the audio clips are transformed
-into a format that can be fed into machine learning models. We use two primary
-techniques for feature extraction: Spectrograms and Mel-Frequency Cepstral
+% Feature Extraction
+\section{Feature Extraction}
+Feature extraction was a critical step where the audio clips were transformed
+into a format that were fed into machine learning models. We used two primary
+techniques for feature extraction: Mel Spectrograms and Mel-Frequency Cepstral
 Coefficients (MFCC).
 
-\subsubsection{Spectrogram}
-A spectrogram is a visual representation of the spectrum of frequencies in a
-sound signal as they vary with time. It is generated by applying the Short-Time
-Fourier Transform (STFT) to the audio signal. This transformation provides
-insight into how the frequency content of the signal changes over time.
-\begin{eqnarray}
-    X(n) = \sum_{m=0}^{N-1} x(m) \cdot w(n-m)
-\end{eqnarray}
-% \[
-% X(n) = \sum_{m=0}^{N-1} x(m) \cdot w(n-m)
-% \]
+      \subsection{Mel Spectrogram}
+      A spectrogram is a visual representation of the spectrum of frequencies in a
+      sound signal as they vary with time. It is generated by applying the Short-Time Fourier Transform (STFT) to the audio signal, followed by mapping the frequencies to the Mel scale, which better represents human auditory perception. This transformation provides
+      insight into how the frequency content of the signal changes over time.
 
-where \( x(m) \) is the audio signal and \( w(n) \) is the window function.
+      \begin{enumerate}
+        \item \textbf{Short-Time Fourier Transform (STFT):} The STFT is computed by dividing the signal into overlapping frames, applying a window function, and then performing the Fourier Transform on each frame.
+        \begin{eqnarray}
+            X(n) = \sum_{m=0}^{N-1} x(m) \cdot w(n-m)
+            \end{eqnarray}
+      
+            where \( x(m) \) is the audio signal and \( w(n) \) is the window function.
+        \item \textbf{Mel Scale Transformation:}
+        The frequency axis of the spectrogram is then mapped to the Mel scale using triangular filter banks.
+        \begin{eqnarray}
+            M(f) = 2595 \log_{10} \left(1 + \frac{f}{700} \right)
+            \end{eqnarray}
+      
+            where \( M(f) \) is the Mel frequency, and f is the frequency in Hz.
+            
+        \item \textbf{Log Scaling and Normalization:}
+        Convert Mel spectrogram to a logarithmic scale:
+        \begin{eqnarray}
+            S_{\text{log}}(m, n) = \log \left( S_{\text{mel}}(m, n) \right)
+            \end{eqnarray}
+            where \( S_{\text{log}}(m, n) \) is the log-scaled Mel spectrogram, and \( S_{\text{mel}}(m, n) \) is the Mel spectrogram before log transformation.
+      \end{enumerate}
+      
+      \subsection{Mel-Frequency Cepstral Coefficients (MFCC)}
+      MFCCs are coefficients that collectively describe the short-term power spectrum
+      of a sound signal. The process of obtaining MFCCs involves several steps:
+      \begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.5]{images/MFCC.jpg}
+            \caption{Feature Extraction Using Spectrogram and
+                  MFCC}%\label{fig:fig1}
+      \end{figure}
+      
+      \begin{enumerate}
+            \item \textbf{Framing:} Divide the audio signal into short frames.
+            \item \textbf{Discrete Fourier Transform (DFT):} Convert each frame to the
+                  frequency domain.
+                  \begin{eqnarray}
+                        X(k) = \sum_{n=0}^{N-1} x(n) \cdot e^{-j \frac{2\pi}{N} kn}
+                  \end{eqnarray}
 
-\subsubsection{Mel-Frequency Cepstral Coefficients (MFCC)}
+            \item \textbf{Log Function:} Apply a logarithm to the amplitude spectrum.
+                  \begin{eqnarray}
+                        S_{\text{log}}(k) = \log(|X(k)|)
+                  \end{eqnarray}
 
-MFCCs are coefficients that collectively describe the short-term power spectrum
-of a sound signal. The process of obtaining MFCCs involves several steps:
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{images/MFCC.jpg}
-    \caption{Feature Extraction Using Spectrogram and
-        MFCC}%\label{fig:fig1}
-\end{figure}
-\begin{enumerate}
-    \item \textbf{Framing:} Divide the audio signal into short frames.
-    \item \textbf{Discrete Fourier Transform (DFT):} Convert each frame to the
-          frequency domain.
-          \begin{eqnarray}
-              X(k) = \sum_{n=0}^{N-1} x(n) \cdot e^{-j \frac{2\pi}{N} kn}
-          \end{eqnarray}
+            \item \textbf{Mel-Scaling:} Map the frequencies to the Mel scale, which
+                  better represents how humans perceive sound.
+                  \begin{eqnarray}
+                        f_{\text{mel}} = 2595 \cdot \log_{10}(1 + \frac{f}{700})
+                  \end{eqnarray}
 
-    \item \textbf{Log Function:} Apply a logarithm to the amplitude spectrum.
-          \begin{eqnarray}
-              S_{\text{log}}(k) = \log(|X(k)|)
-          \end{eqnarray}
+            \item \textbf{Discrete Cosine Transform (DCT):} Convert the Mel spectrum to
+                  the cepstral domain, yielding the MFCC features.
+                  \begin{eqnarray}
+                        C(n) = \sum_{k=0}^{K-1} S_{\text{mel}}(k) \cdot \cos \left(
+                        \frac{\pi n (k+0.5)}{K} \right)
+                  \end{eqnarray}
 
-    \item \textbf{Mel-Scaling:} Map the frequencies to the Mel scale, which
-          better represents how humans perceive sound.
-          \begin{eqnarray}
-              f_{\text{mel}} = 2595 \cdot \log_{10}(1 + \frac{f}{700})
-          \end{eqnarray}
-
-    \item \textbf{Discrete Cosine Transform (DCT):} Convert the Mel spectrum to
-          the cepstral domain, yielding the MFCC features.
-          \begin{eqnarray}
-              C(n) = \sum_{k=0}^{K-1} S_{\text{mel}}(k) \cdot \cos \left(
-              \frac{\pi n (k+0.5)}{K} \right)
-          \end{eqnarray}
-
-\end{enumerate}
+      \end{enumerate}
+      
 
 
-\subsection{EfficientNet}
-EfficientNet is a family of convolutional neural networks (CNNs) designed to achieve high accuracy with optimal computational efficiency. 
-It utilizes a novel compound scaling approach, which uniformly scales depth, width, and resolution, unlike traditional models that scale 
-these dimensions arbitrarily. Developed by Google, EfficientNet outperforms many previous architectures while using fewer parameters and 
-lower computational costs. This makes it particularly effective for tasks like image classification and feature extraction, including applications 
-in bioacoustics, where it can analyze spectrograms for bird sound identification with high precision.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.4]{images/LSTM.png}
-    % citation link: https://medium.com/@ottaviocalzone/an-intuitive-explanation-of-lstm-a035eb6ab42c
-    \caption{EfficientNet architecture}%\label{fig:fig1}
-\end{figure}
-
-
-
-\subsection{Convolutional Neural Networks (CNN)}
-
-Convolutional Neural Networks (CNNs) are highly effective for extracting
-spatial features from spectrograms, making them well-suited for audio
-classification tasks. CNNs use convolutional layers to detect patterns and
-features in the input data by applying convolutional filters across the input
-spectrogram.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics{images/Convolution.png}
-    \caption{CNN architecture}%\label{fig:fig1}
-    % citation link: https://medium.com/techiepedia/binary-image-classifier-cnn-using-tensorflow-a3f5d6746697
-\end{figure}
-
-The basic operations involved in a CNN include:
-\begin{itemize}
-    \item \textbf{Convolution:} This operation involves applying a set of
-          learnable filters (kernels) across the input spectrogram to produce feature
-          maps.
-          \begin{eqnarray}
-              (f * x)(t) = \sum_{\tau = -\infty}^{\infty} x(\tau) \cdot f(t -
-              \tau)
-          \end{eqnarray}
-
-    \item \textbf{Activation Function:} The rectified linear unit (ReLU)
-          activation function is applied to introduce non-linearity into the model.
-          \begin{eqnarray}
-              f(x) = \max(0, x)
-          \end{eqnarray}
-
-    \item \textbf{Pooling:} Pooling layers reduce the spatial dimensions of the
-          feature maps, typically using
-          max pooling to retain the most significant features.
-    \item \textbf{Fully Connected Layers:} After several convolutional and
-          pooling layers, the feature maps
-          are flattened and passed through fully connected layers to produce the
-          final classification output.
-\end{itemize}
-
-\subsection{Long Short-Term Memory Networks (LSTM)}
-
-Long Short-Term Memory (LSTM) networks are a type of recurrent neural network
-(RNN) capable of capturing temporal dependencies in sequential data. This makes
-them well-suited for processing audio signals where the order of data points
-matters. LSTMs are designed to overcome the limitations of traditional RNNs by
-addressing the vanishing gradient problem through the use of gates that
-regulate the flow of information.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.4]{images/LSTM.png}
-    % citation link: https://medium.com/@ottaviocalzone/an-intuitive-explanation-of-lstm-a035eb6ab42c
-    \caption{LSTM architecture}%\label{fig:fig1}
-\end{figure}
-
-The key components of an LSTM cell include:
-\begin{itemize}
-    \item \textbf{Forget Gate:} Determines which information from the previous
-          cell state should be discarded.
-          \begin{eqnarray}
-              f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
-          \end{eqnarray}
-
-    \item \textbf{Input Gate:} Decides which new information should be added to
-          the cell state.
-          \begin{eqnarray}
-              i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
-          \end{eqnarray}
-
-    \item \textbf{Candidate Cell State:} Creates new candidate values that
-          could be added to the cell state.
-          \begin{eqnarray}
-              \tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)
-          \end{eqnarray}
-
-    \item \textbf{Cell State:} The cell state is updated based on the input
-          gate and the forget gate.
-          \begin{eqnarray}
-              C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t
-          \end{eqnarray}
-
-    \item \textbf{Output Gate:} Determines the output of the LSTM cell.
-          \begin{eqnarray}
-              o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)
-          \end{eqnarray}
-          \begin{eqnarray}
-              h_t = o_t \cdot \tanh(C_t)
-          \end{eqnarray}
-
-\end{itemize}
-
-\subsection{Combined CNN and LSTM (CNN+LSTM)}
-A hybrid model that leverages the strengths of both CNN and LSTM architectures
-is developed. In this combined model, the CNN processes spectrograms to extract
-spatial features, which are then fed into LSTM layers to capture temporal
-patterns. The integration of these two models aims to utilize both spatial and
-temporal information, thereby improving the overall classification accuracy.
-Fully connected layers at the end perform the final classification based on the
-features extracted by both CNN and LSTM components.
-
-\subsection{Hyperparameter Optimization using Genetic Algorithm}
-Genetic algorithms (GAs) are a powerful method for optimizing hyperparameters
+% Genetic Algorithm
+\section{Hyperparameter Optimization using Genetic Algorithm}
+Genetic algorithms are a powerful method for optimizing hyperparameters
 in machine learning models. Genetic Algorithm have proven to significantly
 improve the performance metrics of the CNN model instead of using hand tuned
 approach for hyperparameters. This section outlines the steps involved in using
 GAs for hyperparameter optimization\cite{9058307}.
 \begin{itemize}
-    \item \textbf{Encoding the Hyperparameters}
-          \begin{itemize}
-              \item Hyperparameters are represented as a chromosome, where each
-                    hyperparameter is a
-                    gene in the chromosome.
-              \item For example, in a neural network, a chromosome might
-                    include genes for the
-                    learning rate, number of layers, number of neurons per
-                    layer, and activation
-                    functions.
-          \end{itemize}
+      \item \textbf{Encoding the Hyperparameters}
+            \begin{itemize}
+                  \item Hyperparameters are represented as a chromosome, where each hyperparameter is a
+                        gene in the chromosome.
+                  \item For example, in a neural network, a chromosome might include genes for the
+                        learning rate, number of layers, number of neurons per layer, and activation
+                        functions.
+            \end{itemize}
 
-    \item \textbf{Initial Population}
-          \begin{itemize}
-              \item An initial population of chromosomes is generated randomly,
-                    with each
-                    chromosome representing a different set of hyperparameters.
-          \end{itemize}
+      \item \textbf{Initial Population}
+            \begin{itemize}
+                  \item An initial population of chromosomes is generated randomly, with each
+                        chromosome representing a different set of hyperparameters.
+            \end{itemize}
 
-    \item \textbf{Fitness Function}
-          \begin{itemize}
-              \item A fitness function is defined to evaluate the performance
-                    of each set of
-                    hyperparameters.
-              \item This typically involves training the model with the given
-                    hyperparameters and
-                    measuring its performance on a validation set.
-          \end{itemize}
+      \item \textbf{Fitness Function}
+            \begin{itemize}
+                  \item A fitness function is defined to evaluate the performance of each set of
+                        hyperparameters.
+                  \item This typically involves training the model with the given hyperparameters and
+                        measuring its performance on a validation set.
+            \end{itemize}
 
-    \item \textbf{Selection}
-          \begin{itemize}
-              \item Selection involves choosing the best-performing chromosomes
-                    to serve as parents
-                    for the next generation.
-              \item Various selection methods can be employed, such as
-                    tournament selection,
-                    roulette wheel selection, or rank-based selection.
-          \end{itemize}
-          \newpage
-    \item \textbf{Crossover (Recombination)}
-          \begin{itemize}
-              \item Crossover combines pairs of parent chromosomes to produce
-                    offspring for the
-                    next generation.
-              \item This is done by swapping segments of parent chromosomes to
-                    create new
-                    chromosomes, thereby combining features of both parents.
-          \end{itemize}
+      \item \textbf{Selection}
+            \begin{itemize}
+                  \item Selection involves choosing the best-performing chromosomes to serve as parents
+                        for the next generation.
+                  \item Various selection methods can be employed, such as tournament selection,
+                        roulette wheel selection, or rank-based selection.
+            \end{itemize}
+            \newpage
+      \item \textbf{Crossover (Recombination)}
+            \begin{itemize}
+                  \item Crossover combines pairs of parent chromosomes to produce offspring for the
+                        next generation.
+                  \item This is done by swapping segments of parent chromosomes to create new
+                        chromosomes, thereby combining features of both parents.
+            \end{itemize}
 
-    \item \textbf{Mutation}
-          \begin{itemize}
-              \item Mutation introduces random changes to some of the genes in
-                    the offspring
-                    chromosomes.
-              \item This helps maintain genetic diversity in the population and
-                    allows the
-                    algorithm to explore a broader search space.
-          \end{itemize}
+      \item \textbf{Mutation}
+            \begin{itemize}
+                  \item Mutation introduces random changes to some of the genes in the offspring
+                        chromosomes.
+                  \item This helps maintain genetic diversity in the population and allows the
+                        algorithm to explore a broader search space.
+            \end{itemize}
 
-    \item \textbf{Replacement}
-          \begin{itemize}
-              \item The current population is partially or entirely replaced
-                    with the new
-                    generation of chromosomes, ensuring that better solutions
-                    are carried forward
-                    while allowing for exploration of new possibilities.
-          \end{itemize}
+      \item \textbf{Replacement}
+            \begin{itemize}
+                  \item The current population is partially or entirely replaced with the new
+                        generation of chromosomes, ensuring that better solutions are carried forward
+                        while allowing for exploration of new possibilities.
+            \end{itemize}
 
-    \item \textbf{Termination}
-          \begin{itemize}
-              \item The process of selection, crossover, mutation, and
-                    replacement is repeated
-                    until a termination criterion is met.
-              \item This could be a set number of generations, convergence of
-                    fitness scores, or
-                    achieving a satisfactory performance level.
-          \end{itemize}
+      \item \textbf{Termination}
+            \begin{itemize}
+                  \item The process of selection, crossover, mutation, and replacement is repeated
+                        until a termination criterion is met.
+                  \item This could be a set number of generations, convergence of fitness scores, or
+                        achieving a satisfactory performance level.
+            \end{itemize}
 
-    \item \textbf{Best Solution}
-          \begin{itemize}
-              \item The best chromosome at the end of the process represents
-                    the optimal or
-                    near-optimal set of hyperparameters for the model.
-          \end{itemize}
+      \item \textbf{Best Solution}
+            \begin{itemize}
+                  \item The best chromosome at the end of the process represents the optimal or
+                        near-optimal set of hyperparameters for the model.
+            \end{itemize}
 \end{itemize}
 \newpage
 
-\subsection{Algorithms Used}
-\subsubsection{Silent Gaps Removal}
-\label{alg:Silence_Removal}
-\begin{algorithm}
-    \caption{Clipping of silent gaps from both ends}
-    \begin{algorithmic}[1]
-        \STATE $ \text{wav} \gets \text{sampled audio signal} $
-        \STATE $ \Delta \gets \text{appropriate window length} $
-        \STATE \text{/* In our code, $ \Delta = 500 $ for 16KHz sampling rate
-            */}
-        \STATE \textbf{INPUT:} $ \text{wav}, \Delta $
-        \STATE \textbf{PROCESS:}
-        \STATE $ \text{wavAvg} \gets \text{Average}(|\text{wav}|) $
-        \STATE $ N \gets \text{Length}(\text{wav}) $
+\chapter{Results and Analysis}
+In the course of our project on Bird Species Classification from Audio, we have
+accomplished several key tasks to progress our analysis and model development:
 
-        \STATE \text{/* Removing the silent gap from the start */}
-        \FOR{$ \text{idx} = 0, \Delta, 2\Delta, \ldots, N - \Delta $}
-        \STATE $ \text{win} \gets \text{wav}[\text{idx} : \text{idx} + \Delta]
-        $
-        \STATE $ \text{winAvg} \gets \text{Average}(|\text{win}|) $
-        \IF{$ \text{winAvg} > \text{wavAvg} $}
-        \STATE $ \text{wav} \gets \text{wav}[\text{idx} :] $
-        \STATE \textbf{break}
-        \ENDIF
-        \ENDFOR
-
-        \STATE \text{/* Removing the silent gap from the end */}
-        \FOR{$ \text{idx} = N - \Delta, N - 2\Delta, \ldots, 0 $}
-        \STATE $ \text{win} \gets \text{wav}[\text{idx} : \text{idx} + \Delta]
-        $
-        \STATE $ \text{winAvg} \gets \text{Average}(|\text{win}|) $
-        \IF{$ \text{winAvg} > \text{wavAvg} $}
-        \STATE $ \text{wav} \gets \text{wav}[: \text{idx}] $
-        \STATE \textbf{break}
-        \ENDIF
-        \ENDFOR
-
-        \STATE \textbf{OUTPUT:} $ \text{processed\_wav} \gets \text{wav} $
-    \end{algorithmic}
-\end{algorithm}
-
-\subsubsection{Genetic Algorithm}
-\begin{algorithm}[H]
-    \caption{Genetic Algorithm for Hyperparameter Optimization}
-    \begin{algorithmic}[1]
-        \STATE Initialize the population with random hyperparameters.
-        \FOR{generation = 1 to $N$}
-        \STATE Evaluate the fitness of each individual in the population.
-        \STATE Select individuals to be parents based on their fitness scores.
-        \STATE Generate offspring through crossover.
-        \STATE Apply mutation to the offspring.
-        \STATE Replace the old population with the new generation.
-        \ENDFOR
-        \STATE Return the best solution found.
-    \end{algorithmic}
-\end{algorithm}
-
-\subsubsection{Fitness Function}
-The fitness function evaluates the performance of hyperparameters by training
-and validating the model:
-
-\begin{algorithm}[H]
-    \caption{Fitness Function}
-    \begin{algorithmic}[1]
-        \STATE Train the model with given hyperparameters.
-        \STATE Evaluate the model's performance on a validation set.
-        \RETURN Performance metric (e.g., accuracy, F1 score).
-    \end{algorithmic}
-\end{algorithm}
-
-\subsubsection{Mel Spectrogram}
-% The mel spectrogram of audio signals are extracted following the given series of steps:
-\begin{algorithm}[H]
-    \caption{Mel Spectrogram Extraction}
-    \begin{algorithmic}[1]
-
-        \STATE \textbf{Input:} Audio signal $x(t)$.
-        \STATE \textbf{Output:} Mel spectrogram $S_{\text{mel}}$.
-        \STATE Apply STFT to generate spectrogram $S(f, t)$.
-        \STATE Convert amplitudes of $S(f, t)$ to dB scale, obtaining
-        $S_{\text{dB}}(f, t)$.
-        \STATE \textbf{Convert frequencies to Mel scale}.
-        \STATE \hspace{10} Choose number of mel bands $N_{\text{mel}}$.
-        \STATE \textbf{Construct mel filter banks}.
-        \STATE \hspace{10} Convert $f_{\text{min}}$ and $f_{\text{max}}$ of
-        $S_{\text{dB}}(f, t)$ to Mel scale.
-        \STATE \hspace{10} Divide Mel scale range into $N_{\text{mel}}$
-        intervals.
-        \STATE \hspace{10} Convert center frequencies of Mel bands back to
-        Hertz.
-        \STATE \hspace{10} Round center frequencies to nearest bins.
-        \STATE \hspace{10} Design triangular band pass filters for each Mel
-        band.
-        \STATE \hspace{10} Apply mel filter banks to $S_{\text{dB}}(f, t)$ to
-        obtain $S_{\text{mel}}$.
-    \end{algorithmic}
-\end{algorithm}
-
-\subsubsection{Mel-Frequency Cepstral Coefficients Extraction}
-% The extraction of MFCCs of a signal involves the following steps:
-
-\begin{algorithm}[H]
-    \caption{MFCC Extraction}
-    \begin{algorithmic}[1]
-
-        \STATE \textbf{Input:} Audio signal $x(t)$
-        \STATE \textbf{Output:} MFCC coefficients.
-        \STATE Frame the signal into short frames.
-        \STATE Apply a window function to the frames.
-        \STATE Apply DFT to generate the frequency spectrum of each frame.
-        \STATE Apply logarithm to the spectrum to get log amplitude spectrum.
-        \STATE Perform Mel scaling using filter banks to get Mel spectrogram.
-        \STATE Apply DCT to the Mel spectrogram to get MFCCs.
-    \end{algorithmic}
-\end{algorithm}
-
-\newpage
-
-
-\section{Mapping Location of Bird in Map}
-
-Mapping the location of a bird in an application using
-\textbf{google\_maps\_flutter} and \textbf{geolocator} involves using the
-classified bird data to
-pinpoint its location on a map. This is particularly useful for bird watchers
-and researchers to track bird sightings.
-
-\begin{algorithm}
-    \caption{Mapping Location of Bird in Map}
-    \begin{algorithmic}[1]
-        \STATE Initialize the Google Maps widget
-        \STATE Capture the image of the bird
-        \STATE Get the classified bird species and captured location.
-        \STATE Convert the location data to latitude and longitude coordinates
-        \STATE Add a marker to the map at the specified coordinates
-        \STATE Update the map view to center on the new marker
-    \end{algorithmic}
-\end{algorithm}
-\newpage
-\section{System Diagram}
-The usecase diagram for Bird species identification from Audio and Image is
-given
-below:
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{images/usecase.png}
-    \caption{Usecase Diagram for
-        FeatherFind}%\label{fig:fig1}
-\end{figure}
-
-% \begin{figure}[h!]
-%      \centering
-%         \includegraphics[scale=0.7]{output/activity.jpg}
-%         \caption{Activity Diagram}%\label{fig:fig1}
-%      \end{figure}
-%      \newpage
-% \newpage
-\newpage
-\section{Software Development Model}
-This project will be using an incremental methodology since it offers a
-functioning prototype at an early stage of development. The requirements and
-scope of the project can be altered as necessary by studying the prototype. The
-rationale for the preference for this software development strategy is the
-flexibility offered by adopting the incremental technique. In this paradigm,
-the project goes through several releases or iterations prior to its official
-release.
-\begin{figure}[h!]
-    % \centering
-    \includegraphics[scale=0.25]{images/SDLC.png}
-    \caption{Incremental Model for development of
-        FeatherFind}%\label{fig:fig1}
-\end{figure}
-\newpage
-
-\chapter{Epilogue}
-\section{Work Done}
-In the course of our project on Bird Species Classification from Audio, we have accomplished several key tasks to progress our analysis and model development:
-
-\subsection{Data Collection}
-We curated a dataset of bird calls for 41 bird species found in Nepal using Xeno-Canto, a globally recognized repository of bird sound recordings. This platform provided diverse audio recordings for the selected bird species, forming the foundation of our dataset.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/before_augmentation.png}
-    \caption{Data before performing augmentation}
-    \label{fig:visualization}
-\end{figure}
-
-\newpage
-\subsection{Data Augmentation}
-Initial analysis of the collected data revealed significant class imbalance, with some species having over 400 recordings while others had fewer than 50. Additionally, the audio recordings varied in length. To address these issues:  
-\begin{itemize}
-    \item \textbf{Audio Clipping:}  
-    \begin{itemize}
-        \item Recordings were clipped into segments of 10 seconds each.  
-        \item Clips shorter than 5 seconds were discarded to avoid blank audio segments and insufficient data.  
-        \item Clips between 5 and 10 seconds were padded with silence at the end to standardize their length to 10 seconds.  
-    \end{itemize}
-
-    \item \textbf{Augmentation Techniques:}  
-    To balance the dataset, augmentation techniques such as time stretching, phase shifting, and noise addition were applied. The parameters were varied to ensure diversity in the augmented data.  
-    \begin{itemize}
-        \item Each bird class was augmented to contain exactly 500 audio clips.
-    \end{itemize}
-\end{itemize}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/after_augmentation.png}
-    \caption{Data after performing augmentation}
-    \label{fig:visualization}
-\end{figure}
-
-
-
-\newpage
-
-\subsection{Data Preprocessing}
-The audio recordings were transformed into Mel Spectrograms for further analysis.  
-
-\begin{itemize}
-    \item \textbf{Conversion Details:}  
-    \begin{itemize}
-        \item Audio files were converted using a sample rate of 32,000 Hz.  
-        \item The spectrograms were generated with a Hanning window and 48 Mel bands.  
-    \end{itemize}
-
-    \item \textbf{Dataset Expansion:}  
-    \begin{itemize}
-        \item Each of the 500 audio files per bird class was converted into corresponding Mel Spectrogram images.  
-        \item The resulting dataset was divided into training, validation, and testing sets for model development.
-    \end{itemize}
-\end{itemize}
-
-\subsection{Model Training}  
-The classification model was built using \textbf{EfficientNetB3} as the base architecture.  
-
-\begin{itemize}
-    \item \textbf{Input Preprocessing:}  
-    \begin{itemize}
-        \item Mel Spectrogram images were resized to \(128 \times 128 \times 3\) and normalized using the preprocess\_input function of EfficientNet.  
-    \end{itemize}
-
-    \item \textbf{Regularization:}  
-    \begin{itemize}
-        \item Dropout layers and kernel regularizers were employed to mitigate overfitting.  
-    \end{itemize}
-
-    \item \textbf{Callback Functions:}  
-    \begin{itemize}
-        \item Early stopping, learning rate reduction on plateau, and checkpoint saving mechanisms were implemented to enhance training efficiency and performance.  
-    \end{itemize}
-
-    \item \textbf{Performance:}  
-    \begin{itemize}
-        \item On the test set, the model achieved an accuracy of \textbf{89.36\%} with a cross-entropy loss of \textbf{0.42}.  
-    \end{itemize}
-\end{itemize}
-
-\subsection{Genetic Algorithm for Hyperparameter Tuning}
-To optimize the performance of our model, we used genetic algorithm for hyperparameter tuning. 
-This approach helped us systematically explore and identify the most effective hyperparameter settings for our model, 
-including learning rates, batch sizes, and network architecture parameters. 
-The genetic algorithm enabled a more efficient and comprehensive search for optimal configurations.
-
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/accuracy_and_loss.png}
-    \caption{Accuracy and Cross-entropy loss for train and validation sets}
-    \label{fig:visualization}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.3]{images/confusion_matrix.png}
-    \caption{Confusion matrix for the model on test set.}
-    \label{fig:Confusion matrix}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.45]{images/classification_report.png}
-    \caption{Classification report of the model.}
-    \label{fig:Classification report}
-\end{figure}
-
-\newpage
-\subsection{Deployment to Huggingface spaces}
-A FastAPI application was developed using the trained model and deployed on \textbf{Huggingface spaces}. This deployment enables seamless API integration, allowing users to interact with the model for predictions efficiently and reliably.
-
-
-\subsection{Bird Sound Detection Model Training}
-
-To enhance the reliability of the species classification system, we incorporated a Bird Sound Detection model as a preliminary step to verify the presence of bird sounds in recorded audio. This approach is inspired by Lasseck (2018) \cite{lasseck2018acoustic}, which demonstrated the effectiveness of using Deep Convolutional Neural Networks (DCNNs) for acoustic bird detection, achieving an AUC score exceeding \textbf{93.7\%} on unseen data. Following this methodology, we employed a pre-trained InceptionV3 network for our binary classification task, achieving an initial AUC score of \textbf{83\%}.
-
-Dataset used for the training of the Bird Sound Detection Model is Field recordings, worldwide ("freefield1010") - a collection of 7,690 excerpts from field recordings around the world, gathered by the FreeSound project, and then standardised for research. This collection is very diverse in location and environment, and for the BAD Challenge we have annotated it for the presence/absence of birds.
-% Image for Bird Sound Detection Model Training
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.45]{images/det_trainingdataset.png}
-    \caption{Dataset distribution for freefield1010}
-    \label{fig:freefield1010 dataset}
-\end{figure}
-
-
-Dataset used for the evaluating the model's performance is Crowdsourced dataset, UK ("warblrb10k") - 8,000 smartphone audio recordings from around the UK, crowdsourced by users of Warblr the bird recognition app. The audio covers a wide distribution of UK locations and environments, and includes weather noise, traffic noise, human speech and even human bird imitations.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.45]{images/det_testingdataset.png}
-    \caption{Dataset distribution for warblrb10k}
-    \label{fig:warblrb10k dataset}
-\end{figure}
-\newpage
-After the model was subjected to the testing dataset, the following confusion matrix was obtained, yielding an accuracy of \textbf{87.28\%}.
+\section{Bird sound Detection}
+The FeatherFind project has made significant progress in developing 
+an advanced bird species identification system using audio recordings. Datasets 
+used for the identification of bird sound i.e the presence and absence of bird sounds
+in the audio are ("freefield1010") dataset as shown in figure() 
+%cite the dataset from methodology here)
+for training and ("warblrb10k") dataset as shown in figure ()
+%cite the dataset from methodology here 
+\\ The combined dataset leverages
+the diverse environmental conditions and noise variations from both sources,
+enhancing the model's robustness and generalization capabilities.
+After the model was subjected to the testing dataset, the following confusion
+matrix was obtained, yielding an accuracy of \textbf{87.28\%}.
+for testing. 
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.35]{images/det_confusionmatrix.png}
     \caption{Confusion Matrix for Bird Sound Detection Model}
     \label{fig:Confusion Matrix for Detection Model}
 \end{figure}
-
-To assess the effectiveness of our model in distinguishing between the target classes, we analyzed its performance using the Receiver Operating Characteristic (ROC) curve. The ROC curve provides a comprehensive view of the trade-off between the true positive rate (TPR) and the false positive rate (FPR) at various threshold settings. The Area Under the Curve (AUC) metric, derived from the ROC curve, quantifies the overall discriminatory power of the model, with a higher AUC indicating better performance.
+To assess the effectiveness of our model in distinguishing between the target
+classes, its performance using the Receiver Operating
+Characteristic (ROC) curve was analaysed. The ROC curve provides a comprehensive view of the
+trade-off between the true positive rate (TPR) and the false positive rate
+(FPR) at various threshold settings. The Area Under the Curve (AUC) metric,
+derived from the ROC curve, quantifies the overall discriminatory power of the
+model, with a higher AUC indicating better performance.
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.35]{images/det_roc.png}
@@ -1446,57 +1215,117 @@ To assess the effectiveness of our model in distinguishing between the target cl
     \label{fig:ROC Curve}
 \end{figure}
 
-While our results are promising and validate the model's applicability, the specific preprocessing and data augmentation techniques outlined in the reference study, such as time and frequency stretching and the use of a high-pass filter, were not implemented. Incorporating these methods in future iterations could further enhance the model's performance and generalization to diverse recording conditions.
+\section{Bird Species Classification}
+% Efficient Net
+% CNN LSTM
 
-\newpage
-
-
-% Include image for model training
-\newpage
-
-\subsection{Mobile App Development}
-The mobile application allows the user to record the audio, visualize it with waveforms during recording, 
-before sending the actual audio data to the server for processing. The user can also use the application to 
-add their current location to the map. 
-
+\section{Genetic Algorithim for CNN-LSTM and Efficient-Net}
+To optimize the performance of our model, we used genetic algorithm for
+hyperparameter tuning. This approach helped us systematically explore and
+identify the most effective hyperparameter settings for our model, including network architecture parameters like
+learning rates, batch sizes, images sizes, dropout and others. The genetic
+algorithm enabled a more efficient and comprehensive search for optimal
+configurations.
+\subsection{Genetic Algorithim for CNN-LSTM}
+For the CNN-LSTM model, GA was applied to tune critical hyperparameters that impact both convolutional feature extraction and sequence modeling. The key hyperparameters optimized includes Batch Size, Learning Rate, Number of Epochs, Dropout Rate, LSTM Units and Dense Units.
+The genetic algorithm was executed over multiple generations, evolving hyperparameter configurations towards optimal performance. The best model achieved a Test Accuracy of \textbf{75.17\%} and Test Loss of \textbf{1.0235}, demonstrating improved learning efficiency and reduced overfitting.
+% Figure 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{images/homepage.png}
+    \includegraphics[scale=0.18]{images/.png}
+    \caption{GA CNN-LSTM.}
+\end{figure}
+
+\subsection{Genetic Algorithim for Efficient-Net}
+For EfficientNet, GA was used to fine-tune hyperparameters that directly affect feature extraction and classification efficiency. The optimized parameters includes Batch Size, Learning Rate, Number of Epochs, Dropout Rate,Regularization and Dense Units
+Through multiple generations, the genetic algorithm selected the best-performing hyperparameters, leading to a final Test Accuracy of \textbf{93.37\%} and Test Loss of \textbf{0.3056}, outperforming baseline configurations.
+% Figure
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.18]{images/.png}
+    \caption{GA Efficient-Net.}
+\end{figure}
+
+% Results
+
+% Mobile Application
+\section{Mobile Application}
+The mobile application allows the user to record the audio, visualize it with
+waveforms during recording, before sending the actual audio data to the server
+for processing. The user can also use the application to add their current
+location to the map.The homepage of the application allows the user to view the birds along with 
+the audio that are available in FeatherFind's database.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.18]{images/Homepage.png}
     \caption{Home Page of FeatherFind.}
 \end{figure}
+The map page in FeatherFind allows the user to view all the birds that has been located
+using the application and view their location in the maps embedded in the application alone 
+with the detailed description of the birds.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.18]{images/mappage.png}
+    \caption{Mapped Birds in FeatherFind.}
+\end{figure}
+
+For the audio recognition the user can , record the audio in the application and as the 
+audio is being recorded the app visualizes the audio in appropriate waveform. When the user stops
+recording the audio, the user is prompted with a confirmation dialog, which can be used to process the 
+audio and recognize it.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.18]{images/recording.png}
+    \caption{Recording using FeatherFind.}
+\end{figure}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.18]{images/Recordingpage.jpg}
-    \caption{Audio Recording using FeatherFind.}
+    \includegraphics[scale=0.18]{images/confirmation.png}
+    \caption{Confirmation for Audio Recognition.}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.18]{images/Identified.png}
+    \caption{Bird Species Identification using FeatherFind.}
 \end{figure}
 
-\newpage
-
-
-\section{Work Remaining}
-While substantial progress has been made in the Bird Species Classification
-from Audio project, several critical tasks remain to be addressed to further refine and enhance the system:
-
-% \subsection{Improved Data Augmentation}
-% To address potential imbalances in the dataset and improve model performance,
-%  we will implement advanced data augmentation techniques. This involves creating 
-%  additional variations of the audio files through methods such as pitch shifting, 
-%  time stretching, and adding synthetic noise. Enhanced data augmentation will help 
-%  balance the dataset and provide a more diverse range of examples for the model to learn from.
-
-% \subsection{Model Training with CNN+LSTM}
-% We will extend our model training to include a hybrid Convolutional Neural Network (CNN) and Long Short-Term Memory (LSTM) network. The combination of CNNs and LSTMs is expected to capture both spatial and temporal features in the audio data more effectively, potentially leading to improved classification accuracy. We will experiment with various architectures and configurations to identify the most effective setup for our classification task.
-
-\subsection{Genetic Algorithm for Hyperparameter Tuning}
-To optimize the performance of our model, we used genetic algorithm for hyperparameter tuning. This approach helped us systematically explore and identify the most effective hyperparameter settings for our model, including learning rates, batch sizes, and network architecture parameters. The genetic algorithm enabled a more efficient and comprehensive search for optimal configurations.
-
-\subsection{Mobile App Integration}
-Once the model is properly trained and optimized, the next step will be to integrate the machine learning model into a mobile application. The mobile app will capture audio input from the user, preprocess it (e.g., feature extraction), and then feed it into the deployed model for classification.
-
-These remaining tasks are essential to advancing the project and achieving our goal of an accurate and reliable bird species classification system from audio data. 
 
 \newpage
+
+\chapter{Discussion}
+The FeatherFind project has made significant progress in developing an advanced
+species identification using audio recordings.Some the key achievements of the
+project include:
+\section{Achievements}
+\begin{itemize}
+    \item Comprehensive Data Collection: The project successfully comiled an extensive
+          dataset of d sounds by scraping Xeno-Canto, ensuring diversity in species
+          representaion.
+    \item Advanced Data Processing Techniques: The project utilized advancd audio
+          processing techniques along with data augmentaion(time stretching,phase
+          shifting, gradient noiise addition), were implemented to balance dataset and
+          enhance model robustness.
+    \item Feature Extraction and Model Training: Spectrograms and Mel-Frequency Cepstral
+          Coefficients (MFCCs) were employed for feature extraction. EfficientNetB3
+          architecture was utilized for bird species classification, achieving an
+          accuracy of 89.36\% on the test dataset. Avolutional Neural Network (CNN)
+          combined with Long ShoTerm Memory (LSTM) networks was used to capture both
+          spatial ad temporal features.
+    \item Genetic Algorithm for Hyperparameter Optimization: The model's performance was
+          fine-tuned using genetic algorithms, ensuring optimal parameter selection for
+          improved accuracy.
+    \item Bird Sound Detection Model: A preliminary model was trained to verify the
+          presence of bird sounds before classification, using the InceptionV3
+          network.AUC score of 83\% and an accuracy of 87.28\% was achieved.
+    \item Deployment and Mobile App Development: The classification model was deployed on
+          Huggingface Spaces for seamless API integration.A mobile application was
+          developed to allow users to record and analyze bird sounds in real-time while
+          tagging locations using GPS integration.
+\end{itemize}
+
+\section{Limitations}
+\section{Future Improvements}
 
 %Reference
 \renewcommand\bibname{REFERENCES} % Change heading to References
@@ -1507,6 +1336,5 @@ These remaining tasks are essential to advancing the project and achieving our g
 %Comment this Chapter if you do not need to include Appendix.
 
 %\addcontentsline{toc}{chapter}{Appendix}
-
 
 \end{document}
