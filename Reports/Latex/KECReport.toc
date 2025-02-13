@@ -1,8 +1,8 @@
 \acswitchoff 
 \contentsline {chapter}{Abstract}{i}{chapter*.2}%
-\contentsline {chapter}{List Of Figures}{vi}{chapter*.5}%
-\contentsline {chapter}{List Of Tables}{vi}{chapter*.5}%
-\contentsline {chapter}{Abbreviations}{vii}{chapter*.6}%
+\contentsline {chapter}{List Of Figures}{vii}{chapter*.5}%
+\contentsline {chapter}{List Of Tables}{vii}{chapter*.5}%
+\contentsline {chapter}{Abbreviations}{viii}{chapter*.6}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Problem Statement}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Objective}{2}{section.1.2}%
@@ -19,52 +19,61 @@
 \contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Related Works}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Related Research}{8}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Methodology}{14}{chapter.3}%
-\contentsline {section}{\numberline {3.1}System Overview}{14}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Working Mechanism for Bird Sound Detection}{15}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Data Collection}{16}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Data Transformation}{18}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Feature Extraction}{19}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Model Architecture}{20}{subsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.4.1}ResNet-50: A Detailed Overview}{20}{subsubsection.3.2.4.1}%
-\contentsline {subsubsection}{\numberline {3.2.4.2}Architecture of ResNet-50}{20}{subsubsection.3.2.4.2}%
-\contentsline {subsubsection}{\numberline {3.2.4.3}Components of ResNet-50 Architecture}{21}{subsubsection.3.2.4.3}%
-\contentsline {subsubsection}{\numberline {3.2.4.4}Adaptation for Bird Sound Detection}{22}{subsubsection.3.2.4.4}%
-\contentsline {subsubsection}{\numberline {3.2.4.5}Training and Generalization}{23}{subsubsection.3.2.4.5}%
-\contentsline {subsection}{\numberline {3.2.5}Training Process}{23}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Evaluation}{25}{subsection.3.2.6}%
-\contentsline {section}{\numberline {3.3}Working Mechanism for Bird Species Classification}{27}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Data Collection}{28}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Data Augmentation}{28}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Data Preprocessing}{29}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Feature Extraction}{30}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Model Architecture}{30}{subsection.3.3.5}%
-\contentsline {subsubsection}{\numberline {3.3.5.1}EfficientNetB3}{30}{subsubsection.3.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.3.5.2}CNN+LSTM Model}{35}{subsubsection.3.3.5.2}%
-\contentsline {subsection}{\numberline {3.3.6}Evaluation Metrics}{37}{subsection.3.3.6}%
-\contentsline {section}{\numberline {3.4}Feature Extraction}{38}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Mel Spectrogram}{38}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Mel-Frequency Cepstral Coefficients (MFCC)}{40}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Hyperparameter Optimization using Genetic Algorithm}{41}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Results and Analysis}{43}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Bird Sound Detection}{43}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Bird Species Classification}{46}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Classification using CNN-LSTM}{46}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Classification using EfficientNetB3}{49}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Hyperparameter Optimization Using Genetic Algorithim}{52}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Hyperparameters for CNN-LSTM}{52}{subsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.1}Hyperparameter Search Space}{52}{subsubsection.4.3.1.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.2}Genetic Algorithm Process}{52}{subsubsection.4.3.1.2}%
-\contentsline {subsubsection}{\numberline {4.3.1.3}Results}{53}{subsubsection.4.3.1.3}%
-\contentsline {subsubsection}{\numberline {4.3.1.4}Conclusion}{56}{subsubsection.4.3.1.4}%
-\contentsline {subsection}{\numberline {4.3.2}Hyperparameters for Efficient-Net}{56}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}Hyperparameter Search Space}{56}{subsubsection.4.3.2.1}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}Genetic Algorithm Process}{56}{subsubsection.4.3.2.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.3}Results}{57}{subsubsection.4.3.2.3}%
-\contentsline {subsubsection}{\numberline {4.3.2.4}Conclusion}{59}{subsubsection.4.3.2.4}%
-\contentsline {section}{\numberline {4.4}Mobile Application}{59}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Discussion}{65}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Achievements}{65}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Limitations}{66}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Future Improvements}{66}{section.5.3}%
-\contentsline {chapter}{References}{66}{section.5.3}%
+\contentsline {section}{\numberline {2.3}Research Gap Analysis}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Dataset Diversity and Representation}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Handling Environmental Noise}{14}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Real-Time and Multi-Bird Sound Recognition}{14}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Integration with Mobile and Cloud-Based Systems}{15}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Advanced Feature Extraction Techniques}{15}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Integration with Conservation Efforts}{15}{subsection.2.3.6}%
+\contentsline {chapter}{\numberline {3}Methodology}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}System Overview}{16}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Working Mechanism for Bird Sound Detection}{17}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Data Collection}{17}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Data Transformation}{19}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Feature Extraction}{21}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Model Architecture}{22}{subsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}ResNet-50: A Detailed Overview}{22}{subsubsection.3.2.4.1}%
+\contentsline {subsection}{\numberline {3.2.5}Evaluation}{27}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}Working Mechanism for Bird Species Classification}{29}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Data Collection}{30}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Data Augmentation}{30}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Data Preprocessing}{31}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Feature Extraction}{32}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Model Architecture}{32}{subsection.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.5.1}EfficientNetB3}{32}{subsubsection.3.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.3.5.2}CNN+LSTM Model}{36}{subsubsection.3.3.5.2}%
+\contentsline {subsection}{\numberline {3.3.6}Evaluation Metrics}{39}{subsection.3.3.6}%
+\contentsline {section}{\numberline {3.4}Feature Extraction}{40}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Mel Spectrogram}{40}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Mel-Frequency Cepstral Coefficients (MFCC)}{42}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Hyperparameter Optimization using Genetic Algorithm}{43}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Algorithms Used}{45}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Mel Spectrogram}{45}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Mel-Frequency Cepstral Coefficients Extraction}{45}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Genetic Algorithm}{46}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Fitness Function}{46}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Mapping Location of Bird in Map}{46}{subsection.3.6.5}%
+\contentsline {section}{\numberline {3.7}System Diagram}{47}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Software Development Model}{48}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Results and Analysis}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Bird Sound Detection}{49}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Bird Species Classification}{52}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Classification using CNN-LSTM}{52}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Classification using EfficientNetB3}{55}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Hyperparameter Optimization Using Genetic Algorithim}{58}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Hyperparameters for CNN-LSTM}{58}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Hyperparameter Search Space}{58}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}Genetic Algorithm Process}{58}{subsubsection.4.3.1.2}%
+\contentsline {subsubsection}{\numberline {4.3.1.3}Results for CNN-LSTM}{59}{subsubsection.4.3.1.3}%
+\contentsline {subsubsection}{\numberline {4.3.1.4}Conclusion for CNN-LSTM}{62}{subsubsection.4.3.1.4}%
+\contentsline {subsection}{\numberline {4.3.2}Hyperparameters for Efficient-Net}{62}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Hyperparameter Search Space}{62}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Genetic Algorithm Process}{62}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}Results for EfficientNetB3}{63}{subsubsection.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}Conclusion for EfficientNetB3}{65}{subsubsection.4.3.2.4}%
+\contentsline {section}{\numberline {4.4}Mobile Application}{65}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Discussion}{71}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Limitations}{71}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Future Improvements}{72}{section.5.2}%
+\contentsline {chapter}{References}{72}{section.5.2}%
