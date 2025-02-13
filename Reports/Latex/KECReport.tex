@@ -26,8 +26,8 @@
 %specify your department
 \newcommand{\hod}{Er. Rabindra Khati \\ Associate Professor}
 %specify Head ot the department
-\newcommand{\defYear}{2024} %Defense Year
-\newcommand{\defMonth}{December} %Defense Month- January, February, ...
+\newcommand{\defYear}{2025} %Defense Year
+\newcommand{\defMonth}{February} %Defense Month- January, February, ...
 % \newcommand{\defDay}{22} %
 
 \newcommand{\supervisor}{Prof. Dr. Subarna Shakya}
@@ -117,8 +117,10 @@
 
     \tableofcontents % prints table of contents
     \listoffigures % prints list of figures
+    \listoftables % prints list of tables
     \addcontentsline{toc}{chapter}{List Of Figures}
-    %\listoftables % prints list of table
+    \addcontentsline{toc}{chapter}{List Of Tables}
+
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -362,7 +364,7 @@ schedule feasibility requirements.
         Internet Accessibility         & Recording Quality \(>\)= 256 Kbps, 48
         KHz
         \\ \hline
-        Database: Sqlfite              &                                       \\ \hline
+        Database: MySQL             &                                       \\ \hline
     \end{tabular}
 \end{table}
 
@@ -620,25 +622,20 @@ and bird species classification.
     \includegraphics[scale=0.65]{images/System Overview.png}
     \caption{System Overview}\label{fig:system_overview}
 \end{figure}
-
 Our project leverages a mobile application to capture audio recordings, which
 are then processed to identify bird species. The mobile app records the sound
 and visualizes it with waveforms during the recording process. Once the audio
 is captured, it is sent to our backend system for further analysis.
 
-The backend system, built using Django and Django Rest Framework, first passes
-the audio through a bird sound detection model. This model determines whether
+This model determines whether
 the recorded audio contains bird sounds. If bird sounds are detected, the audio
 is then forwarded to the bird species classifier model. The classifier
-identifies the specific bird species present in the recording.
-
-Upon successful classification, the system maps the identified bird species to
-the location where the audio was recorded, utilizing the device's GPS data.
-This information is stored in a MySQL database, which handles all data
-management tasks. If the bird sound detection model does not detect any bird
+identifies the specific bird species present in the recording. If the bird sound detection model does not detect any bird
 sounds, the recorded audio is labeled accordingly, indicating the absence of
 bird sounds.
 
+Upon successful classification, the system maps the identified bird species to
+the location where the audio was recorded, utilizing the device's GPS data.
 This approach ensures that only relevant audio recordings are processed for
 species classification, enhancing the accuracy and efficiency of the system.
 The integration of Django, Django Rest Framework, and MySQL provides a robust
@@ -646,12 +643,16 @@ and scalable backend infrastructure to support the application's functionality
 as shown in Figure \ref{fig:system_overview}.
 \\
 
+
+
+
+
 \section{Working Mechanism for Bird Sound Detection}
       % description about mechanism
       % Image of the Working Mechanism
       \begin{figure}[h!]
             \centering
-            \includegraphics[scale=0.33]{images/DetectionMethodology.png}
+            \includegraphics[scale=0.33]{images/MajorProject-Detection.png}
             \caption{Block diagram for the working mechanism for Bird Detection}%\label{fig:fig1}
       \end{figure}
 
@@ -659,7 +660,7 @@ as shown in Figure \ref{fig:system_overview}.
       The dataset used for the Bird Sound Detection Model includes Field recordings, worldwide ("freefield1010") - a collection of 7,690 excerpts from field recordings around the world, gathered by the FreeSound project, and then standardised for research. This collection is very diverse in location and environment, and for the BAD Challenge, it has been annotated for the presence/absence of birds.
       \begin{figure}[h!]
             \centering
-            \includegraphics[scale=0.45]{images/dataset_detection-1.png}
+            \includegraphics[scale=0.75]{images/dataset_detection-1.png}
             \caption{Dataset distribution for freefield1010}
             \label{fig:freefield1010 dataset}
       \end{figure}
@@ -667,15 +668,15 @@ as shown in Figure \ref{fig:system_overview}.
       Another dataset used is the Crowdsourced dataset, UK ("warblrb10k") - 8,000 smartphone audio recordings from around the UK, crowdsourced by users of Warblr, the bird recognition app. The audio covers a wide distribution of UK locations and environments and includes weather noise, traffic noise, human speech, and even human bird imitations.
       \begin{figure}[h!]
             \centering
-            \includegraphics[scale=0.45]{images/dataset_detection-2.png}
+            \includegraphics[scale=0.75]{images/dataset_detection-2.png}
             \caption{Dataset distribution for warblrb10k}
             \label{fig:warblrb10k dataset}
       \end{figure}
-
+      \newpage
       Instead of using the datasets separately, we merged them to create a single dataset comprising 15,690 audio recordings—7,710 without bird sounds and 7,980 with bird sounds. The merged dataset was then partitioned into training, testing, and validation sets in an 80:10:10 ratio, ensuring a comprehensive and balanced dataset for model training and evaluation.
       \begin{figure}[h!]
             \centering
-            \includegraphics[scale=0.45]{images/dataset_detection-3.png}
+            \includegraphics[scale=0.75]{images/dataset_detection-3.png}
             \caption{Distribution of the merged dataset}
             \label{fig:merged_dataset}
       \end{figure}         \newpage      
@@ -728,7 +729,7 @@ as shown in Figure \ref{fig:system_overview}.
       \end{itemize}
 
       \subsection{Feature Extraction}
-      The Mel Spectrogram transforms raw audio signals into a time-frequency image that captures the essential spectral characteristics required for bird sound detection. As demonstrated by Lasseck et al.\cite{lasseck2018acoustic}, this approach efficiently distinguishes recordings containing bird vocalizations from those without. For a comprehensive explanation of the computation, please refer to Section~\ref{sec:FeatureExtraction}.
+      The Mel Spectrogram transforms raw audio signals into a time-frequency image that captures the essential spectral characteristics required for bird sound detection. As demonstrated by Lasseck et al.\cite{lasseck2018acoustic}, this approach efficiently distinguishes recordings containing bird vocalizations from those without. For a comprehensive explanation of the computation, please refer to the \nameref{sec:feature_extraction}.
 
       \subsection{Model Architecture}
 
@@ -744,12 +745,13 @@ as shown in Figure \ref{fig:system_overview}.
 
       Another key component of ResNet-50 is batch normalization, which standardizes feature maps at each layer, leading to stable gradient flow and faster convergence. Additionally, ReLU activation functions introduce non-linearity, allowing the network to learn complex patterns in the data.
 
-      \begin{figure}[h]
+      \begin{figure}[h!]
       \centering
-      \includegraphics[width=0.9\textwidth]{resnet50_architecture.png}
-      \caption{Modified ResNet-50 architecture for Bird Sound Detection. The model processes mel spectrogram inputs, extracts deep features using frozen ResNet-50 layers, and classifies them using a custom fully connected layer.}
+      \includegraphics[angle=270,width=0.2\textwidth]{images/MajorProject-resnet architecture.png}
+      \caption{Modified ResNet-50 architecture for Bird Sound Detection.}
       \label{fig:resnet50}
       \end{figure}
+      \newpage
 
       \subsubsection{Components of ResNet-50 Architecture}
       The ResNet-50 model consists of several essential components that contribute to its powerful feature extraction and classification capabilities:
@@ -793,7 +795,6 @@ as shown in Figure \ref{fig:system_overview}.
 
       \subsection{Training Process}
       The training process for the bird sound detection model was carefully designed to ensure optimal learning and generalization. The process incorporated several key components and strategies:
-
       \begin{itemize}
             \item \textbf{Training Parameters:}
             \begin{itemize}
@@ -805,9 +806,15 @@ as shown in Figure \ref{fig:system_overview}.
 
             \item \textbf{Loss Function:}
             Binary Cross-Entropy Loss (BCE) was chosen as the loss function due to its effectiveness in binary classification tasks. For input predictions $\hat{y}$ and true labels $y$, the BCE loss is calculated as:
-            \begin{equation}
+            
+            % here
+            
+            % \begin{equation}
+            \begin{eqnarray}
                   L_{BCE} = -\frac{1}{N}\sum_{i=1}^{N}[y_i\log(\hat{y}_i) + (1-y_i)\log(1-\hat{y_i})]
-            \end{equation}
+            % \end{equation}
+            \end{eqnarray}
+                  where N is the number of data samples.
 
             \item \textbf{Optimization:}
             \begin{itemize}
@@ -818,7 +825,7 @@ as shown in Figure \ref{fig:system_overview}.
                         \end{itemize}
                   \item Learning rate scheduling was implemented using ReduceLROnPlateau with:
                         \begin{itemize}
-                              \item Reduction factor: 0.2
+                              \item Reduction factor: 0.1
                               \item Patience: 3 epochs
                         \end{itemize}
             \end{itemize}
@@ -830,8 +837,40 @@ as shown in Figure \ref{fig:system_overview}.
                   \item Early stopping was implemented to prevent overfitting
                   \item Model performance was evaluated on the test set after training completion
             \end{itemize}
-      \end{itemize}      
-
+      \end{itemize} 
+      The key hyperparameters used for training are summarized in Table \ref{tab:training_hyperparameters}.
+      \begin{table}[h]
+            \centering
+            \caption{Training Hyperparameters}
+            \label{tab:training_hyperparameters}
+            \begin{tabular}{|c|c|}
+                \hline
+                \textbf{Hyperparameter} & \textbf{Value} \\
+                \hline
+                Number of Epochs & 20 \\
+                \hline
+                Batch Size & 32 \\
+                \hline
+                Initial Learning Rate & 0.001 \\
+                \hline
+                Weight Decay & 0.0001 \\
+                \hline
+                Loss Function & Binary Cross-Entropy (BCE) \\
+                \hline
+                Optimizer & Adam \\
+                \hline
+                Learning Rate Scheduling & ReduceLROnPlateau \\
+                \hline
+                Reduction Factor & 0.1 \\
+                \hline
+                Patience & 3 epochs \\
+                \hline
+                Early Stopping & Patience = 3 epochs \\
+                \hline
+            \end{tabular}
+      \end{table}
+            
+            
       \subsection{Evaluation}
       To assess the effectiveness of our model in distinguishing between the target classes, we analyzed its performance using the Receiver Operating Characteristic (ROC) curve. Following the benchmark established by Lasseck et al.\cite{lasseck2018acoustic} for the freefield1010 and warblrb10k datasets, the Area Under the Curve (AUC) metric was chosen as the primary evaluation criterion.
 
@@ -850,7 +889,7 @@ as shown in Figure \ref{fig:system_overview}.
       \end{equation}
       Represents the proportion of non-bird sounds incorrectly classified as bird sounds.
       \end{itemize}
-
+ `    '
       The Area Under the ROC Curve (AUC) provides a single scalar value representing the model's overall classification performance. An AUC of 1.0 represents perfect classification, while 0.5 indicates random chance performance.
 
       The ROC curve analysis reveals several important aspects of our model's performance:
@@ -869,7 +908,6 @@ as shown in Figure \ref{fig:system_overview}.
 
 
 \section{Working Mechanism for Bird Species Classification}
-      \subsubsection{Working Mechanism}
         The working mechanism for bird identification from audio utilizes the dataset
         compiled from Xeno Canto, housing a diverse collection of avian vocalizations.
         Our methodology revolves around the utilization of EfficientNet, a
@@ -884,7 +922,7 @@ as shown in Figure \ref{fig:system_overview}.
         % https://www.geeksforgeeks.org/vgg-16-cnn-model/
         \begin{figure}[h!]
             \centering
-            \includegraphics[scale=0.33]{images/IdentificationMethodology.png}
+            \includegraphics[scale=0.33]{images/MajorProject-Audio Methodology.png}
             \caption{Block diagram for the working mechanism for Bird Species Identification}%\label{fig:fig1}
         \end{figure}
 
@@ -955,46 +993,284 @@ as shown in Figure \ref{fig:system_overview}.
       \subsection{Feature Extraction}
       The Mel Spectrogram was employed to transform raw audio recordings into a two-dimensional time-frequency representation, effectively converting sound into an image-like format for processing by convolutional neural networks. This method captures both the temporal and spectral nuances of bird calls, allowing the classifier to discern distinguishing features among various species. As demonstrated in the work of Sevilla et al.\cite{sevilla2017audio}, such time-frequency representations enhance classification accuracy by emphasizing key frequency components inherent in bird vocalizations.
 
-      For a more detailed discussion on the Mel Spectrograms, please refer to the \nameref{sec:mel_spectrogram_explanation} in the Feature Extraction section.
+      For a more detailed discussion on the Mel Spectrograms, please refer to the \ref{sec:feature_extraction}.
 
       
       \subsection{Model Architecture}
-        The proposed model is based on EfficientNetB3, a deep convolutional neural network (CNN) known for its optimized accuracy and efficiency. EfficientNetB3 utilizes the compound scaling method, which uniformly scales network depth, width, and input resolution to achieve better performance with fewer parameters. The backbone of the model consists of Mobile Inverted Bottleneck Convolution (MBConv) blocks, squeeze-and-excitation (SE) modules for adaptive feature recalibration, and Swish activation for smooth gradient propagation.
 
-        To leverage pre-trained knowledge, transfer learning was applied by using EfficientNetB3 pre-trained on ImageNet as a feature extractor while fine-tuning specific layers for task-specific learning. The include\_top=False parameter was used to remove the original fully connected layers, allowing for a custom classification head to be added.
+      The bird call classification model is based on EfficientNetB3, a deep convolutional neural network (CNN) designed for optimal efficiency and accuracy. EfficientNetB3 achieves this through \textbf{compound scaling}, which uniformly scales network depth, width, and resolution to maximize performance while minimizing computational cost.
+      
+      \subsubsection{EfficientNetB3}
+      EfficientNetB3 is part of the EfficientNet family, which employs a balance between deeper layers, wider networks, and higher input resolutions. This architecture integrates several enhancements, including \textbf{Mobile Inverted Bottleneck Convolution (MBConv) blocks}, \textbf{squeeze-and-excitation (SE) modules}, and the \textbf{Swish activation function}. These components contribute to better feature extraction and gradient flow, ensuring robust classification performance.
+      \begin{itemize}
+            \item[i] \textbf{Architecture of EfficientNetB3} \\
+            EfficientNetB3 follows a hierarchical feature extraction process, where early layers detect fundamental patterns (edges, textures), while deeper layers extract more complex features. The architecture consists of multiple MBConv blocks that improve computational efficiency by using \textbf{depthwise separable convolutions} and \textbf{linear bottlenecks}. Additionally, SE modules dynamically recalibrate channel-wise feature responses, enhancing the model’s ability to focus on important frequency patterns in the mel spectrogram.
+            
+            \begin{figure}[h!]
+                  \centering
+                  \includegraphics[width=0.3\textwidth]{images/MajorProject-efficientNetB3 architecture.png}
+                  \caption{Modified EfficientNetB3 architecture for Bird Species Classification.}
+                  \label{fig:efficientnetb3}
+            \end{figure}
+            
+            The key architectural components of EfficientNetB3 are summarized below:
+            
+            \begin{itemize}
+                  \item \textbf{Convolutional Layers:} Extract spatial features from input spectrograms. Early layers capture basic patterns (edges, textures), while deeper layers learn abstract audio representations.
+                  
+                  \item \textbf{MBConv Blocks:} Mobile Inverted Bottleneck Convolution blocks enhance efficiency by using depthwise separable convolutions and linear bottlenecks.
+                  
+                  \item \textbf{Squeeze-and-Excitation (SE) Modules:} Improve feature recalibration by dynamically adjusting channel-wise feature responses, allowing the network to focus on relevant frequency patterns.
+                  
+                  \item \textbf{Swish Activation:} A smooth, non-monotonic activation function that enhances gradient flow and optimization stability.
+                  
+                  \item \textbf{Batch Normalization:} Standardizes activations at each layer to stabilize training and improve convergence.
+                  
+                  \item \textbf{Global Average Pooling:} Reduces dimensionality of feature maps before passing them to the classification layer.
+                  
+                  \item \textbf{Dropout Layer:} A dropout rate of 0.3 is applied to prevent overfitting by randomly deactivating neurons.
+                  
+                  \item \textbf{Fully Connected Layer:} Converts extracted features into classification outputs.
+                  
+                  \item \textbf{Softmax Activation:} Generates probability distributions for multi-class classification.
+            \end{itemize}
+            
+            
+            % \subsubsection{Adaptation for Bird Call Classification}
+            \item[ii)] \textbf{Adaptation for Bird Call Classification} \\
+            While EfficientNetB3 is originally designed for image classification, it has been adapted for bird call classification by processing mel spectrograms as input. The key modifications include:
+            
+            \begin{itemize}
+            \item \textbf{Input Modification:} The model accepts spectrogram inputs with dimensions \(128 \times 128 \times 3\), where three channels correspond to different spectrogram augmentations or frequency bands.
+            \item \textbf{Feature Extraction:} The EfficientNetB3 layers pre-trained on ImageNet are used as a feature extractor. The convolutional layers are \textbf{frozen} to retain general visual features while training the classification head on bird call data.
+            \item \textbf{Custom Classification Head:} The original fully connected layers are replaced with a new classification head consisting of a \textbf{Flatten} layer, \textbf{Dropout} layer (0.3), and a \textbf{Dense} layer. A softmax activation function is applied to generate class probabilities.
+            \end{itemize}
+            
 
-        After feature extraction, the output was flattened using a Flatten layer, converting the multi-dimensional feature maps into a 1D vector. A Dropout layer (0.3) was then applied to randomly deactivate neurons during training, reducing overfitting and improving generalization. Finally, a Dense layer with L2 regularization (λ = 1e-4) was used for classification, ensuring weight penalization to prevent overfitting. A softmax activation function was employed in the final layer to generate probability distributions across the target classes.
+            \item[iii)] \textbf{Training and Generalization} \\
+            The model is trained using a transfer learning approach, where only the classification layers are updated while the pre-trained EfficientNetB3 layers remain frozen. This reduces training time and improves generalization.
+            
 
-        This architecture effectively balances feature extraction, regularization, and classification accuracy, making it well-suited for image-based tasks, including fine-grained classification problems.
-     
-        \subsection{Training Process}
-        The training process utilizes the \textbf{categorical cross-entropy loss function}, which is suitable for multi-class classification problems. The Adam optimizer with a learning rate of \textbf{0.0001} was used to update model weights, and the model was trained for \textbf{30 epochs} with callbacks to enhance performance and prevent overfitting.
+            % \subsubsection{Training Process}
+            \item[iv)] \textbf{Training Process} 
+            \begin{itemize}
+                  \item \textbf{Initial Training Parameters:}
+                  \begin{itemize}
+                  \item Number of epochs: 30
+                  \item Batch size: 4
+                  \item Image size: \(128 \times 128 \times 3\)
+                  \item Initial learning rate: 0.0001
+                  \end{itemize}
+            
+                  \item \textbf{Loss Function:}
+                  Categorical Cross-Entropy(CCE) was chosen as the loss function since it is well-suited for multi-class classification tasks. The Categorical Cross-Entropy is calculated as:
+                  % \begin{equation}
+                  \begin{eqnarray}
+                        L_{CCE} = -\frac{1}{N} \sum_{i=1}^{N} \sum_{j=1}^{C} y_{i,j} \log(\hat{y}_{i,j})
+                  \end{eqnarray}
+                        where N is Number of data samples and C is number of Classes.
+                  
+                  % \end{equation}
+      
+            
+                  \item \textbf{Optimization:}
+                  \begin{itemize}
+                  \item The Adam optimizer was employed with the following parameters:
+                  \begin{itemize}
+                        \item Learning rate: 0.0001
+                  \end{itemize}
+                  \item Learning rate scheduling was implemented using an exponential decay function after the first five epochs.
+                  \end{itemize}
+            
+                  \item \textbf{Regularization:}
+                  \begin{itemize}
+                  \item Dropout (0.3) was applied to prevent overfitting.
+                  \item L2 regularization (\(\lambda = 1e^{-4}\)) was used for additional weight regularization.
+                  \end{itemize}
+            
+                  \item \textbf{Monitoring and Validation:}
+                  \begin{itemize}
+                  \item Training and validation losses were monitored each epoch.
+                  \item Learning rate adjustments were made using an exponential decay function.
+                  \item Early stopping was implemented with a patience of three epochs to prevent overfitting.
+                  \item Model checkpointing was applied to save the best-performing model based on validation loss.
+                  \end{itemize}
+            \end{itemize} 
+            
+            The key hyperparameters used for training are summarized in Table \ref{tab:training_hyperparameters}.
+            \begin{table}[h]
+                  \centering
+                  \caption{Initial Training Hyperparameters}
+                  \label{tab:training_hyperparameters}
+                  \begin{tabular}{|c|c|}
+                  \hline
+                  \textbf{Hyperparameter} & \textbf{Value} \\
+                  \hline
+                  Number of Epochs & 30 \\
+                  \hline
+                  Batch Size & 4 \\
+                  \hline
+                  Input Image Size & \(128 \times 128 \times 3\) \\
+                  \hline
+                  Initial Learning Rate & 0.0001 \\
+                  \hline
+                  Loss Function & Categorical Cross-Entropy \\
+                  \hline
+                  Optimizer & Adam \\
+                  \hline
+                  Learning Rate Scheduling & Exponential Decay (after 5 epochs) \\
+                  \hline
+                  Dropout Rate & 0.3 \\
+                  \hline
+                  L2 Regularization & \(1e^{-4}\) \\
+                  % \hline
+                  Early Stopping & Patience = 3 epochs \\
+                  \hline
+                  \end{tabular}
+            \end{table}
+            
+            
+            The final model efficiently classifies bird calls by leveraging deep feature extraction from EfficientNetB3 while incorporating a custom classification head optimized for spectrogram data. Through transfer learning and regularization techniques, the model generalizes well to new audio samples, achieving high classification accuracy.
+      \end{itemize}
+
+
+      \subsubsection{CNN+LSTM Model}
+      The CNN+LSTM architecture is designed for bird call classification using MFCC (Mel-Frequency Cepstral Coefficients) matrices instead of mel spectrogram images. Unlike EfficientNetB3, which processes image representations of audio, this model extracts both spatial and temporal features by combining convolutional layers with recurrent layers.
+
+      \subsubsection{Architecture of CNN+LSTM}
+      This model follows a two-stage feature extraction process:
+
+      \begin{itemize}
+      \item \textbf{Convolutional Feature Extraction:} Convolutional layers extract local frequency features from MFCC matrices, capturing patterns in short time frames.
+      \item \textbf{Temporal Modeling with LSTM:} A Long Short-Term Memory (LSTM) layer processes sequential dependencies in the extracted features, enhancing temporal understanding.
+      \end{itemize}
+
+      The key architectural components of the CNN+LSTM model are as follows:
+
+      \begin{itemize}
+      \item \textbf{Convolutional Layers:} Three convolutional layers extract spatial features from MFCC input. Each convolutional block includes:
+      \begin{itemize}
+            \item \textbf{Conv2D:} Filters of sizes $(3 \times 3)$ with ReLU activation.
+            \item \textbf{Batch Normalization:} Normalizes activations for stable training.
+            \item \textbf{MaxPooling2D:} Reduces feature map dimensions by pooling along the time axis.
+      \end{itemize}
+      
+      \item \textbf{Time-Distributed Flattening:} Flattens convolutional feature maps while preserving temporal dimensions for LSTM processing.
+      
+      \item \textbf{LSTM Layer:} A 256-unit LSTM layer captures long-range temporal dependencies in bird call sequences.
+      
+      \item \textbf{Fully Connected Layers:} Two dense layers process the LSTM output:
+      \begin{itemize}
+            \item A 64-unit dense layer with ReLU activation and dropout (0.3) for regularization.
+            \item An output dense layer with softmax activation for classification.
+      \end{itemize}
+      \end{itemize}
+
+      \subsubsection{Adaptation for Bird Call Classification}
+      The CNN+LSTM model is tailored to classify bird calls based on MFCC matrices instead of image-based spectrograms. The key modifications include:
+
+      \begin{itemize}
+      \item \textbf{Input Modification:} The model accepts MFCC matrices with dimensions $(13 \times 626 \times 1)$, where 13 represents MFCC coefficients, and 626 represents time frames.
+      \item \textbf{Sequential Feature Extraction:} CNN layers extract spatial frequency information, while the LSTM layer captures sequential dependencies in bird calls.
+      \item \textbf{Custom Classification Head:} Includes fully connected layers with dropout to reduce overfitting.
+      \end{itemize}
+
+      \subsubsection{Training and Generalization}
+      The model is trained using a combination of early stopping, learning rate scheduling, and model checkpointing to ensure optimal performance.
+
+      \subsubsection{Training Process}
+      \begin{itemize}
+      \item \textbf{Initial Training Parameters:}
+      \begin{itemize}
+            \item Number of epochs: 30
+            \item Batch size: 16
+            \item Learning rate: 0.0001
+            \item Loss function: Categorical Cross-Entropy
+      \end{itemize}
+      
+      \item \textbf{Optimization:}
+      \begin{itemize}
+            \item Adam optimizer with an initial learning rate of 0.0001.
+            \item Learning rate scheduling using an exponential decay function after the first five epochs.
+      \end{itemize}
+      
+      \item \textbf{Regularization:}
+      \begin{itemize}
+            \item Dropout (0.3) applied to prevent overfitting.
+            % \item L2 regularization to improve generalization.
+      \end{itemize}
+      
+      \item \textbf{Monitoring and Validation:}
+      \begin{itemize}
+            \item Training and validation losses monitored per epoch.
+            \item Early stopping with a patience of 3 epochs.
+            \item Model checkpointing to save the best-performing model based on validation loss.
+      \end{itemize}
+      \end{itemize}
+
+      The key hyperparameters used for training are summarized in Table \ref{tab:training_hyperparameters_cnnlstm}.
+
+      \begin{table}[h]
+      \centering
+      \caption{Initial Training Hyperparameters for CNN+LSTM}
+      \label{tab:training_hyperparameters_cnnlstm}
+      \begin{tabular}{|c|c|}
+            \hline
+            \textbf{Hyperparameter} & \textbf{Value} \\
+            \hline
+            Number of Epochs & 30 \\
+            \hline
+            Batch Size & 16 \\
+            \hline
+            Input Shape & (13, 626, 1) \\
+            \hline
+            Learning Rate & 0.0001 \\
+            \hline
+            Loss Function & Categorical Cross-Entropy \\
+            \hline
+            Optimizer & Adam \\
+            \hline
+            Learning Rate Scheduling & Exponential Decay (after 5 epochs) \\
+            \hline
+            Dropout Rate & 0.3 \\
+            \hline
+            Early Stopping & Patience = 3 epochs \\
+            \hline
+      \end{tabular}
+      \end{table}
+
+      The final CNN+LSTM model effectively classifies bird calls by integrating deep convolutional feature extraction with temporal modeling, ensuring high accuracy while leveraging MFCC representations.
+
+
+
+      %   \subsection{Training Process}
+      %   The training process utilizes the \textbf{categorical cross-entropy loss function}, which is suitable for multi-class classification problems. The Adam optimizer with a learning rate of \textbf{0.0001} was used to update model weights, and the model was trained for \textbf{30 epochs} with callbacks to enhance performance and prevent overfitting.
         
-        A learning rate scheduler was implemented to adjust the learning rate dynamically. For the first five epochs, the learning rate remains constant, after which it follows an \textbf{exponential decay function}. Additionally, \textbf{early stopping} was employed, monitoring the validation loss with a patience of \textbf{3 epochs}, ensuring that the best model weights are restored. A \textbf{model checkpoint} callback saves the best model based on validation loss.
+      %   A learning rate scheduler was implemented to adjust the learning rate dynamically. For the first five epochs, the learning rate remains constant, after which it follows an \textbf{exponential decay function}. Additionally, \textbf{early stopping} was employed, monitoring the validation loss with a patience of \textbf{3 epochs}, ensuring that the best model weights are restored. A \textbf{model checkpoint} callback saves the best model based on validation loss.
         
-        The key hyperparameters used during training are summarized in Table \ref{tab:training_hyperparameters}.
+      %   The key hyperparameters used during training are summarized in Table \ref{tab:training_hyperparameters}.
         
-        \begin{table}[h]
-            \centering
-            \caption{Training Hyperparameters}
-            \label{tab:training_hyperparameters}
-            \begin{tabular}{|c|c|}
-                \hline
-                \textbf{Hyperparameter} & \textbf{Value} \\
-                \hline
-                Batch Size & 4 \\
-                Image Size & \(128 \times 128\) \\
-                Learning Rate & 0.0001 \\
-                Loss Function & Categorical Cross-Entropy \\
-                Optimizer & Adam \\
-                Epochs & 30 \\
-                \hline
-            \end{tabular}
-        \end{table}
+      %   \begin{table}[h]
+      %       \centering
+      %       \caption{Training Hyperparameters}
+      %       \label{tab:training_hyperparameters}
+      %       \begin{tabular}{|c|c|}
+      %           \hline
+      %           \textbf{Hyperparameter} & \textbf{Value} \\
+      %           \hline
+      %           Batch Size & 4 \\
+      %           Image Size & \(128 \times 128\) \\
+      %           Learning Rate & 0.0001 \\
+      %           Loss Function & Categorical Cross-Entropy \\
+      %           Optimizer & Adam \\
+      %           Epochs & 30 \\
+      %           \hline
+      %       \end{tabular}
+      %   \end{table}
         
       
     \subsection{Evaluation Metrics}
-        To assess the performance of the proposed model, the following evaluation metrics were used. These metrics provide a comprehensive understanding of the model’s classification ability by analyzing both correct predictions and class-wise performance.
+        To assess the performance of the proposed models, the following evaluation metrics were used. These metrics provide a comprehensive understanding of the models classification ability by analyzing both correct predictions and class-wise performance.
         
         \begin{itemize}
             \item \textbf{Accuracy:}  
@@ -1004,7 +1280,7 @@ as shown in Figure \ref{fig:system_overview}.
             \end{equation}
         
             \item \textbf{Recall:}  
-            Recall (also known as sensitivity or true positive rate) measures the model’s ability to correctly identify positive instances.
+            Recall (also known as sensitivity or true positive rate) measures the model's ability to correctly identify positive instances.
             \begin{equation}
                 Recall = \frac{TP}{TP + FN}
             \end{equation}
@@ -1026,6 +1302,7 @@ as shown in Figure \ref{fig:system_overview}.
 
 % Feature Extraction
 \section{Feature Extraction}
+\label{sec:feature_extraction} 
 Feature extraction was a critical step where the audio clips were transformed
 into a format that were fed into machine learning models. We used two primary
 techniques for feature extraction: Mel Spectrograms and Mel-Frequency Cepstral
@@ -1058,6 +1335,15 @@ Coefficients (MFCC).
             \end{eqnarray}
             where \( S_{\text{log}}(m, n) \) is the log-scaled Mel spectrogram, and \( S_{\text{mel}}(m, n) \) is the Mel spectrogram before log transformation.
       \end{enumerate}
+
+      \begin{figure}[h!]
+            \centering
+            \includegraphics[width=0.4\textwidth]{images/koel_mel_spectrogram.jpg}
+            \caption{Mel Spectrogram image for a sample audio}
+            \label{fig:mel_spectrogram_sample}
+      \end{figure}
+
+      \newpage
       
       \subsection{Mel-Frequency Cepstral Coefficients (MFCC)}
       MFCCs are coefficients that collectively describe the short-term power spectrum
@@ -1096,6 +1382,13 @@ Coefficients (MFCC).
                   \end{eqnarray}
 
       \end{enumerate}
+
+      \begin{figure}[h!]
+            \centering
+            \includegraphics[width=0.4\textwidth]{images/koel_mfcc.jpg}
+            \caption{MFCC image for a sample audio}
+            \label{fig:mfcc_sample}
+      \end{figure}
       
 
 
@@ -1137,7 +1430,7 @@ GAs for hyperparameter optimization\cite{9058307}.
                   \item Various selection methods can be employed, such as tournament selection,
                         roulette wheel selection, or rank-based selection.
             \end{itemize}
-            \newpage
+            
       \item \textbf{Crossover (Recombination)}
             \begin{itemize}
                   \item Crossover combines pairs of parent chromosomes to produce offspring for the
@@ -1181,74 +1474,327 @@ GAs for hyperparameter optimization\cite{9058307}.
 In the course of our project on Bird Species Classification from Audio, we have
 accomplished several key tasks to progress our analysis and model development:
 
-\section{Bird sound Detection}
-The FeatherFind project has made significant progress in developing 
-an advanced bird species identification system using audio recordings. Datasets 
-used for the identification of bird sound i.e the presence and absence of bird sounds
-in the audio are ("freefield1010") dataset as shown in figure() 
-%cite the dataset from methodology here)
-for training and ("warblrb10k") dataset as shown in figure ()
-%cite the dataset from methodology here 
-\\ The combined dataset leverages
-the diverse environmental conditions and noise variations from both sources,
-enhancing the model's robustness and generalization capabilities.
-After the model was subjected to the testing dataset, the following confusion
-matrix was obtained, yielding an accuracy of \textbf{87.28\%}.
-for testing. 
+\section{Bird Sound Detection}
+
+Figure \ref{fig:training_curves} shows the training progress over 15 epochs. The model shows consistent improvement in both accuracy and loss metrics during training and validation phases.
+
 \begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.35]{images/det_confusionmatrix.png}
-    \caption{Confusion Matrix for Bird Sound Detection Model}
-    \label{fig:Confusion Matrix for Detection Model}
+      \centering
+      \begin{subfigure}{\textwidth}
+            \includegraphics[width=\textwidth]{images/det_acc.png}
+            \caption{Accuracy curves}
+      \end{subfigure}
+      \begin{subfigure}{\textwidth}
+            \includegraphics[width=\textwidth]{images/det_loss.png}
+            \caption{Loss curves}
+      \end{subfigure}
+      \caption{Training and validation curves for Bird Sound Detection Model}
+      \label{fig:training_curves}
 \end{figure}
-To assess the effectiveness of our model in distinguishing between the target
-classes, its performance using the Receiver Operating
-Characteristic (ROC) curve was analaysed. The ROC curve provides a comprehensive view of the
-trade-off between the true positive rate (TPR) and the false positive rate
-(FPR) at various threshold settings. The Area Under the Curve (AUC) metric,
-derived from the ROC curve, quantifies the overall discriminatory power of the
-model, with a higher AUC indicating better performance.
+
+The training process exhibited steady improvement, with the model achieving final metrics of:
+\begin{itemize}
+      \item Training accuracy: \textbf{84.20\%} and validation accuracy: \textbf{84.10\%}
+            \item Training loss: \textbf{0.394} and validation loss: \textbf{0.412}
+            \item Training F1-score: \textbf{0.585} and validation F1-score: \textbf{0.615}
+      \end{itemize}
+
+The close alignment between training and validation metrics indicates good generalization without overfitting. The loss curves show consistent convergence, while accuracy and F1-scores demonstrate steady improvement throughout the training process.
+
+The confusion matrix in Figure \ref{fig:Confusion Matrix for Detection Model} shows the classification performance on the test dataset. From the total of \textbf{1621} samples, the model correctly classified \textbf{621} samples as non-bird sounds (True Negatives) and \text{680} samples as bird sounds (True Positives). There were 107 false positives and \textbf{160} false negatives.
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.75]{images/detection_cm.png}
+      \caption{Confusion Matrix for Bird Sound Detection Model}
+      \label{fig:Confusion Matrix for Detection Model}
+\end{figure}
+The model performance metrics are summarized in Table \ref{tab:detection_metrics}.
+
+\begin{table}[h]
+      \centering
+      \caption{Performance Metrics for Bird Sound Detection Model}
+      \label{tab:detection_metrics}
+      \begin{tabular}{|l|c|}
+            \hline
+            \textbf{Metric} & \textbf{Value (\%)} \\
+            \hline
+            Accuracy & 82.97 \\
+            F1-score & 83.59 \\
+            Precision & 80.95 \\
+            Recall & 86.40 \\
+            \hline
+      \end{tabular}
+\end{table}
+
+Figure \ref{fig:ROC Curve} shows the Receiver Operating Characteristic (ROC) curve for the bird sound detection model. The curve illustrates the model's ability to discriminate between bird and non-bird sounds across different classification thresholds.
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.35]{images/det_roc.png}
+    \includegraphics[scale=0.65]{images/detection_auc.png}
     \caption{ROC Curve of the detection model}
     \label{fig:ROC Curve}
 \end{figure}
 
+The Area Under the Curve (AUC) score of \textbf{0.911} indicates excellent discriminative ability, as it is significantly higher than the random chance baseline of \textbf{0.5}.
 \section{Bird Species Classification}
-% Efficient Net
-% CNN LSTM
+The below figures show the outcomes of Bird Species Classification based on two different architectures i.e CNN-LSTM and EfficientNetB3, evaluated on our dataset of 41 bird species.
 
-\section{Genetic Algorithim for CNN-LSTM and Efficient-Net}
+\subsection{Classification using CNN-LSTM}
+The CNN-LSTM model achieved an accuracy of \textbf{74.73\%} with a cross-entropy loss of \textbf{1.0171} across all 41 bird species. The confusion matrix shows stronger diagonal elements indicating good classification ability for most species, though there is some confusion between similar-sounding birds.
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.6]{images/cnn_lstm_evaluation.png}
+      \caption{CNN-LSTM Model Evaluation}
+  \end{figure}
+      The training and validation curves show the model achieved a training accuracy of \textbf{80.76\%} and validation accuracy of \textbf{74.73\%}, with corresponding losses of \textbf{0.8025} and \textbf{1.0171} respectively.
+\newpage
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.5]{images/cnn_lstm_confusion_matrix.png}
+      \caption{CNN-LSTM Confusion Matrix}
+  \end{figure}
+The confusion matrix visualizes the model's predictions across all 41 classes, with darker diagonal elements indicating correct classifications and lighter off-diagonal elements showing misclassifications between species.
+
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.6]{images/efficientNet_classification_report.png}
+      \caption{CNN-LSTM Classification Report}
+  \end{figure}
+  \newpage
+The classification report shows detailed metrics for each species, with an average precision of \textbf{73\%}, recall of \textbf{75\%}, and F1-score of \textbf{73\%} across all classes.
+
+
+\newpage
+\subsection{Classification using EfficientNetB3}
+The EfficientNetB3 model demonstrated superior performance with an accuracy of \textbf{90.73\%} with a cross-entropy loss of \textbf{0.4154}, significantly outperforming the CNN-LSTM architecture. The confusion matrix reveals excellent discrimination ability across most species, with minimal misclassifications between different bird calls.
+
+\begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.6]{images/efficientNet_evaluation.png}
+            \caption{EfficientNetB3 Model Evaluation}
+      \end{figure}
+The training and validation curves demonstrate strong performance with a training accuracy of \textbf{93.32\%} and validation accuracy of \textbf{91.61\%}, while maintaining low loss values of \textbf{0.2336} and \textbf{0.3706} respectively.
+\newpage
+\begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.35]{images/efficientNet_confusion_matix.png}
+            \caption{EfficientNetB3 Confusion Matrix}
+      \end{figure}
+      The confusion matrix shows strong diagonal elements indicating excellent classification accuracy across most species, with minimal confusion between different bird calls.
+\newpage
+
+\begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.6]{images/efficientNet_classification_report.png}
+            \caption{EfficientNetB3 Classification Report}
+      \end{figure}
+The classification report shows detailed metrics for each species, with an average precision, recall and f1-score of \textbf{91\%} across all classes.
+
+\newpage
+\section{Hyperparameter Optimization Using Genetic Algorithim}
 To optimize the performance of our model, we used genetic algorithm for
 hyperparameter tuning. This approach helped us systematically explore and
 identify the most effective hyperparameter settings for our model, including network architecture parameters like
 learning rates, batch sizes, images sizes, dropout and others. The genetic
 algorithm enabled a more efficient and comprehensive search for optimal
 configurations.
-\subsection{Genetic Algorithim for CNN-LSTM}
-For the CNN-LSTM model, GA was applied to tune critical hyperparameters that impact both convolutional feature extraction and sequence modeling. The key hyperparameters optimized includes Batch Size, Learning Rate, Number of Epochs, Dropout Rate, LSTM Units and Dense Units.
-The genetic algorithm was executed over multiple generations, evolving hyperparameter configurations towards optimal performance. The best model achieved a Test Accuracy of \textbf{75.17\%} and Test Loss of \textbf{1.0235}, demonstrating improved learning efficiency and reduced overfitting.
-% Figure 
-\begin{figure}[h!]
+\subsection{Hyperparameters for CNN-LSTM}
+For the CNN-LSTM model, GA was applied to tune  hyperparameters that impact both convolutional feature extraction and model efficiency. The key hyperparameters optimized includes Batch Size, Learning Rate, Number of Epochs, Dropout Rate, LSTM Units and Dense Units.
+The genetic algorithm was executed over multiple generations, evolving hyperparameter configurations towards optimal performance.
+
+\subsubsection{Hyperparameter Search Space}
+The genetic algorithm optimized the following hyperparameters:
+
+\begin{table}[h]
     \centering
-    \includegraphics[scale=0.18]{images/.png}
-    \caption{GA CNN-LSTM.}
+    \begin{tabular}{|l|c|}
+        \hline
+        \textbf{Hyperparameter} & \textbf{Search Values} \\
+        \hline
+        Batch Size & \{16, 32, 64\} \\
+        Learning Rate & \{1e-4, 1e-4, 1e-3\} \\
+        Epochs & \{20, 30, 40\} \\
+        Dropout Rate & \{0.3, 0.4, 0.5\} \\
+        LSTM Units & \{64, 128, 256\} \\
+        Dense Units & \{64, 128, 256\} \\
+        \hline
+    \end{tabular}
+    \caption{Hyperparameter search space for CNN-LSTM}
+    \label{tab:search_space}
+\end{table}
+
+\subsubsection{Genetic Algorithm Process}
+The GA followed an evolutionary approach, iterating over multiple generations to refine hyperparameters. The process consisted of:
+
+\begin{itemize}
+    \item \textbf{Population Size:} 3 (each generation consists of 3 hyperparameter sets)
+    \item \textbf{Generations:} 2 (iterative evolution of hyperparameters)
+    \item \textbf{Mutation Rate:} 10\% (randomly modifying one parameter)
+    \item \textbf{Crossover:} Parents were selected based on validation accuracy, and offspring were created by combining their hyperparameters.
+\end{itemize}
+\subsubsection{Results}
+Over two generations, the algorithm refined hyperparameters, improving model accuracy and minimizing overfitting. The following images illustrate training and validation performance trends for different hyperparameter configurations across generations.
+
+The Following Graphs shows the training and validation accuracies and loss for the respective hyperparameters used for CNN-LSTM.\\
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.18]{images/GA_CNN_LSTM_1.png}
+      \caption{Accuracy and Loss for CNN-LSTM in generation 1}
+  \end{figure}
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.18]{images/GA_CNN_LSTM_2.png}
+      \caption{Accuracy and Loss for CNN-LSTM in generation 2}
+  \end{figure}
+  \newpage
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.18]{images/GA_CNN_LSTM_3.png}
+      \caption{Accuracy and Loss for CNN-LSTM in generation 3}
+  \end{figure}
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.18]{images/GA_CNN_LSTM_4.png}
+      \caption{Accuracy and Loss for CNN-LSTM in generation 4}
+  \end{figure}
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.18]{images/GA_CNN_LSTM_5.png}
+      \caption{Accuracy and Loss for CNN-LSTM in generation 5}
+  \end{figure}
+
+\newpage
+The following table demonstrates different hyperparameter configurations and their corresponding test accuracies.
+
+\begin{table}[h!]
+      \centering
+      \resizebox{\textwidth}{!}{  % Automatically scale to fit
+      \begin{tabular}{|c|c|c|c|c|c|c|c|}
+          \hline
+          \textbf{SN} & \textbf{Batch} & \textbf{LR} & \textbf{Epochs} & \textbf{Dropout} & \textbf{LSTM Units} & \textbf{Dense Units} & \textbf{Test Accuracy (\%)} \\
+          \hline
+          1 & 64  & 0.001  & 40  & 0.5  & 128  & 64  & 7.61 \\
+          2 & 16  & 0.001  & 30  & 0.3  & 256  & 64  & 25.76 \\
+          3 & 16  & 0.0001 & 20  & 0.3  & 256  & 64  & \textbf{75.17} \\
+          4 & 16  & 0.0001 & 20  & 0.4  & 256  & 64  & 65.80 \\
+          5 & 16  & 0.001  & 30  & 0.3  & 65   & 64  & 11.61 \\
+          \hline
+      \end{tabular}
+      }
+      \caption{Hyperparameter configurations and test accuracies for CNN-LSTM}
+      \label{tab:cnn_lstm_results}
+\end{table}
+
+
+\subsubsection{Conclusion}
+The best model achieved a Test Accuracy of \textbf{75.17\%} with a \textbf{Batch Size of 16}, \textbf{Learning Rate of 0.0001}, \textbf{Epochs = 20}, \textbf{Dropout Rate of 0.3}, \textbf{LSTM Units = 256}, and \textbf{Dense Units = 64}. These results highlight the effectiveness of the Genetic Algorithm in systematically optimizing hyperparameters, leading to improved learning efficiency and minimized overfitting.
+
+% % Figure 
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.18]{images/.png}
+%     \caption{GA CNN-LSTM.}
+% \end{figure}
+
+\subsection{Hyperparameters for Efficient-Net}
+For EfficientNet, GA was used to fine-tune hyperparameters that directly affect feature extraction and classification efficiency. The optimized parameters includes Batch Size, Learning Rate, Number of Epochs, Dropout Rate,Regularization and Dense Units.
+
+\subsubsection{Hyperparameter Search Space}
+The genetic algorithm optimized the following hyperparameters:
+\begin{table}[h]
+      \centering
+      \begin{tabular}{|l|c|}
+          \hline
+          \textbf{Hyperparameter} & \textbf{Search Values} \\
+          \hline
+          Batch Size & \{4, 8, 16\} \\
+          Image Size & \{(128, 128), (128, 128), (224, 224)\} \\
+          Learning Rate & \{1e-4, 1e-4, 1e-3\} \\
+          Epochs & \{20, 20, 20\} \\
+          Dropout Rate & \{0.3, 0.2, 0.4\} \\
+          L2 Regularization & \{1e-4, 1e-4, 1e-3\} \\
+          \hline
+      \end{tabular}
+      \caption{Hyperparameter search space for the EfficientNetB3}
+      \label{tab:search_space}
+  \end{table}
+  
+\subsubsection{Genetic Algorithm Process}
+The GA followed an evolutionary approach, iterating over multiple generations to refine hyperparameters. The process consisted of:
+
+\begin{itemize}
+    \item \textbf{Population Size:} 3 (each generation consists of 3 hyperparameter sets)
+    \item \textbf{Generations:} 2 (iterative evolution of hyperparameters)
+    \item \textbf{Mutation Rate:} 10\% (randomly modifying one parameter)
+    \item \textbf{Crossover:} Parents were selected based on validation accuracy, and offspring were created by combining their hyperparameters.
+\end{itemize}
+
+\subsubsection{Results}
+Over three generations, the algorithm refined hyperparameters, leading to improved validation accuracy. The following figures illustrate training and validation performance trends for different hyperparameter configurations across generations.
+
+The Following Graphs shows the training and validation accuracies and loss for the respective hyperparameters used for EfficientNetB3.
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[scale=0.2]{images/GA_EfficientNet1.png}
+      \caption{Accuracy and Loss for EfficientNetB3 in generation 1}
+\end{figure}
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[scale=0.9]{images/GA_EfficientNet2.png}
+      \caption{Accuracy and Loss for EfficientNetB3 in generation 2}
+\end{figure}
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[scale=0.45]{images/GA_EfficientNet3.png}
+      \caption{Accuracy and Loss for EfficientNetB3 in generation 3}
+\end{figure}
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[scale=0.45]{images/GA_EfficientNet4.png}
+      \caption{Accuracy and Loss for EfficientNetB3 in generation 4}
+\end{figure}
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[scale=0.45]{images/GA_EfficientNet5.png}
+      \caption{Accuracy and Loss for EfficientNetB3 in generation 5}
 \end{figure}
 
-\subsection{Genetic Algorithim for Efficient-Net}
-For EfficientNet, GA was used to fine-tune hyperparameters that directly affect feature extraction and classification efficiency. The optimized parameters includes Batch Size, Learning Rate, Number of Epochs, Dropout Rate,Regularization and Dense Units
-Through multiple generations, the genetic algorithm selected the best-performing hyperparameters, leading to a final Test Accuracy of \textbf{93.37\%} and Test Loss of \textbf{0.3056}, outperforming baseline configurations.
+\clearpage  % Ensures all figures are placed before proceeding to the table
+
+The following table demonstrates different hyperparameter configurations and their corresponding test accuracies.
+
+\begin{table}[h!]
+      \centering
+      \begin{tabular}{|c|c|c|c|c|c|c|c|}
+          \hline
+          \textbf{SN} & 
+          \textbf{Batch} & \textbf{Img Size} & \textbf{LR} & \textbf{Epochs} & \textbf{Dropout} & \textbf{L2} & \textbf{Test Accuracy (\%)} \\
+          \hline
+          1 & 8   & 224x224 & 0.0001  & 20  & 0.2  & 1e-4  & \textbf{93.37} \\
+          2 & 8   & 128x128 & 0.001   & 20  & 0.4  & 1e-4  & 92.54 \\
+          3 & 16  & 128x128 & 0.0001  & 20  & 0.3  & 1e-4  & 90.68 \\
+          4 & 8   & 128x128 & 0.0001  & 20  & 0.2  & 1e-4  & 91.02 \\
+          5 & 8   & 128x128 & 0.001   & 20  & 0.2  & 1e-4  & 92.54 \\
+          \hline
+      \end{tabular}
+      \caption{Hyperparameter configurations for Efficient-NetB3}
+\end{table}
+
+  
+  
+\subsubsection{Conclusion}
+The best model achieved a Test Accuracy of \textbf{93.37\%} with a \textbf{Batch Size of 8}, \textbf{Image Size of 224x224}, \textbf{Learning Rate of 0.0001}, \textbf{Epochs = 20}, \textbf{Dropout Rate of 0.2}, and \textbf{L2 Regularization = 1e-4}. These results highlight the effectiveness of the Genetic Algorithm in systematically optimizing hyperparameters, leading to improved model performance and reduced overfitting.
+
 % Figure
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.18]{images/.png}
-    \caption{GA Efficient-Net.}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.18]{images/.png}
+%     \caption{GA Efficient-Net.}
+% \end{figure}
 
 % Results
 
-% Mobile Application
+% Mobile Application    
 \section{Mobile Application}
 The mobile application allows the user to record the audio, visualize it with
 waveforms during recording, before sending the actual audio data to the server
@@ -1269,7 +1815,7 @@ with the detailed description of the birds.
     \caption{Mapped Birds in FeatherFind.}
 \end{figure}
 
-For the audio recognition the user can , record the audio in the application and as the 
+For the audio recognition the user can record the audio in the application and as the 
 audio is being recorded the app visualizes the audio in appropriate waveform. When the user stops
 recording the audio, the user is prompted with a confirmation dialog, which can be used to process the 
 audio and recognize it.
@@ -1325,6 +1871,17 @@ project include:
 \end{itemize}
 
 \section{Limitations}
+\begin{itemize}
+      \item Dataset limitations : Since the dataset lacks sufficient variation in bird species, 
+      environmental noise, and recording conditions, FeatherFind struggles with real-world scenarios. 
+      Additionally, because certain bird species are overrepresented, the model produces biased predictions, 
+      making it less reliable for species with fewer training samples.
+      \item Multiple bird sound : Since the system is optimized to recognize only a single dominant bird call in an audio recording, 
+      it fails to accurately identify multiple birds vocalizing simultaneously. When overlapping sounds occur, the model either 
+      misclassifies them or ignores background calls, limiting its ability to handle complex audio environments.
+      \item
+\end{itemize}
+  
 \section{Future Improvements}
 
 %Reference
