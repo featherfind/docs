@@ -215,9 +215,9 @@ endangered species.
 % targeted conservation actions and policies to preserve Nepal's rich avian
 % biodiversity.
 
-\section{Objectives}
+\section{Objective}
 \begin{enumerate}[label=\roman*]
-    \item To develop and implement an integrated technological solution that utilizes
+    To develop and implement an integrated technological solution that utilizes
           advanced audio recognition technique for the accurate identification and
           monitoring of bird species in Nepal, with an emphasis on endangered species.
 \end{enumerate}
@@ -796,6 +796,7 @@ as shown in Figure \ref{fig:system_overview}.
       \subsection{Training Process}
       The training process for the bird sound detection model was carefully designed to ensure optimal learning and generalization. The process incorporated several key components and strategies:
       \begin{itemize}
+            \\
             \item \textbf{Training Parameters:}
             \begin{itemize}
                   \item Number of epochs: 20
@@ -870,7 +871,7 @@ as shown in Figure \ref{fig:system_overview}.
             \end{tabular}
       \end{table}
             
-            
+      \newpage   
       \subsection{Evaluation}
       To assess the effectiveness of our model in distinguishing between the target classes, we analyzed its performance using the Receiver Operating Characteristic (ROC) curve. Following the benchmark established by Lasseck et al.\cite{lasseck2018acoustic} for the freefield1010 and warblrb10k datasets, the Area Under the Curve (AUC) metric was chosen as the primary evaluation criterion.
 
@@ -889,7 +890,6 @@ as shown in Figure \ref{fig:system_overview}.
       \end{equation}
       Represents the proportion of non-bird sounds incorrectly classified as bird sounds.
       \end{itemize}
- `    '
       The Area Under the ROC Curve (AUC) provides a single scalar value representing the model's overall classification performance. An AUC of 1.0 represents perfect classification, while 0.5 indicates random chance performance.
 
       The ROC curve analysis reveals several important aspects of our model's performance:
@@ -906,8 +906,14 @@ as shown in Figure \ref{fig:system_overview}.
 
 
 
-
+\newpage
 \section{Working Mechanism for Bird Species Classification}
+      % https://www.geeksforgeeks.org/vgg-16-cnn-model/
+       \begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.33]{images/MajorProject-Audio Methodology.png}
+            \caption{Block diagram for the working mechanism for Bird Species Identification}%\label{fig:fig1}
+        \end{figure}
         The working mechanism for bird identification from audio utilizes the dataset
         compiled from Xeno Canto, housing a diverse collection of avian vocalizations.
         Our methodology revolves around the utilization of EfficientNet, a
@@ -918,33 +924,30 @@ as shown in Figure \ref{fig:system_overview}.
         identifying a broad spectrum of 41 distinct bird species. Here lies the
         detailed explanation of the methodology, from the working mechanism to model
         training.
-
-        % https://www.geeksforgeeks.org/vgg-16-cnn-model/
-        \begin{figure}[h!]
-            \centering
-            \includegraphics[scale=0.33]{images/MajorProject-Audio Methodology.png}
-            \caption{Block diagram for the working mechanism for Bird Species Identification}%\label{fig:fig1}
-        \end{figure}
-
-
         \subsection{Data Collection}
         For the bird species classification model, we scraped audio data from Xeno-canto
         (\textit{xeno-canto.org}), a global repository of bird vocalizations
         contributed by ornithologists and birding enthusiasts. Since the dataset was
         highly imbalanced, we applied a series of preprocessing and augmentation
         techniques to ensure a more uniform distribution across bird species.
-        
         \begin{figure}[h!]
             \centering
-            \includegraphics[width=0.8\textwidth]{images/before_augmentation.png}
+            \includegraphics[width=1\textwidth]{images/before_augmentation.png}
             \caption{Dataset before performing augmentation}
             \label{fig:visualization}
         \end{figure}
-
+        
         \subsection{Data Augmentation}
         Initial analysis of the collected data revealed significant class imbalance,
         with some species having over 400 recordings while others had fewer than 50.
         Additionally, the audio recordings varied in length. To address these issues:
+        
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=1\textwidth]{images/after_augmentation.png}
+            \caption{Dataset after performing augmentation}
+            \label{fig:visualization}
+        \end{figure}
         \begin{itemize}
             \item \textbf{Audio Clipping:}
                 \begin{itemize}
@@ -962,12 +965,7 @@ as shown in Figure \ref{fig:system_overview}.
                 \end{itemize}
         \end{itemize}
         
-        \begin{figure}[h!]
-            \centering
-            \includegraphics[width=0.8\textwidth]{images/after_augmentation.png}
-            \caption{Dataset after performing augmentation}
-            \label{fig:visualization}
-        \end{figure}
+        
 
         % Data Preprocessing
         \subsection{Data Preprocessing}
@@ -1003,7 +1001,7 @@ as shown in Figure \ref{fig:system_overview}.
       \subsubsection{EfficientNetB3}
       EfficientNetB3 is part of the EfficientNet family, which employs a balance between deeper layers, wider networks, and higher input resolutions. This architecture integrates several enhancements, including \textbf{Mobile Inverted Bottleneck Convolution (MBConv) blocks}, \textbf{squeeze-and-excitation (SE) modules}, and the \textbf{Swish activation function}. These components contribute to better feature extraction and gradient flow, ensuring robust classification performance.
       \begin{itemize}
-            \item[i] \textbf{Architecture of EfficientNetB3} \\
+      \item[i)] \textbf{Architecture of EfficientNetB3} \\
             EfficientNetB3 follows a hierarchical feature extraction process, where early layers detect fundamental patterns (edges, textures), while deeper layers extract more complex features. The architecture consists of multiple MBConv blocks that improve computational efficiency by using \textbf{depthwise separable convolutions} and \textbf{linear bottlenecks}. Additionally, SE modules dynamically recalibrate channel-wise feature responses, enhancing the model’s ability to focus on important frequency patterns in the mel spectrogram.
             
             \begin{figure}[h!]
@@ -1035,9 +1033,9 @@ as shown in Figure \ref{fig:system_overview}.
                   \item \textbf{Softmax Activation:} Generates probability distributions for multi-class classification.
             \end{itemize}
             
-            
+            \newpage
             % \subsubsection{Adaptation for Bird Call Classification}
-            \item[ii)] \textbf{Adaptation for Bird Call Classification} \\
+      \item[ii)] \textbf{Adaptation for Bird Call Classification} \\
             While EfficientNetB3 is originally designed for image classification, it has been adapted for bird call classification by processing mel spectrograms as input. The key modifications include:
             
             \begin{itemize}
@@ -1047,12 +1045,12 @@ as shown in Figure \ref{fig:system_overview}.
             \end{itemize}
             
 
-            \item[iii)] \textbf{Training and Generalization} \\
+      \item[iii)] \textbf{Training and Generalization} \\
             The model is trained using a transfer learning approach, where only the classification layers are updated while the pre-trained EfficientNetB3 layers remain frozen. This reduces training time and improves generalization.
             
 
             % \subsubsection{Training Process}
-            \item[iv)] \textbf{Training Process} 
+      \item[iv)] \textbf{Training Process} 
             \begin{itemize}
                   \item \textbf{Initial Training Parameters:}
                   \begin{itemize}
