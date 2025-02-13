@@ -41,10 +41,6 @@
 \contentsline {subsection}{\numberline {3.3.5}Model Architecture}{30}{subsection.3.3.5}%
 \contentsline {subsubsection}{\numberline {3.3.5.1}EfficientNetB3}{30}{subsubsection.3.3.5.1}%
 \contentsline {subsubsection}{\numberline {3.3.5.2}CNN+LSTM Model}{35}{subsubsection.3.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.3.5.3}Architecture of CNN+LSTM}{35}{subsubsection.3.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.3.5.4}Adaptation for Bird Call Classification}{36}{subsubsection.3.3.5.4}%
-\contentsline {subsubsection}{\numberline {3.3.5.5}Training and Generalization}{36}{subsubsection.3.3.5.5}%
-\contentsline {subsubsection}{\numberline {3.3.5.6}Training Process}{36}{subsubsection.3.3.5.6}%
 \contentsline {subsection}{\numberline {3.3.6}Evaluation Metrics}{37}{subsection.3.3.6}%
 \contentsline {section}{\numberline {3.4}Feature Extraction}{38}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Mel Spectrogram}{38}{subsection.3.4.1}%

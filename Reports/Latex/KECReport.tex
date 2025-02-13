@@ -1134,112 +1134,117 @@ as shown in Figure \ref{fig:system_overview}.
 
       \subsubsection{CNN+LSTM Model}
       The CNN+LSTM architecture is designed for bird call classification using MFCC (Mel-Frequency Cepstral Coefficients) matrices instead of mel spectrogram images. Unlike EfficientNetB3, which processes image representations of audio, this model extracts both spatial and temporal features by combining convolutional layers with recurrent layers.
-
-      \subsubsection{Architecture of CNN+LSTM}
-      This model follows a two-stage feature extraction process:
-
       \begin{itemize}
-      \item \textbf{Convolutional Feature Extraction:} Convolutional layers extract local frequency features from MFCC matrices, capturing patterns in short time frames.
-      \item \textbf{Temporal Modeling with LSTM:} A Long Short-Term Memory (LSTM) layer processes sequential dependencies in the extracted features, enhancing temporal understanding.
+     
+            % \subsubsection{Architecture of CNN+LSTM}
+            \item[i)] \textbf{Architecture of CNN+LSTM} \\
+            This model follows a two-stage feature extraction process:
+
+            \begin{itemize}
+            \item \textbf{Convolutional Feature Extraction:} Convolutional layers extract local frequency features from MFCC matrices, capturing patterns in short time frames.
+            \item \textbf{Temporal Modeling with LSTM:} A Long Short-Term Memory (LSTM) layer processes sequential dependencies in the extracted features, enhancing temporal understanding.
+            \end{itemize}
+
+            The key architectural components of the CNN+LSTM model are as follows:
+
+            \begin{itemize}
+            \item \textbf{Convolutional Layers:} Three convolutional layers extract spatial features from MFCC input. Each convolutional block includes:
+            \begin{itemize}
+                  \item \textbf{Conv2D:} Filters of sizes $(3 \times 3)$ with ReLU activation.
+                  \item \textbf{Batch Normalization:} Normalizes activations for stable training.
+                  \item \textbf{MaxPooling2D:} Reduces feature map dimensions by pooling along the time axis.
+            \end{itemize}
+            
+            \item \textbf{Time-Distributed Flattening:} Flattens convolutional feature maps while preserving temporal dimensions for LSTM processing.
+            
+            \item \textbf{LSTM Layer:} A 256-unit LSTM layer captures long-range temporal dependencies in bird call sequences.
+            
+            \item \textbf{Fully Connected Layers:} Two dense layers process the LSTM output:
+            \begin{itemize}
+                  \item A 64-unit dense layer with ReLU activation and dropout (0.3) for regularization.
+                  \item An output dense layer with softmax activation for classification.
+            \end{itemize}
+            \end{itemize}
+
+            % \subsubsection{Adaptation for Bird Call Classification}
+            \item[ii)] \textbf{Adaptation for Bird Call Classification} \\
+            The CNN+LSTM model is tailored to classify bird calls based on MFCC matrices instead of image-based spectrograms. The key modifications include:
+
+            \begin{itemize}
+            \item \textbf{Input Modification:} The model accepts MFCC matrices with dimensions $(13 \times 626 \times 1)$, where 13 represents MFCC coefficients, and 626 represents time frames.
+            \item \textbf{Sequential Feature Extraction:} CNN layers extract spatial frequency information, while the LSTM layer captures sequential dependencies in bird calls.
+            \item \textbf{Custom Classification Head:} Includes fully connected layers with dropout to reduce overfitting.
+            \end{itemize}
+
+            % \subsubsection{Training and Generalization}
+            \item[iii)] \textbf{Training and Generalization} \\
+            The model is trained using a combination of early stopping, learning rate scheduling, and model checkpointing to ensure optimal performance.
+
+            % \subsubsection{Training Process}
+            \item[iv)] \textbf{Training Process} 
+            \begin{itemize}
+            \item \textbf{Initial Training Parameters:}
+            \begin{itemize}
+                  \item Number of epochs: 30
+                  \item Batch size: 16
+                  \item Learning rate: 0.0001
+                  \item Loss function: Categorical Cross-Entropy
+            \end{itemize}
+            
+            \item \textbf{Optimization:}
+            \begin{itemize}
+                  \item Adam optimizer with an initial learning rate of 0.0001.
+                  \item Learning rate scheduling using an exponential decay function after the first five epochs.
+            \end{itemize}
+            
+            \item \textbf{Regularization:}
+            \begin{itemize}
+                  \item Dropout (0.3) applied to prevent overfitting.
+                  % \item L2 regularization to improve generalization.
+            \end{itemize}
+            
+            \item \textbf{Monitoring and Validation:}
+            \begin{itemize}
+                  \item Training and validation losses monitored per epoch.
+                  \item Early stopping with a patience of 3 epochs.
+                  \item Model checkpointing to save the best-performing model based on validation loss.
+            \end{itemize}
+            \end{itemize}
+            \newpage
+            The key hyperparameters used for training are summarized in Table \ref{tab:training_hyperparameters_cnnlstm}.
+
+            \begin{table}[h]
+            \centering
+            \caption{Initial Training Hyperparameters for CNN+LSTM}
+            \label{tab:training_hyperparameters_cnnlstm}
+            \begin{tabular}{|c|c|}
+                  \hline
+                  \textbf{Hyperparameter} & \textbf{Value} \\
+                  \hline
+                  Number of Epochs & 30 \\
+                  \hline
+                  Batch Size & 16 \\
+                  \hline
+                  Input Shape & (13, 626, 1) \\
+                  \hline
+                  Learning Rate & 0.0001 \\
+                  \hline
+                  Loss Function & Categorical Cross-Entropy \\
+                  \hline
+                  Optimizer & Adam \\
+                  \hline
+                  Learning Rate Scheduling & Exponential Decay (after 5 epochs) \\
+                  \hline
+                  Dropout Rate & 0.3 \\
+                  \hline
+                  Early Stopping & Patience = 3 epochs \\
+                  \hline
+            \end{tabular}
+            \end{table}
+
+            The final CNN+LSTM model effectively classifies bird calls by integrating deep convolutional feature extraction with temporal modeling, ensuring high accuracy while leveraging MFCC representations.
+
       \end{itemize}
-
-      The key architectural components of the CNN+LSTM model are as follows:
-
-      \begin{itemize}
-      \item \textbf{Convolutional Layers:} Three convolutional layers extract spatial features from MFCC input. Each convolutional block includes:
-      \begin{itemize}
-            \item \textbf{Conv2D:} Filters of sizes $(3 \times 3)$ with ReLU activation.
-            \item \textbf{Batch Normalization:} Normalizes activations for stable training.
-            \item \textbf{MaxPooling2D:} Reduces feature map dimensions by pooling along the time axis.
-      \end{itemize}
-      
-      \item \textbf{Time-Distributed Flattening:} Flattens convolutional feature maps while preserving temporal dimensions for LSTM processing.
-      
-      \item \textbf{LSTM Layer:} A 256-unit LSTM layer captures long-range temporal dependencies in bird call sequences.
-      
-      \item \textbf{Fully Connected Layers:} Two dense layers process the LSTM output:
-      \begin{itemize}
-            \item A 64-unit dense layer with ReLU activation and dropout (0.3) for regularization.
-            \item An output dense layer with softmax activation for classification.
-      \end{itemize}
-      \end{itemize}
-
-      \subsubsection{Adaptation for Bird Call Classification}
-      The CNN+LSTM model is tailored to classify bird calls based on MFCC matrices instead of image-based spectrograms. The key modifications include:
-
-      \begin{itemize}
-      \item \textbf{Input Modification:} The model accepts MFCC matrices with dimensions $(13 \times 626 \times 1)$, where 13 represents MFCC coefficients, and 626 represents time frames.
-      \item \textbf{Sequential Feature Extraction:} CNN layers extract spatial frequency information, while the LSTM layer captures sequential dependencies in bird calls.
-      \item \textbf{Custom Classification Head:} Includes fully connected layers with dropout to reduce overfitting.
-      \end{itemize}
-
-      \subsubsection{Training and Generalization}
-      The model is trained using a combination of early stopping, learning rate scheduling, and model checkpointing to ensure optimal performance.
-
-      \subsubsection{Training Process}
-      \begin{itemize}
-      \item \textbf{Initial Training Parameters:}
-      \begin{itemize}
-            \item Number of epochs: 30
-            \item Batch size: 16
-            \item Learning rate: 0.0001
-            \item Loss function: Categorical Cross-Entropy
-      \end{itemize}
-      
-      \item \textbf{Optimization:}
-      \begin{itemize}
-            \item Adam optimizer with an initial learning rate of 0.0001.
-            \item Learning rate scheduling using an exponential decay function after the first five epochs.
-      \end{itemize}
-      
-      \item \textbf{Regularization:}
-      \begin{itemize}
-            \item Dropout (0.3) applied to prevent overfitting.
-            % \item L2 regularization to improve generalization.
-      \end{itemize}
-      
-      \item \textbf{Monitoring and Validation:}
-      \begin{itemize}
-            \item Training and validation losses monitored per epoch.
-            \item Early stopping with a patience of 3 epochs.
-            \item Model checkpointing to save the best-performing model based on validation loss.
-      \end{itemize}
-      \end{itemize}
-
-      The key hyperparameters used for training are summarized in Table \ref{tab:training_hyperparameters_cnnlstm}.
-
-      \begin{table}[h]
-      \centering
-      \caption{Initial Training Hyperparameters for CNN+LSTM}
-      \label{tab:training_hyperparameters_cnnlstm}
-      \begin{tabular}{|c|c|}
-            \hline
-            \textbf{Hyperparameter} & \textbf{Value} \\
-            \hline
-            Number of Epochs & 30 \\
-            \hline
-            Batch Size & 16 \\
-            \hline
-            Input Shape & (13, 626, 1) \\
-            \hline
-            Learning Rate & 0.0001 \\
-            \hline
-            Loss Function & Categorical Cross-Entropy \\
-            \hline
-            Optimizer & Adam \\
-            \hline
-            Learning Rate Scheduling & Exponential Decay (after 5 epochs) \\
-            \hline
-            Dropout Rate & 0.3 \\
-            \hline
-            Early Stopping & Patience = 3 epochs \\
-            \hline
-      \end{tabular}
-      \end{table}
-
-      The final CNN+LSTM model effectively classifies bird calls by integrating deep convolutional feature extraction with temporal modeling, ensuring high accuracy while leveraging MFCC representations.
-
-
 
       %   \subsection{Training Process}
       %   The training process utilizes the \textbf{categorical cross-entropy loss function}, which is suitable for multi-class classification problems. The Adam optimizer with a learning rate of \textbf{0.0001} was used to update model weights, and the model was trained for \textbf{30 epochs} with callbacks to enhance performance and prevent overfitting.
