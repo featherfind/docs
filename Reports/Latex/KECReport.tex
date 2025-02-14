@@ -89,7 +89,7 @@
 %to display members name under Acknowledgement
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}%to include this chapter in TOC 
-This project presents \textbf{FeatherFind}, an innovative system for automated bird species identification using audio recordings. The system combines two deep learning models: a \textbf{bird sound detection model} based on modified \textbf{ResNet-50 architecture}, and a \textbf{species classification model} utilizing \textbf{EfficientNetB3} and \textbf{CNN-LSTM architectures}. The bird sound detection model achieved \textbf{82.97\% accuracy} with an \textbf{AUC score of 0.911}, effectively distinguishing bird vocalizations from ambient noise. For species classification, the \textbf{EfficientNetB3 model} demonstrated superior performance with \textbf{90.73\% accuracy} across \textbf{41 bird species}, outperforming the \textbf{CNN-LSTM model's 74.73\% accuracy}. The system employs \textbf{Mel-Spectrograms} and \textbf{Mel-Frequency Cepstral Coefficients (MFCC)} for feature extraction, with \textbf{genetic algorithm} optimizing model hyperparameters. Implementation includes a \textbf{mobile application} that enables users to record bird sounds, visualize audio waveforms, and map identified species' locations. This research contributes to \textbf{biodiversity monitoring} and \textbf{conservation efforts} in Nepal, where over \textbf{887 bird species} exist, including \textbf{168 threatened species}. The system's high accuracy and practical application demonstrate its potential for both scientific research and citizen science initiatives in avian conservation.
+This project presents FeatherFind, an innovative system for automated bird species identification using audio recordings. The system combines two deep learning models: a bird sound detection model based on modified ResNet-50 architecture, and a species classification model utilizing EfficientNetB3 and CNN-LSTM architectures. The bird sound detection model achieved 82.97\% accuracy with an AUC score of 0.911, effectively distinguishing bird vocalizations from ambient noise. For species classification, the EfficientNetB3 model demonstrated superior performance with 90.73\% accuracy across 41 bird species, outperforming the CNN-LSTM model's 74.73\% accuracy. The system employs Mel-Spectrograms and Mel-Frequency Cepstral Coefficients (MFCC) for feature extraction, with genetic algorithm optimizing model hyperparameters. Implementation includes a mobile application that enables users to record bird sounds, visualize audio waveforms, and map identified species' locations. This research contributes to biodiversity monitoring and conservation efforts in Nepal, where over 887 bird species exist, including 168 threatened species. The system's high accuracy and practical application demonstrate its potential for both scientific research and citizen science initiatives in avian conservation.
 
 {\textit{Keywords$-$Bird Species Classification, Bioacoustics, Convolutional Neural Network, EfficientNet, LSTM, ResNet, Mel-Spectrogram, MFCC, Genetic Algorithm}}
 
@@ -1612,7 +1612,7 @@ release.
         FeatherFind}%\label{fig:fig1}
 \end{figure}
 
-\chapter{Results and Analysis}
+\chapter{Results, Analysis, and Conclusion}
 In the course of our project on Bird Species Classification from Audio, we have
 accomplished several key tasks to progress our analysis and model development:
 
@@ -1913,7 +1913,7 @@ The following table demonstrates different hyperparameter configurations and the
           5 & 8   & 128x128 & 0.001   & 20  & 0.2  & 1e-4  & 92.54 \\
           \hline
       \end{tabular}
-      \caption{Hyperparameter configurations for Efficient-NetB3}
+      \caption{Hyperparameter configurations and test accuracies for Efficient-NetB3}
 \end{table}
 
   
