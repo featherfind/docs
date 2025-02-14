@@ -670,17 +670,15 @@ species classification, enhancing the accuracy and efficiency of the system.
 The integration of Django, Django Rest Framework, and MySQL provides a robust
 and scalable backend infrastructure to support the application's functionality
 as shown in Figure \ref{fig:system_overview}.
-\\
 \section{Working Mechanism for Bird Sound Detection}
-      The bird sound detection process represents the initial filtering stage of our audio classification system, determining whether a given audio clip contains bird vocalizations. The mechanism follows a series of steps as shown in \ref{fig:working_bird_det}.This module uses a modified ResNet-50 architecture, pre-trained on ImageNet and fine-tuned for binary classification of bird sounds. By converting audio inputs into mel spectrograms, the model can effectively distinguish bird vocalizations from ambient noise and other.
-
       \begin{figure}[h!]
             \centering
             \includegraphics[scale=0.33]{images/MajorProject-Detection.png}
             \caption{Block diagram for the working mechanism for Bird Detection}
             \label{fig:working_bird_det}
       \end{figure}
-
+      \newpage
+      The bird sound detection process represents the initial filtering stage of our audio classification system, determining whether a given audio clip contains bird vocalizations. The mechanism follows a series of steps as shown in \ref{fig:working_bird_det}.This module uses a modified ResNet-50 architecture, pre-trained on ImageNet and fine-tuned for binary classification of bird sounds. By converting audio inputs into mel spectrograms, the model can effectively distinguish bird vocalizations from ambient noise and other.
       \subsection{Data Collection}
       The dataset used for the Bird Sound Detection Model includes two primary sources:
 
@@ -693,17 +691,14 @@ as shown in Figure \ref{fig:system_overview}.
                   \label{fig:freefield1010 dataset}
             \end{figure}
 
-            \item \textbf{Crowdsourced dataset, UK ("warblrb10k"):} This dataset includes 8,000 smartphone audio recordings from around the UK, crowdsourced by users of Warblr, the bird recognition app. The audio covers a wide distribution of UK locations and environments and includes weather noise, traffic noise, human speech, and even human bird imitations. The distribution of this dataset is shown in Figure \ref{fig:warblrb10k dataset}.
+            \item \textbf{Crowdsourced dataset, UK ("warblrb10k"):} This dataset includes 8,000 smartphone audio recordings around the UK, crowdsourced by users of Warblr, the bird recognition app. The audio covers a wide distribution of UK locations and environments and includes weather noise, traffic noise, human speech, and even human bird imitations. The distribution of this dataset is shown in Figure \ref{fig:warblrb10k dataset}.
             \begin{figure}[h!]
                   \centering
-                  \includegraphics[scale=0.75]{images/dataset_detection-2.png}
+                  \includegraphics[scale=0.45]{images/dataset_detection-2.png}
                   \caption{Dataset distribution for warblrb10k}
                   \label{fig:warblrb10k dataset}
             \end{figure}
       \end{itemize}
-
-
-      \newpage
       Instead of using the datasets separately, we merged them to create a single dataset comprising 15,690 audio recordings—7,710 without bird sounds and 7,980 
       with bird sounds. The merged dataset was then partitioned into training, testing, and validation sets in an 80:10:10 ratio, ensuring a comprehensive and 
       balanced dataset for model training and evaluation.
@@ -1158,7 +1153,7 @@ as shown in Figure \ref{fig:system_overview}.
                   Dropout Rate & 0.3 \\
                   \hline
                   L2 Regularization & \(1e^{-4}\) \\
-                  % \hline
+                  \hline
                   Early Stopping & Patience = 3 epochs \\
                   \hline
                   \end{tabular}
@@ -1170,9 +1165,8 @@ as shown in Figure \ref{fig:system_overview}.
 
 
       \subsubsection{CNN+LSTM Model}
-      The CNN+LSTM architecture is designed for bird call classification using MFCC (Mel-Frequency Cepstral Coefficients) matrices instead of mel spectrogram images. Unlike EfficientNetB3, which processes image representations of audio, this model extracts both spatial and temporal features by combining convolutional layers with recurrent layers.
+      The CNN+LSTM architecture is designed for bird call classification using MFCC (Mel-Frequency Cepstral Coefficients) instead of mel spectrogram images. Unlike EfficientNetB3, which processes image representations of audio, this model extracts both spatial and temporal features by combining convolutional layers with recurrent layers.
       \begin{itemize}
-     
             % \subsubsection{Architecture of CNN+LSTM}
             \item[i)] \textbf{Architecture of CNN+LSTM} \\
             This model follows a two-stage feature extraction process:
@@ -1612,7 +1606,7 @@ release.
         FeatherFind}%\label{fig:fig1}
 \end{figure}
 
-\chapter{Results, Analysis, and Conclusion}
+\chapter{Results, Analysis, and Comparisions}
 In the course of our project on Bird Species Classification from Audio, we have
 accomplished several key tasks to progress our analysis and model development:
 

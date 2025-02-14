@@ -5,10 +5,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces System Overview\relax }}{16}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Block diagram for the working mechanism for Bird Detection\relax }}{18}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Dataset distribution for freefield1010\relax }}{19}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Block diagram for the working mechanism for Bird Detection\relax }}{17}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Dataset distribution for freefield1010\relax }}{18}{figure.caption.12}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Dataset distribution for warblrb10k\relax }}{19}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Distribution of the merged dataset\relax }}{20}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Distribution of the merged dataset\relax }}{19}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Modified ResNet-50 architecture for Bird Sound Detection.\relax }}{23}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Block diagram for the working mechanism for Bird Species Identification\relax }}{29}{figure.caption.17}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Dataset before performing augmentation\relax }}{30}{figure.caption.18}%
