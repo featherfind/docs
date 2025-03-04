@@ -8,7 +8,7 @@
 \newcommand{\projectTitle}{FEATHERFIND : BIRD SPECIES IDENTIFICATION FROM AUDIO} %specify "Title" of Your Project
 \newcommand{\doc}{Final Report} % specify the document you are preparing eg. "Proposal", "Mid-Term Report" or "Final Report"32
 % Note that You have to sibmit "Final Report" for Pre-final defense as well.
-\newcommand{\subCode}{CT707} %specify Subject of Your Project
+\newcommand{\subCode}{CT755} %specify Subject of Your Project
 \newcommand{\degree}{Bachelor in Computer Engineering}
 %specify your degree
 \newcommand{\submittedBy}%Specify Names and Roll/Symbol Numbers of the Project Group Members
@@ -30,7 +30,7 @@
 \newcommand{\hod}{Er. Rabindra Khati \\ Associate Professor}
 %specify Head ot the department
 \newcommand{\defYear}{2025} %Defense Year
-\newcommand{\defMonth}{February} %Defense Month- January, February, ...
+\newcommand{\defMonth}{March} %Defense Month- January, February, ...
 % \newcommand{\defDay}{22} %
 
 \newcommand{\supervisor}{Prof. Dr. Subarna Shakya}
@@ -89,9 +89,9 @@
 %to display members name under Acknowledgement
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}%to include this chapter in TOC 
-This project presents FeatherFind, an innovative system for automated bird species identification using audio recordings. The system combines two deep learning models: a bird sound detection model based on modified ResNet-50 architecture, and a species classification model utilizing EfficientNetB3 and CNN-LSTM architectures. The bird sound detection model achieved 82.97\% accuracy with an AUC score of 0.911, effectively distinguishing bird vocalizations from ambient noise. For species classification, the EfficientNetB3 model demonstrated superior performance with 90.73\% accuracy across 41 bird species, outperforming the CNN-LSTM model's 74.73\% accuracy. The system employs Mel-Spectrograms and Mel-Frequency Cepstral Coefficients (MFCC) for feature extraction, with genetic algorithm optimizing model hyperparameters. Implementation includes mobile application that enables users to record bird sounds, visualize audio waveforms, and map identified species' locations. This research contributes to biodiversity monitoring and conservation efforts in Nepal, where over 887 bird species exist, including 168 threatened species. The system's high accuracy and practical application demonstrate its potential for both scientific research and citizen science initiatives in avian conservation.
+This project presents FeatherFind, an innovative system for automated bird species identification using audio recordings. The system combines two deep learning models: a bird sound detection model based on modified ResNet-50 architecture, and a species classification model utilizing EfficientNetB3 and CNN-LSTM architectures. The bird sound detection model achieved 82.97\% accuracy with an AUC score of 0.911, effectively distinguishing bird vocalizations from ambient noise. For species classification, the EfficientNetB3 model demonstrated superior performance with 90.73\% accuracy across 41 bird species, outperforming the CNN-LSTM model's 74.73\% accuracy. The system employs Mel-Spectrograms and Mel-Frequency Cepstral Coefficients (MFCC) for feature extraction, with genetic algorithm optimizing model hyperparameters. Implementation includes a mobile application that enables users to record bird sounds, visualize audio waveforms, and map identified species' locations. The system's high accuracy and practical application demonstrate its potential for both scientific research and citizen science initiatives in avian conservation.
 
-{\textit{Keywords$-$Bird Species Classification, Bioacoustics, Convolutional Neural Network, EfficientNet, LSTM, ResNet, Mel-Spectrogram, MFCC, Genetic Algorithm}}
+{\textbf{Keywords}}{\textit{$-$Bird Species Classification, Bioacoustics, Convolutional Neural Network, EfficientNet, LSTM, ResNet, Mel-Spectrogram, MFCC, Genetic Algorithm}}
 
 
 % {\textit{Keywords$-$Optical Character Recognition, Binarization, Thresholding, Denoising, Boundary Detection, Hough Line Transformation, K-Means Clustering, Convolutional Neural Network}}
@@ -161,6 +161,7 @@ This project presents FeatherFind, an innovative system for automated bird speci
     RNN \> Recurrent Neural Network\\
     ROC \> Receiver Operating Characteristics\\ 
     SE \> Squeeze and Excitation \\
+    SQL \> Structured Query Language\\
     STFT \> Short-Time Fourier Transform\\
     TPR \> True Positive Rate \\
     WSOLA \> Waveform Similarity OverLap Add\\
@@ -291,6 +292,7 @@ Before implementation of project design, the feasibility analysis of the
 project must be done to move any further. The feasibility analysis of the
 project gives an idea on how the project will perform and its impact in the
 real world scenario. So, it is of utmost importance.
+
 \subsection{Economic Feasibility}
 Our system is economically achievable as a result of the development of several
 tools, libraries, and frameworks. Since all the software required to construct
@@ -322,17 +324,18 @@ and professionals. By providing an efficient method for bird sound
 classification, the project supports a sizable community interested in avian
 studies and conservation, ensuring practical applicability and ease of use.
 
-\subsection{Schedule Feasibility}
-The workload of the project is divided amongst the project members. The
-scheduling is done according to an incremental model where different modules
-are planned to be assigned to the group members.So, the project fulfills the
-schedule feasibility requirements.
-%(GAntt chart here)
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.4]{images/gantt_chart.png}
-    \caption{Gantt Chart}\label{fig:my_label}
-\end{figure}
+% \subsection{Schedule Feasibility}
+% The workload of the project is divided amongst the project members. The
+% scheduling is done according to an incremental model where different modules
+% are planned to be assigned to the group members.So, the project fulfills the
+% schedule feasibility requirements.
+% %(GAntt chart here)
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[scale=0.4]{images/gantt_chart.png}
+%     \caption{Gantt Chart}\label{fig:my_label}
+% \end{figure}
+
 \newpage
 \section{System Requirements}
 
@@ -387,7 +390,7 @@ strategies employed to address these issues, providing a comprehensive overview
 of the current state of research and future directions in avian bioacoustics.
 
 \section{Related Works}
-BirdNET is a cutting-edge research platform developed through collaboration
+BirdNET\cite{birdnet} is a cutting-edge research platform developed through collaboration
 between the K. Lisa Yang Center for Conservation Bioacoustics at the Cornell
 Lab of Ornithology and the Chair of Media Informatics at Chemnitz University of
 Technology. Its primary aim is to detect and classify bird sounds using machine
@@ -620,11 +623,11 @@ vocalizations.\\
 \textbf{Gap:} There is a critical need for more extensive and balanced datasets that include a wider range of endangered bird species. This would involve targeted data collection efforts in diverse habitats across Nepal, ensuring that the unique vocalizations and behaviors of endangered species are adequately captured.
 
 \subsection{Handling Environmental Noise}
-\textbf{Current State:} Studies like those by Sevilla et al. (2017) and Lasseck (2018) have highlighted the challenges posed by environmental noise in bird sound classification. While some methods, such as noise addition and filtering, have been employed, the impact of noise on model performance remains a significant issue.\\
+\textbf{Current State:} Studies like those by Sevilla et al.\cite{sevilla2017audio} and Lasseck et al.\cite{lasseck2018acoustic} have highlighted the challenges posed by environmental noise in bird sound classification. While some methods, such as noise addition and filtering, have been employed, the impact of noise on model performance remains a significant issue.\\
 \textbf{Gap:} More advanced noise reduction and signal processing techniques are required to enhance the accuracy of bird sound classification in noisy environments. This includes developing models that can effectively distinguish bird calls from background noise and other overlapping sounds.
 
 \subsection{Real-Time and Multi-Bird Sound Recognition}
-\textbf{Current State:} Most existing models, including those by Gautam et al. (2023) and Chandu B et al. (2020), focus on identifying single bird species from audio recordings. However, real-world scenarios often involve multiple birds vocalizing simultaneously.\\
+\textbf{Current State:} Most existing models, including those by Gautam et al.\cite{gautam2023audio} and Chandu B et al.\cite{chandu2020automated}, focus on identifying single bird species from audio recordings. However, real-world scenarios often involve multiple birds vocalizing simultaneously.\\
 \textbf{Gap:} There is a need for models capable of real-time processing and recognizing multiple bird species in a single recording. This requires advancements in source separation techniques and the development of algorithms that can handle complex soundscapes.
 
 \subsection{Integration with Mobile and Cloud-Based Systems}
@@ -632,7 +635,7 @@ vocalizations.\\
 \textbf{Gap:} Developing offline capabilities and optimizing models for real-time processing on mobile devices would enhance the usability and accessibility of bird sound classification systems. This includes creating lightweight models that can run efficiently on mobile hardware.
 
 \subsection{Advanced Feature Extraction Techniques}
-\textbf{Current State:} Studies have employed various feature extraction techniques, such as Mel Spectrograms and MFCCs, as seen in the works of Sevilla et al. (2017) and Pahuja et al. (2021). While these methods have proven effective, there is potential for further enhancement.\\
+\textbf{Current State:} Studies have employed various feature extraction techniques, such as Mel Spectrograms and MFCCs, as seen in the works of Sevilla et al.\cite{sevilla2017audio} and Pahuja et al.\cite{pahuja2021sound}. While these methods have proven effective, there is potential for further enhancement.\\
 \textbf{Gap:} Exploring additional feature extraction techniques and combining multiple features could improve the performance of bird sound classification models. This includes investigating new representations of audio signals that capture more nuanced aspects of bird vocalizations.
 
 \subsection{Integration with Conservation Efforts}
@@ -643,6 +646,16 @@ vocalizations.\\
 \chapter{Methodology}
 This chapter describes the overall system including the bird sound detection
 and bird species classification.
+
+\section{System Diagram}
+The usecase diagram for Bird species identification from Audio and Image is
+given below:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{images/usecase.png}
+    \caption{Usecase Diagram for
+        FeatherFind}%\label{fig:fig1}
+\end{figure}
 
 % System Architecture
 \section{System Overview}
@@ -670,17 +683,15 @@ species classification, enhancing the accuracy and efficiency of the system.
 The integration of Django, Django Rest Framework, and MySQL provides a robust
 and scalable backend infrastructure to support the application's functionality
 as shown in Figure \ref{fig:system_overview}.
-\\
 \section{Working Mechanism for Bird Sound Detection}
-      The bird sound detection process represents the initial filtering stage of our audio classification system, determining whether a given audio clip contains bird vocalizations. The mechanism follows a series of steps as shown in \ref{fig:working_bird_det}.This module uses a modified ResNet-50 architecture, pre-trained on ImageNet and fine-tuned for binary classification of bird sounds. By converting audio inputs into mel spectrograms, the model can effectively distinguish bird vocalizations from ambient noise and other.
-
       \begin{figure}[h!]
             \centering
             \includegraphics[scale=0.33]{images/MajorProject-Detection.png}
             \caption{Block diagram for the working mechanism for Bird Detection}
             \label{fig:working_bird_det}
       \end{figure}
-
+      \newpage
+      The bird sound detection process represents the initial filtering stage of our audio classification system, determining whether a given audio clip contains bird vocalizations. The mechanism follows a series of steps as shown in Figure \ref{fig:working_bird_det}.This module uses a modified ResNet-50 architecture, pre-trained on ImageNet and fine-tuned for binary classification of bird sounds. By converting audio inputs into mel spectrograms, the model can effectively distinguish bird vocalizations from ambient noise and other.
       \subsection{Data Collection}
       The dataset used for the Bird Sound Detection Model includes two primary sources:
 
@@ -693,17 +704,14 @@ as shown in Figure \ref{fig:system_overview}.
                   \label{fig:freefield1010 dataset}
             \end{figure}
 
-            \item \textbf{Crowdsourced dataset, UK ("warblrb10k"):} This dataset includes 8,000 smartphone audio recordings from around the UK, crowdsourced by users of Warblr, the bird recognition app. The audio covers a wide distribution of UK locations and environments and includes weather noise, traffic noise, human speech, and even human bird imitations. The distribution of this dataset is shown in Figure \ref{fig:warblrb10k dataset}.
+            \item \textbf{Crowdsourced dataset, UK ("warblrb10k"):} This dataset includes 8,000 smartphone audio recordings around the UK, crowdsourced by users of Warblr, the bird recognition app. The audio covers a wide distribution of UK locations and environments and includes weather noise, traffic noise, human speech, and even human bird imitations. The distribution of this dataset is shown in Figure \ref{fig:warblrb10k dataset}.
             \begin{figure}[h!]
                   \centering
-                  \includegraphics[scale=0.75]{images/dataset_detection-2.png}
+                  \includegraphics[scale=0.45]{images/dataset_detection-2.png}
                   \caption{Dataset distribution for warblrb10k}
                   \label{fig:warblrb10k dataset}
             \end{figure}
       \end{itemize}
-
-
-      \newpage
       Instead of using the datasets separately, we merged them to create a single dataset comprising 15,690 audio recordings—7,710 without bird sounds and 7,980 
       with bird sounds. The merged dataset was then partitioned into training, testing, and validation sets in an 80:10:10 ratio, ensuring a comprehensive and 
       balanced dataset for model training and evaluation.
@@ -1158,7 +1166,7 @@ as shown in Figure \ref{fig:system_overview}.
                   Dropout Rate & 0.3 \\
                   \hline
                   L2 Regularization & \(1e^{-4}\) \\
-                  % \hline
+                  \hline
                   Early Stopping & Patience = 3 epochs \\
                   \hline
                   \end{tabular}
@@ -1170,9 +1178,8 @@ as shown in Figure \ref{fig:system_overview}.
 
 
       \subsubsection{CNN+LSTM Model}
-      The CNN+LSTM architecture is designed for bird call classification using MFCC (Mel-Frequency Cepstral Coefficients) matrices instead of mel spectrogram images. Unlike EfficientNetB3, which processes image representations of audio, this model extracts both spatial and temporal features by combining convolutional layers with recurrent layers.
+      The CNN+LSTM architecture is designed for bird call classification using MFCC (Mel-Frequency Cepstral Coefficients) instead of mel spectrogram images. Unlike EfficientNetB3, which processes image representations of audio, this model extracts both spatial and temporal features by combining convolutional layers with recurrent layers.
       \begin{itemize}
-     
             % \subsubsection{Architecture of CNN+LSTM}
             \item[i)] \textbf{Architecture of CNN+LSTM} \\
             This model follows a two-stage feature extraction process:
@@ -1579,15 +1586,7 @@ researchers to track bird sightings.
     \end{algorithmic}
 \end{algorithm}
 \newpage
-\section{System Diagram}
-The usecase diagram for Bird species identification from Audio and Image is
-given below:
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{images/usecase.png}
-    \caption{Usecase Diagram for
-        FeatherFind}%\label{fig:fig1}
-\end{figure}
+
 
 % \begin{figure}[h!]
 %      \centering
@@ -1612,7 +1611,7 @@ release.
         FeatherFind}%\label{fig:fig1}
 \end{figure}
 
-\chapter{Results and Analysis}
+\chapter{Results, Analysis, and Comparisions}
 In the course of our project on Bird Species Classification from Audio, we have
 accomplished several key tasks to progress our analysis and model development:
 
@@ -1646,7 +1645,7 @@ The close alignment between training and validation metrics indicates good gener
 The confusion matrix in Figure \ref{fig:Confusion Matrix for Detection Model} shows the classification performance on the test dataset. From the total of \textbf{1621} samples, the model correctly classified \textbf{621} samples as non-bird sounds (True Negatives) and \text{680} samples as bird sounds (True Positives). There were 107 false positives and \textbf{160} false negatives.
 \begin{figure}[h!]
       \centering
-      \includegraphics[scale=0.75]{images/detection_cm.png}
+      \includegraphics[scale=0.58]{images/det_confusionmatrix.png}
       \caption{Confusion Matrix for Bird Sound Detection Model}
       \label{fig:Confusion Matrix for Detection Model}
 \end{figure}
@@ -1913,7 +1912,7 @@ The following table demonstrates different hyperparameter configurations and the
           5 & 8   & 128x128 & 0.001   & 20  & 0.2  & 1e-4  & 92.54 \\
           \hline
       \end{tabular}
-      \caption{Hyperparameter configurations for Efficient-NetB3}
+      \caption{Hyperparameter configurations and test accuracies for Efficient-NetB3}
 \end{table}
 
   
@@ -1963,8 +1962,17 @@ audio and recognize it.
 %     \caption{Bird Species Identification using FeatherFind.}
 % \end{figure}
 
+% \newpage
 
-\newpage
+\section{Web Application}
+The web application developed for our project is designed to facilitate the recording, identification, and mapping of bird species using a combination of React for the frontend and Django for the backend. It consists of two primary sections: Record and Map, each serving a distinct yet interconnected purpose in the study and visualization of bird calls.
+
+In the Record section, users can capture bird sounds directly through the web application. The interface provides a canvas displaying a spectrogram, which visualizes the audio frequencies of the recorded sound over time. Once the recording is complete, the data is processed by the backend, where the system analyzes the audio and determines the corresponding bird species. The backend then returns the predicted species and its confidence score, and the web application provides users with an option to visit the respective Wikipedia page for more information about the identified bird. This feature enhances the user experience by integrating automated species recognition with an educational component.
+
+The Map section utilizes OpenStreetMap with the Leaflet library to present a detailed visualization of bird sightings within the user's region. The application retrieves previously detected bird locations from an SQL database, displaying them as markers on the map. Additionally, it allows users to identify clusters of similar bird species based on past records, enabling pattern recognition and ecological study. A search functionality is also included, enabling users to look up specific bird species and view their recorded sightings. This mapping capability helps in tracking bird populations over time and provides valuable insights into their distribution.
+
+By combining real-time audio analysis with geospatial visualization, the web application serves as a comprehensive tool for bird enthusiasts and researchers alike. The integration of React and Django ensures a seamless and efficient user experience, while the SQL database facilitates structured storage of bird detection data for future reference and analysis.
+
 
 \chapter{Conclusion and Future Improvements}
 The project on bird species identification from audio recordings has yielded promising results, demonstrating the efficacy of advanced machine learning techniques in bioacoustic analysis. Our approach involved the development of two primary models: a bird sound detection model based on a modified ResNet-50 architecture and a bird species classification model utilizing EfficientNetB3 and CNN-LSTM architectures. The bird sound detection model achieved an impressive accuracy of 82.97\%, with an AUC score of 0.911, indicating its strong ability to distinguish bird sounds from background noise. This model's performance underscores the importance of robust feature extraction and data augmentation techniques in handling diverse and noisy audio environments. On the other hand, the bird species classification model, particularly the EfficientNetB3 architecture, demonstrated superior performance with an accuracy of 90.73\% and an F1-score of 91\%. This high level of accuracy highlights the model's capability to effectively classify a wide range of bird species based on their vocalizations. The use of genetic algorithms for hyperparameter optimization further enhanced the models' performance, showcasing the potential of evolutionary algorithms in fine-tuning complex neural networks. We found that Mel-Spectrograms are best suited for CNN-based architectures, while MFCCs are more effective for RNN-based models. Additionally, the EfficientNetB3 model outperformed the CNN-LSTM model, indicating that compound scaling in neural networks can significantly improve classification accuracy. Overall, this project represents a significant step forward in the application of machine learning to avian bioacoustics, offering valuable tools for conservation efforts, biodiversity monitoring, and ecological research.
@@ -1996,35 +2004,53 @@ The project on bird species identification from audio recordings has yielded pro
 
 \chapter*{Annex}
 \addcontentsline{toc}{chapter}{Annex}
+
+% \section*{Mobile App}
 \begin{figure}[h!]
       \centering
-      \includegraphics[scale=0.4]{images/Homepage.jpg}
-      \caption{Home Page of FeatherFind.}
+      \includegraphics[scale=0.38]{images/Homepage.jpg}
+      \caption{Home page of the mobile app.}
   \end{figure}
-
 
   \begin{figure}[h!]
       \centering
       \includegraphics[scale=0.26]{images/mappage.png}
-      \caption{Mapped Birds in FeatherFind.}
+      \caption{Mapped birds.}
   \end{figure}
-
   \begin{figure}[h!]
       \centering
       \includegraphics[scale=0.26]{images/recording.png}
-      \caption{Recording using FeatherFind.}
+      \caption{Bird call recording using the mobile app.}
   \end{figure}
-
   \begin{figure}[h!]
       \centering
       \includegraphics[scale=0.26]{images/confirmation.png}
-      \caption{Confirmation for Audio Recognition.}
+      \caption{Confirmation for audio recognition using the mobile app.}
+  \end{figure}
+  \begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.4]{images/Identified.jpg}
+      \caption{Bird species identification using the mobile app.}
+  \end{figure}
+
+
+% \section*{Web App}
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.25]{images/web_homepage.png}
+      \caption{Home page of the web app.}
   \end{figure}
 
   \begin{figure}[h!]
       \centering
-      \includegraphics[scale=0.4]{images/Identified.jpg}
-      \caption{Bird Species Identification using FeatherFind.}
+      \includegraphics[scale=0.25]{images/web_mappage.png}
+      \caption{Map page of the web app.}
+  \end{figure}
+
+  \begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.25]{images/web_recordpage.png}
+      \caption{Record page of the web app.}
   \end{figure}
 
 %Comment this Chapter if you do not need to include Appendix.

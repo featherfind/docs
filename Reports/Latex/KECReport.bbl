@@ -36,6 +36,11 @@ C.~Inskipp, H.~S. Baral, T.~Inskipp, A.~P. Khatiwada, M.~P. Khatiwada, L.~P.
   Poudyal, and R.~Amin, ``Nepal's national red list of birds,'' \emph{Journal
   of Threatened Taxa}, vol.~9, no.~1, pp. 9700--9722, 2017.
 
+\bibitem{birdnet}
+K.~L. Y.~C. for Conservation~Bioacoustics, ``Birdnet: Analyzing bird sounds
+  using machine learning,'' \url{https://birdnet.cornell.edu/}, 2025, accessed:
+  2024-06-03.
+
 \bibitem{gautam2023audio}
 R.~Gautam, B.~Khatiwada, B.~P. Subedi, N.~Duwal, and K.~C. Dahal, ``Audio
   classifier for automatic identification of endangered bird species of
