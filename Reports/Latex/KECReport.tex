@@ -89,7 +89,7 @@
 %to display members name under Acknowledgement
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}%to include this chapter in TOC 
-This project presents \textbf{FeatherFind}, an innovative system for automated bird species identification using audio recordings. The system combines two deep learning models: a \textbf{bird sound detection model} based on modified \textbf{ResNet-50 architecture}, and a \textbf{species classification model} utilizing \textbf{EfficientNetB3} and \textbf{CNN-LSTM architectures}. The bird sound detection model achieved \textbf{82.97\% accuracy} with an \textbf{AUC score of 0.911}, effectively distinguishing bird vocalizations from ambient noise. For species classification, the \textbf{EfficientNetB3 model} demonstrated superior performance with \textbf{90.73\% accuracy} across \textbf{41 bird species}, outperforming the \textbf{CNN-LSTM model's 74.73\% accuracy}. The system employs \textbf{Mel-Spectrograms} and \textbf{Mel-Frequency Cepstral Coefficients (MFCC)} for feature extraction, with \textbf{genetic algorithm} optimizing model hyperparameters. Implementation includes a \textbf{mobile application} that enables users to record bird sounds, visualize audio waveforms, and map identified species' locations. This research contributes to \textbf{biodiversity monitoring} and \textbf{conservation efforts} in Nepal, where over \textbf{887 bird species} exist, including \textbf{168 threatened species}. The system's high accuracy and practical application demonstrate its potential for both scientific research and citizen science initiatives in avian conservation.
+This project presents FeatherFind, an innovative system for automated bird species identification using audio recordings. The system combines two deep learning models: a bird sound detection model based on modified ResNet-50 architecture, and a species classification model utilizing EfficientNetB3 and CNN-LSTM architectures. The bird sound detection model achieved 82.97\% accuracy with an AUC score of 0.911, effectively distinguishing bird vocalizations from ambient noise. For species classification, the EfficientNetB3 model demonstrated superior performance with 90.73\% accuracy across 41 bird species, outperforming the CNN-LSTM model's 74.73\% accuracy. The system employs Mel-Spectrograms and Mel-Frequency Cepstral Coefficients (MFCC) for feature extraction, with genetic algorithm optimizing model hyperparameters. Implementation includes mobile application that enables users to record bird sounds, visualize audio waveforms, and map identified species' locations. This research contributes to biodiversity monitoring and conservation efforts in Nepal, where over 887 bird species exist, including 168 threatened species. The system's high accuracy and practical application demonstrate its potential for both scientific research and citizen science initiatives in avian conservation.
 
 {\textit{Keywords$-$Bird Species Classification, Bioacoustics, Convolutional Neural Network, EfficientNet, LSTM, ResNet, Mel-Spectrogram, MFCC, Genetic Algorithm}}
 
@@ -1928,45 +1928,45 @@ waveforms during recording, before sending the actual audio data to the server
 for processing. The user can also use the application to add their current
 location to the map.The homepage of the application allows the user to view the birds along with 
 the audio if they are available in FeatherFind's database.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.4]{images/Homepage.jpg}
-    \caption{Home Page of FeatherFind.}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.4]{images/Homepage.jpg}
+%     \caption{Home Page of FeatherFind.}
+% \end{figure}
 The map page in FeatherFind allows the user to view all the birds that has been located
 using the application and view their location in the maps embedded in the application alone 
 with the detailed description of the birds.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.26]{images/mappage.png}
-    \caption{Mapped Birds in FeatherFind.}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.26]{images/mappage.png}
+%     \caption{Mapped Birds in FeatherFind.}
+% \end{figure}
 
 For the audio recognition the user can record the audio in the application and as the 
 audio is being recorded the app visualizes the audio in appropriate waveform. When the user stops
 recording the audio, the user is prompted with a confirmation dialog, which can be used to process the 
 audio and recognize it.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.26]{images/recording.png}
-    \caption{Recording using FeatherFind.}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.26]{images/recording.png}
+%     \caption{Recording using FeatherFind.}
+% \end{figure}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.26]{images/confirmation.png}
-    \caption{Confirmation for Audio Recognition.}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.4]{images/Identified.jpg}
-    \caption{Bird Species Identification using FeatherFind.}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.26]{images/confirmation.png}
+%     \caption{Confirmation for Audio Recognition.}
+% \end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.4]{images/Identified.jpg}
+%     \caption{Bird Species Identification using FeatherFind.}
+% \end{figure}
 
 
 \newpage
 
-\chapter{Discussion}
+\chapter{Conclusion and Future Improvements}
 The project on bird species identification from audio recordings has yielded promising results, demonstrating the efficacy of advanced machine learning techniques in bioacoustic analysis. Our approach involved the development of two primary models: a bird sound detection model based on a modified ResNet-50 architecture and a bird species classification model utilizing EfficientNetB3 and CNN-LSTM architectures. The bird sound detection model achieved an impressive accuracy of 82.97\%, with an AUC score of 0.911, indicating its strong ability to distinguish bird sounds from background noise. This model's performance underscores the importance of robust feature extraction and data augmentation techniques in handling diverse and noisy audio environments. On the other hand, the bird species classification model, particularly the EfficientNetB3 architecture, demonstrated superior performance with an accuracy of 90.73\% and an F1-score of 91\%. This high level of accuracy highlights the model's capability to effectively classify a wide range of bird species based on their vocalizations. The use of genetic algorithms for hyperparameter optimization further enhanced the models' performance, showcasing the potential of evolutionary algorithms in fine-tuning complex neural networks. We found that Mel-Spectrograms are best suited for CNN-based architectures, while MFCCs are more effective for RNN-based models. Additionally, the EfficientNetB3 model outperformed the CNN-LSTM model, indicating that compound scaling in neural networks can significantly improve classification accuracy. Overall, this project represents a significant step forward in the application of machine learning to avian bioacoustics, offering valuable tools for conservation efforts, biodiversity monitoring, and ecological research.
 
 \section{Limitations}
@@ -1990,6 +1990,42 @@ The project on bird species identification from audio recordings has yielded pro
 \bibliographystyle{IEEEtran} % to use IEEE Format for referencing
 \addcontentsline{toc}{chapter}{References} % to add references in TOC
 \bibliography{library} % specify the .bib file containing reference information 
+
+
+\newpage
+
+\chapter*{Annex}
+\addcontentsline{toc}{chapter}{Annex}
+\begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.4]{images/Homepage.jpg}
+      \caption{Home Page of FeatherFind.}
+  \end{figure}
+
+
+  \begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.26]{images/mappage.png}
+      \caption{Mapped Birds in FeatherFind.}
+  \end{figure}
+
+  \begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.26]{images/recording.png}
+      \caption{Recording using FeatherFind.}
+  \end{figure}
+
+  \begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.26]{images/confirmation.png}
+      \caption{Confirmation for Audio Recognition.}
+  \end{figure}
+
+  \begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.4]{images/Identified.jpg}
+      \caption{Bird Species Identification using FeatherFind.}
+  \end{figure}
 
 %Comment this Chapter if you do not need to include Appendix.
 

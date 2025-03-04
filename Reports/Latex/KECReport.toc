@@ -73,7 +73,8 @@
 \contentsline {subsubsection}{\numberline {4.3.2.3}Results for EfficientNetB3}{63}{subsubsection.4.3.2.3}%
 \contentsline {subsubsection}{\numberline {4.3.2.4}Conclusion for EfficientNetB3}{65}{subsubsection.4.3.2.4}%
 \contentsline {section}{\numberline {4.4}Mobile Application}{65}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Discussion}{71}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Limitations}{71}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Future Improvements}{72}{section.5.2}%
-\contentsline {chapter}{References}{72}{section.5.2}%
+\contentsline {chapter}{\numberline {5}Conclusion and Future Improvements}{66}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Limitations}{66}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Future Improvements}{67}{section.5.2}%
+\contentsline {chapter}{References}{67}{section.5.2}%
+\contentsline {chapter}{Annex}{70}{chapter*.53}%
