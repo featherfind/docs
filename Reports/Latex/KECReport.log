@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.27)  5 MAR 2025 00:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.27)  5 MAR 2025 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1081,12 +1081,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 598--617
 
 [12] [13] [14]
 Chapter 3.
-<images/usecase.png, id=598, 798.985pt x 664.4825pt>
+<images/usecase.png, id=600, 798.985pt x 664.4825pt>
 File: images/usecase.png Graphic file (type png)
 <use images/usecase.png>
 Package pdftex.def Info: images/usecase.png  used on input line 655.
 (pdftex.def)             Requested size: 399.49152pt x 332.24043pt.
-<images/System Overview.png, id=599, 563.10374pt x 356.33125pt>
+<images/System Overview.png, id=601, 563.10374pt x 356.33125pt>
 File: images/System Overview.png Graphic file (type png)
 <use images/System Overview.png>
 Package pdftex.def Info: images/System Overview.png  used on input line 664.
@@ -1097,7 +1097,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [15
 
  <./images/usecase.png>]
-<images/MajorProject-Detection.png, id=607, 1243.64626pt x 1524.69624pt>
+<images/MajorProject-Detection.png, id=609, 1243.64626pt x 1524.69624pt>
 File: images/MajorProject-Detection.png Graphic file (type png)
 <use images/MajorProject-Detection.png>
 Package pdftex.def Info: images/MajorProject-Detection.png  used on input line 
@@ -1114,7 +1114,7 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<images/dataset_detection-1.png, id=621, 404.712pt x 300.6432pt>
+<images/dataset_detection-1.png, id=623, 404.712pt x 300.6432pt>
 File: images/dataset_detection-1.png Graphic file (type png)
 <use images/dataset_detection-1.png>
 Package pdftex.def Info: images/dataset_detection-1.png  used on input line 702
@@ -1132,7 +1132,7 @@ Overfull \hbox (4.98697pt too wide) in paragraph at lines 699--706
  the FreeSound project
  []
 
-<images/dataset_detection-2.png, id=623, 690.58pt x 507.8975pt>
+<images/dataset_detection-2.png, id=625, 690.58pt x 507.8975pt>
 File: images/dataset_detection-2.png Graphic file (type png)
 <use images/dataset_detection-2.png>
 Package pdftex.def Info: images/dataset_detection-2.png  used on input line 710
@@ -1147,7 +1147,7 @@ s dataset in-cludes 8,000 smart-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/dataset_detection-3.png, id=624, 404.712pt x 298.4751pt>
+<images/dataset_detection-3.png, id=626, 404.712pt x 298.4751pt>
 File: images/dataset_detection-3.png Graphic file (type png)
 <use images/dataset_detection-3.png>
 Package pdftex.def Info: images/dataset_detection-3.png  used on input line 720
@@ -1173,7 +1173,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [21]
-<images/MajorProject-resnet architecture.png, id=656, 745.78625pt x 1318.9275pt
+<images/MajorProject-resnet architecture.png, id=658, 745.78625pt x 1318.9275pt
 >
 File: images/MajorProject-resnet architecture.png Graphic file (type png)
 <use images/MajorProject-resnet architecture.png>
@@ -1211,7 +1211,7 @@ as-si-fied as bird sounds.
  []
 
 [27] [28]
-<images/MajorProject-Audio Methodology.png, id=695, 1114.1625pt x 1617.04124pt>
+<images/MajorProject-Audio Methodology.png, id=697, 1114.1625pt x 1617.04124pt>
 
 File: images/MajorProject-Audio Methodology.png Graphic file (type png)
 <use images/MajorProject-Audio Methodology.png>
@@ -1219,13 +1219,13 @@ Package pdftex.def Info: images/MajorProject-Audio Methodology.png  used on inp
 ut line 961.
 (pdftex.def)             Requested size: 367.67476pt x 533.62526pt.
  [29 <./images/MajorProject-Audio Methodology.png>]
-<images/before_augmentation.png, id=701, 859.2903pt x 570.933pt>
+<images/before_augmentation.png, id=703, 859.2903pt x 570.933pt>
 File: images/before_augmentation.png Graphic file (type png)
 <use images/before_augmentation.png>
 Package pdftex.def Info: images/before_augmentation.png  used on input line 982
 .
 (pdftex.def)             Requested size: 416.83289pt x 276.95444pt.
-<images/after_augmentation.png, id=702, 859.2903pt x 570.933pt>
+<images/after_augmentation.png, id=704, 859.2903pt x 570.933pt>
 File: images/after_augmentation.png Graphic file (type png)
 <use images/after_augmentation.png>
 Package pdftex.def Info: images/after_augmentation.png  used on input line 994.
@@ -1242,7 +1242,7 @@ nd 48 Mel bands.
  []
 
 [31 <./images/after_augmentation.png>] [32]
-<images/MajorProject-efficientNetB3 architecture.png, id=720, 261.97874pt x 126
+<images/MajorProject-efficientNetB3 architecture.png, id=722, 261.97874pt x 126
 9.74374pt>
 File: images/MajorProject-efficientNetB3 architecture.png Graphic file (type pn
 g)
@@ -1267,20 +1267,20 @@ xis of the spec-tro-gram is then mapped
  []
 
 [40]
-<images/koel_mel_spectrogram.jpg, id=769, 279.6849pt x 278.2395pt>
+<images/koel_mel_spectrogram.jpg, id=771, 279.6849pt x 278.2395pt>
 File: images/koel_mel_spectrogram.jpg Graphic file (type jpg)
 <use images/koel_mel_spectrogram.jpg>
 Package pdftex.def Info: images/koel_mel_spectrogram.jpg  used on input line 13
 63.
 (pdftex.def)             Requested size: 166.7306pt x 165.87509pt.
  [41 <./images/koel_mel_spectrogram.jpg>]
-<images/MFCC.jpg, id=777, 814.04124pt x 312.16624pt>
+<images/MFCC.jpg, id=779, 814.04124pt x 312.16624pt>
 File: images/MFCC.jpg Graphic file (type jpg)
 <use images/MFCC.jpg>
 Package pdftex.def Info: images/MFCC.jpg  used on input line 1375.
 (pdftex.def)             Requested size: 407.01962pt x 156.08273pt.
  [42 <./images/MFCC.jpg>]
-<images/koel_mfcc.jpg, id=793, 279.9258pt x 278.2395pt>
+<images/koel_mfcc.jpg, id=795, 279.9258pt x 278.2395pt>
 File: images/koel_mfcc.jpg Graphic file (type jpg)
 <use images/koel_mfcc.jpg>
 Package pdftex.def Info: images/koel_mfcc.jpg  used on input line 1410.
@@ -1388,7 +1388,7 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 [45] [46]
-<images/SDLC.png, id=858, 1660.2025pt x 1173.38374pt>
+<images/SDLC.png, id=860, 1660.2025pt x 1173.38374pt>
 File: images/SDLC.png Graphic file (type png)
 <use images/SDLC.png>
 Package pdftex.def Info: images/SDLC.png  used on input line 1609.
@@ -1429,7 +1429,7 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-<images/det_acc.png, id=864, 561.5379pt x 383.031pt>
+<images/det_acc.png, id=866, 561.5379pt x 383.031pt>
 File: images/det_acc.png Graphic file (type png)
 <use images/det_acc.png>
 Package pdftex.def Info: images/det_acc.png  used on input line 1625.
@@ -1481,7 +1481,7 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-<images/det_loss.png, id=865, 564.4287pt x 383.031pt>
+<images/det_loss.png, id=867, 564.4287pt x 383.031pt>
 File: images/det_loss.png Graphic file (type png)
 <use images/det_loss.png>
 Package pdftex.def Info: images/det_loss.png  used on input line 1629.
@@ -1502,7 +1502,7 @@ or  <return>  to continue without it.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/det_confusionmatrix.png, id=867, 629.35126pt x 584.1825pt>
+<images/det_confusionmatrix.png, id=869, 629.35126pt x 584.1825pt>
 File: images/det_confusionmatrix.png Graphic file (type png)
 <use images/det_confusionmatrix.png>
 Package pdftex.def Info: images/det_confusionmatrix.png  used on input line 164
@@ -1511,7 +1511,7 @@ Package pdftex.def Info: images/det_confusionmatrix.png  used on input line 164
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/detection_auc.png, id=870, 499.3857pt x 395.3169pt>
+<images/detection_auc.png, id=872, 499.3857pt x 395.3169pt>
 File: images/detection_auc.png Graphic file (type png)
 <use images/detection_auc.png>
 Package pdftex.def Info: images/detection_auc.png  used on input line 1673.
@@ -1527,14 +1527,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: Text page 50 contains only floats.
 
 [50 <./images/det_confusionmatrix.png> <./images/detection_auc.png>]
-<images/cnn_lstm_evaluation.png, id=887, 612.8496pt x 341.5962pt>
+<images/cnn_lstm_evaluation.png, id=889, 612.8496pt x 341.5962pt>
 File: images/cnn_lstm_evaluation.png Graphic file (type png)
 <use images/cnn_lstm_evaluation.png>
 Package pdftex.def Info: images/cnn_lstm_evaluation.png  used on input line 168
 6.
 (pdftex.def)             Requested size: 367.71259pt x 204.95929pt.
  [51 <./images/cnn_lstm_evaluation.png>]
-<images/cnn_lstm_confusion_matrix.png, id=894, 841.2228pt x 854.9541pt>
+<images/cnn_lstm_confusion_matrix.png, id=896, 841.2228pt x 854.9541pt>
 File: images/cnn_lstm_confusion_matrix.png Graphic file (type png)
 <use images/cnn_lstm_confusion_matrix.png>
 Package pdftex.def Info: images/cnn_lstm_confusion_matrix.png  used on input li
@@ -1545,7 +1545,7 @@ Overfull \hbox (3.77748pt too wide) in paragraph at lines 1693--1694
  [][] 
  []
 
-<images/efficientNet_classification_report.png, id=895, 611.4042pt x 714.0276pt
+<images/efficientNet_classification_report.png, id=897, 611.4042pt x 714.0276pt
 >
 File: images/efficientNet_classification_report.png Graphic file (type png)
 <use images/efficientNet_classification_report.png>
@@ -1562,14 +1562,14 @@ Overfull \hbox (0.48561pt too wide) in paragraph at lines 1709--1710
 ent dis-crim-i-na-tion abil-ity across
  []
 
-<images/efficientNet_evaluation.png, id=906, 616.2222pt x 340.6326pt>
+<images/efficientNet_evaluation.png, id=908, 616.2222pt x 340.6326pt>
 File: images/efficientNet_evaluation.png Graphic file (type png)
 <use images/efficientNet_evaluation.png>
 Package pdftex.def Info: images/efficientNet_evaluation.png  used on input line
  1713.
 (pdftex.def)             Requested size: 369.73616pt x 204.38113pt.
 [54 <./images/efficientNet_evaluation.png>]
-<images/efficientNet_confusion_matix.png, id=912, 1274.1201pt x 1284.2379pt>
+<images/efficientNet_confusion_matix.png, id=914, 1274.1201pt x 1284.2379pt>
 File: images/efficientNet_confusion_matix.png Graphic file (type png)
 <use images/efficientNet_confusion_matix.png>
 Package pdftex.def Info: images/efficientNet_confusion_matix.png  used on input
@@ -1597,12 +1597,12 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1754.
 
  [57]
-<images/GA_CNN_LSTM_1.png, id=929, 2189.17876pt x 1078.0275pt>
+<images/GA_CNN_LSTM_1.png, id=931, 2189.17876pt x 1078.0275pt>
 File: images/GA_CNN_LSTM_1.png Graphic file (type png)
 <use images/GA_CNN_LSTM_1.png>
 Package pdftex.def Info: images/GA_CNN_LSTM_1.png  used on input line 1781.
 (pdftex.def)             Requested size: 394.03517pt x 194.03658pt.
-<images/GA_CNN_LSTM_2.png, id=930, 2229.32875pt x 1088.065pt>
+<images/GA_CNN_LSTM_2.png, id=932, 2229.32875pt x 1088.065pt>
 File: images/GA_CNN_LSTM_2.png Graphic file (type png)
 <use images/GA_CNN_LSTM_2.png>
 Package pdftex.def Info: images/GA_CNN_LSTM_2.png  used on input line 1786.
@@ -1612,12 +1612,12 @@ Package pdftex.def Info: images/GA_CNN_LSTM_2.png  used on input line 1786.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [58 <./images/GA_CNN_LSTM_1.png>]
-<images/GA_CNN_LSTM_3.png, id=936, 2225.31375pt x 1093.08376pt>
+<images/GA_CNN_LSTM_3.png, id=938, 2225.31375pt x 1093.08376pt>
 File: images/GA_CNN_LSTM_3.png Graphic file (type png)
 <use images/GA_CNN_LSTM_3.png>
 Package pdftex.def Info: images/GA_CNN_LSTM_3.png  used on input line 1792.
 (pdftex.def)             Requested size: 400.5392pt x 196.74658pt.
-<images/GA_CNN_LSTM_4.png, id=937, 2377.88374pt x 1168.365pt>
+<images/GA_CNN_LSTM_4.png, id=939, 2377.88374pt x 1168.365pt>
 File: images/GA_CNN_LSTM_4.png Graphic file (type png)
 <use images/GA_CNN_LSTM_4.png>
 Package pdftex.def Info: images/GA_CNN_LSTM_4.png  used on input line 1797.
@@ -1630,7 +1630,7 @@ Overfull \hbox (11.16772pt too wide) in paragraph at lines 1797--1798
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/GA_CNN_LSTM_5.png, id=938, 2375.87625pt x 1170.3725pt>
+<images/GA_CNN_LSTM_5.png, id=940, 2375.87625pt x 1170.3725pt>
 File: images/GA_CNN_LSTM_5.png Graphic file (type png)
 <use images/GA_CNN_LSTM_5.png>
 Package pdftex.def Info: images/GA_CNN_LSTM_5.png  used on input line 1802.
@@ -1645,27 +1645,27 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [59 <./images/GA_CNN_LSTM_2.png> <./images/GA_CNN_LSTM_3.png>] [60 <./images/GA
 _CNN_LSTM_4.png> <./images/GA_CNN_LSTM_5.png>] [61]
-<images/GA_EfficientNet1.png, id=954, 1780.6525pt x 870.25125pt>
+<images/GA_EfficientNet1.png, id=957, 1780.6525pt x 870.25125pt>
 File: images/GA_EfficientNet1.png Graphic file (type png)
 <use images/GA_EfficientNet1.png>
 Package pdftex.def Info: images/GA_EfficientNet1.png  used on input line 1873.
 (pdftex.def)             Requested size: 356.12419pt x 174.04716pt.
-<images/GA_EfficientNet2.png, id=955, 404.51125pt x 196.735pt>
+<images/GA_EfficientNet2.png, id=958, 404.51125pt x 196.735pt>
 File: images/GA_EfficientNet2.png Graphic file (type png)
 <use images/GA_EfficientNet2.png>
 Package pdftex.def Info: images/GA_EfficientNet2.png  used on input line 1878.
 (pdftex.def)             Requested size: 364.05675pt x 177.05984pt.
-<images/GA_EfficientNet3.png, id=956, 806.01125pt x 392.46625pt>
+<images/GA_EfficientNet3.png, id=959, 806.01125pt x 392.46625pt>
 File: images/GA_EfficientNet3.png Graphic file (type png)
 <use images/GA_EfficientNet3.png>
 Package pdftex.def Info: images/GA_EfficientNet3.png  used on input line 1883.
 (pdftex.def)             Requested size: 362.7017pt x 176.60817pt.
-<images/GA_EfficientNet4.png, id=957, 807.015pt x 392.46625pt>
+<images/GA_EfficientNet4.png, id=960, 807.015pt x 392.46625pt>
 File: images/GA_EfficientNet4.png Graphic file (type png)
 <use images/GA_EfficientNet4.png>
 Package pdftex.def Info: images/GA_EfficientNet4.png  used on input line 1888.
 (pdftex.def)             Requested size: 363.1534pt x 176.60817pt.
-<images/GA_EfficientNet5.png, id=958, 803.0pt x 392.46625pt>
+<images/GA_EfficientNet5.png, id=961, 803.0pt x 392.46625pt>
 File: images/GA_EfficientNet5.png Graphic file (type png)
 <use images/GA_EfficientNet5.png>
 Package pdftex.def Info: images/GA_EfficientNet5.png  used on input line 1893.
@@ -1681,74 +1681,86 @@ Chapter 5.
 ] (./KECReport.bbl [67] [68
 
 ]) [69]
-<images/Homepage.jpg, id=1002, 747.79375pt x 1607.00375pt>
+<images/gantt_chart.png, id=1004, 1204.5pt x 552.0625pt>
+File: images/gantt_chart.png Graphic file (type png)
+<use images/gantt_chart.png>
+Package pdftex.def Info: images/gantt_chart.png  used on input line 2009.
+(pdftex.def)             Requested size: 457.71477pt x 209.78592pt.
+
+Overfull \hbox (40.88188pt too wide) in paragraph at lines 2009--2010
+ [][] 
+ []
+
+<images/Homepage.jpg, id=1005, 747.79375pt x 1607.00375pt>
 File: images/Homepage.jpg Graphic file (type jpg)
 <use images/Homepage.jpg>
-Package pdftex.def Info: images/Homepage.jpg  used on input line 2011.
+Package pdftex.def Info: images/Homepage.jpg  used on input line 2016.
 (pdftex.def)             Requested size: 284.16457pt x 610.66779pt.
-<images/mappage.png, id=1003, 1084.05pt x 2326.6925pt>
-File: images/mappage.png Graphic file (type png)
-<use images/mappage.png>
-Package pdftex.def Info: images/mappage.png  used on input line 2017.
-(pdftex.def)             Requested size: 281.84636pt x 604.9258pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/recording.png, id=1004, 1084.05pt x 2299.59125pt>
+<images/mappage.png, id=1006, 1084.05pt x 2326.6925pt>
+File: images/mappage.png Graphic file (type png)
+<use images/mappage.png>
+Package pdftex.def Info: images/mappage.png  used on input line 2022.
+(pdftex.def)             Requested size: 281.84636pt x 604.9258pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/recording.png, id=1007, 1084.05pt x 2299.59125pt>
 File: images/recording.png Graphic file (type png)
 <use images/recording.png>
-Package pdftex.def Info: images/recording.png  used on input line 2022.
+Package pdftex.def Info: images/recording.png  used on input line 2027.
 (pdftex.def)             Requested size: 281.84636pt x 597.87964pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/confirmation.png, id=1005, 1084.05pt x 2297.58376pt>
+<images/confirmation.png, id=1008, 1084.05pt x 2297.58376pt>
 File: images/confirmation.png Graphic file (type png)
 <use images/confirmation.png>
-Package pdftex.def Info: images/confirmation.png  used on input line 2027.
+Package pdftex.def Info: images/confirmation.png  used on input line 2032.
 (pdftex.def)             Requested size: 281.84636pt x 597.3577pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/Identified.jpg, id=1006, 753.81625pt x 1604.99625pt>
+<images/Identified.jpg, id=1009, 753.81625pt x 1604.99625pt>
 File: images/Identified.jpg Graphic file (type jpg)
 <use images/Identified.jpg>
-Package pdftex.def Info: images/Identified.jpg  used on input line 2032.
+Package pdftex.def Info: images/Identified.jpg  used on input line 2037.
 (pdftex.def)             Requested size: 301.52116pt x 641.98714pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/web_homepage.png, id=1007, 1431.84938pt x 812.28468pt>
+<images/web_homepage.png, id=1010, 1431.84938pt x 812.28468pt>
 File: images/web_homepage.png Graphic file (type png)
 <use images/web_homepage.png>
-Package pdftex.def Info: images/web_homepage.png  used on input line 2040.
+Package pdftex.def Info: images/web_homepage.png  used on input line 2045.
 (pdftex.def)             Requested size: 357.96147pt x 203.07066pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/web_mappage.png, id=1008, 1430.34375pt x 812.28468pt>
+<images/web_mappage.png, id=1011, 1430.34375pt x 812.28468pt>
 File: images/web_mappage.png Graphic file (type png)
 <use images/web_mappage.png>
-Package pdftex.def Info: images/web_mappage.png  used on input line 2046.
+Package pdftex.def Info: images/web_mappage.png  used on input line 2051.
 (pdftex.def)             Requested size: 357.58507pt x 203.07066pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/web_recordpage.png, id=1009, 1444.64719pt x 812.28468pt>
+<images/web_recordpage.png, id=1012, 1444.64719pt x 812.28468pt>
 File: images/web_recordpage.png Graphic file (type png)
 <use images/web_recordpage.png>
-Package pdftex.def Info: images/web_recordpage.png  used on input line 2052.
+Package pdftex.def Info: images/web_recordpage.png  used on input line 2057.
 (pdftex.def)             Requested size: 361.16092pt x 203.07066pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [70
 
- <./images/Homepage.jpg>] [71 <./images/mappage.png>] [72 <./images/recording.p
-ng>] [73 <./images/confirmation.png>] [74 <./images/Identified.jpg>]
-[75 <./images/web_homepage.png> <./images/web_mappage.png> <./images/web_record
-page.png>] (./KECReport.aux)
+ <./images/gantt_chart.png>] [71 <./images/Homepage.jpg>] [72 <./images/mappage
+.png>] [73 <./images/recording.png>] [74 <./images/confirmation.png>]
+[75 <./images/Identified.jpg>] [76 <./images/web_homepage.png> <./images/web_ma
+ppage.png> <./images/web_recordpage.png>] (./KECReport.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1761,11 +1773,11 @@ Package rerunfilecheck Info: File `KECReport.out' has not changed.
 (rerunfilecheck)             Checksum: 41D7C89706DEB097B99D0889B251522F;11844.
  ) 
 Here is how much of TeX's memory you used:
- 18299 strings out of 474222
- 337241 string characters out of 5748733
+ 18308 strings out of 474222
+ 337467 string characters out of 5748733
  1936975 words of memory out of 5000000
- 40019 multiletter control sequences out of 15000+600000
- 581122 words of font info for 79 fonts, out of 8000000 for 9000
+ 40026 multiletter control sequences out of 15000+600000
+ 581123 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,11n,98p,1891b,783s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
@@ -1779,10 +1791,10 @@ ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on KECReport.pdf (85 pages, 12767585 bytes).
+Output written on KECReport.pdf (86 pages, 12780758 bytes).
 PDF statistics:
- 1161 PDF objects out of 1200 (max. 8388607)
- 973 compressed objects within 10 object streams
- 312 named destinations out of 1000 (max. 500000)
- 760 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1170 PDF objects out of 1200 (max. 8388607)
+ 979 compressed objects within 10 object streams
+ 314 named destinations out of 1000 (max. 500000)
+ 765 words of extra memory for PDF output out of 10000 (max. 10000000)
 
