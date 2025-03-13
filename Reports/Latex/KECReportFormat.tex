@@ -1,3 +1,4 @@
+%KECReportFormat.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %DO NOT MAKE CHANGES IN THIS FILE
 
@@ -5,20 +6,18 @@
 \usepackage[left = 1.5in, right = 1in, top = 1in, bottom = 1in]{geometry}%for margin
 \usepackage{amsfonts, amsmath, amssymb} %for mathematical equations
 \usepackage{graphicx} %for images
-
 \usepackage{times} %font Times New Roman Font
 \usepackage{float} %required if you use H(strictly here) position for floats
 \usepackage[skip = 8pt,tableposition=top, figureposition=bottom]{caption}%adjust spacing of captions and specify where captions are
 \usepackage{hyperref} % for easy Navigation in document, also puts links in TOC, LOF, LOT...
 \usepackage{setspace} %to change line spacing in some portion \singlespacing \onehalfspacing \doublespacing
-\usepackage{acro} %for List of Abbrreviation and Symbol
+\usepackage[nolist, nosection]{acro} %for List of Abbrreviation and Symbol
 \acsetup{first-style = short} % set to display only short form on the command \ac{}
 
 %packages required for complex tables
 \usepackage{bigstrut} 
 \usepackage{multirow}
-%package for greek letters
-\usepackage[euler]{textgreek}
+
 \renewcommand{\contentsname}{Table of Contents} %Change TOC Heading ... default is "Contents" 
 
 \parindent 0pt	%removes the indent in paragraph
@@ -49,11 +48,11 @@
 %Changes for Chapter Heading Spacing and formats for numbered chapters
 \makeatletter
 \def\@makechapterhead#1{%
-  %\vspace*{50pt}%
-  {  \MakeUppercase{\ifnum \c@secnumdepth >\m@ne
-        \fontsize{16pt}{1}\bfseries \@chapapp \space \thechapter\vspace{5pt}\\
+  %\vspace*{50pt}% 
+    { \centering \MakeUppercase{\ifnum \c@secnumdepth >\m@ne
+        \fontsize{16pt}{1}\bfseries \@chapapp \space \thechapter \vspace{5pt}\\
     \fi
-    \interlinepenalty\@M
+  \centering  \interlinepenalty\@M
      \bfseries #1}\par\nobreak
     %\vskip 0pt
   }}
@@ -72,6 +71,22 @@
     %\vskip 18\p@ % adjust space after heading 18pt
   }}
 \makeatother 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%to make the "figure" and "table" word appear in the list of figures (lof) and list of tables (lot) respectively ...
+\makeatletter
+\newcommand{\mycaption}[2][\@empty]% #1 = short caption (optionl), #2 = caption
+{\refstepcounter\@captype
+ \caption@caption*{\csname fnum@\@captype\endcsname{: }#2}%
+ \ifx\@empty#1
+   \addcontentsline{\csname ext@\@captype\endcsname}{\@captype}%
+     {\csname\@captype name\endcsname\space\arabic{\@captype}: #2}%
+ \else
+   \addcontentsline{\csname ext@\@captype\endcsname}{\@captype}%
+     {\csname\@captype name\endcsname\space\arabic{\@captype}: #1}%
+ \fi
+}
+\makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -86,25 +101,34 @@
 \vfill	%vertically fill the space 
 \begin{figure}[h] % h: put logo "here"
 \begin{center}
-\includegraphics[width=25mm, height = 25mm]{images/logo.png}
+	\includegraphics[width=25mm, height = 25mm]{images/logo.png}
 \end{center}
 \end{figure}
-
-\large{\textbf{[Subject Code: \subCode]}}\\ %Chcite handeu ta iza}ange This Line
+\large{\textbf{[Subject Code: \subCode]}}\\ %Change This Line
 \large{\textbf{A \MakeUppercase{\project} \MakeUppercase{\doc} ON}}\\ %Change This Line
 \Large{\textbf{\MakeUppercase{\projectTitle}}}\\
-
 \vfill	%vertically fill the space 
 \large{\textbf{Submitted by:}}\\
 \large{\textbf{\submittedBy}}\\
 \vfill	%vertically fill the space 
+
+\ifhassupervisor % Displays Supervisor name only if \hassupervisortrue
+	\vfill	%vertically fill the space 
+	\large{\textbf{Supervised by:}}\\
+	\large{\textbf{\supervisor}}\\
+	\large{\textbf{\degSup}}\\
+	%\large{\textbf{\degSupSecondline}}\\
+	%\large{\textbf{\degSupThirdline}}
+\fi
+\vfill	%vertically fill the space 
+
 \textbf{A \MakeUppercase{\project} SUBMITTED IN PARTIAL FULFILLMENT OF THE REQUIREMENT FOR THE DEGREE OF \MakeUppercase{\degree}}\\
 
 \vfill	%vertically fill the space 
 \large{\textbf{Submitted to:}}\\
 \large{\textbf{\submittedTo}}\\
 \vfill
-\large{\textbf{\defDay\ \defMonth, \defYear}}
+\large{\textbf{\defMonth, \defYear}}
 \pagebreak
 \end{center}
 \end{titlepage}
@@ -123,12 +147,14 @@
 \large{\textbf{Submitted by:}}\\
 \large{\textbf{\submittedBy}}\\
 
-% \if{\ne{\supervisor}} \\ Displays Supervisor name only if it is not "none"
+\ifhassupervisor % Displays Supervisor name only if \hassupervisortrue
 	\vfill	%vertically fill the space 
 	\large{\textbf{Supervised by:}}\\
 	\large{\textbf{\supervisor}}\\
 	\large{\textbf{\degSup}}\\
-% \fi
+	\large{\textbf{\degSupSecondline}}\\
+	%\large{\textbf{\degSupThirdline}}
+\fi
 \vfill	%vertically fill the space 
 \textbf{A \MakeUppercase{\project} SUBMITTED IN PARTIAL FULFILLMENT OF THE REQUIREMENT FOR THE DEGREE OF \MakeUppercase{\degree}}\\
 
@@ -139,7 +165,7 @@
 \large{\textbf{Dhapakhel, Lalitpur}}\\
 
 \vfill
-\large{\textbf{\defDay\ \defMonth, \defYear}}
+\large{\textbf{\defMonth, \defYear}}
 \thispagestyle{empty}\\ %to remove page number
 \pagebreak
 \end{center}
@@ -151,9 +177,11 @@
 {
 \chapter*{Copyright}%Required only for Final Defense of Major Project
 \addcontentsline{toc}{chapter}{Copyright}
-The author has agreed that the library, Kantipur Engineering Collage, may make this report freely available for inspection. Moreover the author has agreed that permission for extensive copying of this report for scholarly purpose may be granted by the supervisor(s), who supervised the project work recorded herein or, in their absence, by the Head of the Department wherein this project was done. It is understood that due recognition will be given to the author of this report and to the \submittedTo, Kantipur Engineering College in any use of the material of this report. Copying or publication or other use of this report for financial gain without approval of the \submittedTo, Kantipur Engineering College and author’s written permission is prohibited.\par Request for permission to copy or to make any other use of the material in this report in whole or in part should be addressed to:
+The author has agreed that the library of Kantipur Engineering College, may make this report freely available for inspection. Moreover the author has agreed that permission for extensive copying of this report for scholarly purpose may be granted by the supervisor(s), who supervised the project work recorded herein or, in their absence, by the Head of the Department wherein this project was done. It is understood that due recognition will be given to the author of this report and to the \submittedTo, Kantipur Engineering College in any use of the material of this report. Copying or publication or other use of this report for financial gain without approval of the \submittedTo, Kantipur Engineering College and author’s written permission is prohibited.\par Request for permission to copy or to make any other use of the material in this report in whole or in part should be addressed to:
 
 Head\\
+\\
+.............................\\
 \submittedTo\\
 Kantipur Engineering College\\
 Dhapakhel, Lalitpur\\
@@ -166,7 +194,7 @@ Nepal
 \chapter*{Kantipur Engineering College
 \vskip -10pt}%Required only for Final Defense of Major Project
 \begin{center}
-\fontsize{12.8pt}{1} %size decreaced to adjust department name in single line
+\fontsize{12.8pt}{1} %size decreased to adjust department name in single line
 \textbf{
 \MakeUppercase{\submittedTo}\\ %for department name
 }
@@ -177,52 +205,108 @@ Nepal
 \vskip -16pt
 \addcontentsline{toc}{chapter}{Approval Letter}%
 The undersigned certify that they have read and recommended to the Institute of Engineering for acceptance, a project report entitled "\projectTitle " submitted by \\
-\submittedBy \\
-in partial fulfillment for the degree of \degree. \par
-{\vspace{25pt}
-..........................................\\
-Supervisor\\
-\supervisor \\
-\degSup\\
-\vspace{25pt}\\
-..........................................\\
-External Examiner\\
-\external\\
-\degExternal\\
-\vspace{25pt}\\
-..........................................\\
-\hod\\
-Head of Department\\
-\submittedTo
-\vspace{10pt}\\
+\submittedBy
+in partial fulfillment for the degree of \degree. 
+\vspace{25pt}
+% \par
+{
+\begin{table}[H]
+\begin{flushleft}
+	\begin{tabular}{@{}p{0.45\textwidth}@{}p{0.1\textwidth}@{}p{0.45\textwidth}@{}}
+		\begin{minipage}[t]{0.45\textwidth}
+			\textbf{Supervisor} \\
+			\vspace{10pt} \\
+			............................................. \\
+			\supervisor \\
+			\degSup \\
+			\degSupSecondline \\
+		\end{minipage} & &
+		\begin{minipage}[t]{0.45\textwidth}
+			\textbf{External Examiner} \\
+			\vspace{10pt} \\
+			...................................... \\
+			\external \\
+			\degExternal \\
+			\degExtSecondline \\
+		\end{minipage} \\
+		\vspace{15pt} \\
+		\begin{minipage}[t]{0.45\textwidth}
+			\textbf{Project Coordinator} \\
+			\vspace{10pt} \\
+			.............................................. \\
+			\projectcoordinator \\
+			\degPrjcor \\
+			% \degPjcThirdline \\
+		\end{minipage} & &
+		\begin{minipage}[t]{0.45\textwidth}
+			\textbf{Head of Department} \\
+			\vspace{10pt} \\
+			...................................... \\
+			\hod \\
+			\degHod \\
+			\text{Kantipur Engineering College} \\
+			 \\
+			\
+		\end{minipage} \\
+	\end{tabular}
+\end{flushleft}
+\end{table}
+}
+\vspace{25pt} 
+\begin{center}
 Date: \defMonth\space\defDay ,\space \defYear
 \singlespacing\par
-} %single spacing for the texts inside {}
+\end{center}
+ %single spacing for the texts inside {}
 }
-
-%command for list of abbreviations
 \newcommand{\KECloa}
 {
-%\chapter*{List of Abbreviations}
+\chapter*{List of Abbreviations}
 \addcontentsline{toc}{chapter}{List of Abbreviations}
-\vskip -42pt % to reduce space due to invisivle acronym class name
-{
-\singlespacing
-\printacronyms[include-classes=abbr, name= List of Abbreviations ]
+\begin{tabbing}
+\hspace{15mm}\=\kill
+\textbf{ADAM} \> Adaptive Moment Estimation\\
+\textbf{AI} \> Artificial Intelligence\\
+\textbf{AUC} \> Area Under Curve\\
+\textbf{cGAN} \> Conditional Generative Adversarial Network\\
+\textbf{CNN} \> Convolution Neural Network\\
+\textbf{DL} \> Deep Learning\\
+\textbf{FPR} \> False Positive Rate\\
+\textbf{GAN} \> Generative Adversarial Network\\
+\textbf{ML} \> Machine Learning\\
+\textbf{MSE} \> Mean Squared Error\\
+\textbf{ReLU} \> Rectified Linear Unit\\
+\textbf{ROC} \> Receiver Operating Characteristics\\
+\textbf{SSIM} \> Structural Similarity Index\\
+\textbf{TPR} \> True Positive Rate\\
+\textbf{UI} \> User Interface\\
+\end{tabbing}
+
+%\chapter*{List of Abbreviations}
+%\addcontentsline{toc}{chapter}{List of Abbreviations}
+%\begin{minipage}{20cm}
+%\vskip -42pt % to reduce space due to invisivle acronym %class name
+%\vspace{35pt}
+%{
+%\singlespacing
+%\printacronyms[include=abbr, name= ]
+
+%}
+%\end{minipage}
 }
 
-}
 
 %command for list of symbols
-\newcommand{\KEClos}
-{
-\chapter*{List of Symbols}
-\addcontentsline{toc}{chapter}{List of Symbols}
-\vskip -42pt % to reduce space due to invisivle acronym class name{
-{
-\singlespacing
-}
-}
+%\newcommand{\KEClos}
+%{
+%\chapter*{List of Symbols}
+%\addcontentsline{toc}{chapter}{List of Symbols}
+%\vskip -42pt % to reduce space due to invisivle acronym class name{
+%{
+%\singlespacing
+%\printacronyms[include = symbol, name= ]
+%}
+%}
 
 %command to adjust toc, lof, lot spacing
 \newcommand{\KECadjusttocspacings}
@@ -233,4 +317,3 @@ Date: \defMonth\space\defDay ,\space \defYear
 \addtocontents{lof}{\protect\noaddvspace} %remove extra vertical space in LOF
 \addtocontents{lot}{\protect\noaddvspace} %remove extra vertical space in LOT
 }
-

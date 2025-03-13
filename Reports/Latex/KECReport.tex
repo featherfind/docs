@@ -4,40 +4,60 @@
 \usepackage{algorithmic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Define Macros for Details of your Project
-\newcommand{\project}{Major Project } %Specify "Major Project" or "Minor Project"
+\newcommand{\project}{Major Project} %Specify "Major Project" or "Minor Project"
 \newcommand{\projectTitle}{FEATHERFIND : BIRD SPECIES IDENTIFICATION FROM AUDIO} %specify "Title" of Your Project
 \newcommand{\doc}{Final Report} % specify the document you are preparing eg. "Proposal", "Mid-Term Report" or "Final Report"32
 % Note that You have to sibmit "Final Report" for Pre-final defense as well.
-\newcommand{\subCode}{CT755} %specify Subject of Your Project
+\newcommand{\subCode}{CT 755} %specify Subject of Your Project
 \newcommand{\degree}{Bachelor in Computer Engineering}
 %specify your degree
 \newcommand{\submittedBy}%Specify Names and Roll/Symbol Numbers of the Project Group Members
 {
-    %Edit Member Names and Roll/Symbol No. and adjust width (\makebox[width]) if necessary
-    \makebox[10cm]{}\\ 
-    \makebox[10cm]{Gaurav Giri \hfill [Kan077bct034]}\\
-    \makebox[10cm]{Iza K.C. \hfill [Kan077bct039]}\\
-    \makebox[10cm]{Prajwal Khatiwada \hfill [Kan077bct056]}\\
-    \makebox[10cm]{Samrat Kumar Adhikari \hfill [Kan077bct074]}\\
+    %Edit Member Names and Roll/Symbol No. and adjust width (\makebox[width]) if necessary]
+    \makebox[10cm]{Gaurav Giri \hfill [34278]}\\
+    \makebox[10cm]{Iza K.C. \hfill [34283]}\\
+    \makebox[10cm]{Prajwal Khatiwada \hfill [34299]}\\
+    \makebox[10cm]{Samrat Kumar Adhikari \hfill [34316]}\\
 
     %\makebox[9cm]{Member Name \hfill [Roll/Symbol No.]}\\
 } % Note that You must write your "Symbol Numbers"(Exam Roll Numbers) for Final Defenses
 
+\newcommand{\submittedTo}{Department of Computer and Electronics Engineering} %specify your department
+\newcommand{\hod}{Er. Rabindra Khati} %specify Head of the department
+\newcommand{\degHod}{Associate Professor} % specify the designation of HoD
+\newcommand{\degPjcThirdline}{Kantipur Engineering College} %specify the institute of the project coordinator if there is
 
-
-\newcommand{\submittedTo}{Department of Computer and Electronics Engineering}
-%specify your department
-\newcommand{\hod}{Er. Rabindra Khati \\ Associate Professor}
 %specify Head ot the department
 \newcommand{\defYear}{2025} %Defense Year
 \newcommand{\defMonth}{March} %Defense Month- January, February, ...
-% \newcommand{\defDay}{22} %
+\newcommand{\defDay}{9} %
+
+%for external details
+\newcommand{\external}{Dr. Dibakar Raj Pant} %Specify Name of External for Major Project (Required for Black Book)
+\newcommand{\degExternal}{Associate Professor} %Specify Name of External for Major Project (Required for Black Book)
+\newcommand{\degExtSecondline}{Pulchowk Campus, IOE} %
+
+
+%%%%%%%%%%for major project%%%%%%%%%%%%%%%%%%
+\newif\ifhassupervisor
+\hassupervisortrue % to display supervisor name use command- \hassupervisortrue for major project and for minor project use \hassupervisorfalse to remove this field
+
 
 \newcommand{\supervisor}{Prof. Dr. Subarna Shakya}
-\newcommand{\degSup}{Department of Electronics \& Computer Engineering \\ Pulchowk Campus, Institute of Engineering\\ Tribhuvan University }
+\newcommand{\degSup}{Professor}
+\newcommand{\degSupSecondline}{Pulchowk Campus, IOE}
+
+% \newcommand{\degSupSecondline}{Pulchowk Campus, IOE}
 % \newcommand{\external}{External's Name}
 % \newcommand{\degExternal}{Designation of External\\Second line if required}
 %Specify Name of External for Major Project (Required for Black Book) , use multiple lines (\\) if necessary
+
+\newcommand{\projectcoordinator}{Er. Bishal Thapa}%mention the name of project coordinator for respective faculty
+\newcommand{\degPrjcor}{Senior Lecturer \\ Kantipur Engineering College \\ }
+\newcommand{\degPjcSecondline}{} %specify the department of the project coordinator currently working
+% \newcommand{\degPjcThirdline}{Kantipur Engineering College} %specify the institute of the project coordinator if there is
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -64,6 +84,7 @@
 %}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \setcounter{secnumdepth}{3}
+
 %The Document
 \begin{document}
 
@@ -71,7 +92,7 @@
 \KECtitlepage
 
 \pagenumbering{roman}
-%\KECapproval
+% KECapproval
 % \chapter*{Acknowledgment}
 % \addcontentsline{toc}{chapter}{Acknowledgment}%to include this chapter in TOC
 % We would like to express our gratitude to everyone who helped us to complete this project.
@@ -86,7 +107,27 @@
 % \makebox[10cm]{Gaurav Giri \hfill }\\
 % \makebox[10cm]{Iza K.C. \hfill }\\
 % \makebox[10cm]{Lakesh Shrestha \hfill }
+% to display members name under Acknowledgement
+\KECcopyright % defined in KECReportFormat.tex
+
+%Approval Page is required for FINAL(Black Book Binded) REPORT of MAJOR PROJECT only. Comment this section for other Reports. 
+\KECapproval % defined in KECReportFormat.tex
+
+\chapter*{Acknowledgment}
+\addcontentsline{toc}{chapter}{Acknowledgment}%to include this chapter in TOC
 %to display members name under Acknowledgement
+
+We would like to express our sincere gratitude to everyone who contributed to the successful completion of this project.
+First and foremost, we extend our heartfelt appreciation to our supervisor, Prof. Dr. Subarna Shakya, for his invaluable guidance, continuous support, and constructive feedback throughout the project. His insights and encouragement played a crucial role in shaping our work.
+We would also like to acknowledge the unwavering support of our teachers in the Department of Electronics and Computer Engineering, whose mentorship and expertise helped us navigate the challenges of this project. Additionally, we are grateful to our classmates for their constructive feedback and engaging discussions that enriched our understanding.
+Thank you all for your invaluable contributions to this project.
+
+\begin{flushright}
+\vskip -20pt
+\setstretch{1.2}
+\submittedBy
+\end{flushright}
+
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}%to include this chapter in TOC 
 This project presents FeatherFind, an innovative system for automated bird species identification using audio recordings. The system combines two deep learning models: a bird sound detection model based on modified ResNet-50 architecture, and a species classification model utilizing EfficientNetB3 and CNN-LSTM architectures. The bird sound detection model achieved 82.97\% accuracy with an AUC score of 0.911, effectively distinguishing bird vocalizations from ambient noise. For species classification, the EfficientNetB3 model demonstrated superior performance with 90.73\% accuracy across 41 bird species, outperforming the CNN-LSTM model's 74.73\% accuracy. The system employs Mel-Spectrograms and Mel-Frequency Cepstral Coefficients (MFCC) for feature extraction, with genetic algorithm optimizing model hyperparameters. Implementation includes a mobile application that enables users to record bird sounds, visualize audio waveforms, and map identified species' locations. The system's high accuracy and practical application demonstrate its potential for both scientific research and citizen science initiatives in avian conservation.
@@ -102,31 +143,57 @@ This project presents FeatherFind, an innovative system for automated bird speci
 %\setstretch{1.2}
 %\submittedBy
 %\end{flushright}}
-
 %to adjust spacings for TOC, LOF, LOT
 {
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TOC, LOF and LOT
+\KECadjusttocspacings % defined in KECReportFormat.tex to adjust spacings
+\makeatletter
+% to add vskip of 18 point which is reduced when parskip is set to 0 in \KECadjustspacings
+\def\@makeschapterhead#1{%
+  %\vspace*{50\p@}% Remove the vertical space
+  {\newpage \parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \center \fontsize{16pt}{1} \bfseries \MakeUppercase{#1}\par\nobreak
+    \vskip 18\p@ % adjust space after heading 18pt
+  }}
+\makeatother 
 
-    %TOC, LOF and LOT
-    \KECadjusttocspacings % defined in KECReportFormat.tex to adjust spacings
-    \makeatletter
-    % to add vskip of 18 point which is reduced when parskip is set to 0 in \LECadjustspacings
-    \def\@makeschapterhead#1{%
-        %\vspace*{50\p@}% Remove the vertical space
-        {\newpage \parindent\z@ \raggedright\normalfont
-                \interlinepenalty\@M
-                \center\fontsize{16pt}{1} \bfseries
-                \MakeUppercase{#1}\par\nobreak
-                \vskip 18\p@ % adjust space after heading 18pt
-            }}
-    \makeatother
-
-    \tableofcontents % prints table of contents
-    \listoffigures % prints list of figures
-    \listoftables % prints list of tables
-    \addcontentsline{toc}{chapter}{List Of Figures}
-    \addcontentsline{toc}{chapter}{List Of Tables}
-
+\tableofcontents % prints table of contents
+\addcontentsline{toc}{chapter}{List of Figures}
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoffigures % prints list of figures
+\listoftables % prints list of table
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%comment this chapter if you don't have List of Abbreviations
+
+%to adjust spacings for TOC, LOF, LOT
+% {
+
+%     %TOC, LOF and LOT
+%     \KECadjusttocspacings % defined in KECReportFormat.tex to adjust spacings
+%     \makeatletter
+%     % to add vskip of 18 point which is reduced when parskip is set to 0 in \LECadjustspacings
+%     \def\@makeschapterhead#1{%
+%         %\vspace*{50\p@}% Remove the vertical space
+%         {\newpage \parindent\z@ \raggedright\normalfont
+%                 \interlinepenalty\@M
+%                 \center\fontsize{16pt}{1} \bfseries
+%                 \MakeUppercase{#1}\par\nobreak
+%                 \vskip 18\p@ % adjust space after heading 18pt
+%             }}
+%     \makeatother
+
+%     \tableofcontents % prints table of contents
+%     \listoffigures % prints list of figures
+%     \listoftables % prints list of tables
+%     \addcontentsline{toc}{chapter}{List Of Figures}
+%     \addcontentsline{toc}{chapter}{List Of Tables}
+
+% }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %comment this chapter if you don't have List of Abbreviations
@@ -686,7 +753,7 @@ as shown in Figure \ref{fig:system_overview}.
 \section{Working Mechanism for Bird Sound Detection}
       \begin{figure}[h!]
             \centering
-            \includegraphics[scale=0.33]{images/MajorProject-Detection.png}
+            \includegraphics[scale=0.33]{images/DetectionMethodology.png}
             \caption{Block diagram for the working mechanism for Bird Detection}
             \label{fig:working_bird_det}
       \end{figure}
@@ -958,7 +1025,7 @@ as shown in Figure \ref{fig:system_overview}.
       % https://www.geeksforgeeks.org/vgg-16-cnn-model/
        \begin{figure}[h!]
             \centering
-            \includegraphics[scale=0.33]{images/MajorProject-Audio Methodology.png}
+            \includegraphics[scale=0.33]{images/ClassificationMethodology.png}
             \caption{Block diagram for the working mechanism for Bird Species Identification}%\label{fig:fig1}
         \end{figure}
         The working mechanism for bird identification from audio utilizes the dataset
@@ -1422,73 +1489,50 @@ improve the performance metrics of the CNN model instead of using hand tuned
 approach for hyperparameters. This section outlines the steps involved in using
 GAs for hyperparameter optimization\cite{9058307}.
 \begin{itemize}
-      \item \textbf{Encoding the Hyperparameters}
-            \begin{itemize}
-                  \item Hyperparameters are represented as a chromosome, where each hyperparameter is a
-                        gene in the chromosome.
-                  \item For example, in a neural network, a chromosome might include genes for the
-                        learning rate, number of layers, number of neurons per layer, and activation
-                        functions.
-            \end{itemize}
-
-      \item \textbf{Initial Population}
-            \begin{itemize}
-                  \item An initial population of chromosomes is generated randomly, with each
-                        chromosome representing a different set of hyperparameters.
-            \end{itemize}
-
-      \item \textbf{Fitness Function}
-            \begin{itemize}
-                  \item A fitness function is defined to evaluate the performance of each set of
-                        hyperparameters.
-                  \item This typically involves training the model with the given hyperparameters and
-                        measuring its performance on a validation set.
-            \end{itemize}
-      \\
-      \item \textbf{Selection}
-            \begin{itemize}
-                  \item Selection involves choosing the best-performing chromosomes to serve as parents
-                        for the next generation.
-                  \item Various selection methods can be employed, such as tournament selection,
-                        roulette wheel selection, or rank-based selection.
-            \end{itemize}
+      \item \textbf{Encoding the Hyperparameters}:
+                  Hyperparameters are represented as a chromosome, where each hyperparameter is a
+                  gene in the chromosome.For example, in a neural network, a chromosome might include genes for the
+                  learning rate, number of layers, number of neurons per layer, and activation functions.
             
-      \item \textbf{Crossover (Recombination)}
-            \begin{itemize}
-                  \item Crossover combines pairs of parent chromosomes to produce offspring for the
-                        next generation.
-                  \item This is done by swapping segments of parent chromosomes to create new
-                        chromosomes, thereby combining features of both parents.
-            \end{itemize}
 
-      \item \textbf{Mutation}
-            \begin{itemize}
-                  \item Mutation introduces random changes to some of the genes in the offspring
-                        chromosomes.
-                  \item This helps maintain genetic diversity in the population and allows the
+      \item \textbf{Initial Population}:
+            An initial population of chromosomes is generated randomly, with each chromosome representing a different set of hyperparameters.
+            
+
+      \item \textbf{Fitness Function}:
+            A fitness function is defined to evaluate the performance of each set of hyperparameters. This typically involves training the model with the given hyperparameters and measuring its performance on a validation set.
+
+      \\
+      \item \textbf{Selection}:
+            Selection involves choosing the best-performing chromosomes to serve as parents
+                        for the next generation.Various selection methods can be employed, such as tournament selection,
+                        roulette wheel selection, or rank-based selection.
+            
+            
+      \item \textbf{Crossover (Recombination)}:
+           Crossover combines pairs of parent chromosomes to produce offspring for the next generation.This is done by swapping segments of parent chromosomes to create newchromosomes, thereby combining features of both parents.
+         
+
+      \item \textbf{Mutation}:
+             Mutation introduces random changes to some of the genes in the offspring
+                        chromosomes.This helps maintain genetic diversity in the population and allows the
                         algorithm to explore a broader search space.
-            \end{itemize}
+            
 
-      \item \textbf{Replacement}
-            \begin{itemize}
-                  \item The current population is partially or entirely replaced with the new
+      \item \textbf{Replacement}:
+             The current population is partially or entirely replaced with the new
                         generation of chromosomes, ensuring that better solutions are carried forward
                         while allowing for exploration of new possibilities.
-            \end{itemize}
+            
 
-      \item \textbf{Termination}
-            \begin{itemize}
-                  \item The process of selection, crossover, mutation, and replacement is repeated
-                        until a termination criterion is met.
-                  \item This could be a set number of generations, convergence of fitness scores, or
+      \item \textbf{Termination}:
+            The process of selection, crossover, mutation, and replacement is repeated
+                        until a termination criterion is met. This could be a set number of generations, convergence of fitness scores, or
                         achieving a satisfactory performance level.
-            \end{itemize}
+            
 
-      \item \textbf{Best Solution}
-            \begin{itemize}
-                  \item The best chromosome at the end of the process represents the optimal or
-                        near-optimal set of hyperparameters for the model.
-            \end{itemize}
+      \item \textbf{Best Solution}:
+            The best chromosome at the end of the process represents the optimal or near-optimal set of hyperparameters for the model.
 \end{itemize}
 \newpage
 \section{Algorithms Used}
@@ -1813,11 +1857,11 @@ The following table demonstrates different hyperparameter configurations and the
           \hline
           \textbf{S.N} & \textbf{Batch} & \textbf{LR} & \textbf{Epochs} & \textbf{Dropout} & \textbf{LSTM Units} & \textbf{Dense Units} & \textbf{Test Accuracy (\%)} \\
           \hline
-          1 & 64  & 0.001  & 40  & 0.5  & 128  & 64  & 0.761 \\
-          2 & 16  & 0.001  & 30  & 0.3  & 256  & 64  & 25.76 \\
-          \textbf{3} & \textbf{16}  & \textbf{0.0001} & \textbf{20}  & \textbf{0.3}  & \textbf{256}  & \textbf{64}  & \textbf{75.17} \\
-          4 & 16  & 0.0001 & 20  & 0.4  & 256  & 64  & 65.80 \\
-          5 & 16  & 0.001  & 30  & 0.3  & 65   & 64  & 11.61 \\
+          1 & 64  & 0.001  & 13  & 0.5  & 128  & 64  & 0.761 \\
+          2 & 16  & 0.001  & 20  & 0.3  & 256  & 64  & 25.76 \\
+          \textbf{3} & \textbf{16}  & \textbf{0.0001} & \textbf{14}  & \textbf{0.3}  & \textbf{256}  & \textbf{64}  & \textbf{75.17} \\
+          4 & 16  & 0.0001 & 19  & 0.4  & 256  & 64  & 65.80 \\
+          5 & 16  & 0.001  & 18  & 0.3  & 65   & 64  & 11.61 \\
           \hline
       \end{tabular}
       }
@@ -1827,7 +1871,7 @@ The following table demonstrates different hyperparameter configurations and the
 
 
 \subsubsection{Conclusion for CNN-LSTM}
-The best model achieved a Test Accuracy of \textbf{75.17\%} with a \textbf{Batch Size of 16}, \textbf{Learning Rate of 0.0001}, \textbf{Epochs = 20}, \textbf{Dropout Rate of 0.3}, \textbf{LSTM Units = 256}, and \textbf{Dense Units = 64}. These results highlight the effectiveness of the Genetic Algorithm in systematically optimizing hyperparameters, leading to improved learning efficiency and minimized overfitting.
+The best model achieved a Test Accuracy of \textbf{75.17\%} with a \textbf{Batch Size of 16}, \textbf{Learning Rate of 0.0001}, \textbf{Epochs = 16}, \textbf{Dropout Rate of 0.3}, \textbf{LSTM Units = 256}, and \textbf{Dense Units = 64}. These results highlight the effectiveness of the Genetic Algorithm in systematically optimizing hyperparameters, leading to improved learning efficiency and minimized overfitting.
 
 
 \subsection{Hyperparameters for Efficient-Net}
@@ -1843,7 +1887,7 @@ The genetic algorithm optimized the following hyperparameters:
           \hline
           Batch Size & \{4, 8, 16\} \\
           Image Size & \{(128, 128), (128, 128), (224, 224)\} \\
-          Learning Rate & \{1e-4, 1e-4, 1e-3\} \\
+          Learning Rate & \{1e-4, 1e-4, 1e-3} \\
           Epochs & \{20, 20, 20\} \\
           Dropout Rate & \{0.3, 0.2, 0.4\} \\
           L2 Regularization & \{1e-4, 1e-4, 1e-3\} \\
@@ -1905,11 +1949,11 @@ The following table demonstrates different hyperparameter configurations and the
           \textbf{SN} & 
           \textbf{Batch} & \textbf{Img Size} & \textbf{LR} & \textbf{Epochs} & \textbf{Dropout} & \textbf{L2} & \textbf{Test Accuracy (\%)} \\
           \hline
-          \textbf{1} & \textbf{8}   & \textbf{224x224} & \textbf{0.0001}  & \textbf{20}  & \textbf{0.2}  & \textbf{1e-4}  & \textbf{93.37} \\
+          \textbf{1} & \textbf{8}   & \textbf{224x224} & \textbf{0.0001}  & \textbf{16}  & \textbf{0.2}  & \textbf{1e-4}  & \textbf{93.37} \\
           2 & 8   & 128x128 & 0.001   & 20  & 0.4  & 1e-4  & 92.54 \\
-          3 & 16  & 128x128 & 0.0001  & 20  & 0.3  & 1e-4  & 90.68 \\
+          3 & 16  & 128x128 & 0.0001  & 13  & 0.3  & 1e-3  & 90.68 \\
           4 & 8   & 128x128 & 0.0001  & 20  & 0.2  & 1e-4  & 91.02 \\
-          5 & 8   & 128x128 & 0.001   & 20  & 0.2  & 1e-4  & 92.54 \\
+          5 & 8   & 128x128 & 0.001   & 17  & 0.2  & 1e-4  & 92.54 \\
           \hline
       \end{tabular}
       \caption{Hyperparameter configurations and test accuracies for Efficient-NetB3}
@@ -1918,7 +1962,7 @@ The following table demonstrates different hyperparameter configurations and the
   
   
 \subsubsection{Conclusion for EfficientNetB3}
-The best model achieved a Test Accuracy of \textbf{93.37\%} with a \textbf{Batch Size of 8}, \textbf{Image Size of 224x224}, \textbf{Learning Rate of 0.0001}, \textbf{Epochs = 20}, \textbf{Dropout Rate of 0.2}, and \textbf{L2 Regularization = 1e-4}. These results highlight the effectiveness of the Genetic Algorithm in systematically optimizing hyperparameters, leading to improved model performance and reduced overfitting.
+The best model achieved a Test Accuracy of \textbf{93.37\%} with a \textbf{Batch Size of 8}, \textbf{Image Size of 224x224}, \textbf{Learning Rate of 0.0001}, \textbf{Epochs = 16}, \textbf{Dropout Rate of 0.2}, and \textbf{L2 Regularization = 1e-4}. These results highlight the effectiveness of the Genetic Algorithm in systematically optimizing hyperparameters, leading to improved model performance and reduced overfitting.
 
 % Mobile Application    
 \section{Mobile Application}
@@ -1997,7 +2041,7 @@ The project on bird species identification from audio recordings has yielded pro
 \renewcommand\bibname{REFERENCES} % Change heading to References
 \bibliographystyle{IEEEtran} % to use IEEE Format for referencing
 \addcontentsline{toc}{chapter}{References} % to add references in TOC
-\bibliography{library} % specify the .bib file containing reference information 
+\bibliography{library} % specify the .bib file containing reference information `'
 
 
 \newpage
